@@ -3,12 +3,8 @@ import { FunctionComponent, useMemo, type CSSProperties } from "react";
 export type CodewarTabsType = {
   /** Style props */
   hackathonsTabBackgroundColor?: CSSProperties["backgroundColor"];
-  hackathonsTextColor?: CSSProperties["color"];
   organizersTabBackgroundColor?: CSSProperties["backgroundColor"];
   buildersTabBackgroundColor?: CSSProperties["backgroundColor"];
-  buildersTextColor?: CSSProperties["color"];
-  organizersTextColor?: CSSProperties["color"];
-  projectsTextColor?: CSSProperties["color"];
   projectsTabBackgroundColor?: CSSProperties["backgroundColor"];
 
   /** Action props */
@@ -24,12 +20,8 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
   onBuildersTabClick,
   onOrganizersTabContainerClick,
   hackathonsTabBackgroundColor,
-  hackathonsTextColor,
   organizersTabBackgroundColor,
   buildersTabBackgroundColor,
-  buildersTextColor,
-  organizersTextColor,
-  projectsTextColor,
   projectsTabBackgroundColor,
 }) => {
   const hackathonsTabStyle: CSSProperties = useMemo(() => {
@@ -37,12 +29,6 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
       backgroundColor: hackathonsTabBackgroundColor,
     };
   }, [hackathonsTabBackgroundColor]);
-
-  const hackathonsTextStyle: CSSProperties = useMemo(() => {
-    return {
-      color: hackathonsTextColor,
-    };
-  }, [hackathonsTextColor]);
 
   const organizersTabStyle: CSSProperties = useMemo(() => {
     return {
@@ -56,24 +42,6 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
     };
   }, [buildersTabBackgroundColor]);
 
-  const buildersTextStyle: CSSProperties = useMemo(() => {
-    return {
-      color: buildersTextColor,
-    };
-  }, [buildersTextColor]);
-
-  const organizersTextStyle: CSSProperties = useMemo(() => {
-    return {
-      color: organizersTextColor,
-    };
-  }, [organizersTextColor]);
-
-  const projectsTextStyle: CSSProperties = useMemo(() => {
-    return {
-      color: projectsTextColor,
-    };
-  }, [projectsTextColor]);
-
   const projectsTabStyle: CSSProperties = useMemo(() => {
     return {
       backgroundColor: projectsTabBackgroundColor,
@@ -81,55 +49,43 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
   }, [projectsTabBackgroundColor]);
 
   return (
-    <div className="self-stretch rounded-lg bg-aliceblue-100 flex flex-row flex-wrap items-start justify-center z-[4] text-center text-lg text-aqua-deep font-body-large-600">
+    <div className="self-stretch rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 gap-[5px] z-[5] text-center text-lg text-aqua-deep font-body-large-600">
       <button
-        className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+        className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
         autoFocus={true}
         onClick={onHackathonsTabClick}
         style={hackathonsTabStyle}
       >
-        <div
-          className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]"
-          style={hackathonsTextStyle}
-        >
+        <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
           Hackathons
         </div>
       </button>
       <button
-        className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+        className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
         autoFocus={true}
         onClick={onProjectsTabClick}
         style={projectsTabStyle}
       >
-        <div
-          className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]"
-          style={projectsTextStyle}
-        >
+        <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
           Projects
         </div>
       </button>
       <button
-        className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+        className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
         autoFocus={true}
         onClick={onBuildersTabClick}
         style={buildersTabStyle}
       >
-        <div
-          className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]"
-          style={buildersTextStyle}
-        >
+        <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
           Builders
         </div>
       </button>
       <div
-        className="rounded bg-nero box-border h-[45px] flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep"
+        className="w-[130px] rounded bg-nero box-border h-[45px] flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep"
         onClick={onOrganizersTabContainerClick}
         style={organizersTabStyle}
       >
-        <div
-          className="relative leading-[150%] font-semibold inline-block max-h-[58px]"
-          style={organizersTextStyle}
-        >
+        <div className="relative leading-[150%] font-semibold inline-block max-h-[58px]">
           Organizers
         </div>
       </div>

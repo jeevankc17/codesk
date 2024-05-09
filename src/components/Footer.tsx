@@ -6,7 +6,7 @@ const Footer: FunctionComponent = () => {
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
         alt=""
-        src="/subscribe-section-background6@2x.png"
+        src="/subscribe-section-background4@2x.png"
       />
       <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">

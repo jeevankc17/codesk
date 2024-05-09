@@ -8,13 +8,33 @@ import {
 } from "@mui/material";
 import DoneModal from "../components/DoneModal";
 import PortalPopup from "../components/PortalPopup";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const HomePage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
   const navigate = useNavigate();
+
+  const onLogoClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onCoursesClick = useCallback(() => {
+    navigate("/coursepage");
+  }, [navigate]);
+
+  const onQuizzesClick = useCallback(() => {
+    navigate("/quizpage");
+  }, [navigate]);
+
+  const onCompetetionsClick = useCallback(() => {
+    navigate("/competetionspage");
+  }, [navigate]);
+
+  const onAboutUsClick = useCallback(() => {
+    navigate("/aboutuspage");
+  }, [navigate]);
 
   const onViewCourseButtonClick = useCallback(() => {
     navigate("/coursepage");
@@ -114,8 +134,15 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-[30px] box-border gap-[60px] text-center text-17xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <Navbar coDeskLabColor="#FF5A43" />
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <Navbar
+          coDeskLabColor="#FF5A43"
+          onLogoClick={onLogoClick}
+          onCoursesClick={onCoursesClick}
+          onQuizzesClick={onQuizzesClick}
+          onCompetetionsClick={onCompetetionsClick}
+          onAboutUsClick={onAboutUsClick}
+        />
         <header className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[17] text-left text-29xl text-nero font-inter lg:flex-col md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-start justify-start p-[15px] gap-[15px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
             <div className="self-stretch flex flex-col items-start justify-start font-body-large-600">
@@ -164,7 +191,7 @@ const HomePage: FunctionComponent = () => {
           <img
             className="flex-1 relative max-w-full overflow-hidden h-[516.2px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch"
             alt=""
-            src="/image-513@2x.png"
+            src="/image-5@2x.png"
           />
         </header>
         <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-large-600 sm:pl-[05px] sm:pr-[5px] sm:box-border">

@@ -2,14 +2,12 @@ import { FunctionComponent, useState, useCallback } from "react";
 import DoneModal from "../components/DoneModal";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
-import DrawerMenus from "../components/DrawerMenus";
-import PortalDrawer from "../components/PortalDrawer";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const PartnershipPage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
   const navigate = useNavigate();
-  const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
 
   const onLogoClick = useCallback(() => {
     navigate("/");
@@ -31,14 +29,6 @@ const PartnershipPage: FunctionComponent = () => {
     navigate("/aboutuspage");
   }, [navigate]);
 
-  const openDrawerMenus = useCallback(() => {
-    setDrawerMenusOpen(true);
-  }, []);
-
-  const closeDrawerMenus = useCallback(() => {
-    setDrawerMenusOpen(false);
-  }, []);
-
   const openDoneModalPopup = useCallback(() => {
     setDoneModalPopupOpen(true);
   }, []);
@@ -50,78 +40,18 @@ const PartnershipPage: FunctionComponent = () => {
   return (
     <>
       <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <div className="self-stretch h-[77px] flex flex-row items-start justify-start z-[4]">
-          <header className="self-stretch w-full rounded bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] [background:white] lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border">
-            <div className="flex-1 flex flex-row items-center justify-between">
-              <button
-                className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center"
-                onClick={onLogoClick}
-              >
-                <div className="relative text-13xl tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left">
-                  CoDeskLab
-                </div>
-              </button>
-              <div className="flex flex-row items-center justify-end gap-[36px] sm:flex">
-                <div className="bg-nero flex flex-row items-center justify-end gap-[30px] md:hidden">
-                  <button
-                    className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
-                    onClick={onCoursesClick}
-                  >
-                    <div className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left">
-                      Courses
-                    </div>
-                  </button>
-                  <button
-                    className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
-                    onClick={onQuizzesClick}
-                  >
-                    <div className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left">
-                      Quizzes
-                    </div>
-                  </button>
-                  <button
-                    className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
-                    onClick={onCompetetionsClick}
-                  >
-                    <div className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left">
-                      Competetions
-                    </div>
-                  </button>
-                  <button
-                    className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
-                    onClick={onAboutUsClick}
-                  >
-                    <div className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left">
-                      About Us
-                    </div>
-                  </button>
-                </div>
-                <button
-                  className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center"
-                  onClick={openDrawerMenus}
-                >
-                  <div className="w-8 relative h-8 overflow-hidden shrink-0">
-                    <img
-                      className="absolute top-[6px] left-[2.1px] max-h-full w-[19.8px]"
-                      alt=""
-                      src="/vector-1.svg"
-                    />
-                    <img
-                      className="absolute top-[12px] left-[2.1px] max-h-full w-[19.8px]"
-                      alt=""
-                      src="/vector-1.svg"
-                    />
-                    <img
-                      className="absolute top-[18px] left-[2.1px] max-h-full w-[19.8px]"
-                      alt=""
-                      src="/vector-1.svg"
-                    />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </header>
-        </div>
+        <Navbar
+          coDeskLabColor="#1f95f2"
+          onLogoClick={onLogoClick}
+          onCoursesClick={onCoursesClick}
+          onQuizzesClick={onQuizzesClick}
+          onCompetetionsClick={onCompetetionsClick}
+          onAboutUsClick={onAboutUsClick}
+          competetionsColor="#000"
+          coursesColor="#000"
+          aboutUsColor="#000"
+          quizzesColor="#000"
+        />
         <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[3] text-left text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
             <div className="self-stretch flex flex-col items-start justify-start">
@@ -415,15 +345,6 @@ const PartnershipPage: FunctionComponent = () => {
         </div>
         <Footer />
       </div>
-      {isDrawerMenusOpen && (
-        <PortalDrawer
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Left"
-          onOutsideClick={closeDrawerMenus}
-        >
-          <DrawerMenus onClose={closeDrawerMenus} />
-        </PortalDrawer>
-      )}
       {isDoneModalPopupOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
