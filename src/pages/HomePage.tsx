@@ -115,7 +115,7 @@ const HomePage: FunctionComponent = () => {
   return (
     <>
       <div className="w-full relative bg-nero flex flex-col items-center justify-center p-[30px] box-border gap-[60px] text-center text-17xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <Navbar coDeskLabColor="FF5A43" />
+        <Navbar coDeskLabColor="#FF5A43" />
         <header className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[17] text-left text-29xl text-nero font-inter lg:flex-col md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-start justify-start p-[15px] gap-[15px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
             <div className="self-stretch flex flex-col items-start justify-start font-body-large-600">
