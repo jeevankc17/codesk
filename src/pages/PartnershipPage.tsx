@@ -1,33 +1,11 @@
 import { FunctionComponent, useState, useCallback } from "react";
 import DoneModal from "../components/DoneModal";
 import PortalPopup from "../components/PortalPopup";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const PartnershipPage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
-  const navigate = useNavigate();
-
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
 
   const openDoneModalPopup = useCallback(() => {
     setDoneModalPopupOpen(true);
@@ -39,23 +17,12 @@ const PartnershipPage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <Navbar
-          coDeskLabColor="#1f95f2"
-          onLogoClick={onLogoClick}
-          onCoursesClick={onCoursesClick}
-          onQuizzesClick={onQuizzesClick}
-          onCompetetionsClick={onCompetetionsClick}
-          onAboutUsClick={onAboutUsClick}
-          competetionsColor="#000"
-          coursesColor="#000"
-          aboutUsColor="#000"
-          quizzesColor="#000"
-        />
+      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black1 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <Navbar />
         <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[3] text-left text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
             <div className="self-stretch flex flex-col items-start justify-start">
-              <div className="self-stretch relative leading-[120%] font-semibold sm:text-21xl">
+              <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
                 CoDesk - School Partnerships
               </div>
             </div>
@@ -69,7 +36,7 @@ const PartnershipPage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
               autoFocus={true}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
                 View Contact Us Form
               </div>
             </button>
@@ -286,7 +253,7 @@ const PartnershipPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[1] text-15xl-6 font-segoe-ui">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[1] text-[34.6px] font-segoe-ui">
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
               <b className="flex-1 relative [text-decoration:underline] leading-[45px]">
@@ -302,33 +269,33 @@ const PartnershipPage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
             <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-whitesmoke-200 md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-slategray text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-xl-600 text-slategray text-left">
                   Fill in your details to join the party!
                 </div>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[10px]">
                 <input
-                  className="[outline:none] font-body-large-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Your name"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-large-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Email address"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-large-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Phone Number"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-large-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="School Name"
                   type="text"
                 />
                 <textarea
-                  className="bg-[transparent] font-body-large-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="bg-[transparent] font-body-xl-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Leave Message"
                 />
               </div>
@@ -336,7 +303,7 @@ const PartnershipPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-tomato rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
                 </div>
               </button>

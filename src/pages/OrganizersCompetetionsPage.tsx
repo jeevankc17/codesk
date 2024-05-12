@@ -7,26 +7,6 @@ import Footer from "../components/Footer";
 const OrganizersCompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
-
   const onHackathonsTabClick = useCallback(() => {
     navigate("/hackathonscompetetionspage");
   }, [navigate]);
@@ -48,33 +28,19 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
-      <Navbar
-        coDeskLabColor="#1f95f2"
-        onLogoClick={onLogoClick}
-        onCoursesClick={onCoursesClick}
-        onQuizzesClick={onQuizzesClick}
-        onCompetetionsClick={onCompetetionsClick}
-        onAboutUsClick={onAboutUsClick}
-        competetionsColor="#FF0000"
-        coursesColor="#000"
-        aboutUsColor="#000"
-        quizzesColor="#000"
-      />
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+      <Navbar />
       <CodewarTabs
         onHackathonsTabClick={onHackathonsTabClick}
         onProjectsTabClick={onProjectsTabClick}
         onBuildersTabClick={onBuildersTabClick}
         onOrganizersTabContainerClick={onOrganizersTabContainerClick}
-        hackathonsTabBackgroundColor="#fff"
         organizersTabBackgroundColor="#0063B0"
-        buildersTabBackgroundColor="#fff"
-        projectsTabBackgroundColor="#fff"
       />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-21xl">
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
               Our Organizers
             </div>
           </div>
@@ -100,28 +66,28 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
         <img
           className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch"
           alt=""
-          src="/image-53@2x.png"
+          src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] z-[1] text-base text-black1 font-inter lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] z-[1] text-base text-black1 lg:flex-col md:flex-col">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full">
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2] text-center text-15xl-6">
-            <b className="flex-1 relative leading-[42px]">
+          <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2] text-center text-13xl">
+            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
               All organizers who organizes the hackathons and helps to shape the
               future of childs
-            </b>
+            </div>
           </div>
-          <div className="self-stretch rounded-2xl bg-whitesmoke-100 flex flex-row flex-wrap items-center justify-start py-0 px-10 gap-[0px_16px] z-[1] text-darkslategray-200 font-body-large-600 border-[2px] border-solid border-whitesmoke-300">
+          <div className="self-stretch rounded-2xl bg-whitesmoke-100 flex flex-row flex-wrap items-center justify-start py-0 px-10 gap-[0px_16px] z-[1] text-darkslategray-200 border-[2px] border-solid border-whitesmoke-300 sm:pl-0 sm:pr-0 sm:box-border">
             <div className="w-[168px] h-8 flex flex-col items-center justify-center">
               <div className="self-stretch relative leading-[150%]">
                 Sort organizers by
               </div>
             </div>
             <button
-              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black1 md:w-full"
+              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black1 md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-large-600 text-black1 text-center inline-block max-h-[58px]">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black1 text-center inline-block max-h-[58px]">
                 Most Hackathons Organized
               </div>
             </button>
@@ -136,7 +102,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <div className="flex-1 rounded bg-nero flex flex-row flex-wrap items-center justify-start gap-[10px] text-5xl text-darkslategray-200 font-space-mono">
-              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black1 font-body-large-600">
+              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black1 font-body-xl-600">
                 <img
                   className="w-[100px] rounded h-[100px] overflow-hidden shrink-0 object-cover"
                   alt=""
@@ -156,7 +122,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       10
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       hackathons
                     </div>
@@ -173,7 +139,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       250
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       Projects
                     </div>
@@ -190,7 +156,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       1500$
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       Prize worth
                     </div>
@@ -200,7 +166,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[0] text-5xl font-body-large-600 lg:w-full lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
+        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[0] text-5xl lg:w-full lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] sticky top-[77] lg:flex md:flex">
             <div className="self-stretch relative leading-[150%] font-semibold text-transparent !bg-clip-text [background:linear-gradient(16.28deg,_#c53232,_#7c36dd)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">{`Play while you learn & win amazing prizes`}</div>
             <img

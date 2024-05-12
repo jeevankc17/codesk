@@ -114,7 +114,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
             </b>
           </div>
         </div>
-        <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-aliceblue-200" />
+        <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-aliceblue" />
         <div className="flex flex-col items-start justify-start gap-[28px]">
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"

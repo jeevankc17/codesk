@@ -1,49 +1,15 @@
-import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { FunctionComponent } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const WhyCodeskPage: FunctionComponent = () => {
-  const navigate = useNavigate();
-
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
-
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-      <Navbar
-        coDeskLabColor="#1f95f2"
-        onLogoClick={onLogoClick}
-        onCoursesClick={onCoursesClick}
-        onQuizzesClick={onQuizzesClick}
-        onCompetetionsClick={onCompetetionsClick}
-        onAboutUsClick={onAboutUsClick}
-        competetionsColor="#000"
-        coursesColor="#000"
-        aboutUsColor="#000"
-        quizzesColor="#000"
-      />
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <Navbar />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-21xl">{`Building the Nepal’s largest & most loved coding firm for kids & teens and adult`}</div>
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">{`Building the Nepal’s largest & most loved coding firm for kids & teenagers`}</div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
             <div className="self-stretch relative leading-[150%]">
@@ -66,7 +32,7 @@ const WhyCodeskPage: FunctionComponent = () => {
       <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[3] text-17xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold">
+            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
               Why kids and parents love CoDesk?
             </div>
           </div>
@@ -85,7 +51,7 @@ const WhyCodeskPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Curriculum
                     </div>
                   </div>
@@ -112,7 +78,7 @@ const WhyCodeskPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Teachers
                     </div>
                   </div>
@@ -146,7 +112,7 @@ const WhyCodeskPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Personalized Coding Journey
                     </div>
                   </div>
@@ -167,7 +133,7 @@ const WhyCodeskPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Our values
                     </div>
                   </div>
@@ -202,7 +168,7 @@ const WhyCodeskPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Founding Team Experise
                     </div>
                   </div>
@@ -221,7 +187,7 @@ const WhyCodeskPage: FunctionComponent = () => {
       </div>
       <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[2] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-start">
-          <div className="self-stretch relative leading-[120%] font-semibold">
+          <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
             Why CoDesk offers more value for the price?
           </div>
           <div className="self-stretch relative text-lg leading-[150%]">
@@ -239,13 +205,13 @@ const WhyCodeskPage: FunctionComponent = () => {
               alt=""
               src="/freecoursesvg.svg"
             />
-            <div className="self-stretch flex flex-col items-center justify-start py-0 px-[31.5px]">
+            <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Demo class as beginners
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 At CoDesk, we offers the chance to take a demo class where your
                 children learn the basics of coding and learn to create their
                 own animations, apps or websites.
@@ -258,13 +224,13 @@ const WhyCodeskPage: FunctionComponent = () => {
               alt=""
               src="/customizedlearningsvg.svg"
             />
-            <div className="self-stretch flex flex-col items-center justify-start py-0 px-[31.5px]">
+            <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Customized Learning Journey
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 At CoDesk, we believe that each child is unique and so should be
                 their learning journey. We make sure that each child learns
                 according to their own pace which makes sure they learn coding
@@ -278,13 +244,13 @@ const WhyCodeskPage: FunctionComponent = () => {
               alt=""
               src="/moneybackguaranteesvg.svg"
             />
-            <div className="self-stretch flex flex-col items-center justify-start py-0 px-[31.5px]">
+            <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Guaranteed money back
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 At CoDesk, we put customer satisfaction first and so, we have a
                 100% money back guarantee policy. If we do not meet your
                 expectations you have the right to cancel your purchase and get
@@ -296,7 +262,7 @@ const WhyCodeskPage: FunctionComponent = () => {
       </div>
       <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[1] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-start pt-0 px-[58px] pb-[0.5px]">
-          <div className="w-full relative leading-[120%] font-semibold inline-block max-w-[1128px]">
+          <div className="w-full relative leading-[120%] font-semibold inline-block max-w-[1128px] sm:text-9xl">
             Why children should learn to code?
           </div>
         </div>
@@ -313,7 +279,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                   Develop key skills
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Learning to code helps improve a child's logical thinking and
                   problem-solving skills by 70%, also enabling them to perform
@@ -334,7 +300,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                   Prepare for the future
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Children need to learn coding and develop digital skills if
                   they want to be successful in the technology-driven job market
@@ -355,7 +321,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                   Learn through coding
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Our STEM-focused curriculum makes coding a learning aid and
                   helps kids develop a deeper understanding of the subjects they

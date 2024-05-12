@@ -1,56 +1,24 @@
 import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const CarrerPage: FunctionComponent = () => {
-  const navigate = useNavigate();
-
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
-
   const onScrollBannerButtonClick = useCallback(() => {
-    const anchor = document.querySelector("[data-scroll-to='stepsContainer']");
+    const anchor = document.querySelector(
+      "[data-scroll-to='quizzesContainer']"
+    );
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-      <Navbar
-        coDeskLabColor="#1f95f2"
-        onLogoClick={onLogoClick}
-        onCoursesClick={onCoursesClick}
-        onQuizzesClick={onQuizzesClick}
-        onCompetetionsClick={onCompetetionsClick}
-        onAboutUsClick={onAboutUsClick}
-        competetionsColor="#000"
-        coursesColor="#000"
-        aboutUsColor="#000"
-        quizzesColor="#000"
-      />
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <Navbar />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[8] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-21xl">
+            <div className="self-stretch h-[58px] relative leading-[120%] font-semibold inline-block sm:text-13xl">
               Teach Kids To Code
             </div>
           </div>
@@ -68,7 +36,7 @@ const CarrerPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Read Guidelines
             </div>
           </button>
@@ -79,14 +47,14 @@ const CarrerPage: FunctionComponent = () => {
           src="/image-511@2x.png"
         />
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
-          <div className="self-stretch relative leading-[120%] font-semibold">
+          <div className="self-stretch h-[86px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
             Become a teacher in CoDesk doesn’t mean you will end up your coding
             journey
           </div>
         </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-2.5 gap-[15px] text-left text-5xl lg:flex-row lg:flex-wrap">
+        <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-2.5 gap-[15px] text-left text-5xl text-aqua-deep lg:flex-row lg:flex-wrap">
           <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[200px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] sm:w-[300px]">
             <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
               <img
@@ -100,7 +68,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach whatever age group you prefer
               </div>
@@ -119,7 +87,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach whatever stack you want
               </div>
@@ -138,7 +106,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach on your own preferable language
               </div>
@@ -157,7 +125,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Hands On teaching Resources
               </div>
@@ -176,7 +144,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach physically as well as virutally
               </div>
@@ -195,7 +163,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Earn from teaching as well as building
               </div>
@@ -217,7 +185,7 @@ const CarrerPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Make your passion pay
                     </div>
                   </div>
@@ -241,7 +209,7 @@ const CarrerPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Make An Impact
                     </div>
                   </div>
@@ -275,7 +243,7 @@ const CarrerPage: FunctionComponent = () => {
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="flex-1 relative leading-[120%] font-semibold">
+                    <div className="flex-1 relative leading-[120%] font-semibold sm:text-5xl">
                       Building Lifelong Relationships
                     </div>
                   </div>
@@ -299,56 +267,56 @@ const CarrerPage: FunctionComponent = () => {
           </div>
         </div>
         <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-5xl md:flex-row md:flex-wrap">
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[88.2px] overflow-hidden shrink-0"
               alt=""
               src="/freecoursesvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Get paid per class
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 As a teacher, you will get paid for every one-hour class you
                 successfully complete. The more classes you teach, the more you
                 earn.
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[93.3px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
               src="/moneybackguaranteesvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Attractive incentives
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 We offer lots of opportunities to increase your income through
                 various incentives, referral program, and mentorships.
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
               src="/customizedlearningsvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Career growth plan
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Gain experience and grow as a teacher as well as developer along
                 with a clearly defined career progression path with great
                 rewards for performance and leadership.
@@ -357,9 +325,9 @@ const CarrerPage: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[4] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[4] text-17xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-start">
-          <div className="self-stretch relative leading-[120%] font-semibold">
+          <div className="self-stretch h-[43px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
             All the support you need
           </div>
         </div>
@@ -369,19 +337,19 @@ const CarrerPage: FunctionComponent = () => {
           src="/happytoshowlaptoppng@2x.png"
         />
         <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-5xl md:flex-row md:flex-wrap">
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[88.2px] overflow-hidden shrink-0"
               alt=""
               src="/freecoursesvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Our long term vision through system
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Our platform enables an immersive teaching and learning
                 experience with in-built video. The platform makes teaching easy
                 with all teaching aids, lesson plans, schedules at your
@@ -389,38 +357,38 @@ const CarrerPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
               src="/customizedlearningsvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Unique curriculum and lesson plans
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Our curriculum makes teaching code fun for students and teachers
                 alike. We will also give you in-depth lesson plans to guide the
                 child's code-learning journey.
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[93.3px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
               src="/moneybackguaranteesvg.svg"
             />
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[31.5px] box-border">
+            <div className="w-[317.3px] flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[150%] font-semibold">
                 Training and certification
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 All our teachers undergo extensive training on procedures and
                 curriculum to make sure we meet the highest standards and help
                 you grow as a teacher.
@@ -429,12 +397,9 @@ const CarrerPage: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div
-        className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[3] sm:pl-[5px] sm:pr-[5px] sm:box-border"
-        data-scroll-to="stepsContainer"
-      >
+      <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[3] text-17xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-start">
-          <div className="self-stretch relative leading-[120%] font-semibold">
+          <div className="self-stretch h-[43px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
             All the support you need
           </div>
         </div>
@@ -443,10 +408,10 @@ const CarrerPage: FunctionComponent = () => {
           alt=""
           src="/becomeateacherpng@2x.png"
         />
-        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] text-17xl">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative">
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-              <div className="flex-1 relative leading-[120%] font-semibold">
+              <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
                 5 steps to becoming a teacher
               </div>
             </div>
@@ -601,13 +566,17 @@ const CarrerPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
+          <div
+            className="absolute left-[0] top-[-70px]"
+            data-scroll-to="quizzesContainer"
+          />
         </div>
         <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
           <button
             className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Become A Teacher
             </div>
           </button>
@@ -615,12 +584,12 @@ const CarrerPage: FunctionComponent = () => {
       </div>
       <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[2] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-start">
-          <div className="self-stretch relative leading-[120%] font-semibold">
+          <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
             Eligibility criteria for teachers
           </div>
         </div>
         <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-5xl md:flex-row md:flex-wrap">
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[88.2px] overflow-hidden shrink-0"
               alt=""
@@ -631,15 +600,15 @@ const CarrerPage: FunctionComponent = () => {
                 Recent graduates
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Freshers with a technical degree are always welcome. We offer
                 training and certification to launch your career as a coding
                 teacher.
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
@@ -650,14 +619,14 @@ const CarrerPage: FunctionComponent = () => {
                 Teaching experience
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Teaching experience and especially experience teaching coding
                 will increase your chances of successfully becoming a teacher.
               </div>
             </div>
           </div>
-          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
+          <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start p-5 gap-[20px]">
             <img
               className="w-[93.3px] relative h-[100px] overflow-hidden shrink-0"
               alt=""
@@ -668,8 +637,8 @@ const CarrerPage: FunctionComponent = () => {
                 Coding experience
               </div>
             </div>
-            <div className="w-[317.3px] flex flex-col items-center justify-start py-0 px-[20.6px] box-border text-lg">
-              <div className="self-stretch relative leading-[150%] font-semibold">
+            <div className="w-[317.3px] flex flex-col items-center justify-start text-base">
+              <div className="self-stretch relative leading-[150%]">
                 Hands-on coding experience in a professional setting will also
                 be an added advantage as long as you meet the other basic
                 requirements.
@@ -679,8 +648,8 @@ const CarrerPage: FunctionComponent = () => {
         </div>
       </div>
       <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[1] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <div className="self-stretch flex flex-col items-center justify-start pt-0 px-[58px] pb-[0.5px]">
-          <div className="w-full relative leading-[120%] font-semibold inline-block max-w-[1128px]">
+        <div className="self-stretch flex flex-col items-center justify-start">
+          <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
             Why children should learn to code?
           </div>
         </div>
@@ -689,7 +658,7 @@ const CarrerPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png3@2x.png"
+              src="/reason1png@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -697,7 +666,7 @@ const CarrerPage: FunctionComponent = () => {
                   Develop key skills
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Learning to code helps improve a child's logical thinking and
                   problem-solving skills by 70%, also enabling them to perform
@@ -710,7 +679,7 @@ const CarrerPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png4@2x.png"
+              src="/reason1png@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -718,7 +687,7 @@ const CarrerPage: FunctionComponent = () => {
                   Prepare for the future
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Children need to learn coding and develop digital skills if
                   they want to be successful in the technology-driven job market
@@ -731,7 +700,7 @@ const CarrerPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png5@2x.png"
+              src="/reason1png@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -739,7 +708,7 @@ const CarrerPage: FunctionComponent = () => {
                   Eligibility criteria for teachers
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center text-sm">
+              <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
                   Our STEM-focused curriculum makes coding a learning aid and
                   helps kids develop a deeper understanding of the subjects they

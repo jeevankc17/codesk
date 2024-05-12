@@ -1,31 +1,10 @@
 import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import CodewarTabs from "../components/CodewarTabs";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const CompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();
-
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
 
   const onHackathonsTabClick = useCallback(() => {
     navigate("/hackathonscompetetionspage");
@@ -40,8 +19,8 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onOrganizersTabContainerClick = useCallback(() => {
-    navigate("/organizerscompetetionspage");
-  }, [navigate]);
+    //TODO: button link
+  }, []);
 
   const onScrollBannerButtonClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='stepsContainer']");
@@ -55,29 +34,49 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
-      <Navbar
-        coDeskLabColor="#1f95f2"
-        onLogoClick={onLogoClick}
-        onCoursesClick={onCoursesClick}
-        onQuizzesClick={onQuizzesClick}
-        onCompetetionsClick={onCompetetionsClick}
-        onAboutUsClick={onAboutUsClick}
-        competetionsColor="#FF0000"
-        coursesColor="#000"
-        aboutUsColor="#000"
-        quizzesColor="#000"
-      />
-      <CodewarTabs
-        onHackathonsTabClick={onHackathonsTabClick}
-        onProjectsTabClick={onProjectsTabClick}
-        onBuildersTabClick={onBuildersTabClick}
-        onOrganizersTabContainerClick={onOrganizersTabContainerClick}
-      />
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+      <Navbar />
+      <div className="self-stretch h-[65px] rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] sticky top-[77] z-[5] text-lg text-aqua-deep sm:pl-0 sm:pr-0 sm:box-border">
+        <button
+          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          autoFocus={true}
+          onClick={onHackathonsTabClick}
+        >
+          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
+            Hackathons
+          </div>
+        </button>
+        <button
+          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          autoFocus={true}
+          onClick={onProjectsTabClick}
+        >
+          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
+            Projects
+          </div>
+        </button>
+        <button
+          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          autoFocus={true}
+          onClick={onBuildersTabClick}
+        >
+          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
+            Builders
+          </div>
+        </button>
+        <div
+          className="self-stretch w-[130px] rounded bg-nero box-border flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          onClick={onOrganizersTabContainerClick}
+        >
+          <div className="relative leading-[150%] font-semibold inline-block max-h-[58px] md:text-xs sm:text-xs">
+            Organizers
+          </div>
+        </div>
+      </div>
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-21xl">
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
               We care about organizor’s hackathons and builder’s projects
             </div>
           </div>
@@ -97,7 +96,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Our Four Pillars
             </div>
           </button>
@@ -120,7 +119,7 @@ const CompetetionsPage: FunctionComponent = () => {
           <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-left text-5xl text-aqua-deep">
             <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[40px] lg:flex-col md:flex-col">
               <img
-                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover"
+                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover md:w-[300px] md:h-[300px] sm:w-[300px] sm:h-[300px]"
                 alt=""
                 src="/featureshowcasebrowser89355ef99806d9f83a789939c3f0a482svg@2x.png"
               />
@@ -180,14 +179,14 @@ const CompetetionsPage: FunctionComponent = () => {
                 </div>
               </div>
               <img
-                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover"
+                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover md:w-[300px] md:h-[300px] sm:w-[300px] sm:h-[300px]"
                 alt=""
                 src="/featureshowcasebrowser89355ef99806d9f83a789939c3f0a482svg1@2x.png"
               />
             </div>
             <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[40px] lg:flex-col md:flex-col">
               <img
-                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover"
+                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover md:w-[300px] md:h-[300px] sm:w-[300px] sm:h-[300px]"
                 alt=""
                 src="/featurehackathonbrowser5a044ca6908b6e62ac5be7426689d29bsvg@2x.png"
               />
@@ -246,7 +245,7 @@ const CompetetionsPage: FunctionComponent = () => {
                 </div>
               </div>
               <img
-                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover"
+                className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover md:w-[300px] md:h-[300px] sm:w-[300px] sm:h-[300px]"
                 alt=""
                 src="/featureskillbrowser050977059a23d0d942236d6e8d48c6edsvg@2x.png"
               />
@@ -259,7 +258,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onTryAHackathonsButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Try A Hackathons
             </div>
           </button>

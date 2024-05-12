@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 
 const Footer: FunctionComponent = () => {
   return (
-    <div className="self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black1 font-body-large-600">
+    <div className="self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black1 font-body-xl-600">
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
         alt=""
@@ -11,7 +11,7 @@ const Footer: FunctionComponent = () => {
       <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
           <div className="self-stretch flex flex-row items-start justify-start">
-            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block">
+            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
               CoDesk
             </div>
           </div>
@@ -36,7 +36,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] h-6 flex-1 relative leading-[150%] text-[inherit] inline-block"
+                className="[text-decoration:none] h-6 flex-1 relative leading-[150%] text-[inherit] inline-block sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -45,7 +45,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -54,7 +54,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -63,7 +63,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -79,7 +79,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -88,7 +88,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -97,7 +97,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
@@ -106,7 +106,7 @@ const Footer: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start">
               <a
-                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
                 href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
                 target="_blank"
               >
