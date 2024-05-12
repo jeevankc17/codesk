@@ -28,19 +28,19 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onHackathonsTabClick = useCallback(() => {
-    navigate("/competetions/hackathons");
+    navigate("/competetionspage/hackathons");
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate("/competetions/projects");
+    navigate("/competetionspage/projects");
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate("/competetions/builders");
+    navigate("/competetionspage/builders");
   }, [navigate]);
 
   const onOrganizersTabContainerClick = useCallback(() => {
-    navigate("/competetions/organizers");
+    navigate("/competetionspage/organizers");
   }, [navigate]);
 
   const onScrollBannerButtonClick = useCallback(() => {
@@ -59,7 +59,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-medium-400 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -73,14 +73,14 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
         quizzesColor="#000"
       />
       <CodewarTabs
+        organizersTabBackgroundColor="#fff"
         onHackathonsTabClick={onHackathonsTabClick}
         onProjectsTabClick={onProjectsTabClick}
         onBuildersTabClick={onBuildersTabClick}
         onOrganizersTabContainerClick={onOrganizersTabContainerClick}
-        hackathonsTabBackgroundColor="#fff"
         buildersTabBackgroundColor="#fff"
         projectsTabBackgroundColor="#0063B0"
-        organizersTabBackgroundColor="#fff"
+        hackathonsTabBackgroundColor="#fff"
       />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
@@ -130,7 +130,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-medium-400 text-black text-center inline-block max-h-[58px] sm:text-xs">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black text-center inline-block max-h-[58px] sm:text-xs">
                 Most viewed
               </div>
             </button>
@@ -184,7 +184,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-chateau-green w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero md:w-full sm:w-full"
                 onClick={onViewProjectButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-400 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
                   View Projects
                 </div>
               </button>

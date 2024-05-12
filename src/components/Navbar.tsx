@@ -98,7 +98,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onCoursesClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-xl-600 text-black text-left"
                   style={coursesStyle}
                 >
                   Courses
@@ -109,7 +109,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onQuizzesClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-xl-600 text-black text-left"
                   style={quizzesStyle}
                 >
                   Quizzes
@@ -120,7 +120,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onCompetetionsClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-xl-600 text-black text-left"
                   style={competetionsStyle}
                 >
                   Competetions
@@ -131,7 +131,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onAboutUsClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-xl-600 text-black text-left"
                   style={aboutUsStyle}
                 >
                   About Us

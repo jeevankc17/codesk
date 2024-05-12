@@ -3,7 +3,6 @@ import DoneModal from "../components/DoneModal";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const PartnershipPage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
@@ -29,6 +28,15 @@ const PartnershipPage: FunctionComponent = () => {
     navigate("/aboutuspage");
   }, [navigate]);
 
+  const onScrollBannerButtonClick = useCallback(() => {
+    const anchor = document.querySelector(
+      "[data-scroll-to='contactUsContainer']"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
   const openDoneModalPopup = useCallback(() => {
     setDoneModalPopupOpen(true);
   }, []);
@@ -39,7 +47,7 @@ const PartnershipPage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black font-body-medium-400 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#1f95f2"
           onLogoClick={onLogoClick}
@@ -68,8 +76,9 @@ const PartnershipPage: FunctionComponent = () => {
             <button
               className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
               autoFocus={true}
+              onClick={onScrollBannerButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-400 text-nero text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
                 View Contact Us Form
               </div>
             </button>
@@ -77,7 +86,7 @@ const PartnershipPage: FunctionComponent = () => {
           <img
             className="h-[500px] flex-1 relative max-w-full overflow-hidden object-contain lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
             alt=""
-            src="/image-55@2x.png"
+            src="/image-551@2x.png"
           />
         </div>
         <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[2] text-17xl">
@@ -283,7 +292,7 @@ const PartnershipPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[1] text-[34.6px] font-segoe-ui">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-[34.6px] font-segoe-ui">
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
               <b className="flex-1 relative [text-decoration:underline] leading-[45px]">
@@ -299,33 +308,33 @@ const PartnershipPage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
             <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-whitesmoke-200 md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-medium-400 text-slategray text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-xl-600 text-slategray text-left">
                   Fill in your details to join the party!
                 </div>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[10px]">
                 <input
-                  className="[outline:none] font-body-medium-400 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Your name"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-medium-400 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Email address"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-medium-400 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Phone Number"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-medium-400 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="School Name"
                   type="text"
                 />
                 <textarea
-                  className="bg-[transparent] font-body-medium-400 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="bg-[transparent] font-body-xl-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Leave Message"
                 />
               </div>
@@ -333,14 +342,176 @@ const PartnershipPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-tomato rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-400 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
                 </div>
               </button>
             </form>
           </div>
+          <div
+            className="absolute left-[0] top-[-70px]"
+            data-scroll-to="contactUsContainer"
+          />
         </div>
-        <Footer />
+        <div className="self-stretch flex flex-col items-center justify-start z-[0] text-13xl">
+          <img
+            className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
+            alt=""
+            src="/subscribe-section-background@2x.png"
+          />
+          <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col">
+            <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
+              <div className="self-stretch flex flex-row items-start justify-start">
+                <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-left">
+                  CoDesk
+                </div>
+              </div>
+              <div className="self-stretch flex flex-row items-start justify-start text-lg text-nero">
+                <div className="h-[81px] flex-1 relative leading-[150%] inline-block md:text-left sm:text-left">
+                  The CoDesk is on a mission to inspire school kids in Nepal to
+                  fall in love with coding. Coding is proven to develop
+                  creativity, logical thinking, and problem-solving skills in
+                  kids. It's an essential skill for the future, with more than
+                  60% of all jobs in STEM-related fields requiring knowledge of
+                  code. Kids who start learning to code at a young age are
+                  guaranteed to become leaders, creators, and entrepreneurs of
+                  the future.
+                </div>
+              </div>
+            </div>
+            <div className="self-stretch flex flex-row items-center justify-center gap-[5px] text-right text-base text-nero lg:flex-row md:flex-col sm:flex-col">
+              <div className="flex-1 flex flex-col items-start justify-start gap-[10px] md:flex-[unset] md:self-stretch sm:!mb-[40px] sm:flex-[unset] sm:self-stretch">
+                <div className="self-stretch flex flex-row items-start justify-start text-xl">
+                  <div className="flex-1 relative leading-[150%] font-semibold sm:text-left">
+                    Company
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] h-6 flex-1 relative leading-[150%] text-[inherit] inline-block sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Documentation
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Change Log
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Privacy
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Terms
+                  </a>
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col items-start justify-start gap-[10px] text-center md:flex-[unset] md:self-stretch sm:!mb-[40px] sm:flex-[unset] sm:self-stretch">
+                <div className="self-stretch flex flex-row items-start justify-start text-xl">
+                  <div className="flex-1 relative leading-[150%] font-semibold sm:text-left">
+                    Community
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Join Us On Discord
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Explore A Hackathon
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Code Of Conduct
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Brand Assets
+                  </a>
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col items-start justify-start gap-[10px] text-left md:flex-[unset] md:self-stretch sm:flex-[unset] sm:self-stretch">
+                <div className="self-stretch flex flex-row items-start justify-start text-xl">
+                  <div className="flex-1 relative leading-[150%] font-semibold">
+                    Support
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Help
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Refund Policy
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Status
+                  </a>
+                </div>
+                <div className="self-stretch flex flex-row items-start justify-start">
+                  <a
+                    className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                    href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
+                    target="_blank"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {isDoneModalPopupOpen && (
         <PortalPopup
