@@ -1,11 +1,45 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const WhyCodeskPage: FunctionComponent = () => {
+  const navigate = useNavigate();
+
+  const onLogoClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onCoursesClick = useCallback(() => {
+    navigate("/coursepage");
+  }, [navigate]);
+
+  const onQuizzesClick = useCallback(() => {
+    navigate("/quizpage");
+  }, [navigate]);
+
+  const onCompetetionsClick = useCallback(() => {
+    navigate("/competetionspage");
+  }, [navigate]);
+
+  const onAboutUsClick = useCallback(() => {
+    navigate("/aboutuspage");
+  }, [navigate]);
+
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-      <Navbar />
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-medium-400 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <Navbar
+        logoColor="#1f95f2"
+        onLogoClick={onLogoClick}
+        onCoursesClick={onCoursesClick}
+        onQuizzesClick={onQuizzesClick}
+        onCompetetionsClick={onCompetetionsClick}
+        onAboutUsClick={onAboutUsClick}
+        coursesColor="#000"
+        competetionsColor="#000"
+        aboutUsColor="#000"
+        quizzesColor="#000"
+      />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
@@ -13,18 +47,14 @@ const WhyCodeskPage: FunctionComponent = () => {
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
             <div className="self-stretch relative leading-[150%]">
-              <p className="m-0">
-                CoDeskLab started with a dream to inspire school kids
-              </p>
-              <p className="m-0">
-                to fall in love with coding and to empower every
-              </p>
-              <p className="m-0">child to build anything they can imagine</p>
+              CoDeskLab started with a dream to inspire school kids to fall in
+              love with coding and to empower every child to build anything they
+              can imagine
             </div>
           </div>
         </div>
         <img
-          className="flex-1 relative max-w-full overflow-hidden h-[516.2px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:order-[1] md:flex-[unset] md:self-stretch"
+          className="flex-1 relative max-w-full overflow-hidden h-[516.2px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:order-[1] md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
           src="/image-58@2x.png"
         />
@@ -175,7 +205,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-lg">
                   <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">
-                    Codex’s founder are tutor and and also the system builder.
+                    CoDesk’s founder are tutor and and also the system builder.
                     We understand what it takes to provide the right education
                     to your child.
                   </div>

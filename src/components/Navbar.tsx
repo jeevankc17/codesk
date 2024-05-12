@@ -1,18 +1,18 @@
 import {
   FunctionComponent,
   useState,
-  useCallback,
+  useMemo,
   type CSSProperties,
+  useCallback,
 } from "react";
-import { useNavigate } from "react-router-dom";
 import DrawerMenus from "./DrawerMenus";
 import PortalDrawer from "./PortalDrawer";
 
 export type NavbarType = {
   /** Style props */
-  coDeskLabColor?: CSSProperties["color"];
-  competetionsColor?: CSSProperties["color"];
+  logoColor?: CSSProperties["color"];
   coursesColor?: CSSProperties["color"];
+  competetionsColor?: CSSProperties["color"];
   aboutUsColor?: CSSProperties["color"];
   quizzesColor?: CSSProperties["color"];
 
@@ -25,39 +25,48 @@ export type NavbarType = {
 };
 
 const Navbar: FunctionComponent<NavbarType> = ({
-  coDeskLabColor,
+  logoColor,
   onLogoClick,
   onCoursesClick,
   onQuizzesClick,
   onCompetetionsClick,
   onAboutUsClick,
-  competetionsColor,
   coursesColor,
+  competetionsColor,
   aboutUsColor,
   quizzesColor,
 }) => {
-  const navigate = useNavigate();
+  const coDeskLabStyle: CSSProperties = useMemo(() => {
+    return {
+      color: logoColor,
+    };
+  }, [logoColor]);
+
+  const coursesStyle: CSSProperties = useMemo(() => {
+    return {
+      color: coursesColor,
+    };
+  }, [coursesColor]);
+
+  const competetionsStyle: CSSProperties = useMemo(() => {
+    return {
+      color: competetionsColor,
+    };
+  }, [competetionsColor]);
+
+  const aboutUsStyle: CSSProperties = useMemo(() => {
+    return {
+      color: aboutUsColor,
+    };
+  }, [aboutUsColor]);
+
+  const quizzesStyle: CSSProperties = useMemo(() => {
+    return {
+      color: quizzesColor,
+    };
+  }, [quizzesColor]);
+
   const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
-
-  const onLogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onCoursesClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onQuizzesClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
-  const onCompetetionsClick = useCallback(() => {
-    navigate("/competetionspage");
-  }, [navigate]);
-
-  const onAboutUsClick = useCallback(() => {
-    navigate("/aboutuspage");
-  }, [navigate]);
 
   const openDrawerMenus = useCallback(() => {
     setDrawerMenusOpen(true);
@@ -75,7 +84,10 @@ const Navbar: FunctionComponent<NavbarType> = ({
             className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center"
             onClick={onLogoClick}
           >
-            <div className="relative text-13xl tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left">
+            <div
+              className="relative text-13xl tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left"
+              style={coDeskLabStyle}
+            >
               CoDeskLab
             </div>
           </button>
@@ -85,7 +97,10 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
                 onClick={onCoursesClick}
               >
-                <div className="relative text-sm leading-[150%] font-body-xl-600 text-black1 text-left">
+                <div
+                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  style={coursesStyle}
+                >
                   Courses
                 </div>
               </button>
@@ -93,7 +108,10 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
                 onClick={onQuizzesClick}
               >
-                <div className="relative text-sm leading-[150%] font-body-xl-600 text-black1 text-left">
+                <div
+                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  style={quizzesStyle}
+                >
                   Quizzes
                 </div>
               </button>
@@ -101,7 +119,10 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
                 onClick={onCompetetionsClick}
               >
-                <div className="relative text-sm leading-[150%] font-body-xl-600 text-black1 text-left">
+                <div
+                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  style={competetionsStyle}
+                >
                   Competetions
                 </div>
               </button>
@@ -109,7 +130,10 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
                 onClick={onAboutUsClick}
               >
-                <div className="relative text-sm leading-[150%] font-body-xl-600 text-black1 text-left">
+                <div
+                  className="relative text-sm leading-[150%] font-body-medium-400 text-black text-left"
+                  style={aboutUsStyle}
+                >
                   About Us
                 </div>
               </button>

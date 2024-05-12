@@ -7,34 +7,75 @@ import Footer from "../components/Footer";
 const OrganizersCompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
+  const onLogoClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onCoursesClick = useCallback(() => {
+    navigate("/coursepage");
+  }, [navigate]);
+
+  const onQuizzesClick = useCallback(() => {
+    navigate("/quizpage");
+  }, [navigate]);
+
+  const onCompetetionsClick = useCallback(() => {
+    navigate("/competetionspage");
+  }, [navigate]);
+
+  const onAboutUsClick = useCallback(() => {
+    navigate("/aboutuspage");
+  }, [navigate]);
+
   const onHackathonsTabClick = useCallback(() => {
-    navigate("/hackathonscompetetionspage");
+    navigate("/competetions/hackathons");
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate("/projectscompetetionspage");
+    navigate("/competetions/projects");
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate("/builderscompetetionspage");
+    navigate("/competetions/builders");
   }, [navigate]);
 
   const onOrganizersTabContainerClick = useCallback(() => {
-    navigate("/organizerscompetetionspage");
+    navigate("/competetions/organizers");
   }, [navigate]);
+
+  const onScrollBannerButtonClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='bodyContainer']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const onTakeAQuizNowButtonClick = useCallback(() => {
     navigate("/quizpage");
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
-      <Navbar />
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-medium-400 sm:py-[30px] sm:px-[5px] sm:box-border">
+      <Navbar
+        logoColor="#1f95f2"
+        onLogoClick={onLogoClick}
+        onCoursesClick={onCoursesClick}
+        onQuizzesClick={onQuizzesClick}
+        onCompetetionsClick={onCompetetionsClick}
+        onAboutUsClick={onAboutUsClick}
+        coursesColor="#000"
+        competetionsColor="#000"
+        aboutUsColor="#000"
+        quizzesColor="#000"
+      />
       <CodewarTabs
         onHackathonsTabClick={onHackathonsTabClick}
         onProjectsTabClick={onProjectsTabClick}
         onBuildersTabClick={onBuildersTabClick}
         onOrganizersTabContainerClick={onOrganizersTabContainerClick}
+        hackathonsTabBackgroundColor="#fff"
+        buildersTabBackgroundColor="#fff"
+        projectsTabBackgroundColor="#fff"
         organizersTabBackgroundColor="#0063B0"
       />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
@@ -57,6 +98,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
           <button
             className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
+            onClick={onScrollBannerButtonClick}
           >
             <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
               View a Organizers
@@ -64,12 +106,12 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
           </button>
         </div>
         <img
-          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch"
+          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
           src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] z-[1] text-base text-black1 lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-base text-black lg:flex-col md:flex-col">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2] text-center text-13xl">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
@@ -84,10 +126,10 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <button
-              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black1 md:w-full sm:pl-0 sm:pr-0 sm:box-border"
+              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black1 text-center inline-block max-h-[58px]">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-medium-400 text-black text-center inline-block max-h-[58px] sm:text-xs">
                 Most Hackathons Organized
               </div>
             </button>
@@ -102,11 +144,11 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <div className="flex-1 rounded bg-nero flex flex-row flex-wrap items-center justify-start gap-[10px] text-5xl text-darkslategray-200 font-space-mono">
-              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black1 font-body-xl-600">
+              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black font-body-medium-400">
                 <img
                   className="w-[100px] rounded h-[100px] overflow-hidden shrink-0 object-cover"
                   alt=""
-                  src="/iconpng1@2x.png"
+                  src="/iconpng11@2x.png"
                 />
                 <div className="flex-1 relative leading-[150%] font-semibold">
                   CoDesk Innovations
@@ -122,7 +164,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       10
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-400">
                     <div className="self-stretch relative leading-[130%]">
                       hackathons
                     </div>
@@ -139,7 +181,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       250
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-400">
                     <div className="self-stretch relative leading-[130%]">
                       Projects
                     </div>
@@ -156,7 +198,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       1500$
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-400">
                     <div className="self-stretch relative leading-[130%]">
                       Prize worth
                     </div>
@@ -172,7 +214,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
               alt=""
-              src="/image@2x.png"
+              src="/image3@2x.png"
             />
             <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-base border-[1px] border-solid border-nero">
               <div className="w-full relative leading-[150%] inline-block max-w-[320px]">
@@ -196,6 +238,10 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
+        <div
+          className="absolute left-[0] top-[-140px]"
+          data-scroll-to="bodyContainer"
+        />
       </div>
       <Footer />
     </div>

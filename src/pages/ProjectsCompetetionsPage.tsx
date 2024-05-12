@@ -1,25 +1,53 @@
 import { FunctionComponent, useCallback } from "react";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import CodewarTabs from "../components/CodewarTabs";
 import Footer from "../components/Footer";
 
 const ProjectsCompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
+  const onLogoClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onCoursesClick = useCallback(() => {
+    navigate("/coursepage");
+  }, [navigate]);
+
+  const onQuizzesClick = useCallback(() => {
+    navigate("/quizpage");
+  }, [navigate]);
+
+  const onCompetetionsClick = useCallback(() => {
+    navigate("/competetionspage");
+  }, [navigate]);
+
+  const onAboutUsClick = useCallback(() => {
+    navigate("/aboutuspage");
+  }, [navigate]);
+
   const onHackathonsTabClick = useCallback(() => {
-    navigate("/hackathonscompetetionspage");
+    navigate("/competetions/hackathons");
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate("/projectscompetetionspage");
+    navigate("/competetions/projects");
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate("/builderscompetetionspage");
+    navigate("/competetions/builders");
   }, [navigate]);
 
   const onOrganizersTabContainerClick = useCallback(() => {
-    //TODO: button link
+    navigate("/competetions/organizers");
+  }, [navigate]);
+
+  const onScrollBannerButtonClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='bodyContainer']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
   }, []);
 
   const onViewProjectButtonClick = useCallback(() => {
@@ -31,46 +59,30 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-lg text-aqua-deep font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
-      <Navbar />
-      <div className="self-stretch h-[65px] rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] sticky top-[77] z-[3] sm:pl-0 sm:pr-0 sm:box-border">
-        <button
-          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
-          autoFocus={true}
-          onClick={onHackathonsTabClick}
-        >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
-            Hackathons
-          </div>
-        </button>
-        <button
-          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
-          autoFocus={true}
-          onClick={onProjectsTabClick}
-        >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
-            Projects
-          </div>
-        </button>
-        <button
-          className="cursor-pointer py-[9px] px-5 bg-nero self-stretch w-[130px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
-          autoFocus={true}
-          onClick={onBuildersTabClick}
-        >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px] md:text-xs sm:text-xs">
-            Builders
-          </div>
-        </button>
-        <div
-          className="self-stretch w-[130px] rounded bg-nero box-border flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
-          onClick={onOrganizersTabContainerClick}
-        >
-          <div className="relative leading-[150%] font-semibold inline-block max-h-[58px] md:text-xs sm:text-xs">
-            Organizers
-          </div>
-        </div>
-      </div>
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-medium-400 sm:py-[30px] sm:px-[5px] sm:box-border">
+      <Navbar
+        logoColor="#1f95f2"
+        onLogoClick={onLogoClick}
+        onCoursesClick={onCoursesClick}
+        onQuizzesClick={onQuizzesClick}
+        onCompetetionsClick={onCompetetionsClick}
+        onAboutUsClick={onAboutUsClick}
+        coursesColor="#000"
+        competetionsColor="#000"
+        aboutUsColor="#000"
+        quizzesColor="#000"
+      />
+      <CodewarTabs
+        onHackathonsTabClick={onHackathonsTabClick}
+        onProjectsTabClick={onProjectsTabClick}
+        onBuildersTabClick={onBuildersTabClick}
+        onOrganizersTabContainerClick={onOrganizersTabContainerClick}
+        hackathonsTabBackgroundColor="#fff"
+        buildersTabBackgroundColor="#fff"
+        projectsTabBackgroundColor="#0063B0"
+        organizersTabBackgroundColor="#fff"
+      />
+      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
@@ -89,6 +101,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
           <button
             className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
+            onClick={onScrollBannerButtonClick}
           >
             <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
               View a Projects
@@ -96,12 +109,12 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
           </button>
         </div>
         <img
-          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch"
+          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
           src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] z-[1] text-13xl text-black1 lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-13xl text-black lg:flex-col md:flex-col">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2]">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
@@ -114,10 +127,10 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
               <div className="relative leading-[150%]">Sort projects by</div>
             </div>
             <button
-              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black1 md:w-full sm:pl-0 sm:pr-0 sm:box-border"
+              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black1 text-center inline-block max-h-[58px]">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-medium-400 text-black text-center inline-block max-h-[58px] sm:text-xs">
                 Most viewed
               </div>
             </button>
@@ -157,7 +170,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[10px] text-left text-xs text-black1">
+                  <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[10px] text-left text-xs text-black">
                     <div className="rounded-lg bg-cornflowerblue flex flex-col items-start justify-start p-[5px]">
                       <div className="relative leading-[130%]">Scratch</div>
                     </div>
@@ -171,7 +184,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-chateau-green w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero md:w-full sm:w-full"
                 onClick={onViewProjectButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-400 text-nero text-center inline-block max-h-[58px]">
                   View Projects
                 </div>
               </button>
@@ -184,7 +197,7 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
               alt=""
-              src="/image@2x.png"
+              src="/image3@2x.png"
             />
             <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-base border-[1px] border-solid border-nero">
               <div className="w-full relative leading-[150%] inline-block max-w-[320px]">
@@ -208,6 +221,10 @@ const ProjectsCompetetionsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
+        <div
+          className="absolute left-[0] top-[-140px]"
+          data-scroll-to="bodyContainer"
+        />
       </div>
       <Footer />
     </div>

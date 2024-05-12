@@ -109,7 +109,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
           </div>
           <div className="flex flex-col items-start justify-start">
             <div className="relative leading-[18px]">Hello</div>
-            <b className="relative text-xl leading-[30px] text-black1">
+            <b className="relative text-xl leading-[30px] text-black">
               CoDeskLab
             </b>
           </div>
@@ -125,7 +125,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/houseline.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Home
             </div>
           </button>
@@ -138,7 +138,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/info.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               About Us
             </div>
           </button>
@@ -151,7 +151,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/video.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Courses
             </div>
           </button>
@@ -164,7 +164,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/book--undefined--glyph-undefined1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               School Partnerships
             </div>
           </button>
@@ -175,9 +175,9 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
             <img
               className="w-6 relative h-[19.5px]"
               alt=""
-              src="/vector1.svg"
+              src="/vector11.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Quizzes
             </div>
           </button>
@@ -190,7 +190,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/flagbannerfold.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Competetion
             </div>
           </button>
@@ -203,7 +203,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Worksheets
             </div>
           </button>
@@ -216,7 +216,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Blogs
             </div>
           </button>
@@ -229,7 +229,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/celltower1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Projects
             </div>
           </button>
@@ -242,7 +242,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/question1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Why CoDesk?
             </div>
           </button>
@@ -255,7 +255,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/chalkboardteacher1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Careers
             </div>
           </button>
@@ -268,7 +268,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/lockkeyopen.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Login
             </div>
           </button>
@@ -281,7 +281,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/cashregister.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Register
             </div>
           </button>
@@ -294,7 +294,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/userswitch.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black text-left">
+            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
               Instructor Login
             </div>
           </button>
