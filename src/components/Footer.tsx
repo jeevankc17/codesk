@@ -16,7 +16,7 @@ const Footer: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row items-start justify-start text-lg text-nero">
-            <div className="h-auto flex-1 relative leading-[150%] inline-block md:text-left sm:text-left">
+            <div className="flex-1 relative leading-[150%] inline-block md:text-left sm:text-left">
               The CoDesk is on a mission to inspire school kids in Nepal to fall
               in love with coding. Coding is proven to develop creativity,
               logical thinking, and problem-solving skills in kids. It's an
