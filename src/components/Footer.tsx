@@ -2,21 +2,21 @@ import { FunctionComponent } from "react";
 
 const Footer: FunctionComponent = () => {
   return (
-    <div className="self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black font-body-xl-600">
+    <div className="self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black font-body-medium-600">
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
         alt=""
         src="/subscribe-section-background@2x.png"
       />
-      <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col">
+      <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col sm:gap-[5px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
           <div className="self-stretch flex flex-row items-start justify-start">
-            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
+            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-left">
               CoDesk
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-start justify-start text-lg text-nero">
-            <div className="flex-1 relative leading-[150%] inline-block md:text-left sm:text-left">
+          <div className="self-stretch flex flex-row items-start justify-start h-auto text-lg text-nero">
+            <div className="h-auto flex-1 relative leading-[150%] inline-block md:text-left sm:text-left">
               The CoDesk is on a mission to inspire school kids in Nepal to fall
               in love with coding. Coding is proven to develop creativity,
               logical thinking, and problem-solving skills in kids. It's an

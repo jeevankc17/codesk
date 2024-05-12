@@ -130,7 +130,7 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black font-body-xl-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black font-body-medium-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#FF5A43"
           onLogoClick={onLogoClick}
@@ -141,7 +141,7 @@ const HomePage: FunctionComponent = () => {
         />
         <header className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[17] text-left text-29xl text-nero font-inter lg:flex-col md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-start justify-start p-[15px] gap-[15px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
-            <div className="self-stretch flex flex-col items-start justify-start font-body-xl-600">
+            <div className="self-stretch flex flex-col items-start justify-start font-body-medium-600">
               <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
                 Coding classes for kids and teenagers of Nepal
               </div>
@@ -153,7 +153,7 @@ const HomePage: FunctionComponent = () => {
                     1200+
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-base font-body-xl-600">
+                <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-base font-body-medium-600">
                   <div className="self-stretch relative leading-[24px]">
                     Students
                   </div>
@@ -165,7 +165,7 @@ const HomePage: FunctionComponent = () => {
                     5+
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start relative text-base font-body-xl-600">
+                <div className="self-stretch flex flex-col items-start justify-start relative text-base font-body-medium-600">
                   <div className="relative leading-[24px] z-[0]">Districts</div>
                   <div className="w-6 absolute !m-[0] bottom-[0px] left-[0px] box-border h-px z-[1] border-b-[1px] border-solid border-silver" />
                 </div>
@@ -190,9 +190,9 @@ const HomePage: FunctionComponent = () => {
             src="/image-5@2x.png"
           />
         </header>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-xl-600 sm:pl-0 sm:pr-0 sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-medium-600 sm:pl-0 sm:pr-0 sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center h-auto">
-            <div className="self-stretch relative leading-[120%] font-semibold inline-block sm:text-9xl">
+            <div className="self-stretch h-auto relative leading-[120%] font-semibold inline-block sm:text-9xl">
               <span>Learn coding</span>
               <span className="text-black">{` from the `}</span>
               <span>top Nepali IT instructors</span>
@@ -317,7 +317,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap sm:text-9xl">
               With CoDesk, your child’s future is on safe hands!
@@ -541,7 +541,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               Choose a coding course that excites childs
@@ -752,7 +752,7 @@ const HomePage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onShowAllCoursesClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show All Courses
               </div>
             </button>
@@ -950,7 +950,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onKnowPricingButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Know Pricing
               </div>
             </button>
@@ -1035,7 +1035,7 @@ const HomePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={onApplyNowButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                   Apply Now
                 </div>
               </button>
@@ -1047,7 +1047,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onShowCompetetionsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show Competetions
               </div>
             </button>
@@ -1143,7 +1143,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onShowVideosButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show Videos
               </div>
             </button>
@@ -1337,7 +1337,7 @@ const HomePage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onShowReviewsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show reviews
               </div>
             </button>
@@ -1384,7 +1384,7 @@ const HomePage: FunctionComponent = () => {
             </button>
           </div>
         </div>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               See amazing projects created by our students
@@ -1395,7 +1395,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image1@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1432,7 +1432,7 @@ const HomePage: FunctionComponent = () => {
                     className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButtonClick}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1448,7 +1448,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image3@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1485,7 +1485,7 @@ const HomePage: FunctionComponent = () => {
                     className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButton1Click}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1494,14 +1494,14 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
                 alt=""
-                src="/rectangle-2@2x.png"
+                src="/rectangle-21@2x.png"
               />
             </div>
             <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image4@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1538,7 +1538,7 @@ const HomePage: FunctionComponent = () => {
                     className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButton2Click}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1547,7 +1547,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
                 alt=""
-                src="/rectangle-2@2x.png"
+                src="/rectangle-22@2x.png"
               />
             </div>
           </div>
@@ -1557,7 +1557,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onSeeMoreProjectsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 See more projects
               </div>
             </button>
@@ -1624,7 +1624,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[146px] relative rounded-61xl-5 h-[154px] object-cover"
                   alt=""
-                  src="/rectangle-1@2x.png"
+                  src="/rectangle-11@2x.png"
                 />
               </div>
               <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
@@ -1695,7 +1695,7 @@ const HomePage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onMeetOurTeamButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Meet our team
               </div>
             </button>
@@ -1771,7 +1771,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onKnowMoreCodeskButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Know more CoDesk
               </div>
             </button>
@@ -1905,7 +1905,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onAskYOurDoubtButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                 Ask your doubt?
               </div>
             </button>
@@ -1954,23 +1954,23 @@ const HomePage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
             <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-nero md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero1 text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero1 text-left">
                   Fill in your details to and reach out to us!
                 </div>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[10px]">
                 <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-medium-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Your name"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-medium-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Email address"
                   type="text"
                 />
                 <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="[outline:none] font-body-medium-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
                   placeholder="Phone Number"
                   type="text"
                 />
@@ -1979,7 +1979,7 @@ const HomePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
                 </div>
               </button>
@@ -2055,7 +2055,7 @@ const HomePage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onSupportUsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
                 support us
               </div>
             </button>

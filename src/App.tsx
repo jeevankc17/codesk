@@ -6,14 +6,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import CoursePage from "./pages/CoursePage";
 import CompetetionsPage from "./pages/CompetetionsPage";
+import CoursePage from "./pages/CoursePage";
 import CurriculumByCoursePage from "./pages/CurriculumByCoursePage";
 import AboutUsPage from "./pages/AboutUsPage";
-import HackathonsCompetetionsPage from "./pages/HackathonsCompetetionsPage";
-import ProjectsCompetetionsPage from "./pages/ProjectsCompetetionsPage";
-import BuildersCompetetionsPage from "./pages/BuildersCompetetionsPage";
-import OrganizersCompetetionsPage from "./pages/OrganizersCompetetionsPage";
 import ReviewPage from "./pages/ReviewPage";
 import CommingSoonPage from "./pages/CommingSoonPage";
 import PartnershipPage from "./pages/PartnershipPage";
@@ -24,6 +20,10 @@ import QuizPage from "./pages/QuizPage";
 import WorksheetPage from "./pages/WorksheetPage";
 import CarrerPage from "./pages/CarrerPage";
 import QuizByCourseIDPage from "./pages/QuizByCourseIDPage";
+import HackathonsCompetetionsPage from "./pages/HackathonsCompetetionsPage";
+import ProjectsCompetetionsPage from "./pages/ProjectsCompetetionsPage";
+import BuildersCompetetionsPage from "./pages/BuildersCompetetionsPage";
+import OrganizersCompetetionsPage from "./pages/OrganizersCompetetionsPage";
 
 function App() {
   const action = useNavigationType();
@@ -31,7 +31,6 @@ function App() {
   const pathname = location.pathname;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (action !== "POP") {
       window.scrollTo(0, 0);
     }
@@ -46,11 +45,11 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/coursepage":
+      case "/competetionspage":
         title = "";
         metaDescription = "";
         break;
-      case "/competetionspage":
+      case "/coursepage":
         title = "";
         metaDescription = "";
         break;
@@ -59,22 +58,6 @@ function App() {
         metaDescription = "";
         break;
       case "/aboutuspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/hackathonscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/projectscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/builderscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/organizerscompetetionspage":
         title = "";
         metaDescription = "";
         break;
@@ -118,6 +101,22 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/hackathonscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/projectscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/builderscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/organizerscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -137,13 +136,23 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/coursepage" element={<CoursePage />} />
       <Route path="/competetionspage" element={<CompetetionsPage />} />
+      <Route path="/coursepage" element={<CoursePage />} />
       <Route
         path="/curriculumbycoursepage"
         element={<CurriculumByCoursePage />}
       />
       <Route path="/aboutuspage" element={<AboutUsPage />} />
+      <Route path="/reviewpage" element={<ReviewPage />} />
+      <Route path="/commingsoonpage" element={<CommingSoonPage />} />
+      <Route path="/partnershippage" element={<PartnershipPage />} />
+      <Route path="/blogpage" element={<BlogPage />} />
+      <Route path="/projectpage" element={<ProjectPage />} />
+      <Route path="/whycodeskpage" element={<WhyCodeskPage />} />
+      <Route path="/quizpage" element={<QuizPage />} />
+      <Route path="/worksheetpage" element={<WorksheetPage />} />
+      <Route path="/applyteacherpage" element={<CarrerPage />} />
+      <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
       <Route
         path="/hackathonscompetetionspage"
         element={<HackathonsCompetetionsPage />}
@@ -160,16 +169,6 @@ function App() {
         path="/organizerscompetetionspage"
         element={<OrganizersCompetetionsPage />}
       />
-      <Route path="/reviewpage" element={<ReviewPage />} />
-      <Route path="/commingsoonpage" element={<CommingSoonPage />} />
-      <Route path="/partnershippage" element={<PartnershipPage />} />
-      <Route path="/blogpage" element={<BlogPage />} />
-      <Route path="/projectpage" element={<ProjectPage />} />
-      <Route path="/whycodeskpage" element={<WhyCodeskPage />} />
-      <Route path="/quizpage" element={<QuizPage />} />
-      <Route path="/worksheetpage" element={<WorksheetPage />} />
-      <Route path="/applyteacherpage" element={<CarrerPage />} />
-      <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
     </Routes>
   );
 }

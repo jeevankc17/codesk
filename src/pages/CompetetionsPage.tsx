@@ -28,19 +28,19 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onHackathonsTabClick = useCallback(() => {
-    navigate("/competetionspage/hackathons");
+    navigate("/hackathonscompetetionspage");
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate("/competetionspage/projects");
+    navigate("/projectscompetetionspage");
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate("/competetionspage/builders");
+    navigate("/builderscompetetionspage");
   }, [navigate]);
 
   const onOrganizersTabContainerClick = useCallback(() => {
-    navigate("/competetionspage/organizers");
+    navigate("/organizerscompetetionspage");
   }, [navigate]);
 
   const onScrollBannerButtonClick = useCallback(() => {
@@ -55,7 +55,7 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black font-body-medium-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -75,8 +75,8 @@ const CompetetionsPage: FunctionComponent = () => {
         onBuildersTabClick={onBuildersTabClick}
         onOrganizersTabContainerClick={onOrganizersTabContainerClick}
         buildersTabBackgroundColor="#fff"
-        projectsTabBackgroundColor="#fff"
         hackathonsTabBackgroundColor="#fff"
+        projectsTabBackgroundColor="#fff"
       />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
@@ -101,7 +101,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
               Our Four Pillars
             </div>
           </button>
@@ -263,7 +263,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onTryAHackathonsButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
               Try A Hackathons
             </div>
           </button>

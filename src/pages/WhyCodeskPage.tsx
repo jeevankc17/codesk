@@ -27,7 +27,7 @@ const WhyCodeskPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}

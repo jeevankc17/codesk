@@ -36,7 +36,7 @@ const CarrerPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -70,7 +70,7 @@ const CarrerPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
               Read Guidelines
             </div>
           </button>
@@ -81,7 +81,7 @@ const CarrerPage: FunctionComponent = () => {
           src="/image-511@2x.png"
         />
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
           <div className="self-stretch h-[86px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
             Become a teacher in CoDesk doesn’t mean you will end up your coding
@@ -610,7 +610,7 @@ const CarrerPage: FunctionComponent = () => {
             className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
               Become A Teacher
             </div>
           </button>

@@ -132,7 +132,7 @@ const CoursePage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -342,7 +342,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -501,7 +501,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButton1Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -660,7 +660,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButton2Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -819,7 +819,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButton3Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -983,7 +983,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButton4Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -1144,7 +1144,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButton5Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -1183,7 +1183,7 @@ const CoursePage: FunctionComponent = () => {
                   Introduction to Basic Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-medium-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A perfect course for kids who want to test drive to coding
                   road.
@@ -1202,7 +1202,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-medium-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1414,7 +1414,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
                 onClick={onDownloadButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
@@ -1431,7 +1431,7 @@ const CoursePage: FunctionComponent = () => {
                   Intermidiate Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-medium-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A course for those who want to master the art of coding and
                   create a better future through code.
@@ -1450,7 +1450,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-medium-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1662,7 +1662,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
                 onClick={onDownloadButton1Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
@@ -1679,7 +1679,7 @@ const CoursePage: FunctionComponent = () => {
                   Advanced Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-medium-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A perfect course for kids who want to use coding to solve
                   real-world problems and create a better future.
@@ -1698,7 +1698,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-medium-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1910,14 +1910,14 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
                 onClick={onDownloadButton2Click}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
           </div>
         </div>
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-17xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
           <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
             Coding Workshops
@@ -1993,7 +1993,7 @@ const CoursePage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
               alt=""
-              src="/image4@2x.png"
+              src="/image41@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
               <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">

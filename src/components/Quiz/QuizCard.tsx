@@ -19,7 +19,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
   }, [navigate]);
 
   return (
-    <div className="w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black font-body-xl-600">
+    <div className="w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black font-body-medium-600">
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
         alt=""
@@ -67,7 +67,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
           onClick={onViewQuizButtonClick}
           id={courseId}
         >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+          <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-aqua-deep text-center inline-block max-h-[58px]">
             View Quiz
           </div>
         </button>
