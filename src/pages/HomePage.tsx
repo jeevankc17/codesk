@@ -192,7 +192,7 @@ const HomePage: FunctionComponent = () => {
         </header>
         <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-xl-600 sm:pl-0 sm:pr-0 sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center h-auto">
-            <div className="self-stretch h-[86px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
+            <div className="self-stretch relative leading-[120%] font-semibold inline-block sm:text-9xl">
               <span>Learn coding</span>
               <span className="text-black">{` from the `}</span>
               <span>top Nepali IT instructors</span>
