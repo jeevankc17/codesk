@@ -48,9 +48,9 @@ const CommingSoonPage: FunctionComponent = () => {
         <div className="flex-1 flex flex-col items-start justify-start gap-[40px] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
             <div className="self-stretch relative leading-[150%] font-semibold">
-              COMING SOON
+             "We're all set, just waiting on you."
             </div>
-            <div className="self-stretch relative text-29xl leading-[120%] font-medium text-gray-900 sm:text-5xl">
+            <div className="self-stretch relative text-18xl leading-[120%] font-medium text-gray-900 sm:text-5xl">
               "Hey, hold tight! The goodies you're after are strictly for our enrolled kiddos, so it's time to get your school onboard! Here at the EdTech platform, we're all about teaching coding to cool kids like you. So, if your school isn't in the loop yet, let's get them signed up pronto! Once you're part of the squad, you'll unlock a world of awesome coding adventures just waiting for you to dive in."
             </div>
           </div>
