@@ -180,7 +180,7 @@ const HomePage: FunctionComponent = () => {
                 />
               </div>
               <div className="flex-1 flex flex-row items-start justify-start">
-                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9868296800 for help & questions.`}</div>
+                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9851150547 for help & questions.`}</div>
               </div>
             </div>
           </div>
