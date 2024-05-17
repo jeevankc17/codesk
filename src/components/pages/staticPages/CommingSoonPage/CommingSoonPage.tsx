@@ -51,8 +51,7 @@ const CommingSoonPage: FunctionComponent = () => {
               COMING SOON
             </div>
             <div className="self-stretch relative text-29xl leading-[120%] font-semibold text-gray-900 sm:text-5xl">
-              There is no record on our Database currently, we are going to
-              launch our feature very soon. Stay tune
+              "Hey, hold tight! The goodies you're after are strictly for our enrolled kiddos, so it's time to get your school onboard! Here at the EdTech platform, we're all about teaching coding to cool kids like you. So, if your school isn't in the loop yet, let's get them signed up pronto! Once you're part of the squad, you'll unlock a world of awesome coding adventures just waiting for you to dive in."
             </div>
           </div>
           <button
