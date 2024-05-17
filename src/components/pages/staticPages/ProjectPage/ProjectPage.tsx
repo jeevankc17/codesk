@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../staticPageCommon/Navbar";
-import ProjectCards from "../../../staticPageCommon/Project/ProjectCards";
+import ProjectCards from "./ProjectCards";
 import Footer from "../../../staticPageCommon/Footer";
 
 const ProjectPage: FunctionComponent = () => {

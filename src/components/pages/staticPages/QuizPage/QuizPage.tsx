@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../staticPageCommon/Navbar";
-import QuizCards from "../../../staticPageCommon/Quiz/QuizCards";
+import QuizCards from "./QuizCards";
 import Footer from "../../../staticPageCommon/Footer";
 
 const QuizPage: FunctionComponent = () => {
