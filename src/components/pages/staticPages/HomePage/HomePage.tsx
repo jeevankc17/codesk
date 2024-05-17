@@ -6,11 +6,11 @@ import {
   Icon,
   Typography,
 } from "@mui/material";
-import DoneModal from "../components/DoneModal";
-import PortalPopup from "../components/PortalPopup";
+import DoneModal from "../../../staticPageCommon/DoneModal";
+import PortalPopup from "../../../staticPageCommon/PortalPopup";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import Footer from "../../../staticPageCommon/Footer";
 
 const HomePage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
@@ -1547,7 +1547,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
                 alt=""
-                src="/rectangle-2@2x.png"
+                src="/rectangle-22@2x.png"
               />
             </div>
           </div>

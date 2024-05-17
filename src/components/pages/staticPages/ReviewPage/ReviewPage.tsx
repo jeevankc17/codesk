@@ -1,10 +1,10 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import QuizCards from "../components/Quiz/QuizCards";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import ReviewCards from "../../../staticPageCommon/Review/ReviewCards";
+import Footer from "../../../staticPageCommon/Footer";
 
-const QuizPage: FunctionComponent = () => {
+const ReviewPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
@@ -27,12 +27,12 @@ const QuizPage: FunctionComponent = () => {
     navigate("/aboutuspage");
   }, [navigate]);
 
-  const onScrollBannerButtonClick = useCallback(() => {
+  const onScrollBannerButtonvClick = useCallback(() => {
     const anchor = document.querySelector(
-      "[data-scroll-to='quizzesContainer']"
+      "[data-scroll-to='worksheetSectionContainer']"
     );
     if (anchor) {
-      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+      anchor.scrollIntoView({ block: "start" });
     }
   }, []);
 
@@ -48,54 +48,50 @@ const QuizPage: FunctionComponent = () => {
         coursesColor="#000"
         competetionsColor="#000"
         aboutUsColor="#000"
-        quizzesColor="#FF5A43"
+        quizzesColor="#000"
       />
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
-              Coding Quizes for Kids
-            </div>
+            <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap sm:text-13xl">{`Testimonials  & Reviews By Our Little Coders And their well wishers`}</div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
             <div className="self-stretch relative leading-[150%]">
-              Fun way to learn coding for kids using quizzes
+              Hear our students their parents and their teachers share the many
+              reasons why they love CoDesk
             </div>
           </div>
           <button
             className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
-            onClick={onScrollBannerButtonClick}
+            onClick={onScrollBannerButtonvClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
-              View a Quizzes
+            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
+              View Testimonials
             </div>
           </button>
         </div>
         <img
-          className="w-[663.6px] relative h-[500px] object-cover lg:order-[1] sm:h-[300px]"
+          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
-          src="/image-55@2x.png"
+          src="/image-54@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black">
+      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] relative z-[1] text-center text-[40px] text-black font-inter">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
-              Coding quizzes for kids
-            </div>
+            <div className="flex-1 relative tracking-[-0.01em] leading-[48px] font-semibold whitespace-pre-wrap sm:font-semibold sm:font-body-xl-600 sm:text-9xl">{`Testimonials  & Reviews`}</div>
           </div>
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
+          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm font-body-xl-600">
             <div className="flex-1 relative leading-[150%]">
-              Great collection of fun and interactive coding quizzes for kids to
-              assess and acquire computer science knowledge.
+              Reviews and testimonials from students, parents and teachers
             </div>
           </div>
         </div>
-        <QuizCards />
+        <ReviewCards />
         <div
           className="absolute left-[0] top-[-70px]"
-          data-scroll-to="quizzesContainer"
+          data-scroll-to="worksheetSectionContainer"
         />
       </div>
       <Footer />
@@ -103,4 +99,4 @@ const QuizPage: FunctionComponent = () => {
   );
 };
 
-export default QuizPage;
+export default ReviewPage;

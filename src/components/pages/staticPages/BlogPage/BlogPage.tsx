@@ -1,9 +1,9 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import Footer from "../../../staticPageCommon/Footer";
 
-const WorksheetPage: FunctionComponent = () => {
+const BlogPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
@@ -27,9 +27,7 @@ const WorksheetPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onScrollBannerButtonClick = useCallback(() => {
-    const anchor = document.querySelector(
-      "[data-scroll-to='worksheetsContainer']"
-    );
+    const anchor = document.querySelector("[data-scroll-to='blogsContainer']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
@@ -52,13 +50,13 @@ const WorksheetPage: FunctionComponent = () => {
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
-              Coding Worksheet for Kids
+            <div className="self-stretch h-[58px] relative leading-[120%] font-semibold inline-block sm:text-13xl">
+              Coding Blogs for Kids
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
             <div className="self-stretch relative leading-[150%]">
-              Fun way to learn coding for kids using worksheets
+              Fun way to learn coding for kids reading blogs
             </div>
           </div>
           <button
@@ -67,27 +65,27 @@ const WorksheetPage: FunctionComponent = () => {
             onClick={onScrollBannerButtonClick}
           >
             <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
-              View A Worksheet
+              View A Blog
             </div>
           </button>
         </div>
         <img
           className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
-          src="/image-510@2x.png"
+          src="/image-56@2x.png"
         />
       </div>
       <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
             <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
-              Coding Worksheets for kids
+              Coding blogs for kids
             </div>
           </div>
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
             <div className="flex-1 relative leading-[150%]">
-              Great collection of fun and interactive coding worksheets for kids
-              to assess and acquire computer science knowledge.
+              Great collection of fun and interactive coding blogs for kids to
+              assess and acquire computer science knowledge.
             </div>
           </div>
         </div>
@@ -96,43 +94,42 @@ const WorksheetPage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
               alt=""
-              src="/image110@2x.png"
+              src="/image8@2x.png"
             />
-            <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center border-[1px] border-solid border-nero">
-              <div className="flex-1 relative leading-[150%] font-semibold">
-                Write your name in Binary?
-              </div>
-            </div>
-            <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-base border-[1px] border-solid border-nero">
-              <div className="w-full relative leading-[150%] inline-block max-w-[320px]">
-                A fun activity to help you create words using binary code
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between text-sm border-[1px] border-solid border-nero">
-              <div className="flex flex-col items-start justify-start pt-0 px-0 pb-[7.5px]">
-                <div className="relative leading-[120%] font-semibold">
-                  Age 11 to 14
+            <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] gap-[15px] min-h-[52.5px] border-[1px] border-solid border-nero">
+              <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
+                <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center border-[1px] border-solid border-nero">
+                  <div className="flex-1 relative leading-[150%] font-semibold">
+                    How to build a face recognizer with Scratch coding?
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-row items-center justify-center gap-[2px] text-base">
+                  <div className="w-[84px] relative leading-[150%] whitespace-pre-wrap flex items-center shrink-0">{`Written By:  `}</div>
+                  <div className="flex-1 relative leading-[150%]">
+                    CoDesk Innovations
+                  </div>
                 </div>
               </div>
-              <div className="rounded-11xl bg-cornflowerblue flex flex-col items-start justify-start py-1.5 px-[19.5px] text-nero">
-                <div className="relative leading-[150%] font-medium">
-                  Mathematics
+              <div className="w-80 relative text-base leading-[150%] [display:-webkit-inline-box] items-center overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] max-w-[320px]">
+                Over the last few years, facial recognition technology has grown
+                in popularity. Face detection in psychology refers to the act of
+                identifying and focusing on faces in a scene.
+              </div>
+              <button
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
+                autoFocus={true}
+              >
+                <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
+                  read more
                 </div>
-              </div>
+              </button>
+              <div className="w-80 relative text-sm tracking-[-0.01em] leading-[20px] font-semibold font-inter text-gray1-200 hidden max-w-[320px]" />
             </div>
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-              autoFocus={true}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
-                View a worksheet
-              </div>
-            </button>
           </div>
         </div>
         <div
           className="absolute left-[0] top-[-70px]"
-          data-scroll-to="worksheetsContainer"
+          data-scroll-to="blogsContainer"
         />
       </div>
       <Footer />
@@ -140,4 +137,4 @@ const WorksheetPage: FunctionComponent = () => {
   );
 };
 
-export default WorksheetPage;
+export default BlogPage;

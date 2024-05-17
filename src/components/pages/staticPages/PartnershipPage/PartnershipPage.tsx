@@ -1,9 +1,9 @@
 import { FunctionComponent, useState, useCallback } from "react";
-import DoneModal from "../components/DoneModal";
-import PortalPopup from "../components/PortalPopup";
+import DoneModal from "../../../staticPageCommon/DoneModal";
+import PortalPopup from "../../../staticPageCommon/PortalPopup";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import Footer from "../../../staticPageCommon/Footer";
 
 const PartnershipPage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);

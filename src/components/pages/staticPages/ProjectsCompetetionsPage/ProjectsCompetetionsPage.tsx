@@ -1,8 +1,8 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import CodewarTabs from "../components/CodewarTabs";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import CodewarTabs from "../../../staticPageCommon/CodewarTabs";
+import Footer from "../../../staticPageCommon/Footer";
 
 const ProjectsCompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();

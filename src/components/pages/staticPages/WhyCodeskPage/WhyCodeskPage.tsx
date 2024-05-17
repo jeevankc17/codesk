@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../../staticPageCommon/Navbar";
+import Footer from "../../../staticPageCommon/Footer";
 
 const WhyCodeskPage: FunctionComponent = () => {
   const navigate = useNavigate();
