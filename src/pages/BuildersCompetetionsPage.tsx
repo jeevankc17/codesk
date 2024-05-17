@@ -55,7 +55,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-medium-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -126,7 +126,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
               className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-medium-600 text-black text-center inline-block max-h-[58px] sm:text-xs">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black text-center inline-block max-h-[58px] sm:text-xs">
                 Most Hackathons Attended
               </div>
             </button>
@@ -141,7 +141,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <div className="flex-1 rounded bg-nero flex flex-row flex-wrap items-center justify-start gap-[10px] text-5xl text-darkslategray-200 font-space-mono">
-              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black font-body-medium-600">
+              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black font-body-xl-600">
                 <img
                   className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                   alt=""
@@ -161,7 +161,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
                       128
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       hackathons
                     </div>
@@ -178,7 +178,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
                       32
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       Projects
                     </div>
@@ -195,7 +195,7 @@ const BuildersCompetetionsPage: FunctionComponent = () => {
                       6
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-medium-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
                     <div className="self-stretch relative leading-[130%]">
                       Prizes
                     </div>

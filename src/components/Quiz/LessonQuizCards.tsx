@@ -375,7 +375,7 @@ const LessonQuizCards: FunctionComponent = () => {
     },
   ]);
   return (
-    <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       {quizLessonItems.map((item, index) => (
         <LessonQuizCard
           key={index}

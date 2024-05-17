@@ -52,7 +52,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-base text-black font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-base text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -781,7 +781,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
                     Scratch Programming
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start font-body-medium-600">
+                <div className="self-stretch flex flex-col items-start justify-start font-body-xl-600">
                   <div className="self-stretch relative tracking-[-0.01em] leading-[22px]">
                     <p className="m-0">
                       Learn and excel at coding and craft intricate
@@ -806,13 +806,13 @@ const CurriculumByCoursePage: FunctionComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-2 text-center text-dodger-blue font-body-medium-600">
+                <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-2 text-center text-dodger-blue font-body-xl-600">
                   <div className="w-full relative leading-[150%] inline-block max-w-[384px]">
                     Don't let your child miss out to unlock their potential.
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[2] text-lg font-body-medium-600">
+              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[2] text-lg font-body-xl-600">
                 <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] text-center text-aqua-deep">
                   <div
                     className="self-stretch rounded bg-nero flex flex-row items-center justify-center py-[9px] px-5 gap-[5px] cursor-pointer border-[1px] border-solid border-aqua-deep"
@@ -951,7 +951,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
               An ideal website building course for kids
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-center justify-center py-2.5 px-[50px] text-xl font-body-medium-600">
+          <div className="self-stretch flex flex-row items-center justify-center py-2.5 px-[50px] text-xl font-body-xl-600">
             <div className="flex-1 relative leading-[32px]">
               Learn the principles of website building, start designing stunning
               websites, and add multimedia and complex functionalities to your
@@ -959,7 +959,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 gap-[50px] text-left text-5xl text-aqua-deep font-body-medium-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 gap-[50px] text-left text-5xl text-aqua-deep font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="w-[350px] shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start p-2.5 box-border gap-[10px] max-h-[709px]">
             <div className="self-stretch bg-nero flex flex-col items-start justify-start">
               <div className="self-stretch flex flex-col items-start justify-center">

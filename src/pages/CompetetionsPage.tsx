@@ -55,7 +55,7 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black font-body-medium-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -101,7 +101,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Our Four Pillars
             </div>
           </button>
@@ -263,7 +263,7 @@ const CompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onTryAHackathonsButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-medium-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
               Try A Hackathons
             </div>
           </button>
