@@ -32,6 +32,7 @@ function App() {
   const pathname = location.pathname;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (action !== "POP") {
       window.scrollTo(0, 0);
     }
