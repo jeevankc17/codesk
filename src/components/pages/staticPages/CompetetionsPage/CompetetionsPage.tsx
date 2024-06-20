@@ -109,7 +109,7 @@ const CompetetionsPage: FunctionComponent = () => {
         <img
           className="flex-1 relative max-w-full overflow-hidden h-[516.2px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:order-[1] md:flex-[unset] md:self-stretch sm:h-[300px]"
           alt=""
-          src="/image-5@2x.png"
+          src="/image-512@2x.png"
         />
       </div>
       <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero1 flex flex-col items-center justify-center p-5 gap-[20px] relative z-[3] text-17xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
