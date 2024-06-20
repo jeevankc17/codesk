@@ -5,10 +5,13 @@ import {
   type CSSProperties,
   useCallback,
 } from "react";
+import { useNavigate } from "react-router-dom";
 import DrawerMenus from "./DrawerMenus";
 import PortalDrawer from "./PortalDrawer";
 
 export type NavbarType = {
+  className?: string;
+
   /** Style props */
   logoColor?: CSSProperties["color"];
   coursesColor?: CSSProperties["color"];
@@ -25,6 +28,7 @@ export type NavbarType = {
 };
 
 const Navbar: FunctionComponent<NavbarType> = ({
+  className = "",
   logoColor,
   onLogoClick,
   onCoursesClick,
@@ -66,7 +70,28 @@ const Navbar: FunctionComponent<NavbarType> = ({
     };
   }, [quizzesColor]);
 
+  const navigate = useNavigate();
   const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
+
+  const onLogoClick1 = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onCoursesClick1 = useCallback(() => {
+    navigate("/coursepage");
+  }, [navigate]);
+
+  const onQuizzesClick1 = useCallback(() => {
+    navigate("/quizpage");
+  }, [navigate]);
+
+  const onCompetetionsClick1 = useCallback(() => {
+    navigate("/competetionspage");
+  }, [navigate]);
+
+  const onAboutUsClick1 = useCallback(() => {
+    navigate("/aboutuspage");
+  }, [navigate]);
 
   const openDrawerMenus = useCallback(() => {
     setDrawerMenusOpen(true);
@@ -78,7 +103,9 @@ const Navbar: FunctionComponent<NavbarType> = ({
 
   return (
     <>
-      <div className="self-stretch h-[77px] bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] z-[18] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border">
+      <div
+        className={`self-stretch h-[77px] bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] z-[18] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border ${className}`}
+      >
         <div className="w-[1240px] bg-nero flex flex-row items-center justify-between">
           <button
             className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center"

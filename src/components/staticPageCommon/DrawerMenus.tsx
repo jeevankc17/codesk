@@ -2,10 +2,14 @@ import { FunctionComponent, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export type DrawerMenusType = {
+  className?: string;
   onClose?: () => void;
 };
 
-const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
+const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
+  className = "",
+  onClose,
+}) => {
   const navigate = useNavigate();
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -41,61 +45,53 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
     navigate("/");
   }, [navigate]);
 
-  const onMenuItem1Click = useCallback(() => {
+  const onMenuItemClick1 = useCallback(() => {
     navigate("/aboutuspage");
   }, [navigate]);
 
-  const onMenuItem2Click = useCallback(() => {
+  const onMenuItemClick2 = useCallback(() => {
     navigate("/coursepage");
   }, [navigate]);
 
-  const onMenuItem3Click = useCallback(() => {
+  const onMenuItemClick3 = useCallback(() => {
     navigate("/partnershippage");
   }, [navigate]);
 
-  const onMenuItem4Click = useCallback(() => {
+  const onMenuItemClick4 = useCallback(() => {
     navigate("/quizpage");
   }, [navigate]);
 
-  const onMenuItem5Click = useCallback(() => {
+  const onMenuItemClick5 = useCallback(() => {
     navigate("/competetionspage");
   }, [navigate]);
 
-  const onMenuItem6Click = useCallback(() => {
+  const onMenuItemClick6 = useCallback(() => {
     navigate("/worksheetpage");
   }, [navigate]);
 
-  const onMenuItem7Click = useCallback(() => {
+  const onMenuItemClick7 = useCallback(() => {
     navigate("/blogpage");
   }, [navigate]);
 
-  const onMenuItem8Click = useCallback(() => {
+  const onMenuItemClick8 = useCallback(() => {
     navigate("/projectpage");
   }, [navigate]);
 
-  const onMenuItem9Click = useCallback(() => {
+  const onMenuItemClick9 = useCallback(() => {
     navigate("/whycodeskpage");
   }, [navigate]);
 
-  const onMenuItem10Click = useCallback(() => {
+  const onMenuItemClick10 = useCallback(() => {
     navigate("/applyteacherpage");
   }, [navigate]);
 
-  const onMenuItem11Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onMenuItem12Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onMenuItem13Click = useCallback(() => {
+  const onMenuItemClick11 = useCallback(() => {
     navigate("/commingsoonpage");
   }, [navigate]);
 
   return (
     <div
-      className="w-80 bg-nero flex flex-col items-start justify-start py-5 px-[30px] box-border gap-[138px] [&.animate]:animate-[0.25s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0] h-full max-w-[90%] overflow-auto text-left text-xs text-lightslategray font-roboto"
+      className={`w-80 relative bg-nero flex flex-col items-start justify-start py-5 px-[30px] box-border gap-[138px] [&.animate]:animate-[0.25s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0] h-full max-w-[90%] overflow-auto text-left text-xs text-lightslategray font-components-chip ${className}`}
       data-animate-on-scroll
     >
       <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
@@ -125,176 +121,176 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({ onClose }) => {
               alt=""
               src="/houseline.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Home
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem1Click}
+            onClick={onMenuItemClick1}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/info.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               About Us
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem2Click}
+            onClick={onMenuItemClick2}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/video.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Courses
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem3Click}
+            onClick={onMenuItemClick3}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/book--undefined--glyph-undefined1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               School Partnerships
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem4Click}
+            onClick={onMenuItemClick4}
           >
             <img
               className="w-6 relative h-[19.5px]"
               alt=""
               src="/vector11.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Quizzes
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem5Click}
+            onClick={onMenuItemClick5}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/flagbannerfold.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Competetion
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem6Click}
+            onClick={onMenuItemClick6}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Worksheets
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem7Click}
+            onClick={onMenuItemClick7}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Blogs
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem8Click}
+            onClick={onMenuItemClick8}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/celltower1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Projects
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-center justify-start gap-[16px]"
-            onClick={onMenuItem9Click}
+            onClick={onMenuItemClick9}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/question1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Why CoDesk?
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-center justify-start gap-[16px]"
-            onClick={onMenuItem10Click}
+            onClick={onMenuItemClick10}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/chalkboardteacher1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Careers
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-center justify-start gap-[16px]"
-            onClick={onMenuItem11Click}
+            onClick={onMenuItemClick11}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/lockkeyopen.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Login
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem12Click}
+            onClick={onMenuItemClick11}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/cashregister.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Register
             </div>
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItem13Click}
+            onClick={onMenuItemClick11}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
               src="/userswitch.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-roboto text-black1 text-left">
+            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
               Instructor Login
             </div>
           </button>

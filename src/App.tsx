@@ -24,7 +24,6 @@ import HackathonsCompetetionsPage from "./components/pages/staticPages/Hackathon
 import ProjectsCompetetionsPage from "./components/pages/staticPages/ProjectsCompetetionsPage/ProjectsCompetetionsPage";
 import BuildersCompetetionsPage from "./components/pages/staticPages/BuildersCompetetionsPage/BuildersCompetetionsPage";
 import OrganizersCompetetionsPage from "./components/pages/staticPages/OrganizersCompetetionsPage/OrganizersCompetetionsPage";
-import { getPageMetadata } from "./metadata";
 
 function App() {
   const action = useNavigationType();
@@ -32,7 +31,6 @@ function App() {
   const pathname = location.pathname;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (action !== "POP") {
       window.scrollTo(0, 0);
     }
@@ -40,6 +38,7 @@ function App() {
 
   useEffect(() => {
     const { title, metaDescription } = getPageMetadata(pathname);
+
 
     if (title) {
       document.title = title;
@@ -56,6 +55,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+
       <Route path="/coursepage" element={<CoursePage />} />
       <Route path="/curriculumbycoursepage" element={<CurriculumByCoursePage />} />
       <Route path="/aboutuspage" element={<AboutUsPage />} />
@@ -70,10 +70,22 @@ function App() {
       <Route path="/applyteacherpage" element={<CarrerPage />} />
       <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
       <Route path="/competetionspage" element={<CompetetionsPage />} />
-      <Route path="/hackathonscompetetionspage" element={<HackathonsCompetetionsPage />} />
-      <Route path="/projectscompetetionspage" element={<ProjectsCompetetionsPage />} />
-      <Route path="/builderscompetetionspage" element={<BuildersCompetetionsPage />} />
-      <Route path="/organizerscompetetionspage" element={<OrganizersCompetetionsPage />} />
+      <Route
+        path="/hackathonscompetetionspage"
+        element={<HackathonsCompetetionsPage />}
+      />
+      <Route
+        path="/projectscompetetionspage"
+        element={<ProjectsCompetetionsPage />}
+      />
+      <Route
+        path="/builderscompetetionspage"
+        element={<BuildersCompetetionsPage />}
+      />
+      <Route
+        path="/organizerscompetetionspage"
+        element={<OrganizersCompetetionsPage />}
+      />
     </Routes>
   );
 }
