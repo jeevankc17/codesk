@@ -128,7 +128,7 @@ const HomePage: FunctionComponent = () => {
                 />
               </div>
               <div className="flex-1 flex flex-row items-start justify-start">
-                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9851150547 for help & questions.`}</div>
+                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9868296800 for help & questions.`}</div>
               </div>
             </div>
           </div>
@@ -566,7 +566,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image1@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
@@ -632,7 +632,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image2@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
@@ -812,7 +812,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover hidden z-[1]"
                   alt=""
-                  src="/bestsellingpng@2x.png"
+                  src="/bestsellingpng2@2x.png"
                 />
               </div>
               <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
@@ -1033,7 +1033,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
                 alt=""
-                src="/reason1png@2x.png"
+                src="/reason1png1@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-center justify-center">
                 <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -1054,7 +1054,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
                 alt=""
-                src="/reason1png@2x.png"
+                src="/reason1png2@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-center justify-center">
                 <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -1140,7 +1140,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image@2x.png"
+                    src="/image3@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1197,7 +1197,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image@2x.png"
+                    src="/image4@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1226,7 +1226,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image@2x.png"
+                    src="/image5@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1255,7 +1255,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image@2x.png"
+                    src="/image6@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1343,7 +1343,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image7@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1396,7 +1396,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image8@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1442,14 +1442,14 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
                 alt=""
-                src="/rectangle-2@2x.png"
+                src="/rectangle-21@2x.png"
               />
             </div>
             <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/image9@2x.png"
               />
               <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
@@ -1495,7 +1495,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
                 alt=""
-                src="/rectangle-2@2x.png"
+                src="/rectangle-22@2x.png"
               />
             </div>
           </div>
@@ -1572,7 +1572,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[146px] relative rounded-61xl-5 h-[154px] object-cover"
                   alt=""
-                  src="/rectangle-1@2x.png"
+                  src="/rectangle-11@2x.png"
                 />
               </div>
               <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
