@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import DoneText from "./DoneText";
 
 export type DoneModalType = {
   className?: string;
@@ -11,8 +12,10 @@ const DoneModal: FunctionComponent<DoneModalType> = ({
 }) => {
   return (
     <div
-      className={`w-[297px] relative rounded-3xs bg-aqua-deep h-[298px] max-w-full max-h-full overflow-auto ${className}`}
-    />
+      className={`relative rounded-3xs bg-aqua-deep flex flex-row items-center justify-center max-w-full max-h-full overflow-auto text-center text-29xl text-nero1 font-body-small-500 ${className}`}
+    >
+      <DoneText />
+    </div>
   );
 };
 

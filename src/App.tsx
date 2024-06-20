@@ -19,11 +19,11 @@ import QuizPage from "./components/pages/staticPages/QuizPage/QuizPage";
 import WorksheetPage from "./components/pages/staticPages/WorksheetPage/WorksheetPage";
 import CarrerPage from "./components/pages/staticPages/CarrerPage/CarrerPage";
 import QuizByCourseIDPage from "./components/pages/staticPages/QuizByCourseIDPage/QuizByCourseIDPage";
-import CompetetionsPage from "./components/pages/staticPages/CompetetionsPage/CompetetionsPage";
 import HackathonsCompetetionsPage from "./components/pages/staticPages/HackathonsCompetetionsPage/HackathonsCompetetionsPage";
 import ProjectsCompetetionsPage from "./components/pages/staticPages/ProjectsCompetetionsPage/ProjectsCompetetionsPage";
 import BuildersCompetetionsPage from "./components/pages/staticPages/BuildersCompetetionsPage/BuildersCompetetionsPage";
 import OrganizersCompetetionsPage from "./components/pages/staticPages/OrganizersCompetetionsPage/OrganizersCompetetionsPage";
+import CompetetionsPage from "./components/pages/staticPages/CompetetionsPage/CompetetionsPage";
 
 function App() {
   const action = useNavigationType();
@@ -97,10 +97,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/competetionspage":
-        title = "";
-        metaDescription = "";
-        break;
       case "/hackathonscompetetionspage":
         title = "";
         metaDescription = "";
@@ -114,6 +110,10 @@ function App() {
         metaDescription = "";
         break;
       case "/organizerscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/competetionspage":
         title = "";
         metaDescription = "";
         break;
@@ -152,7 +152,6 @@ function App() {
       <Route path="/worksheetpage" element={<WorksheetPage />} />
       <Route path="/applyteacherpage" element={<CarrerPage />} />
       <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
-      <Route path="/competetionspage" element={<CompetetionsPage />} />
       <Route
         path="/hackathonscompetetionspage"
         element={<HackathonsCompetetionsPage />}
@@ -169,6 +168,7 @@ function App() {
         path="/organizerscompetetionspage"
         element={<OrganizersCompetetionsPage />}
       />
+      <Route path="/competetionspage" element={<CompetetionsPage />} />
     </Routes>
   );
 }

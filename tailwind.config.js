@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        nero: "#fff",
+        nero1: "#fff",
         "footer-header": "#0063b0",
         black: "#000",
         "aqua-deep": "#ff5a43",
@@ -15,7 +15,7 @@ module.exports = {
         "text-primary": "rgba(0, 0, 0, 0.87)",
         "grey-grey-400": "#bdbdbd",
         "grey-grey-700": "#616161",
-        nero1: "#d9d9d9",
+        nero: "#d9d9d9",
         "wwwcodingalcom-mine-shaft": "#3a3a3a",
         lavenderblush: "rgba(255, 237, 235, 0.75)",
         "dim-green": "#58d1bd",
@@ -52,7 +52,7 @@ module.exports = {
       },
       spacing: {},
       fontFamily: {
-        "body-xl-600": "Poppins",
+        "body-small-500": "Poppins",
         "components-chip": "Roboto",
         inter: "Inter",
         "segoe-ui": "'Segoe UI'",

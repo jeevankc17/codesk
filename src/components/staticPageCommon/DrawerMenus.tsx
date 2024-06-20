@@ -91,7 +91,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
 
   return (
     <div
-      className={`w-80 relative bg-nero flex flex-col items-start justify-start py-5 px-[30px] box-border gap-[138px] [&.animate]:animate-[0.25s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0] h-full max-w-[90%] overflow-auto text-left text-xs text-lightslategray font-components-chip ${className}`}
+      className={`w-80 relative bg-nero1 flex flex-col items-start justify-start py-5 px-[30px] box-border gap-[138px] [&.animate]:animate-[0.25s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0] h-full max-w-[90%] overflow-auto text-left text-xs text-lightslategray font-components-chip ${className}`}
       data-animate-on-scroll
     >
       <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
