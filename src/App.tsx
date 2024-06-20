@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   Routes,
   Route,
@@ -37,17 +37,98 @@ function App() {
   }, [action, pathname]);
 
   useEffect(() => {
-    const { title, metaDescription } = getPageMetadata(pathname);
+    let title = "";
+    let metaDescription = "";
 
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/coursepage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/curriculumbycoursepage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/aboutuspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/reviewpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/commingsoonpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/partnershippage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/blogpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/projectpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/whycodeskpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/quizpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/worksheetpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/applyteacherpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/quizbycourseidpage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/competetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/hackathonscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/projectscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/builderscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/organizerscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+    }
 
     if (title) {
       document.title = title;
     }
 
     if (metaDescription) {
-      const metaDescriptionTag = document.querySelector('head > meta[name="description"]');
+      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
+        'head > meta[name="description"]'
+      );
       if (metaDescriptionTag) {
-        metaDescriptionTag.setAttribute("content", metaDescription);
+        metaDescriptionTag.content = metaDescription;
       }
     }
   }, [pathname]);
@@ -55,9 +136,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-
       <Route path="/coursepage" element={<CoursePage />} />
-      <Route path="/curriculumbycoursepage" element={<CurriculumByCoursePage />} />
+      <Route
+        path="/curriculumbycoursepage"
+        element={<CurriculumByCoursePage />}
+      />
       <Route path="/aboutuspage" element={<AboutUsPage />} />
       <Route path="/reviewpage" element={<ReviewPage />} />
       <Route path="/commingsoonpage" element={<CommingSoonPage />} />
@@ -89,5 +172,4 @@ function App() {
     </Routes>
   );
 }
-
 export default App;
