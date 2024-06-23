@@ -15,7 +15,7 @@ module.exports = {
         "text-primary": "rgba(0, 0, 0, 0.87)",
         "grey-grey-400": "#bdbdbd",
         "grey-grey-700": "#616161",
-        nero: "##fff",
+        nero: "#fff",
         "wwwcodingalcom-mine-shaft": "#3a3a3a",
         lavenderblush: "rgba(255, 237, 235, 0.75)",
         "dim-green": "#58d1bd",
