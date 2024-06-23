@@ -34,7 +34,7 @@ const BlogPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -64,7 +64,7 @@ const BlogPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               View A Blog
             </div>
           </button>
@@ -75,7 +75,7 @@ const BlogPage: FunctionComponent = () => {
           src="/image-56@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black">
+      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black1">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
             <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
@@ -94,7 +94,7 @@ const BlogPage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
               alt=""
-              src="/image8@2x.png"
+              src="/image81@2x.png"
             />
             <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] gap-[15px] min-h-[52.5px] border-[1px] border-solid border-nero">
               <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">

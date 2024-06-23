@@ -43,46 +43,6 @@ const CoursePage: FunctionComponent = () => {
     navigate("/curriculumbycoursepage");
   }, [navigate]);
 
-  const onCardscourseContainer1Click = useCallback(() => {
-    //TODO: link
-  }, []);
-
-  const onViewCurriculumButton1Click = useCallback(() => {
-    navigate("/curriculumbycoursepage");
-  }, [navigate]);
-
-  const onCardscourseContainer2Click = useCallback(() => {
-    //TODO: link
-  }, []);
-
-  const onViewCurriculumButton2Click = useCallback(() => {
-    navigate("/curriculumbycoursepage");
-  }, [navigate]);
-
-  const onCardscourseContainer3Click = useCallback(() => {
-    //TODO: link
-  }, []);
-
-  const onViewCurriculumButton3Click = useCallback(() => {
-    navigate("/curriculumbycoursepage");
-  }, [navigate]);
-
-  const onCardscourseContainer4Click = useCallback(() => {
-    //TODO: link
-  }, []);
-
-  const onViewCurriculumButton4Click = useCallback(() => {
-    navigate("/curriculumbycoursepage");
-  }, [navigate]);
-
-  const onCardscourseContainer5Click = useCallback(() => {
-    //TODO: link
-  }, []);
-
-  const onViewCurriculumButton5Click = useCallback(() => {
-    navigate("/curriculumbycoursepage");
-  }, [navigate]);
-
   const onButtonscurriculumClick = useCallback(() => {
     //TODO: button link
   }, []);
@@ -91,48 +51,8 @@ const CoursePage: FunctionComponent = () => {
     navigate("/commingsoonpage");
   }, [navigate]);
 
-  const onButtonscurriculumClick1 = useCallback(() => {
-    //TODO: button link
-  }, []);
-
-  const onDownloadButton1Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onButtonscurriculumClick2 = useCallback(() => {
-    //TODO: button link
-  }, []);
-
-  const onDownloadButton2Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onViewCourseButtonClick = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onTryAFreeClassButtonClick = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onViewCourseButton1Click = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onTryAFreeClassButton1Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onViewCourseButton2Click = useCallback(() => {
-    navigate("/coursepage");
-  }, [navigate]);
-
-  const onTryAFreeClassButton2Click = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -212,7 +132,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -305,7 +225,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -313,7 +233,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -321,7 +241,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -329,7 +249,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -342,7 +262,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                 onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -350,7 +270,7 @@ const CoursePage: FunctionComponent = () => {
           </div>
           <div
             className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainer1Click}
+            onClick={onCardscourseContainerClick}
           >
             <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
               <img
@@ -370,7 +290,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -464,7 +384,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -472,7 +392,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -480,7 +400,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -488,7 +408,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -499,9 +419,9 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButton1Click}
+                onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -509,7 +429,7 @@ const CoursePage: FunctionComponent = () => {
           </div>
           <div
             className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainer2Click}
+            onClick={onCardscourseContainerClick}
           >
             <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
               <img
@@ -529,7 +449,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -623,7 +543,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -631,7 +551,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -639,7 +559,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -647,7 +567,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -658,9 +578,9 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButton2Click}
+                onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -668,7 +588,7 @@ const CoursePage: FunctionComponent = () => {
           </div>
           <div
             className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainer3Click}
+            onClick={onCardscourseContainerClick}
           >
             <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
               <img
@@ -688,7 +608,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -782,7 +702,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -790,7 +710,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -798,7 +718,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -806,7 +726,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -817,9 +737,9 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButton3Click}
+                onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -827,7 +747,7 @@ const CoursePage: FunctionComponent = () => {
           </div>
           <div
             className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainer4Click}
+            onClick={onCardscourseContainerClick}
           >
             <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
               <img
@@ -849,7 +769,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -946,7 +866,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -954,7 +874,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -962,7 +882,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -970,7 +890,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -981,9 +901,9 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButton4Click}
+                onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -991,7 +911,7 @@ const CoursePage: FunctionComponent = () => {
           </div>
           <div
             className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainer5Click}
+            onClick={onCardscourseContainerClick}
           >
             <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
               <img
@@ -1011,7 +931,7 @@ const CoursePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
                 <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0"
@@ -1107,7 +1027,7 @@ const CoursePage: FunctionComponent = () => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scratch Programming Certificate
@@ -1115,7 +1035,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Lifetime access to course content
@@ -1123,7 +1043,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Exclusive access to competitions
@@ -1131,7 +1051,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
                 <div className="flex-1 bg-nero flex flex-row items-center justify-center">
                   <div className="flex-1 relative leading-[150%]">
                     Scholarships for top performers
@@ -1142,9 +1062,9 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButton5Click}
+                onClick={onViewCurriculumButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                   View Curriculum
                 </div>
               </button>
@@ -1183,7 +1103,7 @@ const CoursePage: FunctionComponent = () => {
                   Introduction to Basic Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A perfect course for kids who want to test drive to coding
                   road.
@@ -1202,7 +1122,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1352,7 +1272,7 @@ const CoursePage: FunctionComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black">
+                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
                   <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                     <img
                       className="w-6 relative h-6 overflow-hidden shrink-0"
@@ -1414,7 +1334,7 @@ const CoursePage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
                 onClick={onDownloadButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
@@ -1431,7 +1351,7 @@ const CoursePage: FunctionComponent = () => {
                   Intermidiate Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A course for those who want to master the art of coding and
                   create a better future through code.
@@ -1450,7 +1370,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1600,7 +1520,7 @@ const CoursePage: FunctionComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black">
+                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
                   <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                     <img
                       className="w-6 relative h-6 overflow-hidden shrink-0"
@@ -1655,14 +1575,14 @@ const CoursePage: FunctionComponent = () => {
                 </div>
                 <div
                   className="w-[310px] h-[45px] hidden cursor-pointer"
-                  onClick={onButtonscurriculumClick1}
+                  onClick={onButtonscurriculumClick}
                 />
               </div>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
-                onClick={onDownloadButton1Click}
+                onClick={onDownloadButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
@@ -1679,7 +1599,7 @@ const CoursePage: FunctionComponent = () => {
                   Advanced Programming Concepts
                 </div>
               </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-xl-600">
+              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
                 <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
                   A perfect course for kids who want to use coding to solve
                   real-world problems and create a better future.
@@ -1698,7 +1618,7 @@ const CoursePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-xl-600">
+            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
@@ -1848,7 +1768,7 @@ const CoursePage: FunctionComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black">
+                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
                   <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
                     <img
                       className="w-6 relative h-6 overflow-hidden shrink-0"
@@ -1903,21 +1823,21 @@ const CoursePage: FunctionComponent = () => {
                 </div>
                 <div
                   className="w-[310px] h-[45px] hidden cursor-pointer"
-                  onClick={onButtonscurriculumClick2}
+                  onClick={onButtonscurriculumClick}
                 />
               </div>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
-                onClick={onDownloadButton2Click}
+                onClick={onDownloadButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
                 <img className="w-5 relative h-5" alt="" src="/frame.svg" />
               </button>
             </div>
           </div>
         </div>
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
           <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
             Coding Workshops
@@ -1968,7 +1888,7 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCourseButtonClick}
+                onClick={onCoursesClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-aqua-deep text-center inline-block max-h-[58px]">
                   view course
@@ -1976,7 +1896,7 @@ const CoursePage: FunctionComponent = () => {
               </button>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={onTryAFreeClassButtonClick}
+                onClick={onDownloadButtonClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                   Try a free class
@@ -2031,7 +1951,7 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCourseButton1Click}
+                onClick={onCoursesClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-aqua-deep text-center inline-block max-h-[58px]">
                   view course
@@ -2039,7 +1959,7 @@ const CoursePage: FunctionComponent = () => {
               </button>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={onTryAFreeClassButton1Click}
+                onClick={onDownloadButtonClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                   Try a free class
@@ -2056,7 +1976,7 @@ const CoursePage: FunctionComponent = () => {
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
               alt=""
-              src="/image5@2x.png"
+              src="/image51@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
               <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
@@ -2096,7 +2016,7 @@ const CoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
               <button
                 className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCourseButton2Click}
+                onClick={onCoursesClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-aqua-deep text-center inline-block max-h-[58px]">
                   view course
@@ -2104,7 +2024,7 @@ const CoursePage: FunctionComponent = () => {
               </button>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={onTryAFreeClassButton2Click}
+                onClick={onDownloadButtonClick}
               >
                 <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                   Try a free class

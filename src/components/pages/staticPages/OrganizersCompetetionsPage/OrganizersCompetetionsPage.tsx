@@ -50,12 +50,8 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
     }
   }, []);
 
-  const onTakeAQuizNowButtonClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -108,7 +104,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
           src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-base text-black lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-base text-black1 lg:flex-col md:flex-col">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2] text-center text-13xl">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
@@ -123,10 +119,10 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <button
-              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black md:w-full sm:pl-0 sm:pr-0 sm:box-border"
+              className="cursor-pointer py-[9px] px-5 bg-dim-green flex-1 rounded flex flex-row items-center justify-center border-[1px] border-solid border-black1 md:w-full sm:pl-0 sm:pr-0 sm:box-border"
               autoFocus={true}
             >
-              <div className="flex-1 relative text-lg leading-[150%] font-body-xl-600 text-black text-center inline-block max-h-[58px] sm:text-xs">
+              <div className="flex-1 relative text-lg leading-[150%] font-body-large-600 text-black1 text-center inline-block max-h-[58px] sm:text-xs">
                 Most Hackathons Organized
               </div>
             </button>
@@ -141,7 +137,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
             <div className="flex-1 rounded bg-nero flex flex-row flex-wrap items-center justify-start gap-[10px] text-5xl text-darkslategray-200 font-space-mono">
-              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black font-body-xl-600">
+              <div className="flex-1 rounded-2xl bg-nero flex flex-row items-center justify-start gap-[10px] text-black1 font-body-large-600">
                 <img
                   className="w-[100px] rounded h-[100px] overflow-hidden shrink-0 object-cover"
                   alt=""
@@ -161,7 +157,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       10
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
                     <div className="self-stretch relative leading-[130%]">
                       hackathons
                     </div>
@@ -178,7 +174,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       250
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
                     <div className="self-stretch relative leading-[130%]">
                       Projects
                     </div>
@@ -195,7 +191,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
                       1500$
                     </b>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-xl-600">
+                  <div className="self-stretch flex flex-col items-start justify-start text-xs text-darkgray font-body-large-600">
                     <div className="self-stretch relative leading-[130%]">
                       Prize worth
                     </div>
@@ -226,7 +222,7 @@ const OrganizersCompetetionsPage: FunctionComponent = () => {
               <button
                 className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 autoFocus={true}
-                onClick={onTakeAQuizNowButtonClick}
+                onClick={onQuizzesClick}
               >
                 <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                   Take a quiz now

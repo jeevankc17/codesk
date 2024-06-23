@@ -104,9 +104,9 @@ const Navbar: FunctionComponent<NavbarType> = ({
   return (
     <>
       <div
-        className={`self-stretch h-[77px] bg-nero1 flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] z-[18] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border ${className}`}
+        className={`self-stretch h-[77px] bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] z-[18] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border ${className}`}
       >
-        <div className="w-[1240px] bg-nero1 flex flex-row items-center justify-between">
+        <div className="w-[1240px] bg-nero flex flex-row items-center justify-between">
           <button
             className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center"
             onClick={onLogoClick}
@@ -119,13 +119,13 @@ const Navbar: FunctionComponent<NavbarType> = ({
             </div>
           </button>
           <div className="flex flex-row items-center justify-end gap-[36px] sm:flex">
-            <div className="bg-nero1 flex flex-row items-center justify-end gap-[30px] md:hidden">
+            <div className="bg-nero flex flex-row items-center justify-end gap-[30px] md:hidden">
               <button
                 className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-end"
                 onClick={onCoursesClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-small-500 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left"
                   style={coursesStyle}
                 >
                   Courses
@@ -136,7 +136,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onQuizzesClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-small-500 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left"
                   style={quizzesStyle}
                 >
                   Quizzes
@@ -147,7 +147,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onCompetetionsClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-small-500 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left"
                   style={competetionsStyle}
                 >
                   Competetions
@@ -158,7 +158,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 onClick={onAboutUsClick}
               >
                 <div
-                  className="relative text-sm leading-[150%] font-body-small-500 text-black text-left"
+                  className="relative text-sm leading-[150%] font-body-large-600 text-black1 text-left"
                   style={aboutUsStyle}
                 >
                   About Us

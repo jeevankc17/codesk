@@ -26,12 +26,8 @@ const CommingSoonPage: FunctionComponent = () => {
     navigate("/aboutuspage");
   }, [navigate]);
 
-  const onHomeButtonClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-lg text-primary-500 font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-lg text-primary-500 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -48,17 +44,18 @@ const CommingSoonPage: FunctionComponent = () => {
         <div className="flex-1 flex flex-col items-start justify-start gap-[40px] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
             <div className="self-stretch relative leading-[150%] font-semibold">
-             "We're all set, just waiting on you."
+              COMING SOON
             </div>
-            <div className="self-stretch relative text-18xl leading-[120%] font-medium text-gray-900 sm:text-5xl">
-              "Hey, hold tight! The goodies you're after are strictly for our enrolled kiddos, so it's time to get your school onboard! Here at the EdTech platform, we're all about teaching coding to cool kids like you. So, if your school isn't in the loop yet, let's get them signed up pronto! Once you're part of the squad, you'll unlock a world of awesome coding adventures just waiting for you to dive in."
+            <div className="self-stretch relative text-29xl leading-[120%] font-semibold text-gray-900 sm:text-5xl">
+              There is no record on our Database currently, we are going to
+              launch our feature very soon. Stay tune
             </div>
           </div>
           <button
             className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-            onClick={onHomeButtonClick}
+            onClick={onLogoClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               Go Back To Home
             </div>
           </button>
@@ -67,7 +64,7 @@ const CommingSoonPage: FunctionComponent = () => {
           <img
             className="w-[579px] relative h-[604px] object-cover"
             alt=""
-            src="/image7@2x.png"
+            src="/image71@2x.png"
           />
         </div>
       </div>

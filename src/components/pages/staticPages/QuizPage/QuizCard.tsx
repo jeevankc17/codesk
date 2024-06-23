@@ -2,12 +2,14 @@ import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 export type QuizCardType = {
+  className?: string;
   image?: string;
   courseName?: string;
   courseId?: string;
 };
 
 const QuizCard: FunctionComponent<QuizCardType> = ({
+  className = "",
   image,
   courseName,
   courseId,
@@ -19,7 +21,9 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
   }, [navigate]);
 
   return (
-    <div className="w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black font-body-xl-600">
+    <div
+      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+    >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
         alt=""
@@ -43,7 +47,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
             </div>
           </div>
           <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-            <img className="w-6 relative h-6" alt="" src="/vector.svg" />
+            <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
             <div className="flex-1 bg-nero flex flex-row items-center justify-center">
               <div className="flex-1 relative leading-[150%]">Leaderboard</div>
             </div>
@@ -67,7 +71,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
           onClick={onViewQuizButtonClick}
           id={courseId}
         >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+          <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
             View Quiz
           </div>
         </button>

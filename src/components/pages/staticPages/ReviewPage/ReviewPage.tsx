@@ -37,7 +37,7 @@ const ReviewPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -77,12 +77,12 @@ const ReviewPage: FunctionComponent = () => {
           src="/image-54@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] relative z-[1] text-center text-[40px] text-black font-inter">
+      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] relative z-[1] text-center text-[40px] text-black1 font-inter">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative tracking-[-0.01em] leading-[48px] font-semibold whitespace-pre-wrap sm:font-semibold sm:font-body-xl-600 sm:text-9xl">{`Testimonials  & Reviews`}</div>
+            <div className="flex-1 relative tracking-[-0.01em] leading-[48px] font-semibold whitespace-pre-wrap sm:font-semibold sm:font-body-large-600 sm:text-9xl">{`Testimonials  & Reviews`}</div>
           </div>
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm font-body-xl-600">
+          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm font-body-large-600">
             <div className="flex-1 relative leading-[150%]">
               Reviews and testimonials from students, parents and teachers
             </div>

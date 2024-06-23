@@ -1,13 +1,17 @@
 import { FunctionComponent, useState } from "react";
 import QuizCard from "./QuizCard";
 
+export type QuizCardsType = {
+  className?: string;
+};
+
 type QuizCourseItemsType = Array<{
   courseName: string;
   courseId: string;
   image: string;
 }>;
 
-const QuizCards: FunctionComponent = () => {
+const QuizCards: FunctionComponent<QuizCardsType> = ({ className = "" }) => {
   const [quizCourseItems, setQuizCourseItems] = useState<QuizCourseItemsType>([
     {
       courseName: "Scratch Programming",
@@ -47,7 +51,9 @@ const QuizCards: FunctionComponent = () => {
     },
   ]);
   return (
-    <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div
+      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
+    >
       {quizCourseItems.map((item, index) => (
         <QuizCard
           key={index}

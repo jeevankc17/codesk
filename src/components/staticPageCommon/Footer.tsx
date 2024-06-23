@@ -1,12 +1,18 @@
 import { FunctionComponent } from "react";
 
-const Footer: FunctionComponent = () => {
+export type FooterType = {
+  className?: string;
+};
+
+const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
   return (
-    <div className="self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black font-body-xl-600">
+    <div
+      className={`self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black1 font-body-large-600 ${className}`}
+    >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
         alt=""
-        src="/subscribe-section-background@2x.png"
+        src="/subscribe-section-background1@2x.png"
       />
       <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col sm:gap-[5px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">

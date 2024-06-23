@@ -9,6 +9,14 @@ const PartnershipPage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
   const navigate = useNavigate();
 
+  const openDoneModalPopup = useCallback(() => {
+    setDoneModalPopupOpen(true);
+  }, []);
+
+  const closeDoneModalPopup = useCallback(() => {
+    setDoneModalPopupOpen(false);
+  }, []);
+
   const onLogoClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
@@ -38,17 +46,9 @@ const PartnershipPage: FunctionComponent = () => {
     }
   }, []);
 
-  const openDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(true);
-  }, []);
-
-  const closeDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(false);
-  }, []);
-
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#1f95f2"
           onLogoClick={onLogoClick}
@@ -79,7 +79,7 @@ const PartnershipPage: FunctionComponent = () => {
               autoFocus={true}
               onClick={onScrollBannerButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                 View Contact Us Form
               </div>
             </button>
@@ -121,7 +121,7 @@ const PartnershipPage: FunctionComponent = () => {
                     </div>
                   </div>
                   <div className="self-stretch flex flex-col items-center justify-center gap-[9px] text-lg text-aqua-deep">
-                    <div className="self-stretch flex flex-row items-start justify-center gap-[5px] text-black">
+                    <div className="self-stretch flex flex-row items-start justify-center gap-[5px] text-black1">
                       <img
                         className="w-8 relative h-8 overflow-hidden shrink-0"
                         alt=""
@@ -145,7 +145,7 @@ const PartnershipPage: FunctionComponent = () => {
                         <span>
                           Computer science graduate teachers from CoDesk
                         </span>
-                        <span className="text-black">
+                        <span className="text-black1">
                           {" "}
                           with vast industry and academic experience available.
                         </span>
@@ -159,7 +159,7 @@ const PartnershipPage: FunctionComponent = () => {
                       />
                       <div className="flex-1 relative leading-[150%] font-semibold">
                         <span>Master dashboard</span>
-                        <span className="text-black">
+                        <span className="text-black1">
                           {" "}
                           to track the performance of students and school
                           teachers.
@@ -187,9 +187,9 @@ const PartnershipPage: FunctionComponent = () => {
                       />
                       <div className="flex-1 relative leading-[150%] font-semibold">
                         <span>Training</span>
-                        <span className="text-black">{` provided to school teachers by `}</span>
+                        <span className="text-black1">{` provided to school teachers by `}</span>
                         <span>{`CoDesk Knowledge Experts `}</span>
-                        <span className="text-black">
+                        <span className="text-black1">
                           on curriculum, platforms, and programming languages
                           suitable for all grade groups.
                         </span>
@@ -203,7 +203,7 @@ const PartnershipPage: FunctionComponent = () => {
                       />
                       <div className="flex-1 relative leading-[30px] font-semibold">
                         <span>Custom dashboard</span>
-                        <span className="text-black">
+                        <span className="text-black1">
                           {" "}
                           to track and review the performance of each student
                         </span>
@@ -217,7 +217,7 @@ const PartnershipPage: FunctionComponent = () => {
                       />
                       <div className="flex-1 relative leading-[150%] font-semibold">
                         <span>Speakership / Advocate</span>
-                        <span className="text-black">
+                        <span className="text-black1">
                           {" "}
                           opportunity at CoDesk Events.
                         </span>
@@ -258,11 +258,11 @@ const PartnershipPage: FunctionComponent = () => {
                       />
                       <div className="flex-1 relative leading-[150%] font-semibold">
                         <span>Lifetime access</span>
-                        <span className="text-black">{` to a personal dashboard with `}</span>
+                        <span className="text-black1">{` to a personal dashboard with `}</span>
                         <span>lessons, projects, coding quizzes,</span>
-                        <span className="text-black">{` and `}</span>
+                        <span className="text-black1">{` and `}</span>
                         <span>certificates</span>
-                        <span className="text-black">.</span>
+                        <span className="text-black1">.</span>
                       </div>
                     </div>
                     <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
@@ -309,33 +309,285 @@ const PartnershipPage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
             <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-whitesmoke-200 md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-xl-600 text-slategray text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-slategray text-left">
                   Fill in your details to join the party!
                 </div>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[10px]">
-                <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
-                  placeholder="Your name"
-                  type="text"
-                />
-                <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
-                  placeholder="Email address"
-                  type="text"
-                />
-                <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
-                  placeholder="Phone Number"
-                  type="text"
-                />
-                <input
-                  className="[outline:none] font-body-xl-600 text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
-                  placeholder="School Name"
-                  type="text"
-                />
+                <div className="self-stretch flex flex-col items-start justify-start">
+                  <div className="self-stretch rounded flex flex-col items-start justify-start py-0 px-3 border-[1px] border-solid border-other-outlined-border">
+                    <div className="self-stretch overflow-hidden flex flex-row items-center justify-start py-4 px-0 gap-[8px]">
+                      <div className="hidden flex-row items-start justify-start gap-[8px]">
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        placeholder="Your name"
+                        type="text"
+                      />
+                      <div className="w-7 relative h-7 hidden">
+                        <div className="absolute top-[0px] left-[0px] flex flex-col items-center justify-start">
+                          <div className="rounded-29xl flex flex-row items-center justify-start p-1">
+                            <img
+                              className="w-5 relative h-5 overflow-hidden shrink-0"
+                              alt=""
+                              src="/close.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-row items-start justify-start">
+                        <img
+                          className="w-6 relative h-6 overflow-hidden shrink-0"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-col items-start justify-start">
+                  <div className="self-stretch rounded flex flex-col items-start justify-start py-0 px-3 border-[1px] border-solid border-other-outlined-border">
+                    <div className="self-stretch overflow-hidden flex flex-row items-center justify-start py-4 px-0 gap-[8px]">
+                      <div className="hidden flex-row items-start justify-start gap-[8px]">
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        placeholder="Email address"
+                        type="text"
+                      />
+                      <div className="w-7 relative h-7 hidden">
+                        <div className="absolute top-[0px] left-[0px] flex flex-col items-center justify-start">
+                          <div className="rounded-29xl flex flex-row items-center justify-start p-1">
+                            <img
+                              className="w-5 relative h-5 overflow-hidden shrink-0"
+                              alt=""
+                              src="/close.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-row items-start justify-start">
+                        <img
+                          className="w-6 relative h-6 overflow-hidden shrink-0"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-col items-start justify-start">
+                  <div className="self-stretch rounded flex flex-col items-start justify-start py-0 px-3 border-[1px] border-solid border-other-outlined-border">
+                    <div className="self-stretch overflow-hidden flex flex-row items-center justify-start py-4 px-0 gap-[8px]">
+                      <div className="hidden flex-row items-start justify-start gap-[8px]">
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        placeholder="Phone Number"
+                        type="text"
+                      />
+                      <div className="w-7 relative h-7 hidden">
+                        <div className="absolute top-[0px] left-[0px] flex flex-col items-center justify-start">
+                          <div className="rounded-29xl flex flex-row items-center justify-start p-1">
+                            <img
+                              className="w-5 relative h-5 overflow-hidden shrink-0"
+                              alt=""
+                              src="/close.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-row items-start justify-start">
+                        <img
+                          className="w-6 relative h-6 overflow-hidden shrink-0"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="self-stretch flex flex-col items-start justify-start">
+                  <div className="self-stretch rounded flex flex-col items-start justify-start py-0 px-3 border-[1px] border-solid border-other-outlined-border">
+                    <div className="self-stretch overflow-hidden flex flex-row items-center justify-start py-4 px-0 gap-[8px]">
+                      <div className="hidden flex-row items-start justify-start gap-[8px]">
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-start justify-start">
+                          <div className="rounded-2xl bg-grey-grey-300 flex flex-row items-center justify-start p-1">
+                            <div className="w-6 rounded-45xl bg-grey-grey-400 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-chip text-grey-grey-700 text-center flex items-center justify-center">
+                                F
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                                Chip
+                              </div>
+                            </div>
+                            <img
+                              className="w-6 relative h-6 overflow-hidden shrink-0"
+                              alt=""
+                              src="/cancel.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        placeholder="School Name"
+                        type="text"
+                      />
+                      <div className="w-7 relative h-7 hidden">
+                        <div className="absolute top-[0px] left-[0px] flex flex-col items-center justify-start">
+                          <div className="rounded-29xl flex flex-row items-center justify-start p-1">
+                            <img
+                              className="w-5 relative h-5 overflow-hidden shrink-0"
+                              alt=""
+                              src="/close.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-row items-start justify-start">
+                        <img
+                          className="w-6 relative h-6 overflow-hidden shrink-0"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <textarea
-                  className="bg-[transparent] font-body-xl-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-gray1-300 border-[1px] border-solid border-gray1-400"
+                  className="bg-[transparent] font-body-large-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-text-secondary border-[1px] border-solid border-other-outlined-border"
                   placeholder="Leave Message"
                 />
               </div>
@@ -343,7 +595,7 @@ const PartnershipPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-tomato rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
                 </div>
               </button>

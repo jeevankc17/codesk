@@ -1,6 +1,10 @@
 import { FunctionComponent, useState } from "react";
 import LessonQuizCard from "./LessonQuizCard";
 
+export type LessonQuizCardsType = {
+  className?: string;
+};
+
 type QuizLessonItemsType = Array<{
   image: string;
   lessonName: string;
@@ -11,7 +15,9 @@ type QuizLessonItemsType = Array<{
   numberQuestions: string;
 }>;
 
-const LessonQuizCards: FunctionComponent = () => {
+const LessonQuizCards: FunctionComponent<LessonQuizCardsType> = ({
+  className = "",
+}) => {
   const [quizLessonItems, setQuizLessonItems] = useState<QuizLessonItemsType>([
     {
       image:
@@ -375,7 +381,9 @@ const LessonQuizCards: FunctionComponent = () => {
     },
   ]);
   return (
-    <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div
+      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
+    >
       {quizLessonItems.map((item, index) => (
         <LessonQuizCard
           key={index}

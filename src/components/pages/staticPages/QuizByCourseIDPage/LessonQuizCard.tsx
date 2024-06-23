@@ -2,6 +2,7 @@ import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 export type LessonQuizCardType = {
+  className?: string;
   image?: string;
   lessonName?: string;
   courseName?: string;
@@ -12,6 +13,7 @@ export type LessonQuizCardType = {
 };
 
 const LessonQuizCard: FunctionComponent<LessonQuizCardType> = ({
+  className = "",
   image,
   lessonName,
   courseName,
@@ -27,7 +29,9 @@ const LessonQuizCard: FunctionComponent<LessonQuizCardType> = ({
   }, [navigate]);
 
   return (
-    <div className="w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black font-body-xl-600">
+    <div
+      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+    >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
         alt=""
@@ -91,7 +95,7 @@ const LessonQuizCard: FunctionComponent<LessonQuizCardType> = ({
           onClick={onPlayQuizButtonClick}
           id={lessonId}
         >
-          <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+          <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
             Play Quiz
           </div>
         </button>

@@ -27,7 +27,7 @@ const WhyCodeskPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -301,7 +301,7 @@ const WhyCodeskPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png@2x.png"
+              src="/reason1png3@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -322,7 +322,7 @@ const WhyCodeskPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png1@2x.png"
+              src="/reason1png11@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
@@ -343,7 +343,7 @@ const WhyCodeskPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png2@2x.png"
+              src="/reason1png21@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">

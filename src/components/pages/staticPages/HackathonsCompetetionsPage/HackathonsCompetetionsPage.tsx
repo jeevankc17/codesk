@@ -63,10 +63,6 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
     navigate("/commingsoonpage");
   }, [navigate]);
 
-  const onRemindMeButtonClick = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
   const onCompletedContainerClick = useCallback(() => {
     const anchor = document.querySelector(
       "[data-scroll-to='completedContainer']"
@@ -76,16 +72,8 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
     }
   }, []);
 
-  const onViewProjectsButtonClick = useCallback(() => {
-    navigate("/commingsoonpage");
-  }, [navigate]);
-
-  const onTakeAQuizNowButtonClick = useCallback(() => {
-    navigate("/quizpage");
-  }, [navigate]);
-
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -141,7 +129,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
           src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-13xl text-black lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-13xl text-black1 lg:flex-col md:flex-col">
         <div className="w-[900px] flex flex-col items-start justify-start z-[1] lg:self-stretch lg:w-auto md:w-full">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2]">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">{`All coding competitions & hackathons`}</div>
@@ -150,7 +138,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
             <div className="w-[121px] rounded bg-nero h-9 flex flex-row items-center justify-start py-0 px-0.5 box-border gap-[12px] text-aqua-deep">
               <div className="flex-1 relative leading-[130%] font-semibold">
                 <span>Open</span>
-                <span className="text-black">{` `}</span>
+                <span className="text-black1">{` `}</span>
               </div>
               <div className="w-[33px] rounded bg-aqua-deep flex flex-row items-start justify-start py-0.5 px-2 box-border text-sm text-nero font-segoe-ui">
                 <div className="flex-1 relative leading-[21px] font-semibold">
@@ -185,7 +173,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   Open
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl font-body-xl-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -208,7 +196,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black">
+                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black1">
                       <div className="self-stretch flex flex-row items-center justify-start">
                         <div className="flex-1 relative leading-[120%] font-semibold">
                           Team Size:
@@ -244,7 +232,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   className="cursor-pointer py-[9px] px-5 bg-aqua-deep w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero md:w-full sm:w-full"
                   onClick={onApplyNowButtonClick}
                 >
-                  <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+                  <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                     Apply Now
                   </div>
                 </button>
@@ -259,7 +247,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   Upcoming
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-xl-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -282,7 +270,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black">
+                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black1">
                       <div className="self-stretch flex flex-row items-center justify-start">
                         <div className="flex-1 relative leading-[120%] font-semibold">
                           Team Size:
@@ -317,7 +305,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                 <button
                   className="cursor-pointer py-[9px] px-5 bg-chateau-green w-[230px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-nero md:w-full"
                   autoFocus={true}
-                  onClick={onRemindMeButtonClick}
+                  onClick={onApplyNowButtonClick}
                 >
                   <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                     Remind Me
@@ -335,7 +323,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   Completed
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-xl-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -358,7 +346,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black">
+                    <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black1">
                       <div className="self-stretch flex flex-row items-center justify-start">
                         <div className="flex-1 relative leading-[120%] font-semibold">
                           Team Size:
@@ -392,9 +380,9 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                 </div>
                 <button
                   className="cursor-pointer py-[9px] px-5 bg-nero w-[230px] rounded box-border flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-full"
-                  onClick={onViewProjectsButtonClick}
+                  onClick={onApplyNowButtonClick}
                 >
-                  <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                  <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                     View Projects
                   </div>
                 </button>
@@ -423,7 +411,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
               <button
                 className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 autoFocus={true}
-                onClick={onTakeAQuizNowButtonClick}
+                onClick={onQuizzesClick}
               >
                 <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                   Take a quiz now

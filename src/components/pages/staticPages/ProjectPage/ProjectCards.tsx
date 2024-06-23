@@ -1,6 +1,10 @@
 import { FunctionComponent, useState } from "react";
 import ProjectCard from "./ProjectCard";
 
+export type ProjectCardsType = {
+  className?: string;
+};
+
 type CardItemsType = Array<{
   nameStudent: string;
   grade: string;
@@ -11,7 +15,9 @@ type CardItemsType = Array<{
   profileImage: string;
 }>;
 
-const ProjectCards: FunctionComponent = () => {
+const ProjectCards: FunctionComponent<ProjectCardsType> = ({
+  className = "",
+}) => {
   const [cardItems, setCardItems] = useState<CardItemsType>([
     {
       nameStudent: "Aarav",
@@ -125,7 +131,9 @@ const ProjectCards: FunctionComponent = () => {
     },
   ]);
   return (
-    <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div
+      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
+    >
       {cardItems.map((item, index) => (
         <ProjectCard
           key={index}

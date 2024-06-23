@@ -78,7 +78,7 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero1 flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black font-body-small-500 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#FF5A43"
           onLogoClick={onLogoClick}
@@ -87,9 +87,9 @@ const HomePage: FunctionComponent = () => {
           onCompetetionsClick={onCompetetionsClick}
           onAboutUsClick={onAboutUsClick}
         />
-        <header className="self-stretch rounded-mini bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[17] text-left text-29xl text-nero1 font-inter lg:flex-col md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
+        <header className="self-stretch rounded-mini bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[17] text-left text-29xl text-nero font-inter lg:flex-col md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2]">
-            <div className="self-stretch flex flex-col items-start justify-start font-body-small-500">
+            <div className="self-stretch flex flex-col items-start justify-start font-body-large-600">
               <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
                 Coding classes for kids and teenagers of Nepal
               </div>
@@ -101,7 +101,7 @@ const HomePage: FunctionComponent = () => {
                     1200+
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-base font-body-small-500">
+                <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-base font-body-large-600">
                   <div className="self-stretch relative leading-[24px]">
                     Students
                   </div>
@@ -113,7 +113,7 @@ const HomePage: FunctionComponent = () => {
                     5+
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start relative text-base font-body-small-500">
+                <div className="self-stretch flex flex-col items-start justify-start relative text-base font-body-large-600">
                   <div className="relative leading-[24px] z-[0]">Districts</div>
                   <div className="w-6 absolute !m-[0] bottom-[0px] left-[0px] box-border h-px z-[1] border-b-[1px] border-solid border-silver" />
                 </div>
@@ -138,20 +138,20 @@ const HomePage: FunctionComponent = () => {
             src="/image-5@2x.png"
           />
         </header>
-        <section className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-small-500 sm:pl-0 sm:pr-0 sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-17xl text-aqua-deep font-body-large-600 sm:pl-0 sm:pr-0 sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center h-auto">
             <div className="self-stretch h-auto relative leading-[120%] font-semibold inline-block sm:text-9xl">
               <span>Learn coding</span>
-              <span className="text-black">{` from the `}</span>
+              <span className="text-black1">{` from the `}</span>
               <span>top Nepali IT instructors</span>
-              <span className="text-black">
+              <span className="text-black1">
                 . Our hand-picked instructors ensure the best learning
                 experience.
               </span>
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-[5px] gap-[15px] text-left text-5xl text-footer-header lg:flex-row lg:flex-wrap md:gap-[5px] md:pl-[5px] md:pr-[5px] md:box-border sm:flex-row sm:flex-wrap sm:gap-[5px] sm:pl-0 sm:pr-0 sm:box-border">
-            <div className="h-[150px] w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-center justify-center p-[5px] box-border gap-[5px] lg:w-[200px] md:w-[150px] sm:w-[150px]">
+            <div className="h-[150px] w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-center justify-center p-[5px] box-border gap-[5px] lg:w-[200px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -164,13 +164,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Coding stacks
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -183,13 +183,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Disruptive Technology
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -202,13 +202,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Empowering Youth
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -221,13 +221,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Hands On Resources
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -240,13 +240,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Hackathons Event
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[150px] flex flex-col items-center justify-center p-[5px] box-border gap-[5px] md:w-[150px] sm:w-[150px]">
               <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                 <img
                   className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
@@ -259,20 +259,20 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
                 <div className="flex-1 relative leading-[120%] font-semibold">{`Virtual & Physical Classes`}</div>
               </div>
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero1 flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black font-body-small-500 sm:pl-[5px] sm:pr-[05px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap sm:text-9xl">
               With CoDesk, your child’s future is on safe hands!
             </div>
           </div>
-          <div className="self-stretch bg-nero1 flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl">
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+          <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -291,7 +291,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -310,7 +310,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -328,7 +328,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -345,7 +345,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -365,7 +365,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[81.3px] relative h-[81.3px]"
                 alt=""
@@ -380,7 +380,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`Forgot what was taught in the last  class? No worries. Watch the  recorded class video anytime to  refresh your memory. Get lifetime access to our  exclusive learning content `}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -395,7 +395,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`For class management &  progress tracking  For Easy rescheduling of  classes and session notes  For Course and instructor  information`}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -413,7 +413,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -432,7 +432,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -451,7 +451,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -468,7 +468,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px]"
                 alt=""
@@ -489,20 +489,20 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero1 flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black font-body-small-500 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               Choose a coding course that excites childs
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-sm sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
                 src="/image@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-start justify-start gap-[5px] z-[1]">
+              <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
                   <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                     Specialized Coding
@@ -537,9 +537,9 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-start gap-[15px] z-[2]">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-nero1 self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+                  className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                   autoFocus={true}
                   onClick={onCoursesClick}
                 >
@@ -548,10 +548,10 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </button>
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                   onClick={onTryAFreeClassButtonClick}
                 >
-                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero1 text-center inline-block max-h-[58px]">
+                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                     Try a free class
                   </div>
                 </button>
@@ -562,13 +562,13 @@ const HomePage: FunctionComponent = () => {
                 src="/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
                 src="/image1@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-start justify-start gap-[5px] z-[1]">
+              <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
                   <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                     All In One Coding
@@ -603,9 +603,9 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-start gap-[15px] z-[2]">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-nero1 self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+                  className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                   autoFocus={true}
                   onClick={onCoursesClick}
                 >
@@ -614,10 +614,10 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </button>
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                   onClick={onTryAFreeClassButtonClick}
                 >
-                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero1 text-center inline-block max-h-[58px]">
+                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                     Try a free class
                   </div>
                 </button>
@@ -628,13 +628,13 @@ const HomePage: FunctionComponent = () => {
                 src="/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
                 src="/image2@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-start justify-start gap-[5px] z-[1]">
+              <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
                   <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                     Coding Workshops
@@ -669,9 +669,9 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-start gap-[15px] z-[2]">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-start gap-[15px] z-[2]">
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-nero1 self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+                  className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
                   autoFocus={true}
                   onClick={onCoursesClick}
                 >
@@ -680,10 +680,10 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </button>
                 <button
-                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                   onClick={onTryAFreeClassButtonClick}
                 >
-                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero1 text-center inline-block max-h-[58px]">
+                  <div className="flex-1 relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                     Try a free class
                   </div>
                 </button>
@@ -695,26 +695,26 @@ const HomePage: FunctionComponent = () => {
               />
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onCoursesClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show All Courses
               </div>
             </button>
           </section>
         </section>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-center p-5 gap-[20px] z-[13]">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[13]">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               Flexible pricing with personalized classes
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-2.5 gap-[15px] text-left text-base md:flex-row md:flex-wrap sm:pt-5 sm:pb-5 sm:box-border">
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
+              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black1">
                 <div className="self-stretch flex flex-row items-start justify-center z-[0]">
                   <div className="flex-1 relative leading-[120%] font-semibold">
                     8 classes / month
@@ -726,7 +726,7 @@ const HomePage: FunctionComponent = () => {
                   src="/bestsellingpng@2x.png"
                 />
               </div>
-              <div className="self-stretch bg-nero1 flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
+              <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
@@ -802,8 +802,8 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
+            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
+              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black1">
                 <div className="self-stretch flex flex-row items-start justify-center z-[0]">
                   <div className="flex-1 relative leading-[120%] font-semibold">
                     4 classes / month
@@ -815,7 +815,7 @@ const HomePage: FunctionComponent = () => {
                   src="/bestsellingpng2@2x.png"
                 />
               </div>
-              <div className="self-stretch bg-nero1 flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
+              <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
@@ -892,19 +892,19 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               autoFocus={true}
               onClick={onTryAFreeClassButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Know Pricing
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 gap-[20px] z-[12]">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[12]">
           <div className="self-stretch flex flex-col items-center justify-start gap-[24px]">
             <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
@@ -924,7 +924,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-col items-center justify-start text-5xl text-aqua-deep">
-            <div className="self-stretch bg-nero1 flex flex-row flex-wrap items-center justify-between p-[15px]">
+            <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px]">
               <div className="flex-1 flex flex-row items-center justify-between sm:flex-col">
                 <img
                   className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -947,7 +947,7 @@ const HomePage: FunctionComponent = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black1">
                     <div className="self-stretch flex flex-row items-center justify-start">
                       <div className="flex-1 relative leading-[120%] font-semibold">
                         Team Size:
@@ -980,41 +980,41 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
               <button
-                className="cursor-pointer py-[9px] px-5 bg-aqua-deep w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={onTryAFreeClassButtonClick}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                   Apply Now
                 </div>
               </button>
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               autoFocus={true}
               onClick={onCompetetionsClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show Competetions
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero1 flex flex-col items-start justify-start p-5 gap-[20px] z-[11] text-13xl">
+        <div className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[11] text-13xl">
           <div className="self-stretch flex flex-col items-center justify-start">
             <div className="self-stretch relative leading-[120%] font-semibold">
               Why children should learn to code?
             </div>
           </div>
-          <div className="self-stretch bg-nero1 flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-base md:flex-row md:flex-wrap">
-            <div className="w-[350px] rounded-3xs bg-nero1 flex flex-col items-center justify-center p-5 box-border">
+          <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-base md:flex-row md:flex-wrap">
+            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
               <img
                 className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
                 alt=""
                 src="/reason1png@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-center">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
                 <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
                   <div className="self-stretch relative leading-[120%] font-semibold">
                     Develop key skills
@@ -1029,13 +1029,13 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] rounded-3xs bg-nero1 flex flex-col items-center justify-center p-5 box-border">
+            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
               <img
                 className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
                 alt=""
                 src="/reason1png1@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-center">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
                 <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
                   <div className="self-stretch relative leading-[120%] font-semibold">
                     Prepare for the future
@@ -1050,13 +1050,13 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] rounded-3xs bg-nero1 flex flex-col items-center justify-center p-5 box-border">
+            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
               <img
                 className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
                 alt=""
                 src="/reason1png2@2x.png"
               />
-              <div className="self-stretch bg-nero1 flex flex-col items-center justify-center">
+              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
                 <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
                   <div className="self-stretch relative leading-[120%] font-semibold">
                     Learn through coding
@@ -1085,19 +1085,19 @@ const HomePage: FunctionComponent = () => {
             frameBorder="0"
             allowFullScreen
           />
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               autoFocus={true}
               onClick={onTryAFreeClassButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show Videos
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-start justify-start p-5 gap-[20px] z-[9]">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[9]">
           <div className="self-stretch flex flex-row items-center justify-center">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
               <span>{`Student’s & parent’s testimonials `}</span>
@@ -1105,7 +1105,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1134,7 +1134,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1162,7 +1162,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1191,7 +1191,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1220,7 +1220,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1249,7 +1249,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1280,18 +1280,18 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onShowReviewsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Show reviews
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-row flex-wrap items-center justify-center p-[15px] gap-[0px_15px] z-[8] text-left text-aqua-deep md:flex-col md:gap-[15px] md:p-[15px] md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
+        <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[0px_15px] z-[8] text-left text-aqua-deep md:flex-col md:gap-[15px] md:p-[15px] md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
           <img
             className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover md:flex-[unset] md:self-stretch"
             alt=""
@@ -1301,10 +1301,10 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-[0.5px]">
               <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
                 <span>Intuitive learning dashboard</span>
-                <span className="text-black"> for kids and parents</span>
+                <span className="text-black1"> for kids and parents</span>
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[10px] text-sm text-black">
+            <div className="self-stretch flex flex-col items-start justify-start gap-[10px] text-sm text-black1">
               <div className="self-stretch relative leading-[150%]">{`Class management & progress tracking`}</div>
               <div className="self-stretch relative leading-[150%]">
                 Assignments and task
@@ -1323,23 +1323,23 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
             <button
-              className="cursor-pointer pt-[18.5px] px-[65px] pb-[19px] bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+              className="cursor-pointer pt-[18.5px] px-[65px] pb-[19px] bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
               onClick={onTryAFreeClassButtonClick}
             >
-              <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero1 text-center inline-block max-h-[58px]">
+              <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
                 Show Dashboards
               </div>
             </button>
           </div>
         </div>
-        <section className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-small-500 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               See amazing projects created by our students
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[10px] text-left text-5xl md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap">
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -1377,10 +1377,10 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-center">
                   <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButtonClick}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1392,7 +1392,7 @@ const HomePage: FunctionComponent = () => {
                 src="/rectangle-2@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -1430,10 +1430,10 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-center">
                   <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButtonClick1}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1445,7 +1445,7 @@ const HomePage: FunctionComponent = () => {
                 src="/rectangle-21@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
+            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -1483,10 +1483,10 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-center">
                   <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                     onClick={onViewProjectButtonClick2}
                   >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                       View Project
                     </div>
                   </button>
@@ -1499,19 +1499,19 @@ const HomePage: FunctionComponent = () => {
               />
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               autoFocus={true}
               onClick={onSeeMoreProjectsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 See more projects
               </div>
             </button>
           </section>
         </section>
-        <div className="w-[1400px] bg-nero1 hidden flex-col items-start justify-start p-5 box-border gap-[20px] z-[6] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="w-[1400px] bg-nero hidden flex-col items-start justify-start p-5 box-border gap-[20px] z-[6] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-row items-center justify-center gap-[13px]">
             <div className="w-9 h-[131px] overflow-hidden shrink-0 flex flex-col items-end justify-center">
               <img
@@ -1526,7 +1526,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-base md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`“Teaching coding to kids is a huge responsibility and we want to take that”  `}</div>
               </div>
@@ -1561,7 +1561,7 @@ const HomePage: FunctionComponent = () => {
                 src="/arrowbendrightdown.svg"
               />
             </div>
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold">
                   "Empowering young minds with coding skills is a profound
@@ -1599,7 +1599,7 @@ const HomePage: FunctionComponent = () => {
                 src="/arrowbendrightdown.svg"
               />
             </div>
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero1 overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold">
                   "Guiding children through the world of coding is a weighty
@@ -1638,23 +1638,23 @@ const HomePage: FunctionComponent = () => {
               />
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               onClick={onAboutUsClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Meet our team
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 gap-[20px] z-[5] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[5] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">{`Most loved & trusted platform for kids to learn coding`}</div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-base md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1666,7 +1666,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1678,7 +1678,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1688,7 +1688,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[120%] font-semibold">{`All level of Coding courses `}</div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1700,7 +1700,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero1 flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1713,19 +1713,19 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-nero1 rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
               autoFocus={true}
               onClick={onAboutUsClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-aqua-deep text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
                 Know more CoDesk
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 box-border gap-[20px] min-w-[370px] z-[4] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] min-w-[370px] z-[4] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-row items-center justify-start">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
               Frequently asked questions
@@ -1847,20 +1847,20 @@ const HomePage: FunctionComponent = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
               autoFocus={true}
               onClick={onAskYOurDoubtButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                 Ask your doubt?
               </div>
             </button>
           </section>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-row items-center justify-center p-5 z-[3] md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
-          <div className="flex-1 bg-nero1 flex flex-col items-start justify-start p-5 gap-[40px] md:flex-[unset] md:self-stretch sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch bg-nero flex flex-row items-center justify-center p-5 z-[3] md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+          <div className="flex-1 bg-nero flex flex-col items-start justify-start p-5 gap-[40px] md:flex-[unset] md:self-stretch sm:pl-[5px] sm:pr-[5px] sm:box-border">
             <div className="self-stretch flex flex-col items-start justify-start">
               <div className="self-stretch flex flex-col items-center justify-start pt-0 px-2.5 pb-3">
                 <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
@@ -1886,8 +1886,8 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-center gap-[30px] z-[2]">
-          <div className="self-stretch bg-nero1 flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[2]">
+          <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
               <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
                 Contact Us
@@ -1900,9 +1900,9 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
-            <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero1 box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-nero1 md:w-[350px]">
+            <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-nero md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-left">
                   Fill in your details to and reach out to us!
                 </div>
               </div>
@@ -1951,7 +1951,7 @@ const HomePage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-small-500 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Your name"
                         type="text"
                       />
@@ -2019,7 +2019,7 @@ const HomePage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-small-500 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Email address"
                         type="text"
                       />
@@ -2087,7 +2087,7 @@ const HomePage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-small-500 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Phone Number"
                         type="text"
                       />
@@ -2113,17 +2113,17 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
               <button
-                className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
                 </div>
               </button>
             </form>
           </div>
         </div>
-        <div className="self-stretch bg-nero1 flex flex-col items-center justify-start p-5 gap-[20px] z-[1] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[1] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               Special thanks to
@@ -2204,13 +2204,13 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <section className="self-stretch bg-nero1 flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
             <button
-              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero1"
+              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
               autoFocus={true}
               onClick={onSupportUsButtonClick}
             >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-small-500 text-nero1 text-center inline-block max-h-[58px]">
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                 support us
               </div>
             </button>

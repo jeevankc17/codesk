@@ -36,7 +36,7 @@ const CarrerPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -70,7 +70,7 @@ const CarrerPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               Read Guidelines
             </div>
           </button>
@@ -81,7 +81,7 @@ const CarrerPage: FunctionComponent = () => {
           src="/image-511@2x.png"
         />
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
           <div className="self-stretch h-[86px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
             Become a teacher in CoDesk doesn’t mean you will end up your coding
@@ -102,7 +102,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach whatever age group you prefer
               </div>
@@ -121,7 +121,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach whatever stack you want
               </div>
@@ -140,7 +140,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach on your own preferable language
               </div>
@@ -159,7 +159,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Hands On teaching Resources
               </div>
@@ -178,7 +178,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Teach physically as well as virutally
               </div>
@@ -197,7 +197,7 @@ const CarrerPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black">
+            <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
                 Earn from teaching as well as building
               </div>
@@ -467,13 +467,13 @@ const CarrerPage: FunctionComponent = () => {
                       Step 1
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Submit your application
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black">
+                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     Sign up as a teacher, verify your phone number, and provide
                     some basic information about yourself.
@@ -489,13 +489,13 @@ const CarrerPage: FunctionComponent = () => {
                       Step 2
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Share a demo video
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black">
+                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     Upload a short 2 to 5 minute video of yourself explaining a
                     concept, subject or topic of your choice. This is your
@@ -526,13 +526,13 @@ const CarrerPage: FunctionComponent = () => {
                       Step 3
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Take technical assessment
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black">
+                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     We will give you a small test to complete. This will help us
                     assess your technical knowledge and skill level.
@@ -548,13 +548,13 @@ const CarrerPage: FunctionComponent = () => {
                       Step 4
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Do an interview
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black">
+                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     If your skill and qualifications meet our expectations,
                     you'll hear from us to set up a round of interviews.
@@ -584,13 +584,13 @@ const CarrerPage: FunctionComponent = () => {
                       Step 5
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black">
+                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Get hired!
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black">
+                <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     If all goes well, you will be informed about our decision to
                     hire you as a teacher, and you'll be teaching kids to code
@@ -610,7 +610,7 @@ const CarrerPage: FunctionComponent = () => {
             className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
             autoFocus={true}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               Become A Teacher
             </div>
           </button>
@@ -692,7 +692,7 @@ const CarrerPage: FunctionComponent = () => {
             <img
               className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
               alt=""
-              src="/reason1png3@2x.png"
+              src="/reason1png31@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-center justify-center">
               <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">

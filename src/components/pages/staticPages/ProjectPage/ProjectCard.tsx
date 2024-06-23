@@ -1,6 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 
 export type ProjectCardType = {
+  className?: string;
   coverImage?: string;
   nameStudent?: string;
   courseName?: string;
@@ -11,6 +12,7 @@ export type ProjectCardType = {
 };
 
 const ProjectCard: FunctionComponent<ProjectCardType> = ({
+  className = "",
   coverImage,
   nameStudent,
   courseName,
@@ -24,7 +26,9 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
   }, []);
 
   return (
-    <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px] text-left text-5xl text-black font-body-xl-600">
+    <div
+      className={`w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+    >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
         alt=""
@@ -50,12 +54,12 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-base">
-            <div className="relative leading-[150%] inline-block max-w-[373.3299865722656px]">
+            <div className="relative leading-[150%] inline-block max-w-[373.33px]">
               {courseName}
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-sm">
-            <div className="relative leading-[120%] font-semibold inline-block max-w-[373.3299865722656px]">
+            <div className="relative leading-[120%] font-semibold inline-block max-w-[373.33px]">
               {projectName}
             </div>
           </div>
@@ -66,7 +70,7 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
             onClick={onViewProjectButtonClick}
             id={projectId}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               View Project
             </div>
           </button>

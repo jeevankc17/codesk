@@ -7,8 +7,13 @@ import {
 } from "react-router-dom";
 import HomePage from "./components/pages/staticPages/HomePage/HomePage";
 import CoursePage from "./components/pages/staticPages/CoursePage/CoursePage";
+import CompetetionsPage from "./components/pages/staticPages/CompetetionsPage/CompetetionsPage";
 import CurriculumByCoursePage from "./components/pages/staticPages/CurriculumByCoursePage/CurriculumByCoursePage";
 import AboutUsPage from "./components/pages/staticPages/AboutUsPage/AboutUsPage";
+import HackathonsCompetetionsPage from "./components/pages/staticPages/HackathonsCompetetionsPage/HackathonsCompetetionsPage";
+import ProjectsCompetetionsPage from "./components/pages/staticPages/ProjectsCompetetionsPage/ProjectsCompetetionsPage";
+import BuildersCompetetionsPage from "./components/pages/staticPages/BuildersCompetetionsPage/BuildersCompetetionsPage";
+import OrganizersCompetetionsPage from "./components/pages/staticPages/OrganizersCompetetionsPage/OrganizersCompetetionsPage";
 import ReviewPage from "./components/pages/staticPages/ReviewPage/ReviewPage";
 import CommingSoonPage from "./components/pages/staticPages/CommingSoonPage/CommingSoonPage";
 import PartnershipPage from "./components/pages/staticPages/PartnershipPage/PartnershipPage";
@@ -19,11 +24,6 @@ import QuizPage from "./components/pages/staticPages/QuizPage/QuizPage";
 import WorksheetPage from "./components/pages/staticPages/WorksheetPage/WorksheetPage";
 import CarrerPage from "./components/pages/staticPages/CarrerPage/CarrerPage";
 import QuizByCourseIDPage from "./components/pages/staticPages/QuizByCourseIDPage/QuizByCourseIDPage";
-import HackathonsCompetetionsPage from "./components/pages/staticPages/HackathonsCompetetionsPage/HackathonsCompetetionsPage";
-import ProjectsCompetetionsPage from "./components/pages/staticPages/ProjectsCompetetionsPage/ProjectsCompetetionsPage";
-import BuildersCompetetionsPage from "./components/pages/staticPages/BuildersCompetetionsPage/BuildersCompetetionsPage";
-import OrganizersCompetetionsPage from "./components/pages/staticPages/OrganizersCompetetionsPage/OrganizersCompetetionsPage";
-import CompetetionsPage from "./components/pages/staticPages/CompetetionsPage/CompetetionsPage";
 
 function App() {
   const action = useNavigationType();
@@ -50,11 +50,31 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/competetionspage":
+        title = "";
+        metaDescription = "";
+        break;
       case "/curriculumbycoursepage":
         title = "";
         metaDescription = "";
         break;
       case "/aboutuspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/hackathonscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/projectscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/builderscompetetionspage":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/organizerscompetetionspage":
         title = "";
         metaDescription = "";
         break;
@@ -98,26 +118,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/hackathonscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/projectscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/builderscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/organizerscompetetionspage":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/competetionspage":
-        title = "";
-        metaDescription = "";
-        break;
     }
 
     if (title) {
@@ -138,21 +138,12 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/coursepage" element={<CoursePage />} />
+      <Route path="/competetionspage" element={<CompetetionsPage />} />
       <Route
         path="/curriculumbycoursepage"
         element={<CurriculumByCoursePage />}
       />
       <Route path="/aboutuspage" element={<AboutUsPage />} />
-      <Route path="/reviewpage" element={<ReviewPage />} />
-      <Route path="/commingsoonpage" element={<CommingSoonPage />} />
-      <Route path="/partnershippage" element={<PartnershipPage />} />
-      <Route path="/blogpage" element={<BlogPage />} />
-      <Route path="/projectpage" element={<ProjectPage />} />
-      <Route path="/whycodeskpage" element={<WhyCodeskPage />} />
-      <Route path="/quizpage" element={<QuizPage />} />
-      <Route path="/worksheetpage" element={<WorksheetPage />} />
-      <Route path="/applyteacherpage" element={<CarrerPage />} />
-      <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
       <Route
         path="/hackathonscompetetionspage"
         element={<HackathonsCompetetionsPage />}
@@ -169,7 +160,16 @@ function App() {
         path="/organizerscompetetionspage"
         element={<OrganizersCompetetionsPage />}
       />
-      <Route path="/competetionspage" element={<CompetetionsPage />} />
+      <Route path="/reviewpage" element={<ReviewPage />} />
+      <Route path="/commingsoonpage" element={<CommingSoonPage />} />
+      <Route path="/partnershippage" element={<PartnershipPage />} />
+      <Route path="/blogpage" element={<BlogPage />} />
+      <Route path="/projectpage" element={<ProjectPage />} />
+      <Route path="/whycodeskpage" element={<WhyCodeskPage />} />
+      <Route path="/quizpage" element={<QuizPage />} />
+      <Route path="/worksheetpage" element={<WorksheetPage />} />
+      <Route path="/applyteacherpage" element={<CarrerPage />} />
+      <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
     </Routes>
   );
 }

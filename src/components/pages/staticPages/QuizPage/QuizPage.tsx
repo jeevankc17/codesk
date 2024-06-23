@@ -37,7 +37,7 @@ const QuizPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-xl-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -67,7 +67,7 @@ const QuizPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-xl-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
               View a Quizzes
             </div>
           </button>
@@ -78,7 +78,7 @@ const QuizPage: FunctionComponent = () => {
           src="/image-55@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black">
+      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-13xl text-black1">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
             <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-9xl">
