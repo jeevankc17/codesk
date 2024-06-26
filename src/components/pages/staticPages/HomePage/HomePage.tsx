@@ -78,7 +78,7 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-17xl text-black font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#FF5A43"
           onLogoClick={onLogoClick}
@@ -128,7 +128,7 @@ const HomePage: FunctionComponent = () => {
                 />
               </div>
               <div className="flex-1 flex flex-row items-start justify-start">
-                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9868296800 for help & questions.`}</div>
+                <div className="flex-1 relative leading-[24px] font-semibold">{`Call us at 9851150547 for help & questions.`}</div>
               </div>
             </div>
           </div>
@@ -142,9 +142,9 @@ const HomePage: FunctionComponent = () => {
           <div className="self-stretch flex flex-col items-center justify-center h-auto">
             <div className="self-stretch h-auto relative leading-[120%] font-semibold inline-block sm:text-9xl">
               <span>Learn coding</span>
-              <span className="text-black1">{` from the `}</span>
+              <span className="text-black">{` from the `}</span>
               <span>top Nepali IT instructors</span>
-              <span className="text-black1">
+              <span className="text-black">
                 . Our hand-picked instructors ensure the best learning
                 experience.
               </span>
@@ -164,7 +164,7 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Coding stacks
                 </div>
@@ -183,7 +183,7 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Disruptive Technology
                 </div>
@@ -202,7 +202,7 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Empowering Youth
                 </div>
@@ -221,7 +221,7 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Hands On Resources
                 </div>
@@ -240,7 +240,7 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">
                   Hackathons Event
                 </div>
@@ -259,13 +259,13 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black1">
+              <div className="self-stretch flex flex-row items-start justify-start text-center text-base text-black">
                 <div className="flex-1 relative leading-[120%] font-semibold">{`Virtual & Physical Classes`}</div>
               </div>
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-17xl text-black font-body-large-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap sm:text-9xl">
               With CoDesk, your child’s future is on safe hands!
@@ -489,7 +489,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-17xl text-black font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               Choose a coding course that excites childs
@@ -714,7 +714,7 @@ const HomePage: FunctionComponent = () => {
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-2.5 gap-[15px] text-left text-base md:flex-row md:flex-wrap sm:pt-5 sm:pb-5 sm:box-border">
             <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black1">
+              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
                 <div className="self-stretch flex flex-row items-start justify-center z-[0]">
                   <div className="flex-1 relative leading-[120%] font-semibold">
                     8 classes / month
@@ -803,7 +803,7 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
             <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black1">
+              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
                 <div className="self-stretch flex flex-row items-start justify-center z-[0]">
                   <div className="flex-1 relative leading-[120%] font-semibold">
                     4 classes / month
@@ -947,7 +947,7 @@ const HomePage: FunctionComponent = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-right text-sm text-black">
                     <div className="self-stretch flex flex-row items-center justify-start">
                       <div className="flex-1 relative leading-[120%] font-semibold">
                         Team Size:
@@ -1301,10 +1301,10 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-[0.5px]">
               <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
                 <span>Intuitive learning dashboard</span>
-                <span className="text-black1"> for kids and parents</span>
+                <span className="text-black"> for kids and parents</span>
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[10px] text-sm text-black1">
+            <div className="self-stretch flex flex-col items-start justify-start gap-[10px] text-sm text-black">
               <div className="self-stretch relative leading-[150%]">{`Class management & progress tracking`}</div>
               <div className="self-stretch relative leading-[150%]">
                 Assignments and task
@@ -1332,7 +1332,7 @@ const HomePage: FunctionComponent = () => {
             </button>
           </div>
         </div>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
             <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
               See amazing projects created by our students

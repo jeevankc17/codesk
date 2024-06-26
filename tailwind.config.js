@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         nero: "#fff",
         "footer-header": "#0063b0",
-        black1: "#000",
+        black: "#000",
         "aqua-deep": "#ff5a43",
         dimgray: "#666",
         "other-outlined-border": "rgba(0, 0, 0, 0.23)",
@@ -15,7 +15,6 @@ module.exports = {
         "text-primary": "rgba(0, 0, 0, 0.87)",
         "grey-grey-400": "#bdbdbd",
         "grey-grey-700": "#616161",
-
         "wwwcodingalcom-mine-shaft": "#3a3a3a",
         lavenderblush: "rgba(255, 237, 235, 0.75)",
         "dim-green": "#58d1bd",
@@ -39,9 +38,6 @@ module.exports = {
         tomato: "#ff5c4b",
         cornflowerblue: "#428cd4",
         "yellow-mango": "#faff00",
-        lightslategray: "#7e8a97",
-        black: "#191919",
-        aliceblue: "#e6e9f0",
         whitesmoke: {
           "100": "#f5f7f7",
           "200": "#eaeaea",
@@ -49,6 +45,9 @@ module.exports = {
         },
         darkgray: "#8e989c",
         slategray: "#576074",
+        lightslategray: "#7e8a97",
+        black1: "#191919",
+        aliceblue: "#e6e9f0",
       },
       spacing: {},
       fontFamily: {
