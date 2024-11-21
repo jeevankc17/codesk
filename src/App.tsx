@@ -1,29 +1,30 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
-} from "react-router-dom";
-import HomePage from "./components/pages/staticPages/HomePage/HomePage";
-import CoursePage from "./components/pages/staticPages/CoursePage/CoursePage";
-import CompetetionsPage from "./components/pages/staticPages/CompetetionsPage/CompetetionsPage";
-import CurriculumByCoursePage from "./components/pages/staticPages/CurriculumByCoursePage/CurriculumByCoursePage";
-import AboutUsPage from "./components/pages/staticPages/AboutUsPage/AboutUsPage";
-import HackathonsCompetetionsPage from "./components/pages/staticPages/HackathonsCompetetionsPage/HackathonsCompetetionsPage";
-import ProjectsCompetetionsPage from "./components/pages/staticPages/ProjectsCompetetionsPage/ProjectsCompetetionsPage";
-import BuildersCompetetionsPage from "./components/pages/staticPages/BuildersCompetetionsPage/BuildersCompetetionsPage";
-import OrganizersCompetetionsPage from "./components/pages/staticPages/OrganizersCompetetionsPage/OrganizersCompetetionsPage";
-import ReviewPage from "./components/pages/staticPages/ReviewPage/ReviewPage";
-import CommingSoonPage from "./components/pages/staticPages/CommingSoonPage/CommingSoonPage";
-import PartnershipPage from "./components/pages/staticPages/PartnershipPage/PartnershipPage";
-import BlogPage from "./components/pages/staticPages/BlogPage/BlogPage";
-import ProjectPage from "./components/pages/staticPages/ProjectPage/ProjectPage";
-import WhyCodeskPage from "./components/pages/staticPages/WhyCodeskPage/WhyCodeskPage";
-import QuizPage from "./components/pages/staticPages/QuizPage/QuizPage";
-import WorksheetPage from "./components/pages/staticPages/WorksheetPage/WorksheetPage";
-import CarrerPage from "./components/pages/staticPages/CarrerPage/CarrerPage";
-import QuizByCourseIDPage from "./components/pages/staticPages/QuizByCourseIDPage/QuizByCourseIDPage";
+} from 'react-router-dom';
+
+import HomePage from './components/pages/HomePage/HomePage';
+import CoursePage from './components/pages/CoursePage/CoursePage';
+import CompetetionsPage from './components/pages/CompetetionsPage/CompetetionsPage';
+import CurriculumByCoursePage from './components/pages/CurriculumByCoursePage/CurriculumByCoursePage';
+import AboutUsPage from './components/pages/AboutUsPage/AboutUsPage';
+import HackathonsCompetetionsPage from './components/pages/HackathonsCompetetionsPage/HackathonsCompetetionsPage';
+import ProjectsCompetetionsPage from './components/pages/ProjectsCompetetionsPage/ProjectsCompetetionsPage';
+import BuildersCompetetionsPage from './components/pages/BuildersCompetetionsPage/BuildersCompetetionsPage';
+import OrganizersCompetetionsPage from './components/pages/OrganizersCompetetionsPage/OrganizersCompetetionsPage';
+import ReviewPage from './components/pages/ReviewPage/ReviewPage';
+import CommingSoonPage from './components/pages/CommingSoonPage/CommingSoonPage';
+import PartnershipPage from './components/pages/PartnershipPage/PartnershipPage';
+import BlogPage from './components/pages/BlogPage/BlogPage';
+import ProjectPage from './components/pages/ProjectPage/ProjectPage';
+import WhyCodeskPage from './components/pages/WhyCodeskPage/WhyCodeskPage';
+import QuizPage from './components/pages/QuizPage/QuizPage';
+import WorksheetPage from './components/pages/WorksheetPage/WorksheetPage';
+import CarrerPage from './components/pages/CarrerPage/CarrerPage';
+import QuizByCourseIDPage from './components/pages/QuizByCourseIDPage/QuizByCourseIDPage';
 
 function App() {
   const action = useNavigationType();
@@ -32,91 +33,91 @@ function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (action !== "POP") {
+    if (action !== 'POP') {
       window.scrollTo(0, 0);
     }
   }, [action, pathname]);
 
   useEffect(() => {
-    let title = "";
-    let metaDescription = "";
+    let title = '';
+    let metaDescription = '';
 
     switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
+      case '/':
+        title = '';
+        metaDescription = '';
         break;
-      case "/coursepage":
-        title = "";
-        metaDescription = "";
+      case '/coursepage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/competetionspage":
-        title = "";
-        metaDescription = "";
+      case '/competetionspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/curriculumbycoursepage":
-        title = "";
-        metaDescription = "";
+      case '/curriculumbycoursepage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/aboutuspage":
-        title = "";
-        metaDescription = "";
+      case '/aboutuspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/hackathonscompetetionspage":
-        title = "";
-        metaDescription = "";
+      case '/hackathonscompetetionspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/projectscompetetionspage":
-        title = "";
-        metaDescription = "";
+      case '/projectscompetetionspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/builderscompetetionspage":
-        title = "";
-        metaDescription = "";
+      case '/builderscompetetionspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/organizerscompetetionspage":
-        title = "";
-        metaDescription = "";
+      case '/organizerscompetetionspage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/reviewpage":
-        title = "";
-        metaDescription = "";
+      case '/reviewpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/commingsoonpage":
-        title = "";
-        metaDescription = "";
+      case '/commingsoonpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/partnershippage":
-        title = "";
-        metaDescription = "";
+      case '/partnershippage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/blogpage":
-        title = "";
-        metaDescription = "";
+      case '/blogpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/projectpage":
-        title = "";
-        metaDescription = "";
+      case '/projectpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/whycodeskpage":
-        title = "";
-        metaDescription = "";
+      case '/whycodeskpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/quizpage":
-        title = "";
-        metaDescription = "";
+      case '/quizpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/worksheetpage":
-        title = "";
-        metaDescription = "";
+      case '/worksheetpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/applyteacherpage":
-        title = "";
-        metaDescription = "";
+      case '/applyteacherpage':
+        title = '';
+        metaDescription = '';
         break;
-      case "/quizbycourseidpage":
-        title = "";
-        metaDescription = "";
+      case '/quizbycourseidpage':
+        title = '';
+        metaDescription = '';
         break;
     }
 
