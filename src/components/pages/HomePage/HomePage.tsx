@@ -131,7 +131,22 @@ const HomePage: FunctionComponent = () => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current!.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = x - startX;
+    scrollContainerRef.current!.scrollLeft = scrollLeft - walk;
+  };
+
+  // Add touch support for mobile devices
+  const startDraggingTouch = (e: React.TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - scrollContainerRef.current!.offsetLeft);
+    setScrollLeft(scrollContainerRef.current!.scrollLeft);
+  };
+
+  const onDragTouch = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - scrollContainerRef.current!.offsetLeft;
+    const walk = x - startX;
     scrollContainerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
@@ -304,36 +319,41 @@ const HomePage: FunctionComponent = () => {
 
           <div
             ref={scrollContainerRef}
-            className="self-stretch overflow-x-auto scrollbar-hide flex flex-row items-center justify-center py-[25px] px-[5px] gap-[15px] text-left text-2xl text-footer-header cursor-grab active:cursor-grabbing"
+            className="self-stretch overflow-x-auto scrollbar-hide flex flex-row items-center justify-center md:justify-start sm:justify-start py-[25px] px-[5px] gap-[15px] text-left text-2xl text-footer-header cursor-grab active:cursor-grabbing"
             onMouseDown={startDragging}
             onMouseUp={stopDragging}
             onMouseLeave={stopDragging}
             onMouseMove={onDrag}
+            onTouchStart={startDraggingTouch}
+            onTouchEnd={stopDragging}
+            onTouchMove={onDragTouch}
           >
-            {cardData.map((card, index) => (
-              <div
-                key={index}
-                className="flex-none w-[200px] h-[150px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-center justify-center p-[5px] box-border gap-[5px] transition-transform hover:scale-105 lg:w-[200px] md:w-[150px] sm:w-[150px]"
-              >
-                <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
-                  <img
-                    className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
-                    alt=""
-                    src={card.icon}
-                  />
-                  <div className="flex-1 flex flex-row items-end justify-start">
-                    <div className="flex-1 relative leading-[150%] font-semibold sm:text-lg">
-                      {card.number}
+            <div className="flex flex-row items-center gap-[15px] min-w-max md:pl-2 sm:pl-2">
+              {cardData.map((card, index) => (
+                <div
+                  key={index}
+                  className="flex-none w-[200px] h-[150px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-center justify-center p-[5px] box-border gap-[5px] transition-transform hover:scale-105 lg:w-[200px] md:w-[150px] sm:w-[150px]"
+                >
+                  <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
+                    <img
+                      className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
+                      alt=""
+                      src={card.icon}
+                    />
+                    <div className="flex-1 flex flex-row items-end justify-start">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-lg">
+                        {card.number}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="self-stretch flex flex-row items-start justify-start text-center text-md text-black">
+                    <div className="flex-1 relative leading-[120%] font-semibold">
+                      {card.title}
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-row items-start justify-start text-center text-md text-black">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    {card.title}
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
         <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-4xl\ text-black font-body-large-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
