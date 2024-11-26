@@ -1,3 +1,4 @@
+import React from 'react';
 import { FunctionComponent, useState, useCallback, useRef } from 'react';
 import {
   Accordion,
@@ -11,6 +12,8 @@ import PortalPopup from '../../common/PortalPopup';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../common/Navbar';
 import Footer from '../../common/Footer';
+import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 const HomePage: FunctionComponent = () => {
   const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
@@ -144,48 +147,129 @@ const HomePage: FunctionComponent = () => {
           onAboutUsClick={onAboutUsClick}
         />
         <header className="self-stretch rounded-mini bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[17] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
-          <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2] lg:w-full md:w-full sm:w-full">
-            <div className="self-stretch flex flex-col items-start justify-start font-body-large-600">
-              <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-md">
-                Learn to Code Like Never Before! Whether You’re a Child, a
-                Hobbyist, or a Professional or may be From
-                Technical/Non-Technical Background? Doesn't matter!
-              </div>
-              <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-md">
-                Our Block-Based Programming Makes It Easy to Develop Any Apps,
-                Websites, Robotics & IoT Projects, Games, AI & Automations,
-                AR/VR Any thing.
+          <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
+            <div className="self-stretch flex flex-col items-start justify-start font-body-large-600 sm:items-center">
+              <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-sm sm:text-center">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-4"
+                >
+                  <TypeAnimation
+                    sequence={[
+                      'Coding has Never been so Fun ever Before!',
+                      1000,
+                    ]}
+                    wrapper="span"
+                    cursor={true}
+                    className="text-3xl font-bold bg-gradient-to-r from-[#FF5A43] to-[#FF8A43] bg-clip-text text-transparent sm:text-xl"
+                  />
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="mb-4"
+                >
+                  Whether You're a{' '}
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                  >
+                    Child
+                  </motion.span>
+                  , a{' '}
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                  >
+                    Hobbyist
+                  </motion.span>
+                  , or a{' '}
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                  >
+                    Professional
+                  </motion.span>{' '}
+                  or may be From{' '}
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                  >
+                    Technical/Non-Technical Background
+                  </motion.span>
+                  ? Doesn't matter!
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 1 }}
+                >
+                  Our{' '}
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                  >
+                    Block-Based Programming
+                  </motion.span>{' '}
+                  Makes It Easy to Develop Any{' '}
+                  {[
+                    'Apps',
+                    'Websites',
+                    'Robotics & IoT Projects',
+                    'Games',
+                    'AI & Automations',
+                    'AR/VR',
+                  ].map((text, index) => (
+                    <motion.span
+                      key={index}
+                      whileHover={{
+                        scale: 1.1,
+                        color: '#FF5A43',
+                      }}
+                      className="font-bold text-[1.1em] cursor-pointer transition-colors duration-300 mx-1"
+                    >
+                      {text}
+                      {index !== 5 && ','}
+                    </motion.span>
+                  ))}{' '}
+                  Any thing.
+                </motion.p>
               </div>
             </div>
-            <div className="flex flex-row md:flex-col">
-              <div className="self-stretch flex flex-row items-start justify-start gap-[15px] text-2xl">
-                <div className="self-stretch w-[107px] flex flex-col items-start justify-start">
-                  <div className="self-stretch flex flex-col items-start justify-start">
-                    <div className="relative tracking-[-0.01em] leading-[32px] font-semibold">
-                      1200+
+            <div className="flex flex-row md:flex-col sm:items-center">
+              <div className="self-stretch flex flex-row items-start justify-start gap-[15px] text-2xl sm:justify-center">
+                <div className="self-stretch w-[107px] flex flex-col items-start justify-start sm:items-center">
+                  <div className="self-stretch flex flex-col items-start justify-start sm:items-center">
+                    <div className="relative tracking-[-0.01em] leading-[32px] font-semibold text-[#FF5A43] sm:text-lg">
+                      5000+
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-md font-body-large-600">
-                    <div className="self-stretch relative leading-[24px]">
-                      Students
+                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-md font-body-large-600 sm:items-center sm:pr-0">
+                    <div className="self-stretch relative leading-[24px] sm:text-sm ">
+                      No Of Students
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-start justify-start">
-                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[34.3px] pl-0">
-                    <div className="relative tracking-[-0.01em] leading-[32px] font-semibold">
-                      5+
+                <div className="flex flex-col items-start justify-start sm:items-center">
+                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[34.3px] pl-0 sm:items-center sm:pr-0">
+                    <div className="relative tracking-[-0.01em] leading-[32px] font-semibold text-[#FF5A43] sm:text-lg">
+                      12+
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start relative text-md font-body-large-600">
-                    <div className="relative leading-[24px] z-[0]">
+                  <div className="self-stretch flex flex-col items-start justify-start relative text-md font-body-large-600 sm:items-center">
+                    <div className="relative leading-[24px] z-[0] sm:text-sm">
                       Districts
                     </div>
                     <div className="w-6 absolute !m-[0] bottom-[0px] left-[0px] box-border h-px z-[1] border-b-[1px] border-solid border-silver" />
                   </div>
                 </div>
               </div>
-              <div className="self-stretch flex flex-row items-center justify-start gap-[5px] text-lg">
+              <div className="self-stretch flex flex-row items-center justify-start gap-[5px] text-lg sm:justify-center">
                 <div className="self-stretch flex flex-row items-center justify-center">
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0 object-cover"
@@ -193,8 +277,8 @@ const HomePage: FunctionComponent = () => {
                     src="/phonecall@2x.png"
                   />
                 </div>
-                <div className="flex-1 flex flex-row items-center justify-start">
-                  <div className="flex-1 relative leading-[24px] font-semibold justify-center">{`Call us at 9860246836 for help & questions.`}</div>
+                <div className="flex-1 flex flex-row items-center justify-start sm:justify-center">
+                  <div className="flex-1 relative leading-[24px] font-semibold sm:text-xs">{`Call us at 9860246836 for help & questions.`}</div>
                 </div>
               </div>
             </div>
