@@ -27,7 +27,7 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
 
   return (
     <div
-      className={`w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+      className={`w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px] text-left text-2xl text-black1 font-body-large-600 ${className}`}
     >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
@@ -42,7 +42,7 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
                 {nameStudent}
               </div>
             </div>
-            <div className="w-[110px] flex flex-row items-center justify-end text-right text-base">
+            <div className="w-[110px] flex flex-row items-center justify-end text-right text-md">
               <div className="flex-1 flex flex-col items-end justify-center py-0 pr-[5px] pl-0">
                 <div className="w-[65px] relative leading-[150%] flex items-center">{`Grade: `}</div>
               </div>
@@ -53,7 +53,7 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
               </div>
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-base">
+          <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-md">
             <div className="relative leading-[150%] inline-block max-w-[373.33px]">
               {courseName}
             </div>

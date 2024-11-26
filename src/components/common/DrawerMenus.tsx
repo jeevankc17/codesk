@@ -121,7 +121,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/houseline.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Home
             </div>
           </button>
@@ -134,7 +134,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/info.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               About Us
             </div>
           </button>
@@ -147,7 +147,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/video.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Courses
             </div>
           </button>
@@ -160,7 +160,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/book--undefined--glyph-undefined1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               School Partnerships
             </div>
           </button>
@@ -173,7 +173,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/vector11.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Quizzes
             </div>
           </button>
@@ -186,7 +186,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/flagbannerfold.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Competetion
             </div>
           </button>
@@ -199,7 +199,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Worksheets
             </div>
           </button>
@@ -212,7 +212,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/bookopentext1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Blogs
             </div>
           </button>
@@ -225,7 +225,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/celltower1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Projects
             </div>
           </button>
@@ -238,7 +238,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/question1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Why CoDesk?
             </div>
           </button>
@@ -251,7 +251,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/chalkboardteacher1.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Careers
             </div>
           </button>
@@ -264,7 +264,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/lockkeyopen.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Login
             </div>
           </button>
@@ -277,7 +277,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/cashregister.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Register
             </div>
           </button>
@@ -290,7 +290,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
               alt=""
               src="/userswitch.svg"
             />
-            <div className="relative text-base leading-[24px] font-medium font-components-chip text-black1 text-left">
+            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
               Instructor Login
             </div>
           </button>

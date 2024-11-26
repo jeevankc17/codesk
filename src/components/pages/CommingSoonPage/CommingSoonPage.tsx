@@ -46,7 +46,7 @@ const CommingSoonPage: FunctionComponent = () => {
             <div className="self-stretch relative leading-[150%] font-semibold">
               COMING SOON
             </div>
-            <div className="self-stretch relative leading-[150%] text-gray-900 sm:text-5xl">
+            <div className="self-stretch relative leading-[150%] text-gray-900 sm:text-2xl">
               Hey, hold tight! The goodies you're after are strictly for our
               enrolled kiddos, so it's time to get your school onboard! Here at
               the EdTech platform, we're all about teaching coding to cool kids

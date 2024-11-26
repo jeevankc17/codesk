@@ -3,6 +3,161 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../common/Navbar';
 import Footer from '../../common/Footer';
 
+// Update the specializedCourses array with all 6 courses
+const specializedCourses = [
+  {
+    title: 'Scratch Programming',
+    category: 'Foundation',
+    description:
+      'Understanding fundamental programming concepts through visual coding.',
+    features: [
+      'Understanding fundamental programming concepts through visual coding.',
+      'Learning to create interactive stories, games, and animations.',
+      'Exploring computational thinking and problem-solving skills.',
+    ],
+    grade: 'Grade 3 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Scratch Programming Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'Robolox Programming',
+    category: 'Game Development',
+    description: 'Master game development with Roblox Studio.',
+    features: [
+      'Mastering the tools and features of Roblox Studio for building immersive game environments.',
+      'Learning Lua programming language to create interactive game mechanics and functionalities.',
+      'Understanding the fundamentals of game design to create engaging gameplay experiences.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Roblox Development Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'Thunkable Programming',
+    category: 'App Development',
+    description: 'Build mobile apps without traditional coding.',
+    features: [
+      'Building mobile apps without traditional coding using a visual programming interface.',
+      'Integrating various features such as sensors, APIs, and databases into app development.',
+      'Understanding the app development lifecycle from design to deployment.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Mobile App Development Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'IOT Based Scratch',
+    category: 'IOT & Robotics',
+    description: 'Connect physical devices with code.',
+    features: [
+      'Learning about smart devices and how they interact with the internet to perform various tasks.',
+      'Understanding the role of sensors in collecting data and actuators in performing actions in IoT systems.',
+      'Introducing simple programming concepts through visual programming languages suitable for kids.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'IoT & Robotics Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'Python Programming',
+    category: 'Artificial Intelligence',
+    description: 'Learn professional programming with Python.',
+    features: [
+      'Introduction to Python programming language syntax and concepts.',
+      'Understanding data types, variables, loops, and conditionals.',
+      'Understanding how to work on data sets using Business Intelligence tools and machine learning models.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Python Programming Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'Web Development',
+    category: 'Web Development',
+    description: 'Create modern websites and web applications.',
+    features: [
+      'Understanding of UI/UX principles using Figma then HTML, CSS, and JavaScript for creating interactive web pages.',
+      'Learning about responsive design and cross-browser compatibility.',
+      'Exploring different web development frameworks and libraries for enhanced functionality.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Web Development Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+];
+
+const workshopCourses = [
+  {
+    title: 'Single Day Codeshops',
+    description:
+      'A perfect course for kids who want to test drive to coding road.',
+    age: 'Ages 8-18',
+    lessons: '5+ Lessons',
+    activities: '10+ Activities',
+    image: '/image31@2x.png',
+  },
+  {
+    title: 'Multi Day codeshops',
+    description:
+      'A course for those who want to master the art of coding and create a better future through code.',
+    age: 'Ages 8-18',
+    lessons: '10+ Lessons',
+    activities: '15+ Activities',
+    image: '/image41@2x.png',
+  },
+  {
+    title: 'Week Long Codeshops',
+    description:
+      'A perfect course for kids who want to use coding to solve real-world problems and create a better future.',
+    age: 'Ages 8-18',
+    lessons: '15+ Lessons',
+    activities: '20+ Activities',
+    image: '/image51@2x.png',
+  },
+];
+
 const CoursePage: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -52,7 +207,7 @@ const CoursePage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-4xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -65,15 +220,15 @@ const CoursePage: FunctionComponent = () => {
         aboutUsColor="#000"
         quizzesColor="#000"
       />
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-4xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
               All Coding Courses
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
-            <div className="self-stretch relative leading-[150%]">
+            <div className="self-stretch relative leading-[150%] text-md">
               Pick from a wide range of online coding courses for kids and set
               your children on the path of success
             </div>
@@ -83,7 +238,7 @@ const CoursePage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
+            <div className="relative tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px] text-3xl md:text-xl sm:text-lg">
               View a Courses
             </div>
           </button>
@@ -94,1752 +249,163 @@ const CoursePage: FunctionComponent = () => {
           src="/image-51@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[50px] relative z-[3]">
-        <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
-              Specialized coding courses
-            </div>
-          </div>
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
-            <div className="flex-1 relative leading-[150%]">
-              Learn only what you want to learn with coding courses focused on
-              app development, website building, game development, data science,
-              or more
-            </div>
-          </div>
-        </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 gap-[50px] text-left text-base">
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">Foundation</div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    Scratch Programming
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding fundamental programming concepts through
-                    visual coding.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Learning to create interactive stories, games, and
-                    animations.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Exploring computational thinking and problem-solving skills.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 3 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">Game Development</div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    Robolox Programming
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Mastering the tools and features of Roblox Studio for
-                    building immersive game environments.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Learning Lua programming language to create interactive game
-                    mechanics and functionalities.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding the fundamentals of game design to create
-                    engaging gameplay experiences.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 7 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">App Development</div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    Thunkable Programming
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Building mobile apps without traditional coding using a
-                    visual programming interface.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Integrating various features such as sensors, APIs, and
-                    databases into app development.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding the app development lifecycle from design to
-                    deployment.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 7 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">{`IOT & Robotics`}</div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    IOT Based Scratch
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Learning about smart devices and how they interact with the
-                    internet to perform various tasks.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding the role of sensors in collecting data and
-                    actuators in performing actions in IoT systems.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Introducing simple programming concepts through visual
-                    programming languages suitable for kids.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 7 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">
-                  Artificial Intelligence
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    Python Programming
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    {' '}
-                    Introduction to Python programming language syntax and
-                    concepts.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding data types, variables, loops, and
-                    conditionals. Learning to solve problems and automate tasks
-                    using Python scripts.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding how to work on data sets using Bussiness
-                    Intelligence tools and machine learning models for different
-                    purposes
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 7 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
-            onClick={onCardscourseContainerClick}
-          >
-            <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
-              <img
-                className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
-                alt=""
-                src="/scratchprogrammingpng@2x.png"
-              />
-              <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-center p-2.5 box-border">
-                <div className="relative leading-[150%]">Web Development</div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-5xl text-dodger-blue">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%] font-semibold">
-                    Web Development
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px] text-sm text-black1">
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire1.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Understanding of UI/UX principles using Figma then HTML,
-                    CSS, and JavaScript for creating interactive web pages.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire2.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    {' '}
-                    Learning about responsive design and cross-browser
-                    compatibility.
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/fire3.svg"
-                  />
-                  <div className="flex-1 relative tracking-[-0.01em] leading-[22px] whitespace-pre-wrap">
-                    Exploring different web development frameworks and libraries
-                    for enhanced functionality in client-side, server-side and
-                    database.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/chalkboardteacher.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    Grade 7 and above
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/book--undefined--glyph-undefined.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`6 Modules, 36 Lessons & 50 classes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/microsoftwordlogo.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/question.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img
-                  className="w-6 relative h-6 overflow-hidden shrink-0"
-                  alt=""
-                  src="/celltower.svg"
-                />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
-                    100+ fun activities and projects
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scratch Programming Certificate
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Exclusive access to competitions
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
-                <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
-                <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-                  <div className="flex-1 relative leading-[150%]">
-                    Scholarships for top performers
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                onClick={onViewCurriculumButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                  View Curriculum
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          className="absolute left-[0] top-[-70px]"
-          data-scroll-to="comboCourseContainer"
-        />
-      </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[50px] z-[2] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch bg-nero flex flex-col items-start justify-center gap-[50px] relative z-[3]">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
+            <div className="flex-1 relative leading-[120%] font-semibold text-center sm:text-3xl">
               All-in-one generalized coding courses
             </div>
           </div>
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
-            <div className="flex-1 relative leading-[150%]">
+            <div className="flex-1 relative leading-[150%] text-center">
               Learn to create apps, websites, games and more in our extensive
               online coding courses for kids who want to be real all-rounders
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 gap-[50px] text-base font-inter sm:pl-[5px] sm:pr-[5px] sm:box-border">
-          <div className="w-[350px] shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start p-2.5 box-border gap-[10px]">
-            <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[95px] text-5xl text-purple-heart">
-                <div className="w-full relative tracking-[-0.01em] leading-[32px] font-semibold inline-block max-w-[358px]">
-                  Level 1
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[50px]">
-                <div className="self-stretch relative leading-[22px] font-semibold">
-                  Introduction to Basic Programming Concepts
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
-                <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
-                  A perfect course for kids who want to test drive to coding
-                  road.
-                </div>
-              </div>
-              <div className="self-stretch h-[42px] flex flex-col items-center justify-center text-sm-8 font-segoe-ui">
-                <div className="self-stretch flex flex-col items-center justify-start">
-                  <div className="relative leading-[21px] font-semibold">
-                    100+ Activities | 100+ Quizzes
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center text-sm-6">
-                  <div className="relative leading-[21px] font-semibold">
-                    Duration: 12 months
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/archive.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`Module 1 & 2 of all specialized courses`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/chats1.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Learn live with expert Computer Science teacher
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/cardholder.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`50+ robust physical & online classes`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/campfire.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`100+ fun activities, quizzes & projects`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/airplay.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Stem.org accredited certificate
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/bookmarkssimple.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Experience of coding competetions
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/lifebuoy.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/videoconference.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Live 1:1 class with Coding Instructor
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/computertower.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Receive monthly progress reports
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-darkslategray-100">
-                <div className="w-[310px] hidden flex-col items-center justify-center gap-[9px]">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Sequencing and Algorithms:
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Block-Based Programming (Using Scratch or Blockly):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Problem Solving:
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Level 1 CoDesk developer certificate
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Lifetime community access
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Study materials and resources toolkit
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Exclusive access to competitions
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Scholarships for top three performers in our low coding
-                      program
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="w-[310px] h-[45px] hidden cursor-pointer"
-                  onClick={onButtonscurriculumClick}
+        <div className="self-stretch flex flex-row flex-wrap items-start justify-center p-5 gap-[50px] text-left text-base font-inter sm:pl-[5px] sm:pr-[5px] sm:box-border">
+          {specializedCourses.map((course, index) => (
+            <div
+              key={index}
+              className="w-[350px] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border gap-[10px] cursor-pointer"
+              onClick={onCardscourseContainerClick}
+            >
+              <div className="self-stretch relative rounded-t-md rounded-b-none bg-nero h-[99px] text-darkslateblue">
+                <img
+                  className="absolute top-[-38px] right-[-34px] w-[227px] h-[123px] overflow-hidden object-cover"
+                  alt=""
+                  src={course.image}
                 />
-              </div>
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
-                onClick={onDownloadButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
-                <img className="w-5 relative h-5" alt="" src="/frame.svg" />
-              </button>
-            </div>
-          </div>
-          <div className="w-[350px] shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start p-2.5 box-border gap-[10px]">
-            <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[95px] text-5xl text-purple-heart">
-                <div className="w-full relative tracking-[-0.01em] leading-[32px] font-semibold inline-block max-w-[358px]">
-                  Level 2
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[50px]">
-                <div className="self-stretch relative leading-[22px] font-semibold">
-                  Intermidiate Programming Concepts
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
-                <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
-                  A course for those who want to master the art of coding and
-                  create a better future through code.
-                </div>
-              </div>
-              <div className="self-stretch h-[42px] flex flex-col items-center justify-center text-sm-8 font-segoe-ui">
-                <div className="self-stretch flex flex-col items-center justify-start">
-                  <div className="relative leading-[21px] font-semibold">
-                    100+ Activities | 100+ Quizzes
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center text-sm-6">
-                  <div className="relative leading-[21px] font-semibold">
-                    Duration: 12 months
+                <div className="absolute top-[37px] left-[-3px] rounded-8xs bg-nero h-[37px] flex flex-row items-center justify-start p-2.5 box-border">
+                  <div className="relative leading-[150%] text-md">
+                    {course.category}
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
+
+              <div className="self-stretch flex flex-col items-start justify-start text-2xl text-dodger-blue">
+                <div className="self-stretch flex flex-col items-start justify-start">
+                  <div className="self-stretch bg-nero flex flex-row items-start justify-start">
+                    <div className="flex-1 relative leading-[150%] font-semibold">
+                      {course.title}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] text-sm text-black1">
+                  {course.features.map((feature, idx) => (
+                    <div
+                      key={idx}
+                      className="self-stretch flex flex-row items-center justify-start gap-[5px]"
+                    >
+                      <img
+                        className="w-8 relative h-8 overflow-hidden shrink-0"
+                        alt=""
+                        src={`/fire${idx + 1}.svg`}
+                      />
+                      <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
+                        {feature}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Course details section */}
+              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] text-sm">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
                   <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
+                    className="w-6 relative h-6 overflow-hidden shrink-0"
                     alt=""
-                    src="/archive.svg"
+                    src="/chalkboardteacher.svg"
                   />
-                  <div className="flex-1 relative leading-[150%]">{`Module 3 & 4 of all specialized courses`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/chats1.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Learn live with expert Computer Science teacher
+                  <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                    <div className="flex-1 relative leading-[120%] font-semibold">
+                      {course.grade}
+                    </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
                   <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
+                    className="w-6 relative h-6 overflow-hidden shrink-0"
                     alt=""
-                    src="/cardholder.svg"
+                    src="/book--undefined--glyph-undefined.svg"
                   />
-                  <div className="flex-1 relative leading-[150%]">{`50+ robust physical & online classes`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/campfire.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`100+ fun activities, quizzes & projects`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/airplay.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Stem.org accredited certificate
+                  <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                    <div className="flex-1 relative leading-[120%] font-semibold">
+                      {course.modules}
+                    </div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
                   <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
+                    className="w-6 relative h-6 overflow-hidden shrink-0"
                     alt=""
-                    src="/bookmarkssimple.svg"
+                    src="/microsoftwordlogo.svg"
                   />
-                  <div className="flex-1 relative leading-[150%]">
-                    Experience of coding competetions
+                  <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                    <div className="flex-1 relative leading-[120%] font-semibold">{`Study Materials `}</div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
                   <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
+                    className="w-6 relative h-6 overflow-hidden shrink-0"
                     alt=""
-                    src="/lifebuoy.svg"
+                    src="/question.svg"
                   />
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
+                  <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                    <div className="flex-1 relative leading-[120%] font-semibold">{`Worksheets & Quizzes`}</div>
                   </div>
                 </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
                   <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
+                    className="w-6 relative h-6 overflow-hidden shrink-0"
                     alt=""
-                    src="/videoconference.svg"
+                    src="/celltower.svg"
                   />
-                  <div className="flex-1 relative leading-[150%]">
-                    Live 1:1 class with Coding Instructor
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/computertower.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Receive monthly progress reports
+                  <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                    <div className="flex-1 relative leading-[120%] font-semibold">
+                      {course.activities}
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-darkslategray-100">
-                <div className="w-[310px] hidden flex-col items-center justify-center gap-[9px]">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Sequencing and Algorithms:
+
+              {/* Certificates section */}
+              <div className="self-stretch flex flex-col items-start justify-start gap-[5px]">
+                {course.certificates.map((cert, idx) => (
+                  <div
+                    key={idx}
+                    className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]"
+                  >
+                    <img className="w-6 relative h-6" alt="" src={cert.icon} />
+                    <div className="flex-1 bg-nero flex flex-row items-center justify-center">
+                      <div className="flex-1 relative leading-[150%] text-md">
+                        {cert.text}
+                      </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Block-Based Programming (Using Scratch or Blockly):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Problem Solving:
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Level 2 CODesk developer certificate
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Lifetime community access
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Study materials and resources toolkit
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Exclusive access to competitions
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Scholarships for top three performers in our low coding
-                      program
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="w-[310px] h-[45px] hidden cursor-pointer"
-                  onClick={onButtonscurriculumClick}
-                />
+                ))}
               </div>
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
-                onClick={onDownloadButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
-                <img className="w-5 relative h-5" alt="" src="/frame.svg" />
-              </button>
-            </div>
-          </div>
-          <div className="w-[350px] shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start p-2.5 box-border gap-[10px]">
-            <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[95px] text-5xl text-purple-heart">
-                <div className="w-full relative tracking-[-0.01em] leading-[32px] font-semibold inline-block max-w-[358px]">
-                  Level 3
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-start py-0 px-[50px]">
-                <div className="self-stretch relative leading-[22px] font-semibold">
-                  Advanced Programming Concepts
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-center min-h-[63px] font-body-large-600">
-                <div className="w-full relative leading-[150%] inline-block max-w-[358px]">
-                  A perfect course for kids who want to use coding to solve
-                  real-world problems and create a better future.
-                </div>
-              </div>
-              <div className="self-stretch h-[42px] flex flex-col items-center justify-center text-sm-8 font-segoe-ui">
-                <div className="self-stretch flex flex-col items-center justify-start">
-                  <div className="relative leading-[21px] font-semibold">
-                    100+ Activities | 100+ Quizzes
+
+              {/* View Curriculum button */}
+              <div className="self-stretch bg-nero flex flex-col items-center justify-start">
+                <button
+                  className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
+                  onClick={onViewCurriculumButtonClick}
+                >
+                  <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
+                    View Curriculum
                   </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-center text-sm-6">
-                  <div className="relative leading-[21px] font-semibold">
-                    Duration: 12 months
-                  </div>
-                </div>
+                </button>
               </div>
             </div>
-            <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-left text-sm text-blues font-body-large-600">
-              <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/archive.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`Module 5 & 6 of all specialized courses`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/chats1.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Learn live with expert Computer Science teacher
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/cardholder.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`50+ robust physical & online classes`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/campfire.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">{`100+ fun activities, quizzes & projects`}</div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/airplay.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Stem.org accredited certificate
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/bookmarkssimple.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Experience of coding competetions
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/lifebuoy.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Lifetime access to course content
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/videoconference.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Live 1:1 class with Coding Instructor
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
-                  <img
-                    className="w-8 relative h-8 overflow-hidden shrink-0"
-                    alt=""
-                    src="/computertower.svg"
-                  />
-                  <div className="flex-1 relative leading-[150%]">
-                    Receive monthly progress reports
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center p-[5px] gap-[5px] text-darkslategray-100">
-                <div className="w-[310px] hidden flex-col items-center justify-center gap-[9px]">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Sequencing and Algorithms:
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Block-Based Programming (Using Scratch or Blockly):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Problem Solving:
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/icon.svg"
-                    />
-                    <div className="flex-1 relative tracking-[-0.01em] leading-[22px]">
-                      Creative Projects (Incorporating Scratch):
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[9px] text-black1">
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Level 3 CoDesk developer certificate
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Lifetime community access
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Study materials and resources toolkit
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Exclusive access to competitions
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-center gap-[5px]">
-                    <img
-                      className="w-6 relative h-6 overflow-hidden shrink-0"
-                      alt=""
-                      src="/trophy.svg"
-                    />
-                    <div className="flex-1 relative leading-[150%]">
-                      Scholarships for top three performers in our low coding
-                      program
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="w-[310px] h-[45px] hidden cursor-pointer"
-                  onClick={onButtonscurriculumClick}
-                />
-              </div>
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center gap-[5px] border-[1px] border-solid border-aqua-deep"
-                onClick={onDownloadButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">{`Download Curriculum `}</div>
-                <img className="w-5 relative h-5" alt="" src="/frame.svg" />
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[1] text-center text-4xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
-          <div className="self-stretch relative leading-[120%] font-semibold sm:text-9xl">
+          <div className="self-stretch relative leading-[120%] font-semibold sm:text-3xl">
             Coding Workshops
           </div>
         </div>
@@ -1851,7 +417,7 @@ const CoursePage: FunctionComponent = () => {
               src="/image31@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
-              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
                 <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                   Single Day Codeshops
                 </div>
@@ -1916,7 +482,7 @@ const CoursePage: FunctionComponent = () => {
               src="/image41@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
-              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
                 <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                   Multi Day codeshops
                 </div>
@@ -1979,7 +545,7 @@ const CoursePage: FunctionComponent = () => {
               src="/image51@2x.png"
             />
             <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
-              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
                 <div className="w-full relative leading-[150%] font-semibold inline-block max-w-[344px]">
                   Week Long Codeshops
                 </div>

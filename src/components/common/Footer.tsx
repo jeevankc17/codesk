@@ -7,7 +7,7 @@ export type FooterType = {
 const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
   return (
     <div
-      className={`self-stretch flex flex-col items-center justify-start z-[0] text-center text-13xl text-black1 font-body-large-600 ${className}`}
+      className={`self-stretch flex flex-col items-center justify-start z-[0] text-center text-sm text-black1 font-body-large-600 ${className}`}
     >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[108px] shrink-0 object-cover"
@@ -17,8 +17,8 @@ const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
       <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col sm:gap-[5px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
           <div className="self-stretch flex flex-row items-start justify-start">
-            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-left">
-              CoDesk
+            <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block text-4xl text-center sm:text-lg">
+              CoDeskLab
             </div>
           </div>
           <div className="self-stretch flex flex-row items-start justify-start h-auto text-lg text-nero">
@@ -33,7 +33,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-row items-center justify-center gap-[5px] text-right text-base text-nero lg:flex-row md:flex-col sm:flex-col">
+        <div className="self-stretch flex flex-row items-center justify-center gap-[5px] text-right text-md text-nero lg:flex-row md:flex-col sm:flex-col">
           <div className="flex-1 flex flex-col items-start justify-start gap-[10px] md:flex-[unset] md:self-stretch sm:!mb-[40px] sm:flex-[unset] sm:self-stretch">
             <div className="self-stretch flex flex-row items-start justify-start text-xl">
               <div className="flex-1 relative leading-[150%] font-semibold sm:text-left">

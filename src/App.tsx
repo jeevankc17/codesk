@@ -1,20 +1,10 @@
 import { useEffect } from 'react';
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from 'react-router-dom';
-
+import { Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './components/pages/HomePage/HomePage';
 import CoursePage from './components/pages/CoursePage/CoursePage';
 import CompetetionsPage from './components/pages/CompetetionsPage/CompetetionsPage';
 import CurriculumByCoursePage from './components/pages/CurriculumByCoursePage/CurriculumByCoursePage';
 import AboutUsPage from './components/pages/AboutUsPage/AboutUsPage';
-import HackathonsCompetetionsPage from './components/pages/HackathonsCompetetionsPage/HackathonsCompetetionsPage';
-import ProjectsCompetetionsPage from './components/pages/ProjectsCompetetionsPage/ProjectsCompetetionsPage';
-import BuildersCompetetionsPage from './components/pages/BuildersCompetetionsPage/BuildersCompetetionsPage';
-import OrganizersCompetetionsPage from './components/pages/OrganizersCompetetionsPage/OrganizersCompetetionsPage';
 import ReviewPage from './components/pages/ReviewPage/ReviewPage';
 import CommingSoonPage from './components/pages/CommingSoonPage/CommingSoonPage';
 import PartnershipPage from './components/pages/PartnershipPage/PartnershipPage';
@@ -25,153 +15,194 @@ import QuizPage from './components/pages/QuizPage/QuizPage';
 import WorksheetPage from './components/pages/WorksheetPage/WorksheetPage';
 import CarrerPage from './components/pages/CarrerPage/CarrerPage';
 import QuizByCourseIDPage from './components/pages/QuizByCourseIDPage/QuizByCourseIDPage';
+import Organizers from './components/pages/CompetetionsPage/Organizers/Organizers';
+import Hackathons from './components/pages/CompetetionsPage/Hackathons/Hackathons';
+import Projects from './components/pages/CompetetionsPage/Projects/Projects';
+import Builders from './components/pages/CompetetionsPage/Builders/Builders';
 
-function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
+const routes = [
+  {
+    path: '/',
+    component: <HomePage />,
+    title: "Codesk | Nepal's #1 Coding Platform",
+    metaDescription:
+      "Nepal's first-ever low-code programming platform. Learn coding, robotics, VR/AR, and more. Perfect for kids and beginners.",
+  },
+  {
+    path: '/coursepage',
+    component: <CoursePage />,
+    title: 'Courses | Codesk',
+    metaDescription:
+      "Nepal's most comprehensive coding courses. From basic programming to advanced robotics and AR/VR development.",
+  },
+  {
+    path: '/competetionspage',
+    component: <CompetetionsPage />,
+    title: 'Competitions | Codesk',
+    metaDescription:
+      "Nepal's largest coding competitions. Showcase your skills in programming, robotics, and emerging technologies.",
+  },
+  {
+    path: '/curriculumbycoursepage',
+    component: <CurriculumByCoursePage />,
+    title: 'Course Curriculum | Codesk',
+    metaDescription:
+      'Industry-aligned curriculum designed for Nepali students. Learn programming, AI, robotics, and more through hands-on projects.',
+  },
+  {
+    path: '/aboutuspage',
+    component: <AboutUsPage />,
+    title: 'About Us | Codesk',
+    metaDescription:
+      "Pioneer in Nepal's coding education. Transforming tech education through innovative low-code learning and practical skills development.",
+  },
+  {
+    path: 'competetions/hackathons',
+    component: <Hackathons />,
+    title: 'Hackathons | Codesk',
+    metaDescription:
+      "Participate in Nepal's biggest tech hackathons. Build innovative solutions using coding, robotics, and emerging technologies.",
+  },
+  {
+    path: 'competetions/projects',
+    component: <Projects />,
+    title: 'Project Competitions | Codesk',
+    metaDescription:
+      "Nepal's premier platform for showcasing tech projects. From basic coding to advanced robotics and VR/AR implementations.",
+  },
+  {
+    path: 'competetions/builders',
+    component: <Builders />,
+    title: 'Builders Competition | Codesk',
+    metaDescription:
+      'Build the future of Nepal through code. Join our builders community in creating innovative tech solutions.',
+  },
+  {
+    path: 'competetions/organizers',
+    component: <Organizers />,
+    title: 'Organizers | Codesk',
+    metaDescription:
+      "Partner with Nepal's leading coding platform. Organize impactful tech events and competitions for the next generation.",
+  },
+  {
+    path: '/reviewpage',
+    component: <ReviewPage />,
+    title: 'Reviews | Codesk',
+    metaDescription:
+      'See how Codesk is transforming tech education in Nepal. Read success stories from our students and partners.',
+  },
+  {
+    path: '/commingsoonpage',
+    component: <CommingSoonPage />,
+    title: 'Coming Soon | Codesk',
+    metaDescription:
+      "Exciting new features coming to Nepal's #1 coding platform. Advanced robotics, AR/VR courses, and more.",
+  },
+  {
+    path: '/partnershippage',
+    component: <PartnershipPage />,
+    title: 'Partnerships | Codesk',
+    metaDescription:
+      "Join forces with Nepal's leading tech education platform. Partner in revolutionizing coding and robotics education.",
+  },
+  {
+    path: '/blogpage',
+    component: <BlogPage />,
+    title: 'Blog | Codesk',
+    metaDescription:
+      'Latest insights on coding, robotics, and tech education in Nepal. Stay updated with industry trends and success stories.',
+  },
+  {
+    path: '/projectpage',
+    component: <ProjectPage />,
+    title: 'Projects | Codesk',
+    metaDescription:
+      'Discover innovative projects built by Nepali students. From simple apps to complex robotics and VR/AR solutions.',
+  },
+  {
+    path: '/whycodeskpage',
+    component: <WhyCodeskPage />,
+    title: "Why Codesk | Nepal's Premier Coding Platform",
+    metaDescription:
+      'First-ever low-code platform in Nepal offering comprehensive tech education. Learn coding, robotics, VR/AR in an innovative way.',
+  },
+  {
+    path: '/quizpage',
+    component: <QuizPage />,
+    title: 'Quizzes | Codesk',
+    metaDescription:
+      'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.',
+  },
+  {
+    path: '/worksheetpage',
+    component: <WorksheetPage />,
+    title: 'Worksheets | Codesk',
+    metaDescription:
+      'Practical worksheets for hands-on learning. Master coding, robotics, and VR/AR through guided exercises.',
+  },
+  {
+    path: '/applyteacherpage',
+    component: <CarrerPage />,
+    title: 'Teaching Careers | Codesk',
+    metaDescription:
+      "Join Nepal's leading coding education team. Help shape the future of tech education through innovative teaching methods.",
+  },
+  {
+    path: '/quizbycourseidpage',
+    component: <QuizByCourseIDPage />,
+    title: 'Course Quizzes | Codesk',
+    metaDescription:
+      'Comprehensive course assessments for Nepali students. Evaluate your progress in coding, robotics, and emerging technologies.',
+  },
+];
 
+// ScrollToTop component
+const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (action !== 'POP') {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
+  }, [window.location.pathname]);
 
+  return null;
+};
+
+function App() {
+  const location = useLocation();
+
+  // Update metadata when route changes
   useEffect(() => {
-    let title = '';
-    let metaDescription = '';
+    const currentRoute = routes.find(
+      (route) => route.path === location.pathname
+    );
 
-    switch (pathname) {
-      case '/':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/coursepage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/competetionspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/curriculumbycoursepage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/aboutuspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/hackathonscompetetionspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/projectscompetetionspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/builderscompetetionspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/organizerscompetetionspage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/reviewpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/commingsoonpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/partnershippage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/blogpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/projectpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/whycodeskpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/quizpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/worksheetpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/applyteacherpage':
-        title = '';
-        metaDescription = '';
-        break;
-      case '/quizbycourseidpage':
-        title = '';
-        metaDescription = '';
-        break;
-    }
+    if (currentRoute) {
+      // Update title
+      document.title = currentRoute.title;
 
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
+      // Update meta description
+      const metaDescriptionTag = document.querySelector(
         'head > meta[name="description"]'
-      );
+      ) as HTMLMetaElement;
       if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
+        metaDescriptionTag.content = currentRoute.metaDescription;
+      } else {
+        const newMetaTag = document.createElement('meta');
+        newMetaTag.name = 'description';
+        newMetaTag.content = currentRoute.metaDescription;
+        document.head.appendChild(newMetaTag);
       }
     }
-  }, [pathname]);
+  }, [location.pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/coursepage" element={<CoursePage />} />
-      <Route path="/competetionspage" element={<CompetetionsPage />} />
-      <Route
-        path="/curriculumbycoursepage"
-        element={<CurriculumByCoursePage />}
-      />
-      <Route path="/aboutuspage" element={<AboutUsPage />} />
-      <Route
-        path="/hackathonscompetetionspage"
-        element={<HackathonsCompetetionsPage />}
-      />
-      <Route
-        path="/projectscompetetionspage"
-        element={<ProjectsCompetetionsPage />}
-      />
-      <Route
-        path="/builderscompetetionspage"
-        element={<BuildersCompetetionsPage />}
-      />
-      <Route
-        path="/organizerscompetetionspage"
-        element={<OrganizersCompetetionsPage />}
-      />
-      <Route path="/reviewpage" element={<ReviewPage />} />
-      <Route path="/commingsoonpage" element={<CommingSoonPage />} />
-      <Route path="/partnershippage" element={<PartnershipPage />} />
-      <Route path="/blogpage" element={<BlogPage />} />
-      <Route path="/projectpage" element={<ProjectPage />} />
-      <Route path="/whycodeskpage" element={<WhyCodeskPage />} />
-      <Route path="/quizpage" element={<QuizPage />} />
-      <Route path="/worksheetpage" element={<WorksheetPage />} />
-      <Route path="/applyteacherpage" element={<CarrerPage />} />
-      <Route path="/quizbycourseidpage" element={<QuizByCourseIDPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        {routes.map(({ path, component }) => (
+          <Route key={path} path={path} element={component} />
+        ))}
+      </Routes>
+    </>
   );
 }
+
 export default App;

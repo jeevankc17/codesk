@@ -48,7 +48,7 @@ const PartnershipPage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-29xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-4xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <Navbar
           logoColor="#1f95f2"
           onLogoClick={onLogoClick}
@@ -64,11 +64,11 @@ const PartnershipPage: FunctionComponent = () => {
         <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[3] text-left text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
             <div className="self-stretch flex flex-col items-start justify-start">
-              <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
+              <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">
                 CoDesk - School Partnerships
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-base">
+            <div className="self-stretch flex flex-col items-start justify-start text-md">
               <div className="self-stretch relative leading-[150%]">
                 We welcome schools to partner with us and introduce coding to
                 students through fun activities.
@@ -90,7 +90,7 @@ const PartnershipPage: FunctionComponent = () => {
             src="/image-551@2x.png"
           />
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[2] text-17xl">
+        <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[2] text-4xl\">
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
               <div className="flex-1 relative leading-[120%] font-semibold">
@@ -326,7 +326,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -345,7 +345,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -358,7 +358,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Your name"
                         type="text"
                       />
@@ -394,7 +394,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -413,7 +413,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -426,7 +426,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Email address"
                         type="text"
                       />
@@ -462,7 +462,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -481,7 +481,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -494,7 +494,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="Phone Number"
                         type="text"
                       />
@@ -530,7 +530,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -549,7 +549,7 @@ const PartnershipPage: FunctionComponent = () => {
                               </div>
                             </div>
                             <div className="flex flex-col items-start justify-start py-[3px] px-1.5">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
+                              <div className="relative text-sm tracking-[0.16px] leading-[18px] font-components-chip text-text-primary text-left">
                                 Chip
                               </div>
                             </div>
@@ -562,7 +562,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-base bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
                         placeholder="School Name"
                         type="text"
                       />
@@ -587,7 +587,7 @@ const PartnershipPage: FunctionComponent = () => {
                   </div>
                 </div>
                 <textarea
-                  className="bg-[transparent] font-body-large-600 text-base [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-text-secondary border-[1px] border-solid border-other-outlined-border"
+                  className="bg-[transparent] font-body-large-600 text-md [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-text-secondary border-[1px] border-solid border-other-outlined-border"
                   placeholder="Leave Message"
                 />
               </div>

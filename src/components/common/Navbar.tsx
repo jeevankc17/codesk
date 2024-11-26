@@ -5,94 +5,75 @@ import {
   type CSSProperties,
   useCallback,
 } from 'react';
-import { useNavigate } from 'react-router-dom';
 import DrawerMenus from './DrawerMenus';
 import PortalDrawer from './PortalDrawer';
 
 export type NavbarType = {
   className?: string;
-
-  /** Style props */
   logoColor?: CSSProperties['color'];
   coursesColor?: CSSProperties['color'];
   competetionsColor?: CSSProperties['color'];
   aboutUsColor?: CSSProperties['color'];
   quizzesColor?: CSSProperties['color'];
-
-  /** Action props */
-  onLogoClick?: () => void;
-  onCoursesClick?: () => void;
-  onQuizzesClick?: () => void;
-  onCompetetionsClick?: () => void;
-  onAboutUsClick?: () => void;
+  onLogoClick: () => void;
+  onCoursesClick: () => void;
+  onQuizzesClick: () => void;
+  onCompetetionsClick: () => void;
+  onAboutUsClick: () => void;
 };
 
 const Navbar: FunctionComponent<NavbarType> = ({
   className = '',
   logoColor,
+  coursesColor,
+  competetionsColor,
+  aboutUsColor,
+  quizzesColor,
   onLogoClick,
   onCoursesClick,
   onQuizzesClick,
   onCompetetionsClick,
   onAboutUsClick,
-  coursesColor,
-  competetionsColor,
-  aboutUsColor,
-  quizzesColor,
 }) => {
-  const coDeskLabStyle: CSSProperties = useMemo(() => {
-    return {
-      color: logoColor,
-    };
-  }, [logoColor]);
-
-  const coursesStyle: CSSProperties = useMemo(() => {
-    return {
-      color: coursesColor,
-    };
-  }, [coursesColor]);
-
-  const competetionsStyle: CSSProperties = useMemo(() => {
-    return {
-      color: competetionsColor,
-    };
-  }, [competetionsColor]);
-
-  const aboutUsStyle: CSSProperties = useMemo(() => {
-    return {
-      color: aboutUsColor,
-    };
-  }, [aboutUsColor]);
-
-  const quizzesStyle: CSSProperties = useMemo(() => {
-    return {
-      color: quizzesColor,
-    };
-  }, [quizzesColor]);
-
-  const navigate = useNavigate();
   const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
 
-  const onLogoClick1 = useCallback(() => {
-    navigate('/');
-  }, [navigate]);
+  // Memoized styles
+  const coDeskLabStyle: CSSProperties = useMemo(
+    () => ({
+      color: logoColor,
+    }),
+    [logoColor]
+  );
 
-  const onCoursesClick1 = useCallback(() => {
-    navigate('/coursepage');
-  }, [navigate]);
+  const coursesStyle: CSSProperties = useMemo(
+    () => ({
+      color: coursesColor,
+    }),
+    [coursesColor]
+  );
 
-  const onQuizzesClick1 = useCallback(() => {
-    navigate('/quizpage');
-  }, [navigate]);
+  const competetionsStyle: CSSProperties = useMemo(
+    () => ({
+      color: competetionsColor,
+    }),
+    [competetionsColor]
+  );
 
-  const onCompetetionsClick1 = useCallback(() => {
-    navigate('/competetionspage');
-  }, [navigate]);
+  const aboutUsStyle: CSSProperties = useMemo(
+    () => ({
+      color: aboutUsColor,
+    }),
+    [aboutUsColor]
+  );
 
-  const onAboutUsClick1 = useCallback(() => {
-    navigate('/aboutuspage');
-  }, [navigate]);
+  const quizzesStyle: CSSProperties = useMemo(
+    () => ({
+      color: quizzesColor,
+    }),
+    [quizzesColor]
+  );
 
+  // Drawer handlers
   const openDrawerMenus = useCallback(() => {
     setDrawerMenusOpen(true);
   }, []);
@@ -112,7 +93,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
             onClick={onLogoClick}
           >
             <div
-              className="relative text-13xl tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left"
+              className="relative text-4xl sm:text-lg tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left"
               style={coDeskLabStyle}
             >
               CoDeskLab

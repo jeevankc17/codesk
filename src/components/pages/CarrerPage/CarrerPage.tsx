@@ -451,7 +451,7 @@ const CarrerPage: FunctionComponent = () => {
             </div>
             <div className="self-stretch h-[41px]" />
           </div>
-          <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-left text-lg-4 text-aqua-deep">
+          <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-left text-lg text-aqua-deep">
             <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
               <div className="flex-1 bg-nero flex flex-row items-center justify-end p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
                 <img
@@ -467,7 +467,7 @@ const CarrerPage: FunctionComponent = () => {
                       Step 1
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-2xl text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Submit your application
                     </div>
@@ -489,7 +489,7 @@ const CarrerPage: FunctionComponent = () => {
                       Step 2
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-2xlext-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Share a demo video
                     </div>
@@ -526,7 +526,7 @@ const CarrerPage: FunctionComponent = () => {
                       Step 3
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-2xl text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Take technical assessment
                     </div>
@@ -548,7 +548,7 @@ const CarrerPage: FunctionComponent = () => {
                       Step 4
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-2xl text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Do an interview
                     </div>
@@ -584,7 +584,7 @@ const CarrerPage: FunctionComponent = () => {
                       Step 5
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-6xl-7 text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-2xl text-black1">
                     <div className="self-stretch relative leading-[45px] font-semibold">
                       Get hired!
                     </div>

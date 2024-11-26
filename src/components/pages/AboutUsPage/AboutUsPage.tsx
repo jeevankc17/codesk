@@ -27,7 +27,7 @@ const AboutUsPage: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-aqua-deep font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-sm text-aqua-deep font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -40,12 +40,12 @@ const AboutUsPage: FunctionComponent = () => {
         aboutUsColor="#FF5A43"
         quizzesColor="#000"
       />
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[5] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[5] text-left text-4xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">{`Building the Nepal’s number 1 & most loved coding school for kids & teenagers`}</div>
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">{`Building the Nepal’s number 1 & most loved coding school for kids & teenagers`}</div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-base">
+          <div className="self-stretch flex flex-col items-start justify-start text-md">
             <div className="self-stretch relative leading-[150%]">
               <p className="m-0">
                 CoDesk started with a dream to inspire school kids
@@ -77,7 +77,7 @@ const AboutUsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-base font-body-large-600 md:flex-row md:flex-wrap">
+        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-md font-body-large-600 md:flex-row md:flex-wrap">
           <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
             <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`“Teaching coding to kids is a huge responsibility and we want to take that”  `}</div>
@@ -90,7 +90,7 @@ const AboutUsPage: FunctionComponent = () => {
               />
             </div>
             <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
-              <div className="self-stretch flex flex-col items-center justify-start text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start text-2xl">
                 <div className="self-stretch relative leading-[150%] font-semibold">
                   Sandeep Neupane
                 </div>
@@ -128,7 +128,7 @@ const AboutUsPage: FunctionComponent = () => {
               />
             </div>
             <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
-              <div className="self-stretch flex flex-col items-center justify-start text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start text-2xl">
                 <div className="self-stretch relative leading-[150%] font-semibold">
                   Jeevan KC
                 </div>
@@ -166,7 +166,7 @@ const AboutUsPage: FunctionComponent = () => {
               />
             </div>
             <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
-              <div className="self-stretch flex flex-col items-center justify-start text-5xl">
+              <div className="self-stretch flex flex-col items-center justify-start text-2xl">
                 <div className="self-stretch relative leading-[150%] font-semibold">
                   Abin KC
                 </div>
@@ -193,7 +193,7 @@ const AboutUsPage: FunctionComponent = () => {
       </div>
       <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px] z-[3] font-inter">
         <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-          <div className="flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold sm:text-9xl">
+          <div className="flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold text-3xl md:text-xl sm:text-lg">
             All thanks to our Ambassadors
           </div>
         </div>
@@ -204,12 +204,12 @@ const AboutUsPage: FunctionComponent = () => {
       <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] z-[2]">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
+            <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
               Our Core Belief
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-9xl text-black1">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-3xl text-black1">
           <div className="self-stretch bg-nero flex flex-row items-start justify-start gap-[40px] lg:flex-col md:flex-col">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch">
               <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col">
@@ -226,12 +226,12 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
               <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-5xl">
+                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Empowering Children
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
-                  <div className="flex-1 relative leading-[150%]">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
+                  <div className="flex-1 relative leading-[150%] ">
                     The future is digital and we believe providing children with
                     the knowledge of coding will safeguard their future.
                   </div>
@@ -253,11 +253,11 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
               <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-5xl">
+                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Discovering Why?
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     We encourage children to ask as many questions as possible.
                     We believe a curious mind will do wonders.
@@ -282,7 +282,7 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
               <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-5xl">
+                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     The wonder of childhood
                   </div>
                 </div>
@@ -317,11 +317,11 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
               <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-5xl">
+                  <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Coding should be fun
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     We want to make learning computer science a fun activity
                     children look forward to. We are constantly working to make
@@ -337,12 +337,12 @@ const AboutUsPage: FunctionComponent = () => {
       <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] z-[1]">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
+            <div className="flex-1 relative leading-[120%] font-semibold sm:text-3xl">
               Our Roadmap
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-9xl text-black1 font-inter">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-3xl text-black1 font-inter">
           <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
@@ -359,13 +359,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Conceptualization
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base font-body-large-600">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md font-body-large-600">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (April 2022)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base font-body-large-600">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md font-body-large-600">
                   <div className="flex-1 relative leading-[150%]">
                     Identified the need for CoDeskLab to streamline after-school
                     program management and conducted market research for
@@ -384,13 +384,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Team Formation
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (October 2022)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md">
                   <div className="flex-1 relative leading-[150%]">
                     Assembled a dedicated team passionate about education
                     technology to develop CoDeskLab.
@@ -422,13 +422,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Product Development Kickoff
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base font-body-large-600">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md font-body-large-600">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (January 2023)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base font-body-large-600">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md font-body-large-600">
                   <div className="flex-1 relative leading-[150%]">
                     Initiated development on CoDeskLab, focusing on core
                     features and utilizing agile methodologies.
@@ -446,13 +446,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Beta Testing
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (July 2023)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     Launched a beta version of CoDeskLab, gathering feedback
                     from users for iterative improvements.
@@ -484,13 +484,13 @@ const AboutUsPage: FunctionComponent = () => {
                       User Feedback and Iteration
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base font-body-large-600">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md font-body-large-600">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (October 2023)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base font-body-large-600">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md font-body-large-600">
                   <div className="flex-1 relative leading-[150%]">
                     Incorporated user feedback to enhance the CoDeskLab
                     software, prioritizing user experience and functionality.
@@ -508,13 +508,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Official Launch
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (April 2024)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     Launched CoDeskLab officially, leveraging feedback from beta
                     testing to ensure a robust product.
@@ -548,13 +548,13 @@ const AboutUsPage: FunctionComponent = () => {
                       User Acquisition and Onboarding
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base font-body-large-600">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md font-body-large-600">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (July 2024)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base font-body-large-600">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md font-body-large-600">
                   <div className="flex-1 relative leading-[150%]">
                     Executed targeted marketing campaigns to acquire new users
                     and provided comprehensive onboarding support.
@@ -572,13 +572,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Expansion and Partnerships
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                     <div className="flex-1 relative leading-[22px] font-medium">
                       (January 2025)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     Explored opportunities for expansion and formed strategic
                     partnerships to increase adoption.
@@ -614,13 +614,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Continuous Improvement and Innovation
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base font-body-large-600">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md font-body-large-600">
                     <div className="flex-1 relative leading-[150%] font-medium">
                       (April 2025)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-base font-body-large-600">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md font-body-large-600">
                   <div className="flex-1 relative leading-[150%]">
                     Committed to ongoing product development and innovation,
                     staying ahead of the competition.
@@ -638,13 +638,13 @@ const AboutUsPage: FunctionComponent = () => {
                       Scaling Operations
                     </div>
                   </div>
-                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                  <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                     <div className="flex-1 relative leading-[22px] font-medium">
                       (April 2026)
                     </div>
                   </div>
                 </div>
-                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-base">
+                <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5 text-md">
                   <div className="flex-1 relative leading-[150%]">
                     Scaled operations and infrastructure to meet the increasing
                     demand for CoDeskLab software, ensuring sustainability.

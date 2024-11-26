@@ -1,10 +1,10 @@
 import { FunctionComponent, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../../common/Navbar';
-import Footer from '../../common/Footer';
-import CodewarTabs from '../../common/CodewarTabs';
+import Navbar from '../../../common/Navbar';
+import Footer from '../../../common/Footer';
+import CodewarTabs from '../../../common/CodewarTabs';
 
-const HackathonsCompetetionsPage: FunctionComponent = () => {
+const Hackathons: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
@@ -28,19 +28,19 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onHackathonsTabClick = useCallback(() => {
-    navigate('/hackathonscompetetionspage');
+    navigate('/competetions/hackathons');
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate('/projectscompetetionspage');
+    navigate('/competetions/projects');
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate('/builderscompetetionspage');
+    navigate('/competetions/builders');
   }, [navigate]);
 
-  const onOrganizersTabContainerClick = useCallback(() => {
-    navigate('/organizerscompetetionspage');
+  const onOrganizersTabClick = useCallback(() => {
+    navigate('/competetions/organizers');
   }, [navigate]);
 
   const onScrollBannerButtonClick = useCallback(() => {
@@ -73,7 +73,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -91,7 +91,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
         onHackathonsTabClick={onHackathonsTabClick}
         onProjectsTabClick={onProjectsTabClick}
         onBuildersTabClick={onBuildersTabClick}
-        onOrganizersTabContainerClick={onOrganizersTabContainerClick}
+        onOrganizersTabClick={onOrganizersTabClick}
         buildersTabBackgroundColor="#fff"
         hackathonsTabBackgroundColor="#0063B0"
         projectsTabBackgroundColor="#fff"
@@ -99,12 +99,12 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
               Our Hackathons
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-base">
-            <div className="self-stretch relative leading-[150%]">
+          <div className="self-stretch flex flex-col items-start justify-start text-sm">
+            <div className="self-stretch relative leading-[150%] text-md">
               These are organized coding events where kids can participate
               individually or in teams to work on coding challenges or projects
               within a specified time frame, usually ranging from a few hours to
@@ -118,7 +118,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
             autoFocus={true}
             onClick={onScrollBannerButtonClick}
           >
-            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
+            <div className="relative tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px] text-3xl md:text-xl sm:text-lg">
               View a Hackathons
             </div>
           </button>
@@ -129,10 +129,10 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
           src="/image-531@2x.png"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-13xl text-black1 lg:flex-col md:flex-col">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-sm text-black1 lg:flex-col md:flex-col">
         <div className="w-[900px] flex flex-col items-start justify-start z-[1] lg:self-stretch lg:w-auto md:w-full">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2]">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">{`All coding competitions & hackathons`}</div>
+            <div className="flex-1 relative leading-[120%] font-semibold sm:text-3xl">{`All coding competitions & hackathons`}</div>
           </div>
           <div className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center pt-0 px-0 pb-px gap-[32px] sticky top-[77] [background:white] z-[1] text-xs">
             <div className="w-[121px] rounded bg-nero h-9 flex flex-row items-center justify-start py-0 px-0.5 box-border gap-[12px] text-aqua-deep">
@@ -166,14 +166,14 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start p-5 gap-[16px] z-[0] text-left text-lgi-5 font-segoe-ui">
+          <div className="self-stretch flex flex-col items-start justify-start p-5 gap-[16px] z-[0] text-left text-xl font-segoe-ui">
             <div className="self-stretch flex flex-col items-center justify-center pt-[50px] px-0 pb-0 gap-[16px] text-aqua-deep">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch relative leading-[30px] font-semibold">
                   Open
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl font-body-large-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-2xl font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -187,7 +187,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                           Nepal CodeWars 2024 Kid’s Hackathon
                         </div>
                       </div>
-                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-base text-chateau-green">
+                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-md text-chateau-green">
                         <div className="flex-1 relative leading-[150%]">
                           Hosted by:
                         </div>
@@ -247,7 +247,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   Upcoming
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-large-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-2xl text-aqua-deep font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -261,7 +261,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                           Nepal CodeWars 2024 Kid’s Hackathon
                         </div>
                       </div>
-                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-base text-chateau-green">
+                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-md text-chateau-green">
                         <div className="flex-1 relative leading-[150%]">
                           Hosted by:
                         </div>
@@ -323,7 +323,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                   Completed
                 </div>
               </div>
-              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-5xl text-aqua-deep font-body-large-600">
+              <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] text-center text-2xl text-aqua-deep font-body-large-600">
                 <div className="flex-1 flex flex-row items-center justify-between md:flex-col">
                   <img
                     className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
@@ -337,7 +337,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
                           Nepal CodeWars 2024 Kid’s Hackathon
                         </div>
                       </div>
-                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-base text-chateau-green">
+                      <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-md text-chateau-green">
                         <div className="flex-1 relative leading-[150%]">
                           Hosted by:
                         </div>
@@ -390,7 +390,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[0] text-left text-5xl lg:w-full lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
+        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[0] text-left text-2xl lg:w-full lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] sticky top-[77] lg:flex md:flex">
             <div className="self-stretch relative leading-[150%] font-semibold text-transparent !bg-clip-text [background:linear-gradient(16.28deg,_#c53232,_#7c36dd)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">{`Play while you learn & win amazing prizes`}</div>
             <img
@@ -398,7 +398,7 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
               alt=""
               src="/image32@2x.png"
             />
-            <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-base border-[1px] border-solid border-nero">
+            <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-md border-[1px] border-solid border-nero">
               <div className="w-full relative leading-[150%] inline-block max-w-[320px]">
                 Real-time Leaderboard
               </div>
@@ -430,4 +430,4 @@ const HackathonsCompetetionsPage: FunctionComponent = () => {
   );
 };
 
-export default HackathonsCompetetionsPage;
+export default Hackathons;

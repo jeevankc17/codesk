@@ -52,7 +52,7 @@ const QuizCards: FunctionComponent<QuizCardsType> = ({ className = '' }) => {
   ]);
   return (
     <div
-      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
+      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-2xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
     >
       {quizCourseItems.map((item, index) => (
         <QuizCard

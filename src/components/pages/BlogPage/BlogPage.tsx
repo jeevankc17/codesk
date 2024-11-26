@@ -34,7 +34,7 @@ const BlogPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -89,7 +89,7 @@ const BlogPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-5xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-2xl sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="w-[350px] rounded-lg bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px]">
             <img
               className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"

@@ -33,12 +33,12 @@ const ReviewCard: FunctionComponent<ReviewCardType> = ({
               {nameOfIdentity}
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-center justify-start text-base">
+          <div className="self-stretch flex flex-row items-center justify-start text-md">
             <div className="flex-1 relative leading-[150%]">{identity}</div>
           </div>
         </div>
       </div>
-      <div className="self-stretch flex flex-row items-start justify-start text-center text-base">
+      <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
         <div className="flex-1 relative leading-[150%]">{review}</div>
       </div>
     </div>

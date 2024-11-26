@@ -19,7 +19,7 @@ export type CodewarTabsType = {
   onHackathonsTabClick?: () => void;
   onProjectsTabClick?: () => void;
   onBuildersTabClick?: () => void;
-  onOrganizersTabContainerClick?: () => void;
+  onOrganizersTabClick?: () => void;
 };
 
 const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
@@ -28,7 +28,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
   onHackathonsTabClick,
   onProjectsTabClick,
   onBuildersTabClick,
-  onOrganizersTabContainerClick,
+  onOrganizersTabClick,
   buildersTabBackgroundColor,
   hackathonsTabBackgroundColor,
   projectsTabBackgroundColor,
@@ -58,22 +58,6 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
   }, [projectsTabBackgroundColor]);
 
   const navigate = useNavigate();
-
-  const onHackathonsTabClick1 = useCallback(() => {
-    navigate('/hackathonscompetetionspage');
-  }, [navigate]);
-
-  const onProjectsTabClick1 = useCallback(() => {
-    navigate('/projectscompetetionspage');
-  }, [navigate]);
-
-  const onBuildersTabClick1 = useCallback(() => {
-    navigate('/builderscompetetionspage');
-  }, [navigate]);
-
-  const onOrganizersTabContainerClick1 = useCallback(() => {
-    navigate('/organizerscompetetionspage');
-  }, [navigate]);
 
   return (
     <div
@@ -111,7 +95,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
       </button>
       <div
         className="w-[130px] rounded bg-nero box-border h-[45px] flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
-        onClick={onOrganizersTabContainerClick}
+        onClick={onOrganizersTabClick}
         style={organizersTabStyle}
       >
         <div className="relative leading-[150%] font-semibold inline-block max-h-[58px] md:text-xs sm:text-xs">

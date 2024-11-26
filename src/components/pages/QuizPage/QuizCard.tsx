@@ -22,7 +22,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
 
   return (
     <div
-      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-2xl text-black1 font-body-large-600 ${className}`}
     >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
@@ -35,7 +35,7 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
             {courseName}
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] text-base">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] text-md">
           <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
@@ -43,13 +43,15 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
               src="/icon1.svg"
             />
             <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-              <div className="flex-1 relative leading-[150%]">{`6 modules & 36 lessons `}</div>
+              <div className="flex-1 relative leading-[150%] text-md">{`6 modules & 36 lessons `}</div>
             </div>
           </div>
           <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
             <img className="w-6 relative h-6" alt="" src="/vector5.svg" />
             <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-              <div className="flex-1 relative leading-[150%]">Leaderboard</div>
+              <div className="flex-1 relative leading-[150%] text-md">
+                Leaderboard
+              </div>
             </div>
           </div>
           <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[10px]">
@@ -59,8 +61,8 @@ const QuizCard: FunctionComponent<QuizCardType> = ({
               src="/ladder.svg"
             />
             <div className="flex-1 bg-nero flex flex-row items-center justify-center">
-              <div className="flex-1 relative leading-[150%]">
-                Basic to advance level
+              <div className="flex-1 relative leading-[150%] text-md">
+                Basic to advanced level
               </div>
             </div>
           </div>

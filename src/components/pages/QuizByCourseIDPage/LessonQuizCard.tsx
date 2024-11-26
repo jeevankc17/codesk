@@ -30,7 +30,7 @@ const LessonQuizCard: FunctionComponent<LessonQuizCardType> = ({
 
   return (
     <div
-      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-5xl text-black1 font-body-large-600 ${className}`}
+      className={`w-[350px] bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[10px] text-left text-2xl text-black1 font-body-large-600 ${className}`}
     >
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover"
@@ -43,7 +43,7 @@ const LessonQuizCard: FunctionComponent<LessonQuizCardType> = ({
             {lessonName}
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] text-base">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] text-md">
           <div className="self-stretch bg-nero flex flex-row items-center justify-start text-chateau-green">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center">
               <div className="flex-1 relative leading-[150%]">{courseName}</div>

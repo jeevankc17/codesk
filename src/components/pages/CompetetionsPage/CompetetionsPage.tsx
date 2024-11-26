@@ -28,19 +28,19 @@ const CompetetionsPage: FunctionComponent = () => {
   }, [navigate]);
 
   const onHackathonsTabClick = useCallback(() => {
-    navigate('/hackathonscompetetionspage');
+    navigate('/competetions/hackathons');
   }, [navigate]);
 
   const onProjectsTabClick = useCallback(() => {
-    navigate('/projectscompetetionspage');
+    navigate('/competetions/projects');
   }, [navigate]);
 
   const onBuildersTabClick = useCallback(() => {
-    navigate('/builderscompetetionspage');
+    navigate('/competetions/builders');
   }, [navigate]);
 
-  const onOrganizersTabContainerClick = useCallback(() => {
-    navigate('/organizerscompetetionspage');
+  const onOrganizersTabClick = useCallback(() => {
+    navigate('/competetions/organizers');
   }, [navigate]);
 
   const onScrollBannerButtonClick = useCallback(() => {
@@ -73,25 +73,25 @@ const CompetetionsPage: FunctionComponent = () => {
         onHackathonsTabClick={onHackathonsTabClick}
         onProjectsTabClick={onProjectsTabClick}
         onBuildersTabClick={onBuildersTabClick}
-        onOrganizersTabContainerClick={onOrganizersTabContainerClick}
+        onOrganizersTabClick={onOrganizersTabClick}
         buildersTabBackgroundColor="#fff"
         hackathonsTabBackgroundColor="#fff"
         projectsTabBackgroundColor="#fff"
       />
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-4xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
               We care about organizor’s hackathons and builder’s projects
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
             <div className="self-stretch relative leading-[150%]">
-              <p className="m-0">
+              <p className="m-0 text-md">
                 No more creating Google Forms and managing participants in an
                 Excel sheet.
               </p>
-              <p className="m-0">
+              <p className="m-0 text-md">
                 You focus on your people, leave the rest to us.
               </p>
             </div>
@@ -121,7 +121,7 @@ const CompetetionsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-left text-5xl text-aqua-deep">
+          <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-left text-2xl text-aqua-deep">
             <div className="self-stretch bg-nero flex flex-row items-center justify-start gap-[40px] lg:flex-col md:flex-col">
               <img
                 className="w-[500px] relative h-[500px] overflow-hidden shrink-0 object-cover md:w-[300px] md:h-[300px] sm:w-[300px] sm:h-[300px]"
@@ -135,7 +135,7 @@ const CompetetionsPage: FunctionComponent = () => {
                       Number 1
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-29xl text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-4xl text-black1">
                     <div className="self-stretch relative leading-[120%] font-semibold">
                       <p className="m-0">Your digital up-to-</p>
                       <p className="m-0">date resumé</p>
@@ -163,7 +163,7 @@ const CompetetionsPage: FunctionComponent = () => {
                       Number 2
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-29xl text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-4xl text-black1">
                     <div className="self-stretch relative leading-[120%] font-semibold">
                       <p className="m-0">A showcase of all your</p>
                       <p className="m-0">projects</p>
@@ -202,7 +202,7 @@ const CompetetionsPage: FunctionComponent = () => {
                       Number 3
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-29xl text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-4xl text-black1">
                     <div className="self-stretch relative leading-[120%] font-semibold">
                       <p className="m-0">Your portal to the best</p>
                       <p className="m-0">hackathons</p>
@@ -233,7 +233,7 @@ const CompetetionsPage: FunctionComponent = () => {
                       Number 4
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-29xl text-black1">
+                  <div className="self-stretch flex flex-col items-start justify-start text-4xl text-black1">
                     <div className="self-stretch relative leading-[120%] font-semibold">
                       <p className="m-0">Your skill assessment</p>
                       <p className="m-0">playground</p>
@@ -422,7 +422,7 @@ const CompetetionsPage: FunctionComponent = () => {
             Eligibility criteria for Hackathons
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-5xl md:flex-row md:flex-wrap">
+        <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-2xl md:flex-row md:flex-wrap">
           <div className="shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1),_0px_4px_6px_-2px_rgba(0,_0,_0,_0.05)] rounded-13xl bg-nero overflow-hidden flex flex-col items-center justify-start py-10 px-5 gap-[28px]">
             <img
               className="w-[100px] relative h-[88.2px] overflow-hidden shrink-0"

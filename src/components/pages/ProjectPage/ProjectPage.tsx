@@ -36,7 +36,7 @@ const ProjectPage: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-29xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
         logoColor="#1f95f2"
         onLogoClick={onLogoClick}
@@ -52,11 +52,11 @@ const ProjectPage: FunctionComponent = () => {
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-13xl">
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">
               Coding Projects By Kids
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-base">
+          <div className="self-stretch flex flex-col items-start justify-start text-md">
             <div className="self-stretch relative leading-[150%] whitespace-pre-wrap">
               Fun way to learn coding for kids by doing projects
             </div>
@@ -77,10 +77,10 @@ const ProjectPage: FunctionComponent = () => {
           src="/image-57@2x.png"
         />
       </div>
-      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-17xl text-black1">
+      <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] relative z-[1] text-center text-4xl\ text-black1">
         <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-            <div className="flex-1 relative leading-[120%] font-semibold sm:text-9xl">
+            <div className="flex-1 relative leading-[120%] font-semibold sm:text-3xl">
               Projects By Kids
             </div>
           </div>
