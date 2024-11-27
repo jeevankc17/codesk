@@ -1,9 +1,17 @@
-import { FunctionComponent, useCallback, useEffect } from 'react';
+import { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useClerk, useUser } from '@clerk/clerk-react';
 
 export type DrawerMenusType = {
   className?: string;
   onClose?: () => void;
+};
+
+type UserData = {
+  name: string | null;
+  email: string;
+  userType: string | null;
+  settings: any;
 };
 
 const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
@@ -11,6 +19,55 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
   onClose,
 }) => {
   const navigate = useNavigate();
+  const { openSignIn, signOut } = useClerk();
+  const { user, isSignedIn } = useUser();
+  const [userData, setUserData] = useState<UserData | null>(null);
+
+  // Fetch user data from backend when signed in
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (isSignedIn && user) {
+        try {
+          console.log('Fetching user data for:', user.id); // Debug log
+
+          // First ensure user data is synced
+          const updateResponse = await fetch(`/users/clerk/${user.id}`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              publicMetadata: {
+                userType: 'student',
+                settings: {},
+              },
+            }),
+          });
+
+          if (!updateResponse.ok) {
+            console.error('Update failed:', await updateResponse.text());
+            return;
+          }
+
+          // Then fetch the user data
+          const response = await fetch(`/users/clerk/${user.id}`);
+          if (!response.ok) {
+            console.error('Fetch failed:', await response.text());
+            return;
+          }
+
+          const result = await response.json();
+          console.log('Received user data:', result); // Debug log
+          setUserData(result.data);
+        } catch (error) {
+          console.error('Error fetching user data:', error);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [isSignedIn, user]);
+
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       '[data-animate-on-scroll]'
@@ -85,9 +142,28 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
     navigate('/applyteacherpage');
   }, [navigate]);
 
-  const onMenuItemClick11 = useCallback(() => {
+  const onLoginClick = useCallback(() => {
+    openSignIn();
+    if (onClose) onClose();
+  }, [openSignIn, onClose]);
+
+  const onLogoutClick = useCallback(async () => {
+    try {
+      await signOut();
+      navigate('/');
+      if (onClose) onClose();
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  }, [signOut, navigate, onClose]);
+
+  const onSchoolLoginClick = useCallback(() => {
     navigate('/commingsoonpage');
-  }, [navigate]);
+    if (onClose) onClose();
+  }, [navigate, onClose]);
+
+  console.log('User from Clerk:', user);
+  console.log('User data from backend:', userData);
 
   return (
     <div
@@ -97,16 +173,28 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
       <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
         <div className="flex flex-row items-center justify-start gap-[12px]">
           <div className="flex flex-row items-start justify-start">
-            <img
-              className="w-[49px] relative h-[49px] object-cover"
-              alt=""
-              src="/group3@2x.png"
-            />
+            {isSignedIn && user?.imageUrl ? (
+              <img
+                className="w-[49px] relative h-[49px] rounded-full object-cover"
+                alt="Profile"
+                src={user.imageUrl}
+              />
+            ) : (
+              <img
+                className="w-[49px] relative h-[49px] object-cover"
+                alt=""
+                src="/codesk-logo.jpeg"
+              />
+            )}
           </div>
           <div className="flex flex-col items-start justify-start">
-            <div className="relative leading-[18px]">Hello</div>
+            <div className="relative leading-[18px]">
+              {isSignedIn ? 'Welcome' : 'Hello'}
+            </div>
             <b className="relative text-xl leading-[30px] text-black">
-              CoDeskLab
+              {isSignedIn
+                ? userData?.name || user?.fullName || user?.firstName || 'User'
+                : 'CoDeskLab'}
             </b>
           </div>
         </div>
@@ -257,43 +345,76 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
           </button>
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-center justify-start gap-[16px]"
-            onClick={onMenuItemClick11}
+            onClick={isSignedIn ? onLogoutClick : onLoginClick}
           >
             <img
               className="w-6 relative h-6 overflow-hidden shrink-0"
               alt=""
-              src="/lockkeyopen.svg"
+              src={isSignedIn ? '/logout.svg' : '/lockkeyopen.svg'}
             />
             <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
-              Login
+              {isSignedIn ? 'General Logout' : 'General Login'}
             </div>
           </button>
-          <button
-            className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItemClick11}
-          >
-            <img
-              className="w-6 relative h-6 overflow-hidden shrink-0"
-              alt=""
-              src="/cashregister.svg"
-            />
-            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
-              Register
+          <div className="self-stretch flex flex-col gap-4">
+            <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-aliceblue" />
+            <div className="text-sm text-gray-600 font-medium text-center">
+              CoDesk School Management System
             </div>
-          </button>
-          <button
-            className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
-            onClick={onMenuItemClick11}
-          >
-            <img
-              className="w-6 relative h-6 overflow-hidden shrink-0"
-              alt=""
-              src="/userswitch.svg"
-            />
-            <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
-              Instructor Login
-            </div>
-          </button>
+
+            <button
+              className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
+              onClick={onSchoolLoginClick}
+            >
+              <img
+                className="w-6 relative h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/userswitch.svg"
+              />
+              <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
+                Instructor Login
+              </div>
+            </button>
+            <button
+              className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
+              onClick={onSchoolLoginClick}
+            >
+              <img
+                className="w-6 relative h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/userswitch.svg"
+              />
+              <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
+                Student Login
+              </div>
+            </button>
+            <button
+              className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
+              onClick={onSchoolLoginClick}
+            >
+              <img
+                className="w-6 relative h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/userswitch.svg"
+              />
+              <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
+                Parent Login
+              </div>
+            </button>
+            <button
+              className="cursor-pointer [border:none] p-0 bg-[transparent] self-stretch flex flex-row items-start justify-start gap-[16px]"
+              onClick={onSchoolLoginClick}
+            >
+              <img
+                className="w-6 relative h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/userswitch.svg"
+              />
+              <div className="relative text-md leading-[24px] font-medium font-components-chip text-black1 text-left">
+                Admin Login
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <div className="flex flex-row items-start justify-start text-sm">
