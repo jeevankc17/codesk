@@ -28,7 +28,12 @@ root.render(
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={muiTheme}>
         <CssBaseline />
-        <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+        <ClerkProvider
+          publishableKey={PUBLISHABLE_KEY}
+          afterSignInUrl="/"
+          afterSignUpUrl="/"
+          afterSignOutUrl="/"
+        >
           <App />
         </ClerkProvider>
       </ThemeProvider>
@@ -36,10 +41,5 @@ root.render(
   </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Remove duplicate reportWebVitals call
 reportWebVitals();
