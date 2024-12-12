@@ -166,6 +166,7 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  console.log('App component rendering');
   const location = useLocation();
 
   // Update metadata when route changes
@@ -175,7 +176,6 @@ function App() {
     );
 
     if (currentRoute) {
-      // Update title
       document.title = currentRoute.title;
 
       // Update meta description
