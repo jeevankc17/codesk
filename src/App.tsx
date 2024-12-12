@@ -128,13 +128,6 @@ const routes = [
       'First-ever low-code platform in Nepal offering comprehensive tech education. Learn coding, robotics, VR/AR in an innovative way.',
   },
   {
-    path: '/quizpage',
-    component: <QuizPage />,
-    title: 'Quizzes | Codesklab',
-    metaDescription:
-      'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.',
-  },
-  {
     path: '/worksheetpage',
     component: <WorksheetPage />,
     title: 'Worksheets | Codesklab',
@@ -170,11 +163,20 @@ function App() {
   console.log('App component rendering');
   const location = useLocation();
 
+  // Add protected route metadata
+  const protectedRoutes = {
+    '/quizpage': {
+      title: 'Quizzes | Codesklab',
+      metaDescription: 'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.'
+    }
+  };
+
   // Update metadata when route changes
   useEffect(() => {
+    // Check both regular and protected routes
     const currentRoute = routes.find(
       (route) => route.path === location.pathname
-    );
+    ) || protectedRoutes[location.pathname as keyof typeof protectedRoutes];
 
     if (currentRoute) {
       document.title = currentRoute.title;
