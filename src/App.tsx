@@ -107,11 +107,11 @@ const routes = [
       "Join forces with Nepal's leading tech education platform. Partner in revolutionizing coding and robotics education.",
   },
   {
-    path: '/blogpage',
-    component: <BlogPage />,
+    path: '/quizpage',
+    component: <QuizPage />,
     title: 'Blog | Codesklab',
     metaDescription:
-      'Latest insights on coding, robotics, and tech education in Nepal. Stay updated with industry trends and success stories.',
+      'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.',
   },
   {
     path: '/projectpage',
@@ -165,9 +165,9 @@ function App() {
 
   // Add protected route metadata
   const protectedRoutes = {
-    '/quizpage': {
-      title: 'Quizzes | Codesklab',
-      metaDescription: 'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.'
+    '/blogpage': {
+      title: 'Blog | Codesklab',
+      metaDescription: 'Latest insights on coding, robotics, and tech education in Nepal. Stay updated with industry trends and success stories.'
     }
   };
 
@@ -201,11 +201,11 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route
-          path="/quizpage"
+          path="/blogpage"
           element={
             <>
               <SignedIn>
-                <QuizPage />
+                <BlogPage />
               </SignedIn>
               <SignedOut>
                 <RedirectToSignIn />

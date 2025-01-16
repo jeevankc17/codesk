@@ -59,7 +59,8 @@ const QuizPage: FunctionComponent = () => {
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-md">
             <div className="self-stretch relative leading-[150%] text-md">
-              Fun way to learn coding for kids using quizzes
+              Fun way to learn coding for kids using quizzes. Great way to
+              improve coding skills.
             </div>
           </div>
           <button
@@ -85,8 +86,8 @@ const QuizPage: FunctionComponent = () => {
               Coding quizzes for kids
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-center justify-center p-2.5 ">
-            <div className="flex-1 relative leading-[150%] text-3xl md:text-xl sm:text-lg">
+          <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
+            <div className="flex-1 relative leading-[150%]">
               Great collection of fun and interactive coding quizzes for kids to
               assess and acquire computer science knowledge.
             </div>
