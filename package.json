@@ -37,8 +37,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "vercel-build": "apt-get install -y libnss3 libatk1.0-0 libx11-xcb1 libcups2 && npm run build",
-    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -57,29 +55,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
-  "reactSnap": {
-    "inlineCss": true,
-    "routes": [
-      "/",
-      "/course",
-      "/competitions",
-      "/curriculum",
-      "/about-us",
-      "/reviews",
-      "/coming-soon",
-      "/partnerships",
-      "/blog",
-      "/projects",
-      "/why-codesk",
-      "/quiz",
-      "/worksheet",
-      "/career",
-      "/quiz-by-course-id",
-      "/competitions/organizers",
-      "/competitions/hackathons",
-      "/competitions/projects",
-      "/competitions/builders"
-    ]
-  }
+  "proxy": "http://localhost:3001"
 }
