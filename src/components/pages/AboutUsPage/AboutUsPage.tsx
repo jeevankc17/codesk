@@ -40,13 +40,15 @@ const AboutUsPage: FunctionComponent = () => {
         aboutUsColor="#FF5A43"
         quizzesColor="#000"
       />
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[5] text-left text-4xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
+      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[5] text-left text-4xl text-nero lg:flex-col md:flex-col sm:flex-col sm:px-2">
+        <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch sm:p-2">
           <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">{`Building the Nepal’s number 1 & most loved coding school for kids & teenagers`}</div>
+            <div className="self-stretch relative leading-[120%] font-semibold sm:text-xl sm:text-center">
+              {`Building the Nepal's number 1 & most loved coding school for kids & teenagers`}
+            </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-md">
-            <div className="self-stretch relative leading-[150%]">
+          <div className="self-stretch flex flex-col items-start justify-start text-md sm:text-sm">
+            <div className="self-stretch relative leading-[150%] sm:text-center">
               <p className="m-0">
                 CoDesk started with a dream to inspire school kids
               </p>
@@ -58,7 +60,7 @@ const AboutUsPage: FunctionComponent = () => {
           </div>
         </div>
         <img
-          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
+          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[200px] sm:w-full"
           alt=""
           src="/image-53@2x.png"
         />
@@ -80,7 +82,7 @@ const AboutUsPage: FunctionComponent = () => {
         <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-md font-body-large-600 md:flex-row md:flex-wrap">
           <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
             <div className="self-stretch flex flex-col items-center justify-start">
-              <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`“Teaching coding to kids is a huge responsibility and we want to take that”  `}</div>
+              <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`"Teaching coding to kids is a huge responsibility and we want to take that"  `}</div>
             </div>
             <div className="w-full overflow-hidden flex flex-col items-center justify-center py-0 px-[42px] box-border max-w-[384px]">
               <img
@@ -197,8 +199,8 @@ const AboutUsPage: FunctionComponent = () => {
             All thanks to our Ambassadors
           </div>
         </div>
-        <div className="self-stretch flex flex-row items-center justify-center text-xl text-black1 font-body-large-600">
-          <div className="flex-1 relative leading-[32px]">{`Our teachers and curriculum-designers are the flag-bearers of our approach to revolutionize the education system making it unique, immersive and holistic for the kids, sparking curiosity and thirst for learning & doing. They constantly strive to bring out the genius in every kid. The curriculum is conceptualized and designed by the best minds from top tier institutes around the globe. All hail to them!`}</div>
+        <div className="self-stretch flex flex-row items-center justify-center text-xl text-black1 font-body-large-600 sm:text-base sm:p-2">
+          <div className="flex-1 relative leading-[32px] sm:leading-[24px]">{`Our teachers and curriculum-designers are the flag-bearers of our approach to revolutionize the education system making it unique, immersive and holistic for the kids, sparking curiosity and thirst for learning & doing. They constantly strive to bring out the genius in every kid. The curriculum is conceptualized and designed by the best minds from top tier institutes around the globe. All hail to them!`}</div>
         </div>
       </div>
       <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[15px] z-[2]">
@@ -209,22 +211,22 @@ const AboutUsPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-3xl text-black1">
-          <div className="self-stretch bg-nero flex flex-row items-start justify-start gap-[40px] lg:flex-col md:flex-col">
-            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch">
-              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col">
+        <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-3xl text-black1 sm:p-2">
+          <div className="self-stretch bg-nero flex flex-row items-start justify-start gap-[40px] lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch sm:gap-[10px]">
+              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col sm:w-full">
                 <div className="w-[224.8px] overflow-hidden shrink-0 flex flex-col items-start justify-start max-w-[224.8px] z-[0]">
                   <div className="w-[224.8px] h-[179.8px] overflow-hidden shrink-0 flex flex-col items-center justify-center">
                     <div className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <img
-                  className="w-[224.8px] absolute !m-[0] top-[0.5px] left-[0px] h-[179.8px] overflow-hidden shrink-0 object-cover z-[1]"
+                  className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[150px]"
                   alt=""
                   src="/empoweringchildrenpng@2x.png"
                 />
               </div>
-              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
+              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch sm:text-center">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
                   <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Empowering Children
@@ -238,20 +240,20 @@ const AboutUsPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch">
-              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col">
+            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch sm:gap-[10px]">
+              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col sm:w-full">
                 <div className="w-[224.8px] overflow-hidden shrink-0 flex flex-col items-start justify-start max-w-[224.8px] z-[0]">
                   <div className="w-[224.8px] h-[179.8px] overflow-hidden shrink-0 flex flex-col items-center justify-center">
                     <div className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <img
-                  className="w-[224.8px] absolute !m-[0] top-[0.5px] left-[-0.2px] h-[179.8px] overflow-hidden shrink-0 object-cover z-[1]"
+                  className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[150px]"
                   alt=""
                   src="/inquisitivenesspng@2x.png"
                 />
               </div>
-              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
+              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch sm:text-center">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
                   <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Discovering Why?
@@ -266,21 +268,21 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-start justify-start gap-[40px] lg:flex-col md:flex-col">
-            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch">
-              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-start justify-start gap-[40px] lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch sm:gap-[10px]">
+              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col sm:w-full">
                 <div className="w-[224.8px] overflow-hidden shrink-0 flex flex-col items-start justify-start max-w-[224.8px] z-[0]">
                   <div className="w-[224.8px] h-[179.8px] overflow-hidden shrink-0 flex flex-col items-center justify-center">
                     <div className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <img
-                  className="w-[224.8px] absolute !m-[0] top-[0.8px] left-[-0.2px] h-[179.8px] overflow-hidden shrink-0 object-cover z-[1]"
+                  className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[150px]"
                   alt=""
                   src="/childhoodwonderpng@2x.png"
                 />
               </div>
-              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
+              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch sm:text-center">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
                   <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     The wonder of childhood
@@ -295,8 +297,8 @@ const AboutUsPage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch">
-              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col">
+            <div className="flex-1 bg-nero flex flex-row items-center justify-center gap-[20px] w-full lg:w-full lg:flex-[unset] lg:self-stretch md:flex-col md:flex-[unset] md:self-stretch sm:gap-[10px]">
+              <div className="overflow-hidden flex flex-row items-start justify-center relative object-contain sm:flex-col sm:w-full">
                 <div className="w-[224.8px] overflow-hidden shrink-0 flex flex-col items-start justify-start max-w-[224.8px] z-[0]">
                   <div className="w-[224.8px] h-[179.8px] overflow-hidden shrink-0 flex flex-col items-center justify-center">
                     <div className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0" />
@@ -309,13 +311,13 @@ const AboutUsPage: FunctionComponent = () => {
                     </div>
                   </div>
                   <img
-                    className="w-[224.8px] absolute !m-[0] top-[0px] left-[0px] h-[179.8px] overflow-hidden shrink-0 object-cover z-[1]"
+                    className="w-[224.8px] relative h-[179.8px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[150px]"
                     alt=""
                     src="/codingpng@2x.png"
                   />
                 </div>
               </div>
-              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch">
+              <div className="flex-1 flex flex-col items-start justify-start w-full md:flex-[unset] md:self-stretch sm:text-center">
                 <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
                   <div className="h-[34px] flex-1 relative leading-[120%] font-semibold inline-block sm:text-2xl">
                     Coding should be fun
@@ -343,7 +345,7 @@ const AboutUsPage: FunctionComponent = () => {
           </div>
         </div>
         <div className="self-stretch bg-nero flex flex-col items-start justify-start p-[15px] gap-[40px] text-3xl text-black1 font-inter">
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
                 className="w-[300px] relative h-[325px] overflow-hidden shrink-0"
@@ -351,11 +353,11 @@ const AboutUsPage: FunctionComponent = () => {
                 src="/reason5svg.svg"
               />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="h-10 flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold inline-block">
+                    <div className="h-10 flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold inline-block sm:text-lg sm:leading-[30px]">
                       Conceptualization
                     </div>
                   </div>
@@ -375,8 +377,8 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col">
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:order-[2] md:flex-[unset] md:self-stretch">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -406,7 +408,7 @@ const AboutUsPage: FunctionComponent = () => {
               />
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
                 className="w-[300px] relative h-[300px] overflow-hidden shrink-0"
@@ -414,7 +416,7 @@ const AboutUsPage: FunctionComponent = () => {
                 src="/devsvg.svg"
               />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -437,8 +439,8 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col">
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -468,7 +470,7 @@ const AboutUsPage: FunctionComponent = () => {
               />
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
                 className="w-[300px] relative h-[300px] overflow-hidden shrink-0"
@@ -476,7 +478,7 @@ const AboutUsPage: FunctionComponent = () => {
                 src="/oct2020svg.svg"
               />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -499,8 +501,8 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col">
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -532,7 +534,7 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
                 className="w-[300px] h-[300px] overflow-hidden shrink-0 object-cover"
@@ -540,11 +542,11 @@ const AboutUsPage: FunctionComponent = () => {
                 src="/childhoodwonderpng1@2x.png"
               />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                    <div className="h-10 flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold inline-block">
+                    <div className="h-20 flex-1 relative tracking-[-0.01em] leading-[40px] font-semibold inline-block">
                       User Acquisition and Onboarding
                     </div>
                   </div>
@@ -563,8 +565,8 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col">
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -598,7 +600,7 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
             <div className="flex-1 bg-nero flex flex-row items-center justify-center p-2.5 lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
               <img
                 className="w-[300px] h-[300px] overflow-hidden shrink-0 object-cover"
@@ -606,7 +608,7 @@ const AboutUsPage: FunctionComponent = () => {
                 src="/childhoodwonderpng1@2x.png"
               />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
@@ -629,8 +631,8 @@ const AboutUsPage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row items-center justify-between font-body-large-600 lg:flex-col md:flex-col">
-            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
+          <div className="self-stretch bg-nero flex flex-row items-center justify-between lg:flex-col md:flex-col sm:gap-[20px]">
+            <div className="flex-1 flex flex-col items-center justify-center py-0 px-[50px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border sm:px-2">
               <div className="self-stretch flex flex-col items-start justify-start w-full">
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
