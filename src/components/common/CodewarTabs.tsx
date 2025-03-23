@@ -61,31 +61,13 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
 
   const navigate = useNavigate();
 
-  // Add state to track scroll position
-  const [isSticky, setIsSticky] = useState(false);
-
-  // Add scroll event listener
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbarHeight = 77; // Height of navbar
-      setIsSticky(window.scrollY > navbarHeight);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div
-      className={`self-stretch h-[65px] rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] transition-all duration-300 ${
-        isSticky 
-          ? 'fixed top-0 left-0 right-0 z-[99]' 
-          : 'relative'
-      } text-center text-lg text-aqua-deep font-body-large-600 sm:pl-0 sm:pr-0 sm:box-border ${className}`}
+      className={`self-stretch h-[65px] rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] fixed top-[77px] left-0 right-0 z-[98] text-center text-lg text-aqua-deep font-body-large-600 sm:pl-0 sm:pr-0 sm:box-border sm:h-[45px] ${className}`}
     >
       <div className="w-full max-w-[1240px] mx-auto flex flex-row flex-wrap items-start justify-center gap-[5px]">
         <button
-          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20 sm:h-[35px] sm:py-1"
           autoFocus={true}
           onClick={onHackathonsTabClick}
           style={hackathonsTabStyle}
@@ -95,7 +77,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
           </div>
         </button>
         <button
-          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20 sm:h-[35px] sm:py-1"
           autoFocus={true}
           onClick={onProjectsTabClick}
           style={projectsTabStyle}
@@ -105,7 +87,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
           </div>
         </button>
         <button
-          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          className="cursor-pointer py-[9px] px-5 bg-nero w-[130px] rounded box-border h-[45px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20 sm:h-[35px] sm:py-1"
           autoFocus={true}
           onClick={onBuildersTabClick}
           style={buildersTabStyle}
@@ -115,7 +97,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
           </div>
         </button>
         <div
-          className="w-[130px] rounded bg-nero box-border h-[45px] flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20"
+          className="w-[130px] rounded bg-nero box-border h-[45px] flex flex-row items-center justify-center py-[9px] px-5 cursor-pointer border-[1px] border-solid border-aqua-deep md:w-20 md:pl-2.5 md:pr-2.5 md:box-border sm:w-20 sm:h-[35px] sm:py-1"
           onClick={onOrganizersTabClick}
           style={organizersTabStyle}
         >

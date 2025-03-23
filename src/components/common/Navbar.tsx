@@ -85,7 +85,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
   return (
     <>
       <div
-        className={`self-stretch h-[77px] bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border sticky top-[0] z-[18] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border ${className}`}
+        className={`self-stretch h-[77px] bg-nero flex flex-row items-center justify-center py-[22px] px-20 box-border fixed top-0 left-0 right-0 z-[99] sm:gap-[10px] sm:pl-5 sm:pr-5 sm:box-border ${className}`}
       >
         <div className="w-[1240px] bg-nero flex flex-row items-center justify-between">
           <button

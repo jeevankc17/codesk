@@ -56,33 +56,38 @@ const CompetetionsPage: FunctionComponent = () => {
 
   return (
     <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
-      <Navbar
-        logoColor="#1f95f2"
-        onLogoClick={onLogoClick}
-        onCoursesClick={onCoursesClick}
-        onQuizzesClick={onQuizzesClick}
-        onCompetetionsClick={onCompetetionsClick}
-        onAboutUsClick={onAboutUsClick}
-        coursesColor="#000"
-        competetionsColor="#FF5A43"
-        aboutUsColor="#000"
-        quizzesColor="#000"
-      />
-      <CodewarTabs
-        organizersTabBackgroundColor="#fff"
-        onHackathonsTabClick={onHackathonsTabClick}
-        onProjectsTabClick={onProjectsTabClick}
-        onBuildersTabClick={onBuildersTabClick}
-        onOrganizersTabClick={onOrganizersTabClick}
-        buildersTabBackgroundColor="#fff"
-        hackathonsTabBackgroundColor="#fff"
-        projectsTabBackgroundColor="#fff"
-      />
+      <div className="fixed top-0 left-0 right-0 z-[100] bg-nero">
+        <div className="px-5">
+          <Navbar
+            logoColor="#1f95f2"
+            onLogoClick={onLogoClick}
+            onCoursesClick={onCoursesClick}
+            onQuizzesClick={onQuizzesClick}
+            onCompetetionsClick={onCompetetionsClick}
+            onAboutUsClick={onAboutUsClick}
+            coursesColor="#000"
+            competetionsColor="#FF5A43"
+            aboutUsColor="#000"
+            quizzesColor="#000"
+          />
+          <CodewarTabs
+            organizersTabBackgroundColor="#fff"
+            onHackathonsTabClick={onHackathonsTabClick}
+            onProjectsTabClick={onProjectsTabClick}
+            onBuildersTabClick={onBuildersTabClick}
+            onOrganizersTabClick={onOrganizersTabClick}
+            buildersTabBackgroundColor="#fff"
+            hackathonsTabBackgroundColor="#fff"
+            projectsTabBackgroundColor="#fff"
+          />
+        </div>
+      </div>
+      <div className="h-[120px]"></div>
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[4] text-left text-4xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-start justify-start">
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              We care about organizor’s hackathons and builder’s projects
+              We care about organizor's hackathons and builder's projects
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base">
@@ -216,7 +221,7 @@ const CompetetionsPage: FunctionComponent = () => {
                       click of
                     </p>
                     <p className="m-0">
-                      a button. We save all the required info so that you don’t
+                      a button. We save all the required info so that you don't
                     </p>
                     <p className="m-0">
                       have to fill them over and over again.
