@@ -36,6 +36,7 @@ const Builders: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate('/');
   }, [navigate]);
 
@@ -83,7 +84,6 @@ const Builders: FunctionComponent = () => {
       <div className="fixed top-0 left-0 right-0 z-[100] bg-nero">
         <div className="px-5">
           <Navbar
-            logoColor="#1f95f2"
             onLogoClick={onLogoClick}
             onCoursesClick={onCoursesClick}
             onQuizzesClick={onQuizzesClick}
@@ -109,13 +109,13 @@ const Builders: FunctionComponent = () => {
       <div className="h-[120px]"></div>
       <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
-          <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">
+          <div className="self-stretch flex flex-col items-center justify-start">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg text-center">
               Our Builders
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-md">
-            <div className="self-stretch relative leading-[150%]">
+          <div className="self-stretch flex flex-col items-center justify-start text-md">
+            <div className="self-stretch relative leading-[150%] text-center">
               Builders are the young coders or participants who engage in
               creating projects either during hackathons or independently. They
               use their coding skills and creativity to build innovative

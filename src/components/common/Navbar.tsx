@@ -10,7 +10,6 @@ import PortalDrawer from './PortalDrawer';
 
 export type NavbarType = {
   className?: string;
-  logoColor?: CSSProperties['color'];
   coursesColor?: CSSProperties['color'];
   competetionsColor?: CSSProperties['color'];
   aboutUsColor?: CSSProperties['color'];
@@ -24,7 +23,6 @@ export type NavbarType = {
 
 const Navbar: FunctionComponent<NavbarType> = ({
   className = '',
-  logoColor,
   coursesColor,
   competetionsColor,
   aboutUsColor,
@@ -38,13 +36,6 @@ const Navbar: FunctionComponent<NavbarType> = ({
   const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
 
   // Memoized styles
-  const coDeskLabStyle: CSSProperties = useMemo(
-    () => ({
-      color: logoColor,
-    }),
-    [logoColor]
-  );
-
   const coursesStyle: CSSProperties = useMemo(
     () => ({
       color: coursesColor,
@@ -89,12 +80,23 @@ const Navbar: FunctionComponent<NavbarType> = ({
       >
         <div className="w-[1240px] bg-nero flex flex-row items-center justify-between">
           <button
-            className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center"
+            className="cursor-pointer [border:none] p-2.5 bg-[transparent] flex flex-row items-center justify-center gap-2"
             onClick={onLogoClick}
           >
+            <img 
+              src="https://www.codesklab.com/codesk-logo.jpeg" 
+              alt="CoDeskLab Logo" 
+              className="h-10 w-auto rounded-md"
+              width="40" 
+              height="40"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'https://placehold.co/40x40?text=CoDeskLab';
+              }}
+            />
             <div
-              className="relative text-4xl sm:text-lg tracking-[-0.01em] leading-[40px] font-semibold font-inter text-dodger-blue text-left"
-              style={coDeskLabStyle}
+              className="relative text-2xl sm:text-xl tracking-[-0.01em] leading-[20px] font-semibold font-inter text-dodger-blue text-left"
             >
               CoDeskLab
             </div>

@@ -153,6 +153,7 @@ const Hackathons: FunctionComponent = () => {
   }, []);
 
   const onLogoClick = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate('/');
   }, [navigate]);
 
@@ -229,9 +230,9 @@ const Hackathons: FunctionComponent = () => {
           {hackathons.map(hackathon => (
             <div 
               key={hackathon.id} 
-              className="bg-nero rounded-lg shadow-sm border border-gray-100/10 hover:shadow-md transition-shadow duration-300 overflow-hidden"
+              className="bg-nero rounded-lg shadow-sm border border-gray-100/10 hover:shadow-md transition-shadow duration-300 overflow-hidden w-full"
             >
-              <div className="flex flex-row flex-wrap items-center justify-between p-[15px] sm:p-3 text-center text-2xl text-aqua-deep font-body-large-600">
+              <div className="flex flex-row flex-wrap items-center justify-between p-[15px] sm:p-3 text-center text-2xl text-aqua-deep font-body-large-600 w-full">
                 <div className="flex-1 flex flex-row items-center justify-between gap-6 md:flex-col sm:gap-3">
                   <img
                     className="w-[186px] rounded-lg h-[127px] overflow-hidden shrink-0 object-cover shadow-sm md:w-full sm:h-[100px]"
@@ -309,11 +310,10 @@ const Hackathons: FunctionComponent = () => {
   };
 
   return (
-    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:py-[30px] sm:px-[5px] sm:box-border">
+    <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:py-[30px] sm:px-2 sm:box-border overflow-x-hidden">
       <div className="fixed top-0 left-0 right-0 z-[100] bg-nero">
         <div className="px-5">
           <Navbar
-            logoColor="#1f95f2"
             onLogoClick={onLogoClick}
             onCoursesClick={onCoursesClick}
             onQuizzesClick={onQuizzesClick}
@@ -343,13 +343,13 @@ const Hackathons: FunctionComponent = () => {
         className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[99] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border"
       >
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
-          <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
+          <div className="self-stretch flex flex-col items-center justify-start">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg text-center">
               Our Hackathons
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-sm">
-            <div className="self-stretch relative leading-[150%] text-md">
+          <div className="self-stretch flex flex-col items-center justify-start text-sm">
+            <div className="self-stretch relative leading-[150%] text-md text-center">
               These are organized coding events where kids can participate
               individually or in teams to work on coding challenges or projects
               within a specified time frame, usually ranging from a few hours to
@@ -377,14 +377,14 @@ const Hackathons: FunctionComponent = () => {
 
       <div 
         id="status-tabs"
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-300 w-full ${
           isScrolled 
             ? 'fixed top-[142px] left-0 right-0 z-[99]' 
             : 'relative'
         }`}
       >
-        <div className="max-w-[1240px] mx-auto">
-          <div className="w-[900px] bg-nero py-2.5 rounded-lg shadow-sm">
+        <div className="max-w-[1240px] mx-auto px-2">
+          <div className="w-full max-w-[900px] bg-nero py-2.5 rounded-lg shadow-sm overflow-x-hidden">
             <div className="flex flex-row items-center gap-3 sm:gap-2 pl-2">
               <button
                 className={`text-base font-semibold transition-colors relative px-5 py-[9px] rounded sm:px-3 sm:py-2 sm:text-sm ${
@@ -423,8 +423,8 @@ const Hackathons: FunctionComponent = () => {
 
       {isScrolled && <div className="h-[56px]"></div>}
 
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] lg:flex-col md:flex-col mt-[5px]">
-        <div className="w-[900px] flex flex-col items-start justify-start z-[1] lg:self-stretch lg:w-auto md:w-full">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] lg:flex-col md:flex-col mt-[5px] w-full overflow-x-hidden">
+        <div className="w-full max-w-[900px] flex flex-col items-start justify-start z-[1]">
           <div className="self-stretch flex flex-col items-start justify-start p-2 gap-[10px] z-[0] text-left text-xl font-segoe-ui">
             {activeStatus === 'open' && renderHackathonSection('open', 'Open Hackathons')}
             {activeStatus === 'upcoming' && renderHackathonSection('upcoming', 'Upcoming Hackathons')}
@@ -432,8 +432,8 @@ const Hackathons: FunctionComponent = () => {
           </div>
         </div>
 
-        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[1] text-2xl md:hidden">
-          <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] fixed top-[142px] right-5 z-[2]">
+        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[1] text-2xl md:hidden max-w-[350px]">
+          <div className="w-full rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] fixed top-[142px] right-5 z-[2]">
             <div className="self-stretch relative leading-[150%] font-semibold text-transparent !bg-clip-text [background:linear-gradient(16.28deg,_#c53232,_#7c36dd)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
               {`Play while you learn & win amazing prizes`}
             </div>

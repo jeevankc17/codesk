@@ -8,6 +8,7 @@ const CompetetionsPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate('/');
   }, [navigate]);
 
@@ -59,7 +60,6 @@ const CompetetionsPage: FunctionComponent = () => {
       <div className="fixed top-0 left-0 right-0 z-[100] bg-nero">
         <div className="px-5">
           <Navbar
-            logoColor="#1f95f2"
             onLogoClick={onLogoClick}
             onCoursesClick={onCoursesClick}
             onQuizzesClick={onQuizzesClick}

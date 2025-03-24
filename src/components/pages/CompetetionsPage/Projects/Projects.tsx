@@ -31,6 +31,7 @@ const Projects: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onLogoClick = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate('/');
   }, [navigate]);
 
@@ -82,7 +83,6 @@ const Projects: FunctionComponent = () => {
       <div className="fixed top-0 left-0 right-0 z-[100] bg-nero">
         <div className="px-5">
           <Navbar
-            logoColor="#1f95f2"
             onLogoClick={onLogoClick}
             onCoursesClick={onCoursesClick}
             onQuizzesClick={onQuizzesClick}
@@ -106,38 +106,25 @@ const Projects: FunctionComponent = () => {
         </div>
       </div>
       <div className="h-[120px]"></div>
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
-          <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">
-              Our Projects
+      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
+          <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
+              Coding Projects By Kids
+            </div>
+            <div className="self-stretch relative leading-[150%] text-md sm:text-sm sm:text-center">
+              Fun way to learn coding for kids by doing projects
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-md">
-            <div className="self-stretch relative leading-[150%]">
-              Projects refer to the coding creations or solutions developed by
-              kids during hackathons or independently on the platform. These
-              could range from software applications and games to websites and
-              mobile apps. Kids can showcase their projects, share their code,
-              and receive feedback from peers and mentors on the platform.
-            </div>
-          </div>
-          <button
-            className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-            autoFocus={true}
-            onClick={onScrollBannerButtonClick}
-          >
-            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
-              View a Projects
-            </div>
-          </button>
         </div>
-        <img
-          className="flex-1 relative max-w-full overflow-hidden h-[500px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
-          alt=""
-          src="/image-531@2x.png"
-        />
-      </div>
+        <div className="flex-1 h-full flex items-center justify-center">
+          <img
+            className="w-full h-full object-cover object-center"
+            alt=""
+            src="/image-57@2x.png"
+          />
+        </div>
+      </header>
       <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-sm text-black1 lg:flex-col md:flex-col min-h-screen overflow-visible">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full sticky top-[77] h-fit">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2]">

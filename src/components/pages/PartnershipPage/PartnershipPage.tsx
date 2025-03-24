@@ -48,9 +48,10 @@ const PartnershipPage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-4xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-4xl text-black1 font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        <div className="h-[50px] w-full"></div>
+        
         <Navbar
-          logoColor="#1f95f2"
           onLogoClick={onLogoClick}
           onCoursesClick={onCoursesClick}
           onQuizzesClick={onQuizzesClick}
@@ -61,44 +62,36 @@ const PartnershipPage: FunctionComponent = () => {
           aboutUsColor="#000"
           quizzesColor="#000"
         />
-        <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-start py-0 px-[15px] gap-[15px] z-[3] text-left text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
-          <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
-            <div className="self-stretch flex flex-col items-start justify-start">
-              <div className="self-stretch relative leading-[120%] font-semibold sm:text-sm">
-                CoDesk - School Partnerships
+        
+        <div className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+          <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
+            <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
+              <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center text-nero">
+                Partner With Us
+              </div>
+              <div className="self-stretch relative leading-[150%] text-md sm:text-sm sm:text-center text-nero">
+                Make your school stand out by partnering with Nepal's #1 coding platform for school kids
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start text-md">
-              <div className="self-stretch relative leading-[150%]">
-                We welcome schools to partner with us and introduce coding to
-                students through fun activities.
-              </div>
-            </div>
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-              autoFocus={true}
-              onClick={onScrollBannerButtonClick}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                View Contact Us Form
-              </div>
-            </button>
           </div>
-          <img
-            className="h-[500px] flex-1 relative max-w-full overflow-hidden object-contain lg:order-[1] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:h-[300px]"
-            alt=""
-            src="/image-551@2x.png"
-          />
+          <div className="flex-1 h-full flex items-center justify-center">
+            <img
+              className="w-full h-full object-cover object-center"
+              alt=""
+              src="/image-511@2x.png"
+            />
+          </div>
         </div>
+        
         <div className="self-stretch bg-nero flex flex-col items-center justify-center gap-[30px] z-[2] text-4xl\">
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px] gap-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
-              <div className="flex-1 relative leading-[120%] font-semibold">
+              <div className="flex-1 relative leading-[120%] font-semibold sm:text-3xl">
                 Benefits Of Partnering With Us
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm">
-              <div className="flex-1 relative leading-[150%]">
+            <div className="self-stretch flex flex-row items-center justify-center p-2.5 text-sm sm:text-sm">
+              <div className="flex-1 relative leading-[150%] sm:text-sm">
                 Make your school stand out by partnering with Nepal's #1 coding
                 platform for school kids
               </div>
@@ -116,7 +109,7 @@ const PartnershipPage: FunctionComponent = () => {
               <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
-                    <div className="self-stretch relative leading-[120%] font-semibold">
+                    <div className="self-stretch relative leading-[120%] font-semibold sm:text-lg">
                       For School
                     </div>
                   </div>
@@ -127,7 +120,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>{`Customised `}</span>
                         <span className="text-aqua-deep">
                           Coding Curriculum designed
@@ -141,7 +134,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>
                           Computer science graduate teachers from CoDesk
                         </span>
@@ -157,7 +150,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>Master dashboard</span>
                         <span className="text-black1">
                           {' '}
@@ -174,7 +167,7 @@ const PartnershipPage: FunctionComponent = () => {
               <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
-                    <div className="self-stretch relative leading-[120%] font-semibold">
+                    <div className="self-stretch relative leading-[120%] font-semibold sm:text-lg">
                       For Teachers
                     </div>
                   </div>
@@ -185,7 +178,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>Training</span>
                         <span className="text-black1">{` provided to school teachers by `}</span>
                         <span>{`CoDesk Knowledge Experts `}</span>
@@ -201,7 +194,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[30px] font-semibold">
+                      <div className="flex-1 relative leading-[30px] font-semibold sm:text-sm">
                         <span>Custom dashboard</span>
                         <span className="text-black1">
                           {' '}
@@ -215,7 +208,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>Speakership / Advocate</span>
                         <span className="text-black1">
                           {' '}
@@ -245,7 +238,7 @@ const PartnershipPage: FunctionComponent = () => {
               <div className="flex-1 flex flex-col items-center justify-center py-0 px-[70px] lg:flex-[unset] lg:self-stretch md:pl-2.5 md:pr-2.5 md:box-border md:flex-[unset] md:self-stretch">
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
-                    <div className="self-stretch relative leading-[120%] font-semibold">
+                    <div className="self-stretch relative leading-[120%] font-semibold sm:text-lg">
                       For Students
                     </div>
                   </div>
@@ -256,7 +249,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>Lifetime access</span>
                         <span className="text-black1">{` to a personal dashboard with `}</span>
                         <span>lessons, projects, coding quizzes,</span>
@@ -271,7 +264,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[30px] font-semibold">
+                      <div className="flex-1 relative leading-[30px] font-semibold sm:text-sm">
                         Regular Parent-Teacher Meetings and doubt sessions.
                       </div>
                     </div>
@@ -281,7 +274,7 @@ const PartnershipPage: FunctionComponent = () => {
                         alt=""
                         src="/fire.svg"
                       />
-                      <div className="flex-1 relative leading-[150%] font-semibold">
+                      <div className="flex-1 relative leading-[150%] font-semibold sm:text-sm">
                         <span>{`Free participation in `}</span>
                         <span className="text-aqua-deep">{`National and Global coding competitions and hackathons, `}</span>
                         <span>hosted with CoDesk.</span>
@@ -309,7 +302,7 @@ const PartnershipPage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
             <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-whitesmoke-200 md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
-                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-slategray text-left">
+                <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-slategray text-left sm:text-sm">
                   Fill in your details to join the party!
                 </div>
               </div>
@@ -358,7 +351,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left sm:text-base"
                         placeholder="Your name"
                         type="text"
                       />
@@ -426,7 +419,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left sm:text-base"
                         placeholder="Email address"
                         type="text"
                       />
@@ -494,7 +487,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left sm:text-base"
                         placeholder="Phone Number"
                         type="text"
                       />
@@ -562,7 +555,7 @@ const PartnershipPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <input
-                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left"
+                        className="[border:none] [outline:none] font-body-large-600 text-md bg-[transparent] flex-1 relative leading-[150%] text-text-secondary text-left sm:text-base"
                         placeholder="School Name"
                         type="text"
                       />
@@ -587,7 +580,7 @@ const PartnershipPage: FunctionComponent = () => {
                   </div>
                 </div>
                 <textarea
-                  className="bg-[transparent] font-body-large-600 text-md [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-text-secondary border-[1px] border-solid border-other-outlined-border"
+                  className="bg-[transparent] font-body-large-600 text-md [outline:none] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-text-secondary border-[1px] border-solid border-other-outlined-border sm:text-sm"
                   placeholder="Leave Message"
                 />
               </div>
@@ -595,8 +588,8 @@ const PartnershipPage: FunctionComponent = () => {
                 className="cursor-pointer py-[9px] px-5 bg-tomato rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
                 onClick={openDoneModalPopup}
               >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                  Subimt
+                <div className="relative text-lg leading-[150%] font-semibold sm:text-base">
+                  Submit
                 </div>
               </button>
             </form>

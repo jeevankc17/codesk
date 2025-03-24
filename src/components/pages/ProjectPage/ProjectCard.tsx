@@ -1,4 +1,5 @@
-import { FunctionComponent, useCallback } from 'react';
+import { FunctionComponent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export type ProjectCardType = {
   className?: string;
@@ -21,9 +22,7 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
   profileImage,
   grade,
 }) => {
-  const onViewProjectButtonClick = useCallback(() => {
-    window.open('https://scratch.mit.edu/projects/2232652/');
-  }, []);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -66,11 +65,10 @@ const ProjectCard: FunctionComponent<ProjectCardType> = ({
         </div>
         <div className="self-stretch flex flex-col items-start justify-center">
           <button
-            className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-            onClick={onViewProjectButtonClick}
-            id={projectId}
+            className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+            onClick={() => navigate('/commingsoonpage')}
           >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px] sm:text-base">
               View Project
             </div>
           </button>

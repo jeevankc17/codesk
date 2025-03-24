@@ -39,7 +39,6 @@ const ReviewPage: FunctionComponent = () => {
   return (
     <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-left text-4xl text-nero font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
-        logoColor="#1f95f2"
         onLogoClick={onLogoClick}
         onCoursesClick={onCoursesClick}
         onQuizzesClick={onQuizzesClick}

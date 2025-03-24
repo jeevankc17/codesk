@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from 'react';
 import ProjectCard from './ProjectCard';
+import { useNavigate } from 'react-router-dom';
 
 export type ProjectCardsType = {
   className?: string;
@@ -130,6 +131,13 @@ const ProjectCards: FunctionComponent<ProjectCardsType> = ({
         'https://uploads.scratch.mit.edu/get_image/project/946418689_480x360.png',
     },
   ]);
+
+  const navigate = useNavigate();
+
+  const onViewProjectClick = () => {
+    navigate('/commingsoonpage');
+  };
+
   return (
     <div
       className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-2xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
@@ -146,6 +154,15 @@ const ProjectCards: FunctionComponent<ProjectCardsType> = ({
           grade={item.grade}
         />
       ))}
+      <button
+        className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+        autoFocus={true}
+        onClick={onViewProjectClick}
+      >
+        <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px] sm:text-base">
+          View Project
+        </div>
+      </button>
     </div>
   );
 };

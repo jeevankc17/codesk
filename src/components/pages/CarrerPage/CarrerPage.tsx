@@ -38,7 +38,6 @@ const CarrerPage: FunctionComponent = () => {
   return (
     <div className="w-full relative bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] text-center text-13xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
-        logoColor="#1f95f2"
         onLogoClick={onLogoClick}
         onCoursesClick={onCoursesClick}
         onQuizzesClick={onQuizzesClick}
@@ -49,42 +48,37 @@ const CarrerPage: FunctionComponent = () => {
         aboutUsColor="#000"
         quizzesColor="#000"
       />
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[8] text-left text-29xl text-nero lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
-        <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:order-[2] md:flex-[unset] md:self-stretch">
-          <div className="self-stretch flex flex-col items-start justify-start">
-            <div className="self-stretch h-[58px] relative leading-[120%] font-semibold inline-block sm:text-13xl">
-              Teach Kids To Code
+      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
+          <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
+              Join Our Team
             </div>
+            <div className="self-stretch relative leading-[150%] text-md sm:text-sm sm:text-center">
+              Be part of Nepal's fastest growing EdTech company
+            </div>
+            <button
+              className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+              onClick={() => navigate('/commingsoonpage')}
+            >
+              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px] sm:text-base">
+                View Openings
+              </div>
+            </button>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start text-base">
-            <div className="self-stretch relative leading-[150%]">
-              Teaching kids to code is about empowering them with valuable
-              skills for the future while fostering their creativity,
-              problem-solving abilities, and passion for learning. As a teacher,
-              your role is to guide and support students on their coding
-              journey, making it an enjoyable and rewarding experience for them.
-            </div>
-          </div>
-          <button
-            className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-            autoFocus={true}
-            onClick={onScrollBannerButtonClick}
-          >
-            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-              Read Guidelines
-            </div>
-          </button>
         </div>
-        <img
-          className="flex-1 relative max-w-full overflow-hidden h-[516.2px] object-cover lg:order-[1] lg:flex-[unset] lg:self-stretch md:order-[1] md:flex-[unset] md:self-stretch sm:h-[300px]"
-          alt=""
-          src="/image-511@2x.png"
-        />
-      </div>
+        <div className="flex-1 h-full flex items-center justify-center">
+          <img
+            className="w-full h-full object-cover object-center"
+            alt=""
+            src="/image-59@2x.png"
+          />
+        </div>
+      </header>
       <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-17xl text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-[0.5px]">
           <div className="self-stretch h-[86px] relative leading-[120%] font-semibold inline-block sm:text-9xl">
-            Become a teacher in CoDesk doesn’t mean you will end up your coding
+            Become a teacher in CoDesk doesn't mean you will end up your coding
             journey
           </div>
         </div>

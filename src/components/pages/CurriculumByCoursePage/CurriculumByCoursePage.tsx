@@ -46,7 +46,6 @@ const CurriculumByCoursePage: FunctionComponent = () => {
   return (
     <div className="w-full relative bg-nero flex flex-col items-start justify-center p-5 box-border gap-[20px] text-left text-md text-black1 font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
       <Navbar
-        logoColor="#1f95f2"
         onLogoClick={onLogoClick}
         onCoursesClick={onCoursesClick}
         onQuizzesClick={onQuizzesClick}
@@ -612,7 +611,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px]">
                 <div className="self-stretch flex flex-col items-start justify-start text-left text-black1">
                   <div className="self-stretch relative leading-[120%] font-semibold sm:text-3xl">
-                    What you’ll achieve?
+                    What you'll achieve?
                   </div>
                 </div>
                 <div className="w-[330px] hidden flex-col items-center justify-center min-h-[63px] text-sm">
@@ -1065,7 +1064,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
           </div>
           <div className="w-[471px] bg-nero flex flex-col items-center justify-center p-2.5 box-border gap-[10px] text-center text-black1">
             <div className="self-stretch relative leading-[150%] font-semibold">
-              What you’ll learn?
+              What you'll learn?
             </div>
             <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[10px] text-md">
               <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">

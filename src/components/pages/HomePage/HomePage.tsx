@@ -152,16 +152,20 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
-      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-4xl\ text-black font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-4xl text-black font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+        {/* Add a div for fixed navbar spacing */}
+        <div className="h-[50px] w-full"></div>
+        
         <Navbar
-          logoColor="#FF5A43"
           onLogoClick={onLogoClick}
           onCoursesClick={onCoursesClick}
           onQuizzesClick={onQuizzesClick}
           onCompetetionsClick={onCompetetionsClick}
           onAboutUsClick={onAboutUsClick}
         />
-        <header className="self-stretch rounded-mini bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[17] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        
+        {/* Remove the 20px spacer since we have the navbar spacing */}
+        <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
             <div className="self-stretch flex flex-col items-start justify-start font-body-large-600 sm:items-center">
               <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-sm sm:text-center">
@@ -992,7 +996,7 @@ const HomePage: FunctionComponent = () => {
             </button>
           </section>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[12]">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[15px] z-[12] mt-[10px] mb-[10px]"> {/* Reduced from 20px to 10px */}
           <div className="self-stretch flex flex-col items-center justify-start gap-[24px]">
             <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
@@ -1015,7 +1019,7 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px]">
               <div className="flex-1 flex flex-row items-center justify-between sm:flex-col">
                 <img
-                  className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover"
+                  className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[100px]"
                   alt=""
                   src="/iconpng1@2x.png"
                 />
@@ -1067,14 +1071,16 @@ const HomePage: FunctionComponent = () => {
                   </div>
                 </div>
               </div>
-              <button
-                className="cursor-pointer py-[9px] px-5 bg-aqua-deep w-[230px] rounded box-border h-12 flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={onTryAFreeClassButtonClick}
-              >
-                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                  Apply Now
-                </div>
-              </button>
+              <div className="flex flex-col items-end justify-center gap-[10px] text-right text-sm text-black1 sm:w-full sm:items-center mt-4 sm:mt-2">
+                <button
+                  className="cursor-pointer py-2 px-4 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero hover:bg-[#0055a4] transition-colors sm:w-full max-w-[160px]"
+                  onClick={onTryAFreeClassButtonClick}
+                >
+                  <div className="relative text-base leading-[150%] font-semibold font-body-large-600 text-nero text-center">
+                    Apply Now
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
@@ -2315,96 +2321,91 @@ const HomePage: FunctionComponent = () => {
         </section>
         <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[1] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
+            <div className="self-stretch relative leading-[120%] font-semibold text-center text-3xl md:text-xl sm:text-lg">
               Special thanks to
             </div>
           </div>
-          <div className="self-stretch flex flex-row flex-wrap items-start justify-center gap-[20px] text-xs text-dimgray md:flex-row md:flex-wrap">
-            <div className="w-[368px] h-[212px] flex flex-col items-start justify-start pt-0 px-0 pb-3.5 box-border gap-[8px] min-w-[350px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 pr-[114px] pl-[113.9px]">
-                <div className="w-[305px] relative leading-[130%] flex items-center justify-center">
-                  Backed by
-                </div>
+          <div className="self-stretch flex flex-row flex-wrap items-start justify-center gap-[40px] text-xs text-dimgray md:gap-[30px] sm:gap-[20px]">
+            {/* Backed by section */}
+            <div className="flex flex-col items-center justify-start gap-[16px] w-[300px] sm:w-full">
+              <div className="text-center">
+                <div className="text-base leading-[130%]">Backed by</div>
               </div>
-              <div className="self-stretch flex flex-row items-center justify-center gap-[8px]">
-                <img
-                  className="w-[150px] relative h-[75px] object-cover"
-                  alt=""
-                  src="/stem-logo-recreated01-1@2x.png"
-                />
-                <div className="flex flex-row items-center justify-start relative gap-[10px]">
+              <div className="flex flex-row items-center justify-center gap-[32px] sm:gap-[24px] sm:flex-col w-full">
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[150px] relative h-[150px] z-[0]"
-                    alt=""
-                    src="/vector.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="STEM Logo"
+                    src="/stem-logo-recreated01-1@2x.png"
                   />
+                </div>
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[21.6%] absolute !m-[0] h-[17%] top-[29.67%] right-[39.2%] bottom-[53.33%] left-[39.2%] max-w-full overflow-hidden max-h-full z-[1]"
-                    alt=""
-                    src="/vector3.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="Proma.ai Logo"
+                    src="https://proma.ai/_astro/logo.2S9Dd7KX_ZJMR6h.svg"
                   />
                 </div>
               </div>
             </div>
-            <div className="w-[368px] h-[212px] flex flex-col items-start justify-start pt-0 px-0 pb-3.5 box-border gap-[8px] min-w-[350px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 pr-[114px] pl-[113.9px]">
-                <div className="w-[309px] relative leading-[130%] flex items-center justify-center">{`Built by `}</div>
+
+            {/* Built by section */}
+            <div className="flex flex-col items-center justify-start gap-[16px] w-[300px] sm:w-full">
+              <div className="text-center">
+                <div className="text-base leading-[130%]">Built by</div>
               </div>
-              <div className="self-stretch flex flex-row items-center justify-center gap-[8px]">
-                <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-row items-center justify-center gap-[32px] sm:gap-[24px] sm:flex-col w-full">
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[150px] relative h-[108px]"
-                    alt=""
-                    src="/clip-path-group.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="ActivePieces Logo"
+                    src="https://www.activepieces.com/activepieces-logo-hz-og.svg"
                   />
                 </div>
-                <div className="flex flex-row items-center justify-center">
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[150px] relative h-[150px]"
-                    alt=""
-                    src="/clip-path-group1.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="Toodle.dev Logo"
+                    src="/toddledev.svg"
                   />
                 </div>
               </div>
             </div>
-            <div className="w-[368px] h-[212px] flex flex-col items-center justify-center pt-0 px-0 pb-3.5 box-border gap-[8px] min-w-[350px]">
-              <div className="self-stretch flex flex-col items-center justify-start py-0 pr-[114px] pl-[113.9px]">
-                <div className="w-[305px] relative leading-[130%] flex items-center justify-center">
-                  Supported by
-                </div>
+
+            {/* Supported by section */}
+            <div className="flex flex-col items-center justify-start gap-[16px] w-[300px] sm:w-full">
+              <div className="text-center">
+                <div className="text-base leading-[130%]">Supported by</div>
               </div>
-              <div className="self-stretch flex flex-row items-center justify-center gap-[8px]">
-                <img
-                  className="w-[150px] relative h-[75px] object-cover"
-                  alt=""
-                  src="/bit-logo-recreated-1@2x.png"
-                />
-                <div className="flex flex-row items-center justify-start relative gap-[10px]">
+              <div className="flex flex-row items-center justify-center gap-[32px] sm:gap-[24px] sm:flex-col w-full">
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[150px] relative h-[150px] z-[0]"
-                    alt=""
-                    src="/vector.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="BIT Logo"
+                    src="/bit-logo-recreated-1@2x.png"
                   />
+                </div>
+                <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="w-[21.6%] absolute !m-[0] h-[17%] top-[29.67%] right-[39.2%] bottom-[53.33%] left-[39.2%] max-w-full overflow-hidden max-h-full z-[1]"
-                    alt=""
-                    src="/vector3.svg"
+                    className="max-w-full max-h-full w-auto h-auto"
+                    alt="ActivePieces Logo"
+                    src="https://www.activepieces.com/activepieces-logo-hz-og.svg"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-              autoFocus={true}
-              onClick={onSupportUsButtonClick}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                support us
-              </div>
-            </button>
-          </div>
+        </section>
+        <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
+          <button
+            className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
+            autoFocus={true}
+            onClick={onSupportUsButtonClick}
+          >
+            <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
+              support us
+            </div>
+          </button>
         </section>
         <Footer />
       </div>
