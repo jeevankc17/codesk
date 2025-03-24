@@ -106,16 +106,29 @@ const Projects: FunctionComponent = () => {
         </div>
       </div>
       <div className="h-[120px]"></div>
-      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
-        <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
-          <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
+      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[2] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <div className="w-[775px] flex flex-col items-center justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full">
+          <div className="self-stretch flex flex-col items-center justify-start gap-[15px]">
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg text-center">
               Coding Projects By Kids
             </div>
-            <div className="self-stretch relative leading-[150%] text-md sm:text-sm sm:text-center">
-              Fun way to learn coding for kids by doing projects
+            <div className="self-stretch relative leading-[150%] text-md sm:text-sm text-center">
+              Projects showcase the creativity and technical skills of young coders. 
+              These projects range from simple games to innovative solutions for real-world problems, 
+              all built using various programming languages and tools. Each project represents 
+              a learning journey and demonstrates how kids can transform their ideas into working 
+              applications while developing valuable coding skills.
             </div>
           </div>
+          <button
+            className="cursor-pointer py-[9px] px-5 bg-tomato self-stretch rounded box-border h-[38px] flex flex-row items-center justify-center border-[1px] border-solid border-nero"
+            autoFocus={true}
+            onClick={onScrollBannerButtonClick}
+          >
+            <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
+              View Projects
+            </div>
+          </button>
         </div>
         <div className="flex-1 h-full flex items-center justify-center">
           <img
@@ -125,7 +138,7 @@ const Projects: FunctionComponent = () => {
           />
         </div>
       </header>
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] text-center text-sm text-black1 lg:flex-col md:flex-col min-h-screen overflow-visible">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[0] text-center text-sm text-black1 lg:flex-col md:flex-col min-h-screen overflow-visible">
         <div className="w-[1000px] flex flex-col items-start justify-start gap-[20px] z-[1] lg:self-stretch lg:w-auto md:w-full sticky top-[77] h-fit">
           <div className="self-stretch flex flex-row items-center justify-center p-2.5 z-[2]">
             <div className="flex-1 relative leading-[120%] font-semibold sm:text-3xl">

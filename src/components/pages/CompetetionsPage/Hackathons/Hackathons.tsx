@@ -423,7 +423,7 @@ const Hackathons: FunctionComponent = () => {
 
       {isScrolled && <div className="h-[56px]"></div>}
 
-      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[1] lg:flex-col md:flex-col mt-[5px] w-full overflow-x-hidden">
+      <div className="self-stretch flex flex-row items-start justify-center gap-[20px] relative z-[0] lg:flex-col md:flex-col mt-[5px] w-full overflow-x-hidden">
         <div className="w-full max-w-[900px] flex flex-col items-start justify-start z-[1]">
           <div className="self-stretch flex flex-col items-start justify-start p-2 gap-[10px] z-[0] text-left text-xl font-segoe-ui">
             {activeStatus === 'open' && renderHackathonSection('open', 'Open Hackathons')}
@@ -432,8 +432,8 @@ const Hackathons: FunctionComponent = () => {
           </div>
         </div>
 
-        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[1] text-2xl md:hidden max-w-[350px]">
-          <div className="w-full rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] fixed top-[142px] right-5 z-[2]">
+        <div className="self-stretch flex-1 flex flex-row items-start justify-center z-[0] text-2xl md:hidden">
+          <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] fixed top-[142px] right-5">
             <div className="self-stretch relative leading-[150%] font-semibold text-transparent !bg-clip-text [background:linear-gradient(16.28deg,_#c53232,_#7c36dd)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
               {`Play while you learn & win amazing prizes`}
             </div>
