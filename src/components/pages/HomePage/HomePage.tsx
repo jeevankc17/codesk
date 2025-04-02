@@ -233,7 +233,7 @@ const HomePage: FunctionComponent = () => {
                     whileHover={{ scale: 1.1 }}
                     className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
-                    Block-Based Programming
+                    Block-Based Visual Programming
                   </motion.span>{' '}
                   Makes It Easy to Develop Any{' '}
                   {[
