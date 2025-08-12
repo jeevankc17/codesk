@@ -84,7 +84,7 @@ const Navbar: FunctionComponent<NavbarType> = ({
             onClick={onLogoClick}
           >
             <img 
-              src="https://www.codesklab.com/codesk-logo.jpeg" 
+              src="/codesk-logo.jpeg" 
               alt="CoDeskLab Logo" 
               className="h-10 w-auto rounded-md"
               width="40" 
