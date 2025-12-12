@@ -85,20 +85,20 @@ const Navbar: FunctionComponent<NavbarType> = ({
           >
             <img 
               src="/codesk-logo.jpeg" 
-              alt="CoDeskLab Logo" 
+              alt="CodeskInnovations Logo" 
               className="h-10 w-auto rounded-md"
               width="40" 
               height="40"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null;
-                target.src = 'https://placehold.co/40x40?text=CoDeskLab';
+                target.src = 'https://placehold.co/40x40?text=CodeskInnovations';
               }}
             />
             <div
               className="relative text-2xl sm:text-xl tracking-[-0.01em] leading-[20px] font-semibold font-inter text-dodger-blue text-left"
             >
-              CoDeskLab
+              CodeskInnovations
             </div>
           </button>
           <div className="flex flex-row items-center justify-end gap-[36px] sm:flex">
