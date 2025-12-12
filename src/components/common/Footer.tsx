@@ -18,7 +18,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
           <div className="self-stretch flex flex-row items-start justify-start">
             <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block text-4xl text-center md:text-left sm:text-2xl">
-              CoDeskLab
+              CodeskInnovations
             </div>
           </div>
           <div className="self-stretch flex flex-row items-start justify-start h-auto text-lg text-nero sm:text-xs">
