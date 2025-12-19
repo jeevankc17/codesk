@@ -2343,7 +2343,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
                     alt="Proma.ai Logo"
-                    src="https://proma.ai/_astro/logo.2S9Dd7KX_ZJMR6h.svg"
+                    src="https://proma.ai/_astro/logo-new.CLfn8ACZ_22shiD.svg"
                   />
                 </div>
               </div>
@@ -2365,8 +2365,8 @@ const HomePage: FunctionComponent = () => {
                 <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
-                    alt="Toodle.dev Logo"
-                    src="/toddledev.svg"
+                    alt="Nordcraft Logo"
+                    src="https://media.licdn.com/dms/image/v2/D4D0BAQH3sDGSEiGaGw/company-logo_200_200/B4DZZdco9YHIAM-/0/1745324511478/toddledev_logo?e=1767830400&v=beta&t=O9aEAMn7cT8sC9Qsxk6GmUhlm_I_z3rt_iGJwIxgL_o"
                   />
                 </div>
               </div>
