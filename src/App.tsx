@@ -25,126 +25,126 @@ const routes = [
   {
     path: '/',
     component: <HomePage />,
-    title: "Codesklab | Nepal's #1 Coding Platform",
+    title: "Codesk Innovations | Nepal's #1 Coding Platform",
     metaDescription:
       "Nepal's first-ever low-code programming platform. Learn coding, robotics, VR/AR, and more. Perfect for kids and beginners.",
   },
   {
     path: '/coursepage',
     component: <CoursePage />,
-    title: 'Courses | Codesklab',
+    title: 'Courses | Codesk Innovations',
     metaDescription:
       "Nepal's most comprehensive coding courses. From basic programming to advanced robotics and AR/VR development.",
   },
   {
     path: '/competetionspage',
     component: <CompetetionsPage />,
-    title: 'Competitions | Codesklab',
+    title: 'Competitions | Codesk Innovations',
     metaDescription:
       "Nepal's largest coding competitions. Showcase your skills in programming, robotics, and emerging technologies.",
   },
   {
     path: '/curriculumbycoursepage',
     component: <CurriculumByCoursePage />,
-    title: 'Course Curriculum | Codesklab',
+    title: 'Course Curriculum | Codesk Innovations',
     metaDescription:
       'Industry-aligned curriculum designed for Nepali students. Learn programming, AI, robotics, and more through hands-on projects.',
   },
   {
     path: '/aboutuspage',
     component: <AboutUsPage />,
-    title: 'About Us | Codesklab',
+    title: 'About Us | Codesk Innovations',
     metaDescription:
       "Pioneer in Nepal's coding education. Transforming tech education through innovative low-code learning and practical skills development.",
   },
   {
     path: 'competetions/hackathons',
     component: <Hackathons />,
-    title: 'Hackathons | Codesklab',
+    title: 'Hackathons | Codesk Innovations',
     metaDescription:
       "Participate in Nepal's biggest tech hackathons. Build innovative solutions using coding, robotics, and emerging technologies.",
   },
   {
     path: 'competetions/projects',
     component: <Projects />,
-    title: 'Project Competitions | Codesklab',
+    title: 'Project Competitions | Codesk Innovations',
     metaDescription:
       "Nepal's premier platform for showcasing tech projects. From basic coding to advanced robotics and VR/AR implementations.",
   },
   {
     path: 'competetions/builders',
     component: <Builders />,
-    title: 'Builders Competition | Codesklab',
+    title: 'Builders Competition | Codesk Innovations',
     metaDescription:
       'Build the future of Nepal through code. Join our builders community in creating innovative tech solutions.',
   },
   {
     path: 'competetions/organizers',
     component: <Organizers />,
-    title: 'Organizers | Codesklab',
+    title: 'Organizers | Codesk Innovations',
     metaDescription:
       "Partner with Nepal's leading coding platform. Organize impactful tech events and competitions for the next generation.",
   },
   {
     path: '/reviewpage',
     component: <ReviewPage />,
-    title: 'Reviews | Codesklab',
+    title: 'Reviews | Codesk Innovations',
     metaDescription:
       'See how Codesk is transforming tech education in Nepal. Read success stories from our students and partners.',
   },
   {
     path: '/commingsoonpage',
     component: <CommingSoonPage />,
-    title: 'Coming Soon | Codesklab',
+    title: 'Coming Soon | Codesk Innovations',
     metaDescription:
       "Exciting new features coming to Nepal's #1 coding platform. Advanced robotics, AR/VR courses, and more.",
   },
   {
     path: '/partnershippage',
     component: <PartnershipPage />,
-    title: 'Partnerships | Codesklab',
+    title: 'Partnerships | Codesk Innovations',
     metaDescription:
       "Join forces with Nepal's leading tech education platform. Partner in revolutionizing coding and robotics education.",
   },
   {
     path: '/quizpage',
     component: <QuizPage />,
-    title: 'Blog | Codesklab',
+    title: 'Blog | Codesk Innovations',
     metaDescription:
       'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.',
   },
   {
     path: '/projectpage',
     component: <ProjectPage />,
-    title: 'Projects | Codesklab',
+    title: 'Projects | Codesk Innovations',
     metaDescription:
       'Discover innovative projects built by Nepali students. From simple apps to complex robotics and VR/AR solutions.',
   },
   {
     path: '/whycodeskpage',
     component: <WhyCodeskPage />,
-    title: "Why Codesklab | Nepal's Premier Coding Platform",
+    title: "Why Codesk Innovations | Nepal's Premier Coding Platform",
     metaDescription:
       'First-ever low-code platform in Nepal offering comprehensive tech education. Learn coding, robotics, VR/AR in an innovative way.',
   },
   {
     path: '/worksheetpage',
     component: <WorksheetPage />,
-    title: 'Worksheets | Codesklab',
+    title: 'Worksheets | Codesk Innovations',
     metaDescription:
       'Practical worksheets for hands-on learning. Master coding, robotics, and VR/AR through guided exercises.',
   },
   {
     path: '/applyteacherpage',
     component: <CarrerPage />,
-    title: 'Teaching Careers | Codesklab',
+    title: 'Teaching Careers | Codesk Innovations',
     metaDescription:
       "Join Nepal's leading coding education team. Help shape the future of tech education through innovative teaching methods.",
   },
   {
     path: '/quizbycourseidpage',
     component: <QuizByCourseIDPage />,
-    title: 'Course Quizzes | Codesklab',
+    title: 'Course Quizzes | Codesk Innovations',
     metaDescription:
       'Comprehensive course assessments for Nepali students. Evaluate your progress in coding, robotics, and emerging technologies.',
   },
@@ -166,7 +166,7 @@ function App() {
   // Add protected route metadata
   const protectedRoutes = {
     '/blogpage': {
-      title: 'Blog | Codesklab',
+      title: 'Blog | Codesk Innovations',
       metaDescription: 'Latest insights on coding, robotics, and tech education in Nepal. Stay updated with industry trends and success stories.'
     }
   };
