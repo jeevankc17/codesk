@@ -113,16 +113,16 @@ const AboutUsPage: FunctionComponent = () => {
                         </div>
                         <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md">
                           <div className="flex-1 relative leading-[150%] text-black">
-                            {title === "Conceptualization" && "Identified the need for CoDeskLab to streamline after-school program management and conducted market research for validation."}
-                            {title === "Team Formation" && "Assembled a dedicated team passionate about education technology to develop CoDeskLab."}
-                            {title === "Product Development Kickoff" && "Initiated development on CoDeskLab, focusing on core features and utilizing agile methodologies."}
-                            {title === "Beta Testing" && "Launched a beta version of CoDeskLab, gathering feedback from users for iterative improvements."}
-                            {title === "User Feedback and Iteration" && "Incorporated user feedback to enhance the CoDeskLab software, prioritizing user experience and functionality."}
-                            {title === "Official Launch" && "Launched CoDeskLab officially, leveraging feedback from beta testing to ensure a robust product."}
+                            {title === "Conceptualization" && "Identified the need for codeskinnovations to streamline after-school program management and conducted market research for validation."}
+                            {title === "Team Formation" && "Assembled a dedicated team passionate about education technology to develop codeskinnovations."}
+                            {title === "Product Development Kickoff" && "Initiated development on codeskinnovations, focusing on core features and utilizing agile methodologies."}
+                            {title === "Beta Testing" && "Launched a beta version of codeskinnovations, gathering feedback from users for iterative improvements."}
+                            {title === "User Feedback and Iteration" && "Incorporated user feedback to enhance the codeskinnovations software, prioritizing user experience and functionality."}
+                            {title === "Official Launch" && "Launched codeskinnovations officially, leveraging feedback from beta testing to ensure a robust product."}
                             {title === "User Acquisition and Onboarding" && "Executed targeted marketing campaigns to acquire new users and provided comprehensive onboarding support."}
                             {title === "Expansion and Partnerships" && "Explored opportunities for expansion and formed strategic partnerships to increase adoption."}
                             {title === "Continuous Improvement and Innovation" && "Committed to ongoing product development and innovation, staying ahead of the competition."}
-                            {title === "Scaling Operations" && "Scaled operations and infrastructure to meet the increasing demand for CoDeskLab software, ensuring sustainability."}
+                            {title === "Scaling Operations" && "Scaled operations and infrastructure to meet the increasing demand for codeskinnovations software, ensuring sustainability."}
                           </div>
                         </div>
                       </div>
@@ -147,16 +147,16 @@ const AboutUsPage: FunctionComponent = () => {
                         <div className="self-stretch bg-nero flex flex-row items-center justify-center py-2.5 px-[30px] text-md">
                           <div className="flex-1 relative leading-[150%] text-black">
                             {/* Same content as in the previous block */}
-                            {title === "Conceptualization" && "Identified the need for CoDeskLab to streamline after-school program management and conducted market research for validation."}
-                            {title === "Team Formation" && "Assembled a dedicated team passionate about education technology to develop CoDeskLab."}
-                            {title === "Product Development Kickoff" && "Initiated development on CoDeskLab, focusing on core features and utilizing agile methodologies."}
-                            {title === "Beta Testing" && "Launched a beta version of CoDeskLab, gathering feedback from users for iterative improvements."}
-                            {title === "User Feedback and Iteration" && "Incorporated user feedback to enhance the CoDeskLab software, prioritizing user experience and functionality."}
-                            {title === "Official Launch" && "Launched CoDeskLab officially, leveraging feedback from beta testing to ensure a robust product."}
+                            {title === "Conceptualization" && "Identified the need for codeskinnovations to streamline after-school program management and conducted market research for validation."}
+                            {title === "Team Formation" && "Assembled a dedicated team passionate about education technology to develop codeskinnovations."}
+                            {title === "Product Development Kickoff" && "Initiated development on codeskinnovations, focusing on core features and utilizing agile methodologies."}
+                            {title === "Beta Testing" && "Launched a beta version of codeskinnovations, gathering feedback from users for iterative improvements."}
+                            {title === "User Feedback and Iteration" && "Incorporated user feedback to enhance the codeskinnovations software, prioritizing user experience and functionality."}
+                            {title === "Official Launch" && "Launched codeskinnovations officially, leveraging feedback from beta testing to ensure a robust product."}
                             {title === "User Acquisition and Onboarding" && "Executed targeted marketing campaigns to acquire new users and provided comprehensive onboarding support."}
                             {title === "Expansion and Partnerships" && "Explored opportunities for expansion and formed strategic partnerships to increase adoption."}
                             {title === "Continuous Improvement and Innovation" && "Committed to ongoing product development and innovation, staying ahead of the competition."}
-                            {title === "Scaling Operations" && "Scaled operations and infrastructure to meet the increasing demand for CoDeskLab software, ensuring sustainability."}
+                            {title === "Scaling Operations" && "Scaled operations and infrastructure to meet the increasing demand for codeskinnovations software, ensuring sustainability."}
                           </div>
                         </div>
                       </div>

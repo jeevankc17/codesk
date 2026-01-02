@@ -11,6 +11,7 @@ import {
 
 import './global.css?type=style';
 import { ClerkProvider } from '@clerk/clerk-react';
+import ErrorBoundary from './components/common/ErrorBoundary';
 
 const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
@@ -18,16 +19,23 @@ const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 console.log('Starting app initialization');
 console.log('Clerk key exists:', !!PUBLISHABLE_KEY);
 
+// read common env var names used in CRA/Next/Vite setups
+const clerkPublishableKey =
+  process.env.REACT_APP_CLERK_PUBLISHABLE_KEY ??
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ??
+  process.env.VITE_PUBLIC_CLERK_PUBLISHABLE_KEY ??
+  '';
 
+console.log('Clerk key exists:', !!clerkPublishableKey);
 
 try {
   const muiTheme = createTheme();
   const container = document.getElementById('root');
-  
+
   if (!container) {
     throw new Error('Root element not found');
   }
-  
+
   const root = createRoot(container);
 
   root.render(
@@ -36,9 +44,19 @@ try {
         <StyledEngineProvider injectFirst>
           <ThemeProvider theme={muiTheme}>
             <CssBaseline />
-            <ClerkProvider publishableKey={PUBLISHABLE_KEY!}>
-              <App />
-            </ClerkProvider>
+            <ErrorBoundary>
+              {clerkPublishableKey ? (
+                <ClerkProvider publishableKey={clerkPublishableKey}>
+                  <App />
+                </ClerkProvider>
+              ) : (
+                // Render the app without Clerk (warn in console)
+                <>
+                  {/* Optional: show a small dev-only banner indicating auth is disabled */}
+                  <App />
+                </>
+              )}
+            </ErrorBoundary>
           </ThemeProvider>
         </StyledEngineProvider>
       </BrowserRouter>

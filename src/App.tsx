@@ -12,6 +12,8 @@ import BlogPage from './components/pages/BlogPage/BlogPage';
 import ProjectPage from './components/pages/ProjectPage/ProjectPage';
 import WhyCodeskPage from './components/pages/WhyCodeskPage/WhyCodeskPage';
 import QuizPage from './components/pages/QuizPage/QuizPage';
+import PrivacyPolicy from './components/pages/PrivacyPolicy/PrivacyPolicy';
+import Terms from './components/pages/Terms/Terms';
 import WorksheetPage from './components/pages/WorksheetPage/WorksheetPage';
 import CarrerPage from './components/pages/CarrerPage/CarrerPage';
 import QuizByCourseIDPage from './components/pages/QuizByCourseIDPage/QuizByCourseIDPage';
@@ -147,6 +149,20 @@ const routes = [
     title: 'Course Quizzes | Codesk Innovations',
     metaDescription:
       'Comprehensive course assessments for Nepali students. Evaluate your progress in coding, robotics, and emerging technologies.',
+  },
+  {
+    path: '/privacy-policy',
+    component: <PrivacyPolicy />,
+    title: 'Privacy Policy | Codesk Innovations',
+    metaDescription:
+      'Privacy Policy covering data collection, messaging usage (including WhatsApp), and how we handle user data.',
+  },
+  {
+    path: '/terms',
+    component: <Terms />,
+    title: 'Terms of Service | Codesk Innovations',
+    metaDescription:
+      'Terms of Service for Codesk; rules for use, messaging via WhatsApp, intellectual property, and governing law (Nepal).',
   },
 ];
 

@@ -1170,7 +1170,7 @@ const HomePage: FunctionComponent = () => {
         <section className="self-stretch bg-lavenderblush flex flex-col items-center justify-start p-5 gap-[20px] z-[10]">
           <div className="self-stretch flex flex-row items-center justify-start">
             <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              Watch video to know more about CoDeskLab
+              Watch video to know more about codeskinnovations
             </div>
           </div>
           <iframe
@@ -1195,7 +1195,7 @@ const HomePage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row items-center justify-center">
             <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
               <span>{`Student's & parent's testimonials `}</span>
-              <span className="text-aqua-deep">"why they ❤️ CoDeskLab"</span>
+              <span className="text-aqua-deep">"why they ❤️ codeskinnovations"</span>
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
@@ -1831,12 +1831,12 @@ const HomePage: FunctionComponent = () => {
               className="text-left"
             >
               <Typography className="text-left font-semibold">
-                What is Codesklab?
+                What is codeskinnovations?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                Codesklab is an interactive online platform designed to teach
+                codeskinnovations is an interactive online platform designed to teach
                 kids coding in a fun and engaging way. It offers a variety of
                 coding courses tailored for different age groups and skill
                 levels.
@@ -1890,12 +1890,12 @@ const HomePage: FunctionComponent = () => {
               className="text-left"
             >
               <Typography className="text-left font-semibold">
-                Who is Codesklab for?
+                Who is codeskinnovations for?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                Codesklab is primarily designed for kids aged 6-16 who are
+                codeskinnovations is primarily designed for kids aged 6-16 who are
                 interested in learning coding. However, it can be beneficial for
                 anyone looking to start their coding journey regardless of age.
               </Typography>
@@ -1907,12 +1907,12 @@ const HomePage: FunctionComponent = () => {
               className="text-left"
             >
               <Typography className="text-left font-semibold">
-                Do I need any prior coding experience to use Codesklab?
+                Do I need any prior coding experience to use codeskinnovations?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                No prior coding experience is necessary. Codesklab provides
+                No prior coding experience is necessary. codeskinnovations provides
                 courses suitable for beginners as well as those with some coding
                 background. The platform is designed to accommodate learners at
                 various skill levels.
@@ -1930,7 +1930,7 @@ const HomePage: FunctionComponent = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                Courses on Codesklab are divided into modules and lessons, each
+                Courses on codeskinnovations are divided into modules and lessons, each
                 focusing on specific coding concepts or projects. The curriculum
                 is carefully designed to ensure a smooth learning progression,
                 with interactive activities and challenges to reinforce
@@ -1949,7 +1949,7 @@ const HomePage: FunctionComponent = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                Codesklab provides parental controls and monitoring features,
+                codeskinnovations provides parental controls and monitoring features,
                 allowing parents to track their child's progress, set learning
                 goals, and monitor their activity on the platform. Parents can
                 also receive regular updates and reports on their child's
@@ -1968,7 +1968,7 @@ const HomePage: FunctionComponent = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="text-left">
-                Yes, Codesklab provides technical support to assist users with
+                Yes, codeskinnovations provides technical support to assist users with
                 any issues they may encounter while using the platform. Users
                 can reach out to the support team via email or through the
                 online help center.
@@ -1992,7 +1992,7 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch flex flex-col items-start justify-start">
               <div className="self-stretch flex flex-col items-center justify-start pt-0 px-2.5 pb-3">
                 <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-                  You are in safe hands at CoDeskLab
+                  You are in safe hands at codeskinnovations
                 </div>
               </div>
               <div className="self-stretch h-[35px] flex flex-row items-center justify-center p-2.5 box-border text-sm">
@@ -2004,9 +2004,9 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch flex flex-col items-start justify-start text-md">
               <div className="self-stretch flex flex-col items-center justify-center">
                 <div className="self-stretch relative leading-[150%]">
-                  At CoDeskLab, we are passionate about our stakeholder. If at
+                  At codeskinnovations, we are passionate about our stakeholder. If at
                   any point, you feel that you wish to discontinue using
-                  CoDeskLab, please email us at billing@codesklab.com and we
+                  codeskinnovations, please email us at billing@codeskinnovations.com and we
                   will immediately process your refund for the remaining
                   lessons/classes, no questions asked.
                 </div>

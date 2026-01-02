@@ -955,7 +955,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-start justify-start">
               <div className="self-stretch flex flex-col items-start justify-center">
                 <div className="self-stretch relative leading-[150%] font-semibold">
-                  Top 10 Benefits of Learning at CoDeskLab
+                  Top 10 Benefits of Learning at codeskinnovations
                 </div>
               </div>
             </div>
@@ -1145,7 +1145,7 @@ const CurriculumByCoursePage: FunctionComponent = () => {
             <div className="self-stretch bg-nero flex flex-col items-start justify-start">
               <div className="self-stretch flex flex-col items-start justify-center">
                 <div className="self-stretch relative leading-[150%] font-semibold">
-                  Top 10 Featured Projects built in CoDeskLab
+                  Top 10 Featured Projects built in codeskinnovations
                 </div>
               </div>
             </div>

@@ -122,7 +122,7 @@ const CompetetionsPage: FunctionComponent = () => {
           <div className="self-stretch bg-nero flex flex-col items-center justify-center py-0 px-[5px]">
             <div className="self-stretch flex flex-row items-center justify-center p-2.5">
               <div className="flex-1 relative leading-[120%] font-semibold">
-                CodeskLab is ..
+                codeskinnovations is ..
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@ const CompetetionsPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start text-lg text-black1">
                   <div className="self-stretch relative leading-[150%]">
                     <p className="m-0">
-                      Applying to hackathons on CoDeskLab is as simple as a
+                      Applying to hackathons on codeskinnovations is as simple as a
                       click of
                     </p>
                     <p className="m-0">

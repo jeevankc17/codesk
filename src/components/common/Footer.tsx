@@ -1,10 +1,12 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent } from "react";
 
 export type FooterType = {
   className?: string;
 };
 
-const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
+const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div
       className={`self-stretch flex flex-col items-center justify-start z-[999] text-center md:text-left sm:text-left text-sm text-black1 font-body-large-600 ${className}`}
@@ -61,19 +63,17 @@ const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
             <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
               <a
                 className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
-                href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
-                target="_blank"
+                href="/privacy-policy"
               >
-                Privacy
+                Privacy Policy
               </a>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
               <a
                 className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit] sm:text-left"
-                href="https://cooked-throne-941.notion.site/CoDesk-Lab-15c6b9d282bc4ab2a8dfa1e307665e3c"
-                target="_blank"
+                href="/terms"
               >
-                Terms
+                Terms & Conditions
               </a>
             </div>
           </div>
@@ -163,6 +163,40 @@ const Footer: FunctionComponent<FooterType> = ({ className = '' }) => {
               </a>
             </div>
           </div>
+        </div>
+        <div className="self-stretch border-t border-nero/20 mt-4 pt-3">
+          <div className="text-sm text-nero space-y-1">
+            <p>
+              <span className="font-medium">Address:</span> Ward No. 16, , Kathmandu, Metropolitan, Bagmati, 44600, NP
+            </p>
+
+            <p>
+              <span className="font-medium">Email:</span>{" "}
+              <a
+                href="mailto:support@codeskinnovations.com.np"
+                className="text-nero hover:underline"
+              >
+                support@codeskinnovations.com.np
+              </a>
+            </p>
+
+            <p>
+              <span className="font-medium">Phone:</span>{" "}
+              <a
+                href="tel:+9779868296800"
+                className="text-nero hover:underline"
+              >
+                +977 9868 296800
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="self-stretch border-t border-nero/20 mt-4 pt-3">
+          <p className="text-sm text-nero text-center">
+            © {currentYear} Codesk Innovations Private Limited. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </div>

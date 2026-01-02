@@ -194,7 +194,7 @@ const DrawerMenus: FunctionComponent<DrawerMenusType> = ({
             <b className="relative text-xl leading-[30px] text-black">
               {isSignedIn
                 ? userData?.name || user?.fullName || user?.firstName || 'User'
-                : 'CoDeskLab'}
+                : 'codeskinnovations'}
             </b>
           </div>
         </div>
