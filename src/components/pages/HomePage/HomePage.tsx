@@ -2366,7 +2366,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
                     alt="Nordcraft Logo"
-                    src="https://media.licdn.com/dms/image/v2/D4D0BAQH3sDGSEiGaGw/company-logo_200_200/B4DZZdco9YHIAM-/0/1745324511478/toddledev_logo?e=1767830400&v=beta&t=O9aEAMn7cT8sC9Qsxk6GmUhlm_I_z3rt_iGJwIxgL_o"
+                    src="https://res.cloudinary.com/jeevankc17/image/upload/v1771917215/nc-logo-wide-white_y8h09m.png"
                   />
                 </div>
               </div>
