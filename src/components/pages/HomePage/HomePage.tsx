@@ -297,7 +297,7 @@ const HomePage: FunctionComponent = () => {
                   />
                 </div>
                 <div className="flex-1 flex flex-row items-center justify-start sm:justify-center">
-                  <div className="flex-1 relative leading-[24px] font-semibold sm:text-xs">{`Call us at 9860246836 for help & questions.`}</div>
+                  <div className="flex-1 relative leading-[24px] font-semibold sm:text-xs">{`Call us at 9868296800 for help & questions.`}</div>
                 </div>
               </div>
             </div>
