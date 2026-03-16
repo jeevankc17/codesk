@@ -6,83 +6,65 @@ import Footer from '../../common/Footer';
 // Update the specializedCourses array with all 6 courses
 const specializedCourses = [
   {
-    title: 'Scratch Programming',
-    category: 'Foundation',
+    title: 'Supabase',
+    category: 'Backend Development',
     description:
-      'Understanding fundamental programming concepts through visual coding.',
+      'Mastering Supabase to build production-ready backend systems and scalable web applications.',
     features: [
-      'Understanding fundamental programming concepts through visual coding.',
-      'Learning to create interactive stories, games, and animations.',
-      'Exploring computational thinking and problem-solving skills.',
+      'Mastering Supabase to build production-ready backend systems and scalable web applications.',
+      'Designing PostgreSQL databases, authentication systems, APIs, and real-time data services.',
+      'Learning modern backend architecture used in SaaS and startup products.',
     ],
-    grade: 'Grade 3 and above',
-    modules: '6 Modules, 36 Lessons & 50 classes',
-    activities: '100+ fun activities and projects',
+    grade: 'For University Students',
+    modules: '6 Modules, 36 Lessons & 50 Classes',
+    activities: '50+ backend projects and practical exercises',
     image: '/scratchprogrammingpng@2x.png',
     certificates: [
-      { text: 'Scratch Programming Certificate', icon: '/vector5.svg' },
+      { text: 'Supabase Backend Development Certificate', icon: '/vector5.svg' },
       { text: 'Lifetime access to course content', icon: '/vector5.svg' },
-      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Exclusive access to developer challenges', icon: '/vector5.svg' },
       { text: 'Scholarships for top performers', icon: '/vector5.svg' },
     ],
   },
   {
-    title: 'Robolox Programming',
-    category: 'Game Development',
-    description: 'Master game development with Roblox Studio.',
+    title: 'Proma AI',
+    category: 'AI Automation',
+    description:
+      'Mastering Proma AI to design enterprise-level AI automation systems.',
     features: [
-      'Mastering the tools and features of Roblox Studio for building immersive game environments.',
-      'Learning Lua programming language to create interactive game mechanics and functionalities.',
-      'Understanding the fundamentals of game design to create engaging gameplay experiences.',
+      'Mastering Proma AI to design enterprise-level AI automation systems.',
+      'Building intelligent workflows for HR operations, data processing, and business automation.',
+      'Understanding how organizations deploy AI-powered automation in real environments.',
     ],
-    grade: 'Grade 7 and above',
-    modules: '6 Modules, 36 Lessons & 50 classes',
-    activities: '100+ fun activities and projects',
+    grade: 'For University Students',
+    modules: '6 Modules, 36 Lessons & 50 Classes',
+    activities: '50+ enterprise automation projects',
     image: '/scratchprogrammingpng@2x.png',
     certificates: [
-      { text: 'Roblox Development Certificate', icon: '/vector5.svg' },
+      { text: 'Proma AI Automation Engineering Certificate', icon: '/vector5.svg' },
       { text: 'Lifetime access to course content', icon: '/vector5.svg' },
-      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Exclusive access to enterprise automation challenges', icon: '/vector5.svg' },
       { text: 'Scholarships for top performers', icon: '/vector5.svg' },
     ],
   },
   {
-    title: 'Thunkable Programming',
-    category: 'App Development',
-    description: 'Build mobile apps without traditional coding.',
+    title: 'Activepieces',
+    category: 'Workflow Automation',
+    description:
+      'Mastering Activepieces to build powerful workflow automation systems.',
     features: [
-      'Building mobile apps without traditional coding using a visual programming interface.',
-      'Integrating various features such as sensors, APIs, and databases into app development.',
-      'Understanding the app development lifecycle from design to deployment.',
+      'Mastering Activepieces to build powerful workflow automation systems.',
+      'Connecting APIs, applications, and business tools into intelligent automation pipelines.',
+      'Learning event-driven automation used by modern companies to streamline operations.',
     ],
-    grade: 'Grade 7 and above',
-    modules: '6 Modules, 36 Lessons & 50 classes',
-    activities: '100+ fun activities and projects',
+    grade: 'For University Students',
+    modules: '6 Modules, 36 Lessons & 50 Classes',
+    activities: '50+ workflow automation projects',
     image: '/scratchprogrammingpng@2x.png',
     certificates: [
-      { text: 'Mobile App Development Certificate', icon: '/vector5.svg' },
+      { text: 'Activepieces Automation Development Certificate', icon: '/vector5.svg' },
       { text: 'Lifetime access to course content', icon: '/vector5.svg' },
-      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
-      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
-    ],
-  },
-  {
-    title: 'IOT Based Scratch',
-    category: 'IOT & Robotics',
-    description: 'Connect physical devices with code.',
-    features: [
-      'Learning about smart devices and how they interact with the internet to perform various tasks.',
-      'Understanding the role of sensors in collecting data and actuators in performing actions in IoT systems.',
-      'Introducing simple programming concepts through visual programming languages suitable for kids.',
-    ],
-    grade: 'Grade 7 and above',
-    modules: '6 Modules, 36 Lessons & 50 classes',
-    activities: '100+ fun activities and projects',
-    image: '/scratchprogrammingpng@2x.png',
-    certificates: [
-      { text: 'IoT & Robotics Certificate', icon: '/vector5.svg' },
-      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
-      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Exclusive access to automation challenges', icon: '/vector5.svg' },
       { text: 'Scholarships for top performers', icon: '/vector5.svg' },
     ],
   },
@@ -121,6 +103,27 @@ const specializedCourses = [
     image: '/scratchprogrammingpng@2x.png',
     certificates: [
       { text: 'Web Development Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'Scratch Programming',
+    category: 'Foundation',
+    description:
+      'Understanding fundamental programming concepts through visual coding.',
+    features: [
+      'Understanding fundamental programming concepts through visual coding.',
+      'Learning to create interactive stories, games, and animations.',
+      'Exploring computational thinking and problem-solving skills.',
+    ],
+    grade: 'Grade 3 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'Scratch Programming Certificate', icon: '/vector5.svg' },
       { text: 'Lifetime access to course content', icon: '/vector5.svg' },
       { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
       { text: 'Scholarships for top performers', icon: '/vector5.svg' },
@@ -391,18 +394,6 @@ const CoursePage: FunctionComponent = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                {/* View Curriculum button */}
-                <div className="self-stretch bg-nero flex flex-col items-center justify-start">
-                  <button
-                    className="cursor-pointer py-[9px] px-5 bg-nero self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-                    onClick={onViewCurriculumButtonClick}
-                  >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                      View Curriculum
-                    </div>
-                  </button>
                 </div>
               </div>
             ))}
