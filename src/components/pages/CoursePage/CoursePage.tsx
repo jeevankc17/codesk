@@ -27,27 +27,6 @@ const specializedCourses = [
     ],
   },
   {
-    title: 'Proma AI',
-    category: 'AI Automation',
-    description:
-      'Mastering Proma AI to design enterprise-level AI automation systems.',
-    features: [
-      'Mastering Proma AI to design enterprise-level AI automation systems.',
-      'Building intelligent workflows for HR operations, data processing, and business automation.',
-      'Understanding how organizations deploy AI-powered automation in real environments.',
-    ],
-    grade: 'For University Students',
-    modules: '6 Modules, 36 Lessons & 50 Classes',
-    activities: '50+ enterprise automation projects',
-    image: '/scratchprogrammingpng@2x.png',
-    certificates: [
-      { text: 'Proma AI Automation Engineering Certificate', icon: '/vector5.svg' },
-      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
-      { text: 'Exclusive access to enterprise automation challenges', icon: '/vector5.svg' },
-      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
-    ],
-  },
-  {
     title: 'Activepieces',
     category: 'Workflow Automation',
     description:
@@ -124,6 +103,26 @@ const specializedCourses = [
     image: '/scratchprogrammingpng@2x.png',
     certificates: [
       { text: 'Scratch Programming Certificate', icon: '/vector5.svg' },
+      { text: 'Lifetime access to course content', icon: '/vector5.svg' },
+      { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
+      { text: 'Scholarships for top performers', icon: '/vector5.svg' },
+    ],
+  },
+  {
+    title: 'IOT Based Scratch',
+    category: 'IOT & Robotics',
+    description: 'Connect physical devices with code.',
+    features: [
+      'Learning about smart devices and how they interact with the internet to perform various tasks.',
+      'Understanding the role of sensors in collecting data and actuators in performing actions in IoT systems.',
+      'Introducing simple programming concepts through visual programming languages suitable for kids.',
+    ],
+    grade: 'Grade 7 and above',
+    modules: '6 Modules, 36 Lessons & 50 classes',
+    activities: '100+ fun activities and projects',
+    image: '/scratchprogrammingpng@2x.png',
+    certificates: [
+      { text: 'IoT & Robotics Certificate', icon: '/vector5.svg' },
       { text: 'Lifetime access to course content', icon: '/vector5.svg' },
       { text: 'Exclusive access to competitions', icon: '/vector5.svg' },
       { text: 'Scholarships for top performers', icon: '/vector5.svg' },
