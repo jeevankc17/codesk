@@ -21,7 +21,6 @@ import Organizers from './components/pages/CompetetionsPage/Organizers/Organizer
 import Hackathons from './components/pages/CompetetionsPage/Hackathons/Hackathons';
 import Projects from './components/pages/CompetetionsPage/Projects/Projects';
 import Builders from './components/pages/CompetetionsPage/Builders/Builders';
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 const routes = [
   {
@@ -216,19 +215,6 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-        <Route
-          path="/blogpage"
-          element={
-            <>
-              <SignedIn>
-                <BlogPage />
-              </SignedIn>
-              <SignedOut>
-                <RedirectToSignIn />
-              </SignedOut>
-            </>
-          }
-        />
         {routes.map(({ path, component }) => (
           <Route key={path} path={path} element={component} />
         ))}

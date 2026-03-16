@@ -1,12 +1,8 @@
 import {
   FunctionComponent,
-  useState,
   useMemo,
   type CSSProperties,
-  useCallback,
 } from 'react';
-import DrawerMenus from './DrawerMenus';
-import PortalDrawer from './PortalDrawer';
 
 export type NavbarType = {
   className?: string;
@@ -33,7 +29,6 @@ const Navbar: FunctionComponent<NavbarType> = ({
   onCompetetionsClick,
   onAboutUsClick,
 }) => {
-  const [isDrawerMenusOpen, setDrawerMenusOpen] = useState(false);
 
   // Memoized styles
   const coursesStyle: CSSProperties = useMemo(
@@ -63,15 +58,6 @@ const Navbar: FunctionComponent<NavbarType> = ({
     }),
     [quizzesColor]
   );
-
-  // Drawer handlers
-  const openDrawerMenus = useCallback(() => {
-    setDrawerMenusOpen(true);
-  }, []);
-
-  const closeDrawerMenus = useCallback(() => {
-    setDrawerMenusOpen(false);
-  }, []);
 
   return (
     <>
@@ -148,40 +134,9 @@ const Navbar: FunctionComponent<NavbarType> = ({
                 </div>
               </button>
             </div>
-            <button
-              className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center"
-              onClick={openDrawerMenus}
-            >
-              <div className="w-8 relative h-8 overflow-hidden shrink-0">
-                <img
-                  className="absolute top-[6px] left-[2.1px] max-h-full w-[19.8px]"
-                  alt=""
-                  src="/vector-1.svg"
-                />
-                <img
-                  className="absolute top-[12px] left-[2.1px] max-h-full w-[19.8px]"
-                  alt=""
-                  src="/vector-1.svg"
-                />
-                <img
-                  className="absolute top-[18px] left-[2.1px] max-h-full w-[19.8px]"
-                  alt=""
-                  src="/vector-1.svg"
-                />
-              </div>
-            </button>
           </div>
         </div>
       </div>
-      {isDrawerMenusOpen && (
-        <PortalDrawer
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Left"
-          onOutsideClick={closeDrawerMenus}
-        >
-          <DrawerMenus onClose={closeDrawerMenus} />
-        </PortalDrawer>
-      )}
     </>
   );
 };

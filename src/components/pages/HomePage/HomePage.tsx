@@ -7,8 +7,6 @@ import {
   Icon,
   Typography,
 } from '@mui/material';
-import DoneModal from '../../common/DoneModal';
-import PortalPopup from '../../common/PortalPopup';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../common/Navbar';
 import Footer from '../../common/Footer';
@@ -16,16 +14,55 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
 const HomePage: FunctionComponent = () => {
-  const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const navigate = useNavigate();
 
-  const openDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(true);
-  }, []);
-
-  const closeDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(false);
-  }, []);
+  const floatingStyles = (
+    <style>{`
+      @keyframes heroFloatY {
+        0% { transform: translate3d(0,0,0); }
+        50% { transform: translate3d(0,-10px,0); }
+        100% { transform: translate3d(0,0,0); }
+      }
+      @keyframes heroFloatY2 {
+        0% { transform: translate3d(0,0,0); }
+        50% { transform: translate3d(0,-14px,0); }
+        100% { transform: translate3d(0,0,0); }
+      }
+      @keyframes heroFloatY {
+        0% { transform: translate3d(0,0,0); }
+        50% { transform: translate3d(0,-10px,0); }
+        100% { transform: translate3d(0,0,0); }
+      }
+      @keyframes heroFloatY2 {
+        0% { transform: translate3d(0,0,0); }
+        50% { transform: translate3d(0,-14px,0); }
+        100% { transform: translate3d(0,0,0); }
+      }
+      @keyframes curveFloat1 {
+        0% { transform: translate3d(0,0,0) rotate(0deg); }
+        50% { transform: translate3d(-8px,-12px,0) rotate(2deg); }
+        100% { transform: translate3d(0,0,0) rotate(0deg); }
+      }
+      @keyframes curveFloat2 {
+        0% { transform: translate3d(0,0,0) rotate(0deg); }
+        50% { transform: translate3d(10px,-8px,0) rotate(-1deg); }
+        100% { transform: translate3d(0,0,0) rotate(0deg); }
+      }
+      @keyframes pulseScale {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-float-1, .hero-float-2, .curve-float-1, .curve-float-2, .pulse-node { animation: none !important; }
+      }
+      .hero-float-1 { animation: heroFloatY 6s ease-in-out infinite; will-change: transform; }
+      .hero-float-2 { animation: heroFloatY2 7.5s ease-in-out infinite; will-change: transform; }
+      .curve-float-1 { animation: curveFloat1 8s ease-in-out infinite; will-change: transform; }
+      .curve-float-2 { animation: curveFloat2 9s ease-in-out infinite; will-change: transform; }
+      .pulse-node { animation: pulseScale 3s ease-in-out infinite; will-change: transform; }
+    `}</style>
+  );
 
   const onLogoClick = useCallback(() => {
     navigate('/');
@@ -79,34 +116,65 @@ const HomePage: FunctionComponent = () => {
     window.location.href = 'mailto:jkc5186@gmail.com?subject=For support ';
   }, []);
 
+  const faqs = [
+    {
+      q: 'What is codeskinnovations?',
+      a: 'codeskinnovations is an interactive online platform designed to teach programming in a practical and engaging way. It offers courses tailored for different skill levels.',
+    },
+    {
+      q: 'Why should you learn to code?',
+      a: 'Learning to code improves logical thinking, problem-solving, and communication skills. It also gives you a competitive advantage for internships and jobs. Programming is a modern literacy—one that helps you understand and build the technologies you use.',
+    },
+    {
+      q: "I'm a beginner — is previous coding experience required?",
+      a: 'No. The courses are designed so a complete beginner can follow along. You can start from fundamentals and move toward building real projects.',
+    },
+    {
+      q: 'Who is codeskinnovations for?',
+      a: 'codeskinnovations is built for students, self-learners, and professionals who want to build practical skills and ship real projects.',
+    },
+    {
+      q: 'How are the courses structured?',
+      a: 'Courses are divided into modules and lessons, focused on core concepts and project work. The curriculum is designed for smooth progression, with hands-on exercises to reinforce learning.',
+    },
+    {
+      q: 'Do you provide progress tracking?',
+      a: 'Yes. You get progress tracking and monitoring features to set goals and stay consistent while learning.',
+    },
+    {
+      q: 'Is there technical support available?',
+      a: 'Yes. You can reach out to the support team via email or through the online help center for help with platform issues.',
+    },
+  ];
+
   const cardData = [
     {
-      icon: '/appstorelogo.svg',
+      icon: '/homepage/appstorelogo.svg',
       number: '15+',
       title: 'Coding stacks',
     },
     {
-      icon: '/applelogo.svg',
+      icon: '/homepage/applelogo.svg',
       number: '5+',
       title: 'Disruptive Technology',
     },
     {
-      icon: '/personsimplerun.svg',
+      icon: '/homepage/personsimplerun.svg',
       number: '100+',
-      title: 'Empowering Youth',
+      title: 'Career Outcomes',
     },
     {
-      icon: '/cassettetape.svg',
+      icon: '/homepage/cassettetape.svg',
       number: '50+',
       title: 'Hands On Resources',
     },
     {
-      icon: '/androidlogo.svg',
+      icon: '/homepage/androidlogo.svg',
       number: '100+',
-      title: 'Hackathons Event',
+      title: 'Workshops & Hackathons',
     },
     {
-      icon: '/desktoptower.svg',
+      icon: '/homepage/desktoptower.svg',
       number: 'Robust',
       title: 'Virtual & Physical Classes',
     },
@@ -152,6 +220,7 @@ const HomePage: FunctionComponent = () => {
 
   return (
     <>
+      {floatingStyles}
       <div className="w-full relative bg-nero flex flex-col items-center justify-center p-5 box-border gap-[20px] text-center text-4xl text-black font-body-large-600 sm:gap-[5px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
         {/* Add a div for fixed navbar spacing */}
         <div className="h-[50px] w-full"></div>
@@ -190,59 +259,59 @@ const HomePage: FunctionComponent = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className="mb-4"
+                  className="mb-4 text-sm"
                 >
-                  Whether You're a{' '}
+                  Whether you're a{' '}
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                    className="text-[#FF5A43] font-bold text-[1.1em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
-                    Child
+                    Student
                   </motion.span>
                   , a{' '}
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                    className="text-[#FF5A43] font-bold text-[1.1em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
                     Hobbyist
                   </motion.span>
                   , or a{' '}
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                    className="text-[#FF5A43] font-bold text-[1.1em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
                     Professional
                   </motion.span>{' '}
-                  or may be From{' '}
+                  or from a{' '}
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                    className="text-[#FF5A43] font-bold text-[1.1em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
                     Technical/Non-Technical Background
                   </motion.span>
-                  ? Doesn't matter!
+                  , it doesn't matter.
                 </motion.p>
 
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1 }}
+                  className="text-sm"
                 >
                   Our{' '}
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="text-[#FF5A43] font-bold text-[1.2em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
+                    className="text-[#FF5A43] font-bold text-[1.1em] cursor-pointer hover:text-[#FF8A43] transition-colors duration-300"
                   >
-                    Block-Based Visual Programming
+                    visual based programming
                   </motion.span>{' '}
-                  Makes It Easy to Develop Any{' '}
+                  helps you build{' '}
                   {[
-                    'Apps',
-                    'Websites',
-                    'Robotics & IoT Projects',
-                    'Games',
-                    'AI & Automations',
-                    'AR/VR',
+                    'apps',
+                    'websites',
+                    'automation tools',
+                    'data projects',
+                    'AI workflows & any projects you want much faster much easier..'
                   ].map((text, index) => (
                     <motion.span
                       key={index}
@@ -250,13 +319,12 @@ const HomePage: FunctionComponent = () => {
                         scale: 1.1,
                         color: '#FF5A43',
                       }}
-                      className="font-bold text-[1.1em] cursor-pointer transition-colors duration-300 mx-1"
+                      className="font-bold text-[1em] cursor-pointer transition-colors duration-300 mx-1"
                     >
                       {text}
                       {index !== 5 && ','}
                     </motion.span>
-                  ))}{' '}
-                  Any thing.
+                  ))}
                 </motion.p>
               </div>
             </div>
@@ -265,24 +333,24 @@ const HomePage: FunctionComponent = () => {
                 <div className="self-stretch w-[107px] flex flex-col items-start justify-start sm:items-center">
                   <div className="self-stretch flex flex-col items-start justify-start sm:items-center">
                     <div className="relative tracking-[-0.01em] leading-[32px] font-semibold text-[#FF5A43] sm:text-lg">
-                      5000+
+                      50+
                     </div>
                   </div>
                   <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[26.7px] pl-0 text-md font-body-large-600 sm:items-center sm:pr-0">
                     <div className="self-stretch relative leading-[24px] sm:text-sm ">
-                      No Of Students
+                      Career Tracks
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col items-start justify-start sm:items-center">
                   <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[34.3px] pl-0 sm:items-center sm:pr-0">
                     <div className="relative tracking-[-0.01em] leading-[32px] font-semibold text-[#FF5A43] sm:text-lg">
-                      12+
+                      100+
                     </div>
                   </div>
                   <div className="self-stretch flex flex-col items-start justify-start relative text-md font-body-large-600 sm:items-center">
                     <div className="relative leading-[24px] z-[0] sm:text-sm">
-                      Districts
+                      Hands-on Projects
                     </div>
                     <div className="w-6 absolute !m-[0] bottom-[0px] left-[0px] box-border h-px z-[1] border-b-[1px] border-solid border-silver" />
                   </div>
@@ -293,30 +361,122 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-8 relative h-8 overflow-hidden shrink-0 object-cover"
                     alt=""
-                    src="/phonecall@2x.png"
+                    src="/homepage/phonecall@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-row items-center justify-start sm:justify-center">
-                  <div className="flex-1 relative leading-[24px] font-semibold sm:text-xs">{`Call us at 9860246836 for help & questions.`}</div>
+                  <div className="flex-1 relative leading-[24px] font-semibold sm:text-xs">{`Have questions? Contact us and we’ll help you get started.`}</div>
                 </div>
               </div>
             </div>
           </div>
-          <img
-            className="w-[525px] relative h-[478px] object-cover lg:order-[1] lg:w-full md:w-full sm:w-full sm:h-[250px]"
-            alt=""
-            src="/image-5@2x.png"
-          />
+          <div className="w-[525px] relative h-[478px] overflow-visible lg:order-[1] lg:w-full md:w-full sm:w-full sm:h-[250px]">
+            <img
+              className="absolute inset-0 w-full h-full object-cover rounded-[22px]"
+              alt=""
+              src="/homepage/image-5@2x.png"
+            />
+            <div className="absolute inset-0 rounded-[22px]" />
+
+            <div className="absolute z-[2] left-[-34px] top-[52px] bg-nero rounded-2xl shadow-[0px_20px_60px_rgba(0,_0,_0,_0.18)] border border-[rgba(0,0,0,0.08)] px-4 py-3 w-[200px] sm:hidden transform -rotate-2 hover:-translate-y-1 hover:shadow-[0px_28px_80px_rgba(0,_0,_0,_0.22)] transition-all duration-300 hero-float-1">
+              <div className="text-xs text-black/60">Active learners</div>
+              <div className="text-lg font-semibold text-black">2,500+</div>
+              <div className="mt-1 inline-flex items-center text-xs font-semibold text-chateau-green bg-[rgba(34,197,94,0.12)] px-2 py-0.5 rounded-full">+18% this month</div>
+            </div>
+
+            <div className="absolute z-[2] right-[-34px] top-[34px] bg-nero rounded-2xl shadow-[0px_20px_60px_rgba(0,_0,_0,_0.18)] border border-[rgba(0,0,0,0.08)] px-4 py-3 w-[220px] sm:hidden transform rotate-2 hover:-translate-y-1 hover:shadow-[0px_28px_80px_rgba(0,_0,_0,_0.22)] transition-all duration-300 hero-float-2">
+              <div className="text-xs text-black/60">Project built</div>
+              <div className="text-lg font-semibold text-black">100+</div>
+              <div className="mt-1 text-xs text-black/70">Built across Web, AI, and Automation</div>
+            </div>
+
+            {/* Curved Lines Design */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 525 478" style={{ zIndex: 1 }}>
+              {/* Main curved path */}
+              <path
+                d="M 100 150 Q 200 100, 300 150 T 450 200"
+                stroke="url(#gradient1)"
+                strokeWidth="3"
+                fill="none"
+                opacity="0.6"
+                className="curve-float-1"
+              />
+              <path
+                d="M 80 300 Q 180 250, 280 300 T 420 350"
+                stroke="url(#gradient2)"
+                strokeWidth="2.5"
+                fill="none"
+                opacity="0.5"
+                className="curve-float-2"
+              />
+              <path
+                d="M 320 200 Q 380 180, 420 220 T 450 300"
+                stroke="url(#gradient3)"
+                strokeWidth="2"
+                fill="none"
+                opacity="0.4"
+                className="curve-float-1"
+                style={{ animationDelay: '2s' }}
+              />
+              
+              {/* Gradient definitions */}
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.8" />
+                </linearGradient>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.8" />
+                </linearGradient>
+                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#10b981" stopOpacity="0.8" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {/* Circular Nodes */}
+            <div className="absolute z-[4] left-[100px] top-[140px] w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg pulse-node">
+              <div className="text-white text-xs font-bold text-center">AI</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[200px] top-[100px] w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '0.5s' }}>
+              <div className="text-white text-xs font-bold text-center">Automation</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[300px] top-[140px] w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '1s' }}>
+              <div className="text-white text-[10px] font-bold text-center">Web App</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[80px] top-[290px] w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '1.5s' }}>
+              <div className="text-white text-xs font-bold text-center">Cloud</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[180px] top-[250px] w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '2s' }}>
+              <div className="text-white text-xs font-bold text-center">Game</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[280px] top-[290px] w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '2.5s' }}>
+              <div className="text-white text-[10px] font-bold text-center">IOT</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[380px] top-[250px] w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '3s' }}>
+              <div className="text-white text-xs font-bold text-center">AR/VR</div>
+            </div>
+            
+            <div className="absolute z-[4] left-[350px] top-[180px] w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '3.5s' }}>
+              <div className="text-white text-xs font-bold text-center">Business</div>
+            </div>
+
+                      </div>
         </header>
         <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[16] text-center text-4xl text-aqua-deep font-body-large-600 sm:mt-[20px] sm:pl-0 sm:pr-0 sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center h-auto">
-            <div className="self-stretch h-auto relative leading-[120%] font-semibold inline-block text-4xl text-center md:text-xl sm:text-lg">
-              <span>Learn coding</span>
-              <span className="text-black">{` from the `}</span>
-              <span>top Nepali IT instructors</span>
-              <span className="text-black">
-                . Our hand-picked instructors ensure the best learning
-                experience.
+            <div className="self-stretch h-auto relative leading-[120%] font-semibold inline-block text-center">
+              <span className="text-3xl md:text-2xl sm:text-xl font-bold text-black">Most institutions teach how to code. We teach how to build systems.</span>
+              <span className="text-xl md:text-lg sm:text-base text-gray-600 font-normal block mt-2">
+                Technology is no longer a separate profession it has become a basic skill, just like communication or problem-solving.
               </span>
             </div>
           </div>
@@ -363,7 +523,7 @@ const HomePage: FunctionComponent = () => {
         <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[15] text-center text-4xl\ text-black font-body-large-600 sm:pl-[5px] sm:pr-[05px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap text-3xl md:text-xl sm:text-lg">
-              With CoDesk, your child's future is on safe hands!
+              With CoDesk, your learning journey is in safe hands.
             </div>
           </div>
           <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl">
@@ -371,7 +531,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/baseballhelmet.svg"
+                src="/homepage/baseballhelmet.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold">
@@ -390,7 +550,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/question2.svg"
+                src="/homepage/question2.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold">
@@ -409,7 +569,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/lifebuoy1.svg"
+                src="/homepage/lifebuoy1.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
@@ -427,7 +587,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/applepodcastslogo.svg"
+                src="/homepage/applepodcastslogo.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold">{`Projects & Quizzes after every class`}</div>
@@ -436,7 +596,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">
                   Quizzes and projects are fun and help us remember important
                   facts. These well-targeted and tailor-made quizzes will boost
-                  self-esteem and confidence among kids.
+                  confidence and performance for real-world work.
                 </div>
               </div>
             </div>
@@ -444,7 +604,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/wechatlogo1.svg"
+                src="/homepage/wechatlogo1.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
@@ -463,7 +623,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[81.3px] relative h-[81.3px]"
                 alt=""
-                src="/vector1.svg"
+                src="/homepage/vector1.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
@@ -478,11 +638,11 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/chalkboardteacher2.svg"
+                src="/homepage/chalkboardteacher2.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
-                  Gamified learning dashboard for kids and instrutors
+                  Gamified learning dashboard for learners and mentors
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-sm">
@@ -493,7 +653,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/appwindow.svg"
+                src="/homepage/appwindow.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
@@ -511,16 +671,16 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/student.svg"
+                src="/homepage/student.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold whitespace-pre-wrap">
-                  Community of Young Coders
+                  Community of Coders
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-sm">
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">
-                  Get access to our community of students to collaborate, share
+                  Get access to our community to collaborate, share
                   projects, and solve real-world problems together
                 </div>
               </div>
@@ -529,7 +689,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/arrowsincardinal.svg"
+                src="/homepage/arrowsincardinal.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold">
@@ -538,7 +698,7 @@ const HomePage: FunctionComponent = () => {
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-sm">
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">
-                  CoDesK makes learning fun with gamification. Students can take
+                  CoDesK makes learning engaging with gamification. Learners can take
                   quizzes or complete projects to earn points, badges, and
                   rewards.
                 </div>
@@ -548,16 +708,16 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
-                src="/articlemedium.svg"
+                src="/homepage/articlemedium.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
-                <div className="flex-1 relative leading-[150%] font-semibold">{`Receive monthly progress reports & attend PTMs`}</div>
+                <div className="flex-1 relative leading-[150%] font-semibold">{`Track progress and get structured feedback`}</div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-sm">
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">
-                  Great opportunity for parents and teachers to open two way
+                  Great opportunity for mentors and learners to open two way
                   communication and to share insights and information for the
-                  holistic development of a child.
+                  holistic development.
                 </div>
               </div>
             </div>
@@ -565,7 +725,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] relative h-[100px]"
                 alt=""
-                src="/vector2.svg"
+                src="/homepage/vector2.svg"
               />
               <div className="self-stretch flex flex-row items-center justify-center">
                 <div className="flex-1 relative leading-[150%] font-semibold">
@@ -584,7 +744,7 @@ const HomePage: FunctionComponent = () => {
         <section className="self-stretch bg-nero flex flex-col items-center justify-center p-5 gap-[20px] z-[14] text-center text-4xl\ text-black font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-center">
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              Choose a coding course that excites childs
+              Choose a coding course that excites everyone
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-sm sm:pl-[5px] sm:pr-[5px] sm:box-border">
@@ -592,7 +752,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image@2x.png"
+                src="/homepage/image@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
@@ -602,14 +762,14 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start text-md">
                   <div className="self-stretch relative leading-[150%]">
-                    A perfect course for kids who want to use coding to solve
+                    A perfect course for beginners who want to use coding to solve
                     real-world problems and create a better future.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-[5px]">
                   <div className="flex-1 flex flex-col items-start justify-start">
                     <div className="self-stretch relative leading-[120%] font-semibold">
-                      Ages 8-18
+                      All Ages
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col items-start justify-start">
@@ -625,7 +785,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-2 text-center text-dodger-blue">
                   <div className="w-full relative leading-[150%] inline-block max-w-[384px]">
-                    Don't let your child miss out to unlock their potential.
+                    Don't miss out to unlock your potential.
                   </div>
                 </div>
               </div>
@@ -651,14 +811,14 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] !m-[0] absolute top-[10px] left-[10px] h-[25px] overflow-hidden shrink-0 object-cover z-[3]"
                 alt=""
-                src="/bestsellingpng1@2x.png"
+                src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
             <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image1@2x.png"
+                src="/homepage/image1@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
@@ -675,7 +835,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-row items-center justify-start gap-[5px]">
                   <div className="flex-1 flex flex-col items-start justify-start">
                     <div className="self-stretch relative leading-[120%] font-semibold">
-                      Ages 8-18
+                      All Ages
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col items-start justify-start">
@@ -691,7 +851,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-2 text-center text-dodger-blue">
                   <div className="w-full relative leading-[150%] inline-block max-w-[384px]">
-                    Don't let your child miss out to unlock their potential.
+                    Don't miss out to unlock your potential.
                   </div>
                 </div>
               </div>
@@ -717,14 +877,14 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] !m-[0] absolute top-[10px] left-[10px] h-[25px] overflow-hidden shrink-0 object-cover z-[3]"
                 alt=""
-                src="/bestsellingpng1@2x.png"
+                src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
             <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
-                src="/image2@2x.png"
+                src="/homepage/image2@2x.png"
               />
               <div className="self-stretch bg-nero flex flex-col items-start justify-start gap-[5px] z-[1]">
                 <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px] text-2xl">
@@ -734,14 +894,13 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start text-md">
                   <div className="self-stretch relative leading-[150%]">
-                    A perfect course for kids who want to test drive to coding
-                    road.
+                    A perfect course for beginners who want to test drive coding.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-[5px]">
                   <div className="flex-1 flex flex-col items-start justify-start">
                     <div className="self-stretch relative leading-[120%] font-semibold">
-                      Ages 8-18
+                      All Ages
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col items-start justify-start">
@@ -757,7 +916,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-2 text-center text-dodger-blue">
                   <div className="w-full relative leading-[150%] inline-block max-w-[384px]">
-                    Don't let your child miss out to unlock their potential.
+                    Don't miss out to unlock your potential.
                   </div>
                 </div>
               </div>
@@ -783,7 +942,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[100px] !m-[0] absolute top-[10px] left-[10px] h-[25px] overflow-hidden shrink-0 object-cover z-[3]"
                 alt=""
-                src="/bestsellingpng1@2x.png"
+                src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
           </div>
@@ -815,7 +974,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover z-[1]"
                   alt=""
-                  src="/bestsellingpng@2x.png"
+                  src="/homepage/bestsellingpng@2x.png"
                 />
               </div>
               <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
@@ -823,7 +982,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -835,7 +994,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -847,7 +1006,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -859,7 +1018,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -872,11 +1031,11 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
-                      Progress Tracking - Parent Teacher Meet
+                      Progress tracking and mentor feedback
                     </div>
                   </div>
                 </div>
@@ -884,7 +1043,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -904,7 +1063,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover hidden z-[1]"
                   alt=""
-                  src="/bestsellingpng2@2x.png"
+                  src="/homepage/bestsellingpng2@2x.png"
                 />
               </div>
               <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
@@ -912,7 +1071,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -924,7 +1083,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -936,7 +1095,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -948,7 +1107,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg4.svg"
+                    src="/homepage/svg4.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -961,11 +1120,11 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
-                      Progress Tracking - Parent Teacher Meet
+                      Progress tracking and mentor feedback
                     </div>
                   </div>
                 </div>
@@ -973,7 +1132,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                     alt=""
-                    src="/svg.svg"
+                    src="/homepage/svg.svg"
                   />
                   <div className="flex-1 flex flex-row items-center justify-start">
                     <div className="flex-1 relative leading-[150%]">
@@ -1021,13 +1180,13 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[100px]"
                   alt=""
-                  src="/iconpng1@2x.png"
+                  src="/homepage/iconpng1@2x.png"
                 />
                 <div className="flex-1 flex flex-col items-center justify-center gap-[10px] sm:flex-[unset] sm:self-stretch">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch flex flex-row items-start justify-start">
                       <div className="flex-1 relative leading-[150%] font-semibold sm:text-xl">
-                        Nepal CodeWars 2024 Kid's Hackathon
+                        Nepal CodeWars 2024 University Hackathon
                       </div>
                     </div>
                     <div className="self-stretch flex flex-row items-start justify-start gap-[10px] text-right text-md text-chateau-green">
@@ -1095,107 +1254,10 @@ const HomePage: FunctionComponent = () => {
             </button>
           </section>
         </section>
-        <section className="self-stretch shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[11] text-sm">
-          <div className="self-stretch flex flex-col items-center justify-start">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              Why children should learn to code?
-            </div>
-          </div>
-          <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-md md:flex-row md:flex-wrap">
-            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
-              <img
-                className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
-                alt=""
-                src="/reason1png@2x.png"
-              />
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
-                <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
-                  <div className="self-stretch relative leading-[120%] font-semibold">
-                    Develop key skills
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-center justify-center">
-                  <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
-                    Learning to code helps improve a child's logical thinking
-                    and problem-solving skills by 70%, also enabling them to
-                    perform better at school.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
-              <img
-                className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
-                alt=""
-                src="/reason1png1@2x.png"
-              />
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
-                <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
-                  <div className="self-stretch relative leading-[120%] font-semibold">
-                    Prepare for the future
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-center justify-center">
-                  <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
-                    Children need to learn coding and develop digital skills if
-                    they want to be successful in the technology-driven job
-                    market of the future.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-[350px] rounded-3xs bg-nero flex flex-col items-center justify-center p-5 box-border">
-              <img
-                className="w-[250px] relative h-[250px] overflow-hidden shrink-0 object-cover"
-                alt=""
-                src="/reason1png2@2x.png"
-              />
-              <div className="self-stretch bg-nero flex flex-col items-center justify-center">
-                <div className="self-stretch flex flex-col items-center justify-center py-4 px-0">
-                  <div className="self-stretch relative leading-[120%] font-semibold">
-                    Learn through coding
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-center justify-center">
-                  <div className="w-full relative leading-[150%] inline-block max-w-[448px]">
-                    Our STEM-focused curriculum makes coding a learning aid and
-                    helps kids develop a deeper understanding of the subjects
-                    they study at school.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="self-stretch bg-lavenderblush flex flex-col items-center justify-start p-5 gap-[20px] z-[10]">
-          <div className="self-stretch flex flex-row items-center justify-start">
-            <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              Watch video to know more about codeskinnovations
-            </div>
-          </div>
-          <iframe
-            className="self-stretch h-[700px] flex flex-col items-center justify-start object-contain sm:h-[200px]"
-            src={`https://www.youtube.com/embed/ucCntlvrPsY?rel=0&mute=1`}
-            frameBorder="0"
-            allowFullScreen
-          />
-          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-              autoFocus={true}
-              onClick={onTryAFreeClassButtonClick}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                Show Videos
-              </div>
-            </button>
-          </section>
-        </section>
         <section className="self-stretch bg-nero flex flex-col items-start justify-start p-5 gap-[20px] z-[9]">
           <div className="self-stretch flex flex-row items-center justify-center">
             <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              <span>{`Student's & parent's testimonials `}</span>
-              <span className="text-aqua-deep">"why they ❤️ codeskinnovations"</span>
+              <span>{`Testimonials: Why learners ❤️ Codesk Innovations`}</span>
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
@@ -1205,93 +1267,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image22@2x.png"
-                  />
-                </div>
-                <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
-                  <div className="self-stretch flex flex-row items-center justify-start">
-                    <div className="flex-1 relative leading-[150%] font-semibold">
-                      Nisha
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-start text-md">
-                    <div className="flex-1 relative leading-[150%]">
-                      CoDesk Student
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
-                <div className="flex-1 relative leading-[150%]">
-                  I love learning with CoDesk. It's always fun and the teacher
-                  is nice and kind.
-                </div>
-              </div>
-            </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-              <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
-                <div className="flex flex-row items-start justify-start">
-                  <img
-                    className="w-[100px] relative rounded-100xl h-[100px] object-cover"
-                    alt=""
-                    src="/image3@2x.png"
-                  />
-                </div>
-                <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
-                  <div className="self-stretch flex flex-row items-center justify-start">
-                    <div className="flex-1 relative leading-[150%] font-semibold">
-                      Peter
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-start text-md">
-                    <div className="flex-1 relative leading-[150%]">
-                      CoDesk Student
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
-                <div className="flex-1 relative leading-[150%]">
-                  Iam doing great with codesk. Iam building games and play.
-                </div>
-              </div>
-            </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-              <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
-                <div className="flex flex-row items-start justify-start">
-                  <img
-                    className="w-[100px] relative rounded-100xl h-[100px] object-cover"
-                    alt=""
-                    src="/rectangle-23@2x.png"
-                  />
-                </div>
-                <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
-                  <div className="self-stretch flex flex-row items-center justify-start">
-                    <div className="flex-1 relative leading-[150%] font-semibold">
-                      Ayush
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-start text-md">
-                    <div className="flex-1 relative leading-[150%]">
-                      CoDesk Student
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
-                <div className="flex-1 relative leading-[150%]">
-                  I now have two apps published on the Google Play Store. I'm
-                  glad to be learning coding.
-                </div>
-              </div>
-            </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-              <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
-                <div className="flex flex-row items-start justify-start">
-                  <img
-                    className="w-[100px] relative rounded-100xl h-[100px] object-cover"
-                    alt=""
-                    src="/image4@2x.png"
+                    src="/homepage/image4@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1302,15 +1278,15 @@ const HomePage: FunctionComponent = () => {
                   </div>
                   <div className="self-stretch flex flex-row items-center justify-start text-md">
                     <div className="flex-1 relative leading-[150%]">
-                      CoDesk Parent
+                      student
                     </div>
                   </div>
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
                 <div className="flex-1 relative leading-[150%]">
-                  CoDesk's well-structured courses have made coding fun for my
-                  son. They're the best and the quickest.
+                  CoDesk's structured learning paths helped me build projects
+                  faster and with more confidence.
                 </div>
               </div>
             </div>
@@ -1320,7 +1296,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image5@2x.png"
+                    src="/homepage/image5@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1331,17 +1307,17 @@ const HomePage: FunctionComponent = () => {
                   </div>
                   <div className="self-stretch flex flex-row items-center justify-start text-md">
                     <div className="flex-1 relative leading-[150%]">
-                      CoDesk Parent
+                      student
                     </div>
                   </div>
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
                 <div className="flex-1 relative leading-[150%]">
-                  My Daughter is now an expert in web development, all thanks to
-                  the excellent teachers on CoDesk.
+                  I now feel confident building real web applications, thanks to
+                  the structured guidance and feedback from CoDesk.
                 </div>
-              </div>
+              </div>Build real skills
             </div>
             <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
@@ -1349,7 +1325,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="w-[100px] relative rounded-100xl h-[100px] object-cover"
                     alt=""
-                    src="/image6@2x.png"
+                    src="/homepage/image6@2x.png"
                   />
                 </div>
                 <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
@@ -1360,16 +1336,15 @@ const HomePage: FunctionComponent = () => {
                   </div>
                   <div className="self-stretch flex flex-row items-center justify-start text-md">
                     <div className="flex-1 relative leading-[150%]">
-                      CoDesk Parent
+                      student
                     </div>
                   </div>
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start text-center text-md">
                 <div className="flex-1 relative leading-[150%]">
-                  My son particularly enjoys CoDesk's curriculum that offers
-                  interesting exercises and projects such as Minecraft, Star
-                  Wars and Captain America.
+                  The curriculum offers industry-relevant projects and
+                  thoughtfully designed exercises that build strong fundamentals.
                 </div>
               </div>
             </div>
@@ -1385,233 +1360,13 @@ const HomePage: FunctionComponent = () => {
             </button>
           </section>
         </section>
-        <section className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center p-[15px] gap-[0px_15px] z-[8] text-left text-aqua-deep md:flex-col md:gap-[15px] md:p-[15px] md:box-border sm:gap-[5px] sm:p-[5px] sm:box-border">
-          <img
-            className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover md:flex-[unset] md:self-stretch"
-            alt=""
-            src="/dashboarddemopng@2x.png"
-          />
-          <div className="flex-1 flex flex-col items-start justify-center p-[15px] gap-[15px] md:flex-[unset] md:self-stretch">
-            <div className="self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-[0.5px]">
-              <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-                <span>Intuitive learning dashboard</span>
-                <span className="text-black"> for kids and parents</span>
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[10px] text-sm text-black">
-              <div className="self-stretch relative leading-[150%]">{`Class management & progress tracking`}</div>
-              <div className="self-stretch relative leading-[150%]">
-                Assignments and task
-              </div>
-              <div className="self-stretch relative leading-[150%]">
-                Session notes
-              </div>
-              <div className="self-stretch relative leading-[150%]">
-                Certificates of completion
-              </div>
-              <div className="self-stretch relative leading-[150%]">
-                Course and instructor information
-              </div>
-              <div className="self-stretch relative leading-[150%]">
-                Access to coding competitions, quizzes, resources and much more.
-              </div>
-            </div>
-            <button
-              className="cursor-pointer pt-[18.5px] px-[65px] pb-[19px] bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-              onClick={onTryAFreeClassButtonClick}
-            >
-              <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px]">
-                Show Dashboards
-              </div>
-            </button>
-          </div>
-        </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[7] text-center text-4xl\ text-black font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border">
-          <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              See amazing projects created by our students
-            </div>
-          </div>
-          <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[10px] text-left text-2xl md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap">
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
-              <img
-                className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
-                alt=""
-                src="/image7@2x.png"
-              />
-              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
-                <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
-                  <div className="self-stretch flex flex-row flex-wrap items-center justify-between">
-                    <div className="flex-1 flex flex-col items-start justify-start">
-                      <div className="self-stretch relative leading-[150%] font-semibold">
-                        Nisha KC
-                      </div>
-                    </div>
-                    <div className="w-[110px] flex flex-row items-center justify-end text-right text-md">
-                      <div className="flex-1 flex flex-col items-end justify-center py-0 pr-[5px] pl-0">
-                        <div className="w-[65px] relative leading-[150%] flex items-center">{`Grade: `}</div>
-                      </div>
-                      <div className="w-10 flex flex-col items-start justify-center py-0 pr-[5px] pl-0 box-border text-left text-wwwcodingalcom-mine-shaft">
-                        <div className="self-stretch relative leading-[150%]">
-                          8
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-md">
-                    <div className="relative leading-[150%] inline-block max-w-[373.33px]">
-                      Website development
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-sm">
-                    <div className="relative leading-[120%] font-semibold inline-block max-w-[373.33px]">
-                      Premier league
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-start justify-center">
-                  <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                    onClick={onViewProjectButtonClick}
-                  >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                      View Project
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <img
-                className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
-                alt=""
-                src="/rectangle-2@2x.png"
-              />
-            </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
-              <img
-                className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
-                alt=""
-                src="/image8@2x.png"
-              />
-              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
-                <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
-                  <div className="self-stretch flex flex-row flex-wrap items-center justify-between">
-                    <div className="flex-1 flex flex-col items-start justify-start">
-                      <div className="self-stretch relative leading-[150%] font-semibold">
-                        Aayush Shrestha
-                      </div>
-                    </div>
-                    <div className="w-[110px] flex flex-row items-center justify-end text-right text-md">
-                      <div className="flex-1 flex flex-col items-end justify-center py-0 pr-[5px] pl-0">
-                        <div className="w-[65px] relative leading-[150%] flex items-center">{`Grade: `}</div>
-                      </div>
-                      <div className="w-10 flex flex-col items-start justify-center py-0 pr-[5px] pl-0 box-border text-left text-wwwcodingalcom-mine-shaft">
-                        <div className="self-stretch relative leading-[150%]">
-                          9
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-md">
-                    <div className="relative leading-[150%] inline-block max-w-[373.33px]">
-                      Game Development
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-sm">
-                    <div className="relative leading-[120%] font-semibold inline-block max-w-[373.33px]">
-                      Mine Craft
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-start justify-center">
-                  <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                    onClick={onViewProjectButtonClick1}
-                  >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                      View Project
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <img
-                className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
-                alt=""
-                src="/rectangle-21@2x.png"
-              />
-            </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[25px]">
-              <img
-                className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
-                alt=""
-                src="/image9@2x.png"
-              />
-              <div className="self-stretch flex flex-col items-start justify-start gap-[5px] z-[1]">
-                <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
-                  <div className="self-stretch flex flex-row flex-wrap items-center justify-between">
-                    <div className="flex-1 flex flex-col items-start justify-start">
-                      <div className="self-stretch relative leading-[150%] font-semibold">
-                        Abhinav Acharya
-                      </div>
-                    </div>
-                    <div className="w-[110px] flex flex-row items-center justify-end text-right text-md">
-                      <div className="flex-1 flex flex-col items-end justify-center py-0 pr-[5px] pl-0">
-                        <div className="w-[65px] relative leading-[150%] flex items-center">{`Grade: `}</div>
-                      </div>
-                      <div className="w-10 flex flex-col items-start justify-center py-0 pr-[5px] pl-0 box-border text-left text-wwwcodingalcom-mine-shaft">
-                        <div className="self-stretch relative leading-[150%]">
-                          10
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start py-0 pr-[220.3px] pl-0 text-md">
-                    <div className="relative leading-[150%] inline-block max-w-[373.33px]">
-                      Game Development
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-col items-start justify-start text-sm">
-                    <div className="relative leading-[120%] font-semibold inline-block max-w-[373.33px]">
-                      Car Race
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-start justify-center">
-                  <button
-                    className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                    onClick={onViewProjectButtonClick2}
-                  >
-                    <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                      View Project
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <img
-                className="w-[100px] absolute !m-[0] top-[150px] left-[10px] rounded-100xl h-[100px] object-cover z-[2]"
-                alt=""
-                src="/rectangle-22@2x.png"
-              />
-            </div>
-          </div>
-          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-nero rounded box-border h-[41px] flex flex-row items-center justify-center border-[1px] border-solid border-aqua-deep"
-              autoFocus={true}
-              onClick={onSeeMoreProjectsButtonClick}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-aqua-deep text-center inline-block max-h-[58px]">
-                See more projects
-              </div>
-            </button>
-          </section>
-        </section>
         <section className="w-[1400px] bg-nero hidden flex-col items-start justify-start p-5 box-border gap-[20px] z-[6] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-row items-center justify-center gap-[13px]">
             <div className="w-9 h-[131px] overflow-hidden shrink-0 flex flex-col items-end justify-center">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[29.2px] shrink-0"
                 alt=""
-                src="/vector4.svg"
+                src="/homepage/vector4.svg"
               />
             </div>
             <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
@@ -1622,13 +1377,13 @@ const HomePage: FunctionComponent = () => {
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-md md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
             <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
-                <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`"Teaching coding to kids is a huge responsibility and we want to take that"  `}</div>
+                <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`"Teaching software engineering is a responsibility we take seriously."`}</div>
               </div>
               <div className="w-full overflow-hidden flex flex-col items-center justify-center py-0 px-[42px] box-border max-w-[384px]">
                 <img
                   className="w-[146px] relative rounded-61xl-5 h-[154px] object-cover"
                   alt=""
-                  src="/rectangle-1@2x.png"
+                  src="/homepage/rectangle-1@2x.png"
                 />
               </div>
               <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
@@ -1652,7 +1407,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-8 relative h-8 overflow-hidden shrink-0 hidden"
                 alt=""
-                src="/arrowbendrightdown.svg"
+                src="/homepage/arrowbendrightdown.svg"
               />
             </div>
             <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
@@ -1666,7 +1421,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[146px] relative rounded-61xl-5 h-[154px] object-cover"
                   alt=""
-                  src="/rectangle-11@2x.png"
+                  src="/homepage/rectangle-11@2x.png"
                 />
               </div>
               <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
@@ -1690,7 +1445,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-8 relative h-8 overflow-hidden shrink-0 hidden"
                 alt=""
-                src="/arrowbendrightdown.svg"
+                src="/homepage/arrowbendrightdown.svg"
               />
             </div>
             <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
@@ -1704,7 +1459,7 @@ const HomePage: FunctionComponent = () => {
                 <img
                   className="w-[146px] relative rounded-61xl-5 h-[154px] object-cover"
                   alt=""
-                  src="/rectangle-1@2x.png"
+                  src="/homepage/rectangle-1@2x.png"
                 />
               </div>
               <div className="self-stretch flex flex-col items-center justify-center gap-[2px]">
@@ -1728,7 +1483,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-8 relative h-8 overflow-hidden shrink-0 hidden"
                 alt=""
-                src="/arrowbendrightdown.svg"
+                src="/homepage/arrowbendrightdown.svg"
               />
             </div>
           </div>
@@ -1745,14 +1500,14 @@ const HomePage: FunctionComponent = () => {
         </section>
         <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 gap-[20px] z-[5] sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[0.5px]">
-            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">{`Most loved & trusted platform for kids to learn coding`}</div>
+            <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">{`Most loved & trusted platform to learn coding`}</div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-md md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
             <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/arrowssplit.svg"
+                src="/homepage/arrowssplit.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[120%] font-semibold">
@@ -1764,7 +1519,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/bathtub.svg"
+                src="/homepage/bathtub.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[120%] font-semibold">
@@ -1776,7 +1531,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/batteryverticalfull.svg"
+                src="/homepage/batteryverticalfull.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[120%] font-semibold">{`All level of Coding courses `}</div>
@@ -1786,7 +1541,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/presentationchart.svg"
+                src="/homepage/presentationchart.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[120%] font-semibold">
@@ -1798,7 +1553,7 @@ const HomePage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/columnsplusright.svg"
+                src="/homepage/columnsplusright.svg"
               />
               <div className="self-stretch flex flex-row items-start justify-start">
                 <div className="flex-1 relative leading-[120%] font-semibold">
@@ -1819,173 +1574,65 @@ const HomePage: FunctionComponent = () => {
             </button>
           </section>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 box-border gap-[20px] min-w-[370px] z-[4] sm:pl-[5px] sm:pr-[5px] sm:box-border">
-          <div className="self-stretch flex flex-row items-center justify-start">
-            <div className="flex-1 relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">
-              Frequently asked questions
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 box-border gap-6 min-w-[370px] z-[4] sm:px-5 sm:py-4 sm:gap-4">
+          <div className="w-full max-w-[1100px] flex flex-col gap-6">
+            <div className="text-center space-y-2">
+              <div className="relative leading-[120%] font-semibold text-2xl md:text-xl sm:text-lg text-aqua-deep inline-block">
+                Frequently Asked Questions
+              </div>
+              <div className="text-sm md:text-xs text-gray-600 max-w-2xl mx-auto">
+                Find answers to common questions about our coding programs and learning platform
+              </div>
+            </div>
+
+            <div className="self-stretch grid grid-cols-1 md:grid-cols-2 gap-4">
+              {faqs.map((item, idx) => {
+                const isOpen = openFaqIndex === idx;
+                return (
+                  <div
+                    key={idx}
+                    className="group bg-nero border border-gray-200 rounded-lg shadow hover:shadow-md transition-all duration-300 overflow-hidden"
+                  >
+                    <button
+                      type="button"
+                      className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-gray-50/30 transition-colors duration-200"
+                      onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                      aria-expanded={isOpen}
+                    >
+                      <div className="flex-1 text-gray-900 font-medium text-sm md:text-xs leading-[140%] pr-3">
+                        {item.q}
+                      </div>
+                      <div
+                        className={`flex-shrink-0 h-6 w-6 rounded-full border border-aqua-deep/30 flex items-center justify-center text-aqua-deep transition-all duration-300 ${
+                          isOpen ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </button>
+                    <div className={`relative overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="px-4 pb-4 text-gray-600 text-xs md:text-xs leading-[160%] border-t border-gray-100 pt-3">
+                        {item.a}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            
+            <div className="text-center pt-2">
+              <div className="inline-flex items-center gap-2 text-xs text-gray-500">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Still have questions? Browse our help center or contact our support team
+              </div>
             </div>
           </div>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                What is codeskinnovations?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                codeskinnovations is an interactive online platform designed to teach
-                kids coding in a fun and engaging way. It offers a variety of
-                coding courses tailored for different age groups and skill
-                levels.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                Why should kids learn to code?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                Coding for kids helps improve their logical thinking, critical
-                thinking, problem-solving skills, creativity, mathematics and
-                writing skills and also gives them valuable skills in life and
-                at the workplace. Coding provides a competitive advantage when
-                applying to colleges, internships, and jobs. In addition, basic
-                programming knowledge can change how kids interact daily with
-                the technologies they use. It's a basic literacy–one we can't
-                afford to overlook.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                {`My child is a beginner, is previous coding experience required? `}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                Our coding courses for kids have been developed so that a
-                complete beginner can follow along without any trouble. With
-                technology increasingly prevalent across so many industries,
-                even basic coding knowledge can help kids regardless of the
-                career they ultimately decide to pursue.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                Who is codeskinnovations for?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                codeskinnovations is primarily designed for kids aged 6-16 who are
-                interested in learning coding. However, it can be beneficial for
-                anyone looking to start their coding journey regardless of age.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                Do I need any prior coding experience to use codeskinnovations?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                No prior coding experience is necessary. codeskinnovations provides
-                courses suitable for beginners as well as those with some coding
-                background. The platform is designed to accommodate learners at
-                various skill levels.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                How are the courses structured?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                Courses on codeskinnovations are divided into modules and lessons, each
-                focusing on specific coding concepts or projects. The curriculum
-                is carefully designed to ensure a smooth learning progression,
-                with interactive activities and challenges to reinforce
-                learning.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                Are there any parental controls or monitoring features?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                codeskinnovations provides parental controls and monitoring features,
-                allowing parents to track their child's progress, set learning
-                goals, and monitor their activity on the platform. Parents can
-                also receive regular updates and reports on their child's
-                performance.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="self-stretch">
-            <AccordionSummary
-              expandIcon={<Icon>expand_more</Icon>}
-              className="text-left"
-            >
-              <Typography className="text-left font-semibold">
-                Is there technical support available for users?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="text-left">
-                Yes, codeskinnovations provides technical support to assist users with
-                any issues they may encounter while using the platform. Users
-                can reach out to the support team via email or through the
-                online help center.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <section className="self-stretch bg-nero flex flex-row flex-wrap items-start justify-center p-[15px]">
-            <button
-              className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-              autoFocus={true}
-              onClick={onAskYOurDoubtButtonClick}
-            >
-              <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
-                Ask your doubt?
-              </div>
-            </button>
-          </section>
         </section>
         <section className="self-stretch bg-nero flex flex-row items-center justify-center p-5 z-[3] md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
           <div className="flex-1 bg-nero flex flex-col items-start justify-start p-5 gap-[40px] md:flex-[unset] md:self-stretch sm:pl-[5px] sm:pr-[5px] sm:box-border">
@@ -1997,7 +1644,7 @@ const HomePage: FunctionComponent = () => {
               </div>
               <div className="self-stretch h-[35px] flex flex-row items-center justify-center p-2.5 box-border text-sm">
                 <div className="flex-1 relative leading-[150%] font-medium">
-                  Like thousands of other parents who have enrolled their kids
+                  Like thousands of learners who have chosen codeskinnovations
                 </div>
               </div>
             </div>
@@ -2054,7 +1701,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2073,7 +1720,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2089,7 +1736,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-5 relative h-5 overflow-hidden shrink-0"
                               alt=""
-                              src="/close.svg"
+                              src="/homepage/close.svg"
                             />
                           </div>
                         </div>
@@ -2122,7 +1769,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2141,7 +1788,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2157,7 +1804,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-5 relative h-5 overflow-hidden shrink-0"
                               alt=""
-                              src="/close.svg"
+                              src="/homepage/close.svg"
                             />
                           </div>
                         </div>
@@ -2190,7 +1837,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2209,7 +1856,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2225,7 +1872,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-5 relative h-5 overflow-hidden shrink-0"
                               alt=""
-                              src="/close.svg"
+                              src="/homepage/close.svg"
                             />
                           </div>
                         </div>
@@ -2258,7 +1905,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2277,7 +1924,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-6 relative h-6 overflow-hidden shrink-0"
                               alt=""
-                              src="/cancel.svg"
+                              src="/homepage/cancel.svg"
                             />
                           </div>
                         </div>
@@ -2293,7 +1940,7 @@ const HomePage: FunctionComponent = () => {
                             <img
                               className="w-5 relative h-5 overflow-hidden shrink-0"
                               alt=""
-                              src="/close.svg"
+                              src="/homepage/close.svg"
                             />
                           </div>
                         </div>
@@ -2310,7 +1957,7 @@ const HomePage: FunctionComponent = () => {
               </div>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={openDoneModalPopup}
+                onClick={onSupportUsButtonClick}
               >
                 <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
                   Subimt
@@ -2336,7 +1983,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
                     alt="STEM Logo"
-                    src="/stem-logo-recreated01-1@2x.png"
+                    src="/homepage/stem-logo-recreated01-1@2x.png"
                   />
                 </div>
                 <div className="w-[120px] h-[60px] flex items-center justify-center">
@@ -2382,7 +2029,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
                     alt="BIT Logo"
-                    src="/bit-logo-recreated-1@2x.png"
+                    src="/homepage/bit-logo-recreated-1@2x.png"
                   />
                 </div>
                 <div className="w-[120px] h-[60px] flex items-center justify-center">
@@ -2409,15 +2056,6 @@ const HomePage: FunctionComponent = () => {
         </section>
         <Footer />
       </div>
-      {isDoneModalPopupOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeDoneModalPopup}
-        >
-          <DoneModal onClose={closeDoneModalPopup} />
-        </PortalPopup>
-      )}
     </>
   );
 };

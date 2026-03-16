@@ -1,21 +1,10 @@
-import { FunctionComponent, useState, useCallback } from 'react';
+import { FunctionComponent, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../common/Navbar';
 import Footer from '../../common/Footer';
-import DoneModal from '../../common/DoneModal';
-import PortalPopup from '../../common/PortalPopup';
 
 const PartnershipPage: FunctionComponent = () => {
-  const [isDoneModalPopupOpen, setDoneModalPopupOpen] = useState(false);
   const navigate = useNavigate();
-
-  const openDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(true);
-  }, []);
-
-  const closeDoneModalPopup = useCallback(() => {
-    setDoneModalPopupOpen(false);
-  }, []);
 
   const onLogoClick = useCallback(() => {
     navigate('/');
@@ -586,7 +575,7 @@ const PartnershipPage: FunctionComponent = () => {
               </div>
               <button
                 className="cursor-pointer py-[9px] px-5 bg-tomato rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
-                onClick={openDoneModalPopup}
+                type="submit"
               >
                 <div className="relative text-lg leading-[150%] font-semibold sm:text-base">
                   Submit
@@ -601,15 +590,6 @@ const PartnershipPage: FunctionComponent = () => {
         </div>
         <Footer />
       </div>
-      {isDoneModalPopupOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeDoneModalPopup}
-        >
-          <DoneModal onClose={closeDoneModalPopup} />
-        </PortalPopup>
-      )}
     </>
   );
 };
