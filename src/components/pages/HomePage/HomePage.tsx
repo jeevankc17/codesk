@@ -234,7 +234,7 @@ const HomePage: FunctionComponent = () => {
         />
         
         {/* Remove the 20px spacer since we have the navbar spacing */}
-        <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <header className="self-stretch rounded-[20px] md:rounded-[15px] sm:rounded-[10px] bg-main-blue min-h-[500px] h-auto flex flex-row items-center justify-between py-5 px-[15px] box-border z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:min-h-[600px] md:flex-col md:gap-[10px] md:p-4 md:box-border sm:flex-col sm:gap-[10px] sm:p-4 sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
             <div className="self-stretch flex flex-col items-start justify-start font-body-large-600 sm:items-center">
               <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-sm sm:text-center">
@@ -370,9 +370,9 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="w-[525px] relative h-[478px] overflow-visible lg:order-[1] lg:w-full md:w-full sm:w-full sm:h-[250px]">
+          <div className="w-[525px] relative h-[478px] overflow-visible lg:order-[1] lg:w-full md:w-full md:h-[350px] sm:w-full sm:h-[200px]">
             <img
-              className="absolute inset-0 w-full h-full object-cover rounded-[22px]"
+              className="absolute inset-0 w-full h-full object-contain rounded-[22px] md:rounded-[15px] sm:rounded-[10px]"
               alt=""
               src="/homepage/image-5@2x.png"
             />
@@ -390,8 +390,8 @@ const HomePage: FunctionComponent = () => {
               <div className="mt-1 text-xs text-black/70">Built across Web, AI, and Automation</div>
             </div>
 
-            {/* Curved Lines Design */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 525 478" style={{ zIndex: 1 }}>
+            {/* Curved Lines Design - Hidden on mobile */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none md:hidden" viewBox="0 0 525 478" style={{ zIndex: 1 }}>
               {/* Main curved path */}
               <path
                 d="M 100 150 Q 200 100, 300 150 T 450 200"
@@ -436,36 +436,36 @@ const HomePage: FunctionComponent = () => {
               </defs>
             </svg>
 
-            {/* Circular Nodes */}
-            <div className="absolute z-[4] left-[100px] top-[140px] w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg pulse-node">
+            {/* Circular Nodes - Hidden on mobile, visible on md+ */}
+            <div className="absolute z-[4] left-[100px] top-[140px] w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden">
               <div className="text-white text-xs font-bold text-center">AI</div>
             </div>
             
-            <div className="absolute z-[4] left-[200px] top-[100px] w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute z-[4] left-[200px] top-[100px] w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '0.5s' }}>
               <div className="text-white text-xs font-bold text-center">Automation</div>
             </div>
             
-            <div className="absolute z-[4] left-[300px] top-[140px] w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '1s' }}>
+            <div className="absolute z-[4] left-[300px] top-[140px] w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '1s' }}>
               <div className="text-white text-[10px] font-bold text-center">Web App</div>
             </div>
             
-            <div className="absolute z-[4] left-[80px] top-[290px] w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '1.5s' }}>
+            <div className="absolute z-[4] left-[80px] top-[290px] w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '1.5s' }}>
               <div className="text-white text-xs font-bold text-center">Cloud</div>
             </div>
             
-            <div className="absolute z-[4] left-[180px] top-[250px] w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '2s' }}>
+            <div className="absolute z-[4] left-[180px] top-[250px] w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '2s' }}>
               <div className="text-white text-xs font-bold text-center">Game</div>
             </div>
             
-            <div className="absolute z-[4] left-[280px] top-[290px] w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '2.5s' }}>
+            <div className="absolute z-[4] left-[280px] top-[290px] w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '2.5s' }}>
               <div className="text-white text-[10px] font-bold text-center">IOT</div>
             </div>
             
-            <div className="absolute z-[4] left-[380px] top-[250px] w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '3s' }}>
+            <div className="absolute z-[4] left-[380px] top-[250px] w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '3s' }}>
               <div className="text-white text-xs font-bold text-center">AR/VR</div>
             </div>
             
-            <div className="absolute z-[4] left-[350px] top-[180px] w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-lg pulse-node" style={{ animationDelay: '3.5s' }}>
+            <div className="absolute z-[4] left-[350px] top-[180px] w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-lg pulse-node md:hidden" style={{ animationDelay: '3.5s' }}>
               <div className="text-white text-xs font-bold text-center">Business</div>
             </div>
 
@@ -483,7 +483,7 @@ const HomePage: FunctionComponent = () => {
 
           <div
             ref={scrollContainerRef}
-            className="self-stretch overflow-x-auto scrollbar-hide flex flex-row items-center justify-center md:justify-start sm:justify-start py-[25px] px-[5px] gap-[15px] text-left text-2xl text-main-blue cursor-grab active:cursor-grabbing"
+            className="self-stretch overflow-x-hidden flex flex-row flex-wrap items-center justify-center py-[25px] px-[5px] gap-[15px] text-left text-2xl text-main-blue"
             onMouseDown={startDragging}
             onMouseUp={stopDragging}
             onMouseLeave={stopDragging}
@@ -492,7 +492,7 @@ const HomePage: FunctionComponent = () => {
             onTouchEnd={stopDragging}
             onTouchMove={onDragTouch}
           >
-            <div className="flex flex-row items-center gap-[15px] min-w-max md:pl-2 sm:pl-2">
+            <div className="flex flex-row flex-wrap items-center justify-center gap-[15px]">
               {cardData.map((card, index) => (
                 <div
                   key={index}
@@ -526,8 +526,8 @@ const HomePage: FunctionComponent = () => {
               With CoDesk, your learning journey is in safe hands.
             </div>
           </div>
-          <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl">
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+          <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl sm:gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -546,7 +546,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -565,7 +565,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -583,7 +583,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -600,7 +600,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -619,7 +619,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[81.3px] relative h-[81.3px]"
                 alt=""
@@ -634,7 +634,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`Forgot what was taught in the last  class? No worries. Watch the  recorded class video anytime to  refresh your memory. Get lifetime access to our  exclusive learning content `}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -649,7 +649,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`For class management &  progress tracking  For Easy rescheduling of  classes and session notes  For Course and instructor  information`}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -667,7 +667,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -685,7 +685,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -704,7 +704,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -721,7 +721,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-auto min-h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[350px]">
               <img
                 className="w-[100px] relative h-[100px]"
                 alt=""
@@ -748,7 +748,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-sm sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px] sm:w-full sm:max-w-[400px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -814,7 +814,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px] sm:w-full sm:max-w-[400px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -880,7 +880,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px] sm:w-full sm:max-w-[400px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -963,8 +963,8 @@ const HomePage: FunctionComponent = () => {
               Flexible pricing with personalized classes
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-stretch justify-center gap-6 py-[25px] px-2.5 text-left text-md sm:pt-5 sm:pb-5 sm:box-border overflow-x-auto">
-            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow">
+          <div className="self-stretch flex flex-row items-stretch justify-center gap-6 py-[25px] px-2.5 text-left text-md sm:pt-5 sm:pb-5 sm:box-border flex-wrap sm:gap-4">
+            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow sm:min-w-0 sm:w-full sm:max-w-[350px]">
               <div className="self-stretch bg-gradient-to-r from-aqua-deep to-[#0B8BEA] text-nero flex flex-col items-start justify-center pt-7 px-6 pb-4 relative">
                 <div className="self-stretch flex flex-row items-start justify-between gap-4">
                   <div className="flex-1 relative leading-[120%] font-semibold text-lg">
@@ -1056,7 +1056,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow">
+            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow sm:min-w-0 sm:w-full sm:max-w-[350px]">
               <div className="self-stretch bg-slate-900 text-nero flex flex-col items-start justify-center pt-7 px-6 pb-4 relative">
                 <div className="self-stretch flex flex-row items-start justify-between gap-4">
                   <div className="flex-1 relative leading-[120%] font-semibold text-lg">
@@ -1258,8 +1258,8 @@ const HomePage: FunctionComponent = () => {
               <span>{`Testimonials: Why learners ❤️ Codesk Innovations`}</span>
             </div>
           </div>
-          <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+          <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-col sm:items-center sm:pl-[5px] sm:pr-[5px] sm:box-border sm:gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border sm:w-full sm:max-w-[400px]">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1288,7 +1288,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border sm:w-full sm:max-w-[400px]">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1315,9 +1315,9 @@ const HomePage: FunctionComponent = () => {
                   I now feel confident building real web applications, thanks to
                   the structured guidance and feedback from CoDesk.
                 </div>
-              </div>Build real skills
+              </div>
             </div>
-            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border sm:w-full sm:max-w-[400px]">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1501,7 +1501,7 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">{`Most loved & trusted platform to learn coding`}</div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-md md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1513,7 +1513,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1525,7 +1525,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1535,7 +1535,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[120%] font-semibold">{`All level of Coding courses `}</div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1547,7 +1547,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-full sm:max-w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1572,7 +1572,7 @@ const HomePage: FunctionComponent = () => {
             </button>
           </section>
         </section>
-        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 box-border gap-6 min-w-[370px] z-[4] sm:px-5 sm:py-4 sm:gap-4">
+        <section className="self-stretch bg-nero flex flex-col items-center justify-start p-5 box-border gap-6 z-[4] sm:px-4 sm:py-4 sm:gap-4">
           <div className="w-full max-w-[1100px] flex flex-col gap-6">
             <div className="text-center space-y-2">
               <div className="relative leading-[120%] font-semibold text-2xl md:text-xl sm:text-lg text-aqua-deep inline-block">
@@ -1583,7 +1583,7 @@ const HomePage: FunctionComponent = () => {
               </div>
             </div>
 
-            <div className="self-stretch grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="self-stretch grid grid-cols-1 gap-4">
               {faqs.map((item, idx) => {
                 const isOpen = openFaqIndex === idx;
                 return (
@@ -1673,7 +1673,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
-            <form className="m-0 w-[550px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.16)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] md:w-[350px]">
+            <form className="m-0 w-full max-w-[550px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.16)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-5 sm:px-4 gap-[17px]">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-left">
                   Fill in your details to and reach out to us!
@@ -1954,7 +1954,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
               <button
-                className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero"
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero self-center w-full max-w-[200px]"
                 onClick={onSupportUsButtonClick}
               >
                 <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px]">
