@@ -6,7 +6,7 @@ import CompetetionsPage from './components/pages/CompetetionsPage/CompetetionsPa
 import CurriculumByCoursePage from './components/pages/CurriculumByCoursePage/CurriculumByCoursePage';
 import AboutUsPage from './components/pages/AboutUsPage/AboutUsPage';
 import ReviewPage from './components/pages/ReviewPage/ReviewPage';
-import CommingSoonPage from './components/pages/CommingSoonPage/CommingSoonPage';
+import ContactUsPage from './components/pages/ContactUsPage/ContactUs';
 import PartnershipPage from './components/pages/PartnershipPage/PartnershipPage';
 import BlogPage from './components/pages/BlogPage/BlogPage';
 import WhyCodeskPage from './components/pages/WhyCodeskPage/WhyCodeskPage';
@@ -93,11 +93,18 @@ const routes = [
       'See how Codesk is transforming tech education in Nepal. Read success stories from our students and partners.',
   },
   {
-    path: '/commingsoonpage',
-    component: <CommingSoonPage />,
-    title: 'Coming Soon | Codesk Innovations',
+    path: '/contactuspage',
+    component: <ContactUsPage />,
+    title: 'Contact Us | Codesk Innovations',
     metaDescription:
-      "Exciting new features coming to Nepal's #1 coding platform. Advanced robotics, AR/VR courses, and more.",
+      'Contact Codesk Innovations via email or WhatsApp for support, partnerships, and course inquiries.',
+  },
+  {
+    path: '/commingsoonpage',
+    component: <ContactUsPage />,
+    title: 'Contact Us | Codesk Innovations',
+    metaDescription:
+      'Contact Codesk Innovations via email or WhatsApp for support, partnerships, and course inquiries.',
   },
   {
     path: '/partnershippage',
