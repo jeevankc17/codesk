@@ -9,7 +9,6 @@ import ReviewPage from './components/pages/ReviewPage/ReviewPage';
 import CommingSoonPage from './components/pages/CommingSoonPage/CommingSoonPage';
 import PartnershipPage from './components/pages/PartnershipPage/PartnershipPage';
 import BlogPage from './components/pages/BlogPage/BlogPage';
-import ProjectPage from './components/pages/ProjectPage/ProjectPage';
 import WhyCodeskPage from './components/pages/WhyCodeskPage/WhyCodeskPage';
 import QuizPage from './components/pages/QuizPage/QuizPage';
 import PrivacyPolicy from './components/pages/PrivacyPolicy/PrivacyPolicy';
@@ -108,18 +107,18 @@ const routes = [
       "Join forces with Nepal's leading tech education platform. Partner in revolutionizing coding and robotics education.",
   },
   {
+    path: '/blogpage',
+    component: <BlogPage />,
+    title: 'Blog | Codesk Innovations',
+    metaDescription:
+      'Latest insights on coding, robotics, and tech education in Nepal. Stay updated with industry trends and success stories.',
+  },
+  {
     path: '/quizpage',
     component: <QuizPage />,
     title: 'Blog | Codesk Innovations',
     metaDescription:
       'Interactive coding and robotics quizzes designed for Nepali students. Test your skills in programming and emerging technologies.',
-  },
-  {
-    path: '/projectpage',
-    component: <ProjectPage />,
-    title: 'Projects | Codesk Innovations',
-    metaDescription:
-      'Discover innovative projects built by Nepali students. From simple apps to complex robotics and VR/AR solutions.',
   },
   {
     path: '/whycodeskpage',

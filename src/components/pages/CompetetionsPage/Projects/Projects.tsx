@@ -106,7 +106,7 @@ const Projects: FunctionComponent = () => {
         </div>
       </div>
       <div className="h-[120px]"></div>
-      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[2] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+      <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[2] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
         <div className="w-[775px] flex flex-col items-center justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full">
           <div className="self-stretch flex flex-col items-center justify-start gap-[15px]">
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg text-center">

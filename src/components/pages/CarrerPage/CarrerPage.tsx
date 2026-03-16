@@ -48,7 +48,7 @@ const CarrerPage: FunctionComponent = () => {
         aboutUsColor="#000"
         quizzesColor="#000"
       />
-      <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+      <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
         <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
           <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
@@ -88,11 +88,11 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/appstorelogo.svg"
+                src="/homepage/student.svg"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  15+
+                  5+
                 </div>
               </div>
             </div>
@@ -107,11 +107,11 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/applelogo.svg"
+                src="/homepage/desktoptower.svg"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  5+
+                  100+
                 </div>
               </div>
             </div>
@@ -126,11 +126,11 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/personsimplerun.svg"
+                src="/homepage/articlemedium.svg"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  100+
+                  50+
                 </div>
               </div>
             </div>
@@ -145,11 +145,11 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/cassettetape1.svg"
+                src="/homepage/presentationchart.svg"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  50+
+                  ∞
                 </div>
               </div>
             </div>
@@ -164,17 +164,17 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/androidlogo.svg"
+                src="/homepage/arrowsincardinal.svg"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  Hybrid Teaching
+                  🔄
                 </div>
               </div>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
-                Teach physically as well as virutally
+                Hybrid Teaching
               </div>
             </div>
           </div>
@@ -183,17 +183,17 @@ const CarrerPage: FunctionComponent = () => {
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
-                src="/desktoptower.svg"
+                src="/homepage/bestsellingpng@2x.png"
               />
               <div className="flex-1 flex flex-row items-end justify-start">
                 <div className="flex-1 relative leading-[150%] font-semibold">
-                  Great earnings
+                  💰
                 </div>
               </div>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start text-center text-lg text-black1">
               <div className="flex-1 relative leading-[150%] font-semibold">
-                Earn from teaching as well as building
+                Great earnings
               </div>
             </div>
           </div>

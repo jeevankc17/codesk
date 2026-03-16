@@ -100,16 +100,16 @@ const HomePage: FunctionComponent = () => {
     window.open('https://scratch.mit.edu/projects/2232652/');
   }, []);
 
-  const onViewProjectButtonClick2 = useCallback(() => {
+  const onJoinChallengesButtonClick = useCallback(() => {
     window.open('https://scratch.mit.edu/projects/16853582/');
   }, []);
 
   const onSeeMoreProjectsButtonClick = useCallback(() => {
-    navigate('/projectpage');
+    navigate('/competetions/projects');
   }, [navigate]);
 
   const onAskYOurDoubtButtonClick = useCallback(() => {
-    window.location.href = 'mailto:jkc5186@gmail.com';
+    window.open('https://www.facebook.com/codeskinnovations');
   }, []);
 
   const onSupportUsButtonClick = useCallback(() => {
@@ -234,7 +234,7 @@ const HomePage: FunctionComponent = () => {
         />
         
         {/* Remove the 20px spacer since we have the navbar spacing */}
-        <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[15px] box-border z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[10px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-start p-[15px] box-border gap-[15px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
             <div className="self-stretch flex flex-col items-start justify-start font-body-large-600 sm:items-center">
               <div className="self-stretch relative leading-[120%] font-medium text-2xl md:text-xl sm:text-sm sm:text-center">
@@ -378,13 +378,13 @@ const HomePage: FunctionComponent = () => {
             />
             <div className="absolute inset-0 rounded-[22px]" />
 
-            <div className="absolute z-[2] left-[-34px] top-[52px] bg-nero rounded-2xl shadow-[0px_20px_60px_rgba(0,_0,_0,_0.18)] border border-[rgba(0,0,0,0.08)] px-4 py-3 w-[200px] sm:hidden transform -rotate-2 hover:-translate-y-1 hover:shadow-[0px_28px_80px_rgba(0,_0,_0,_0.22)] transition-all duration-300 hero-float-1">
+            <div className="absolute z-[2] left-[-34px] top-[52px] bg-nero rounded-2xl shadow-[0px_14px_40px_rgba(31,_149,_242,_0.25)] px-4 py-3 w-[200px] sm:hidden transform -rotate-2 hover:-translate-y-1 hover:shadow-[0px_18px_55px_rgba(31,_149,_242,_0.28)] transition-all duration-300 hero-float-1">
               <div className="text-xs text-black/60">Active learners</div>
               <div className="text-lg font-semibold text-black">2,500+</div>
               <div className="mt-1 inline-flex items-center text-xs font-semibold text-chateau-green bg-[rgba(34,197,94,0.12)] px-2 py-0.5 rounded-full">+18% this month</div>
             </div>
 
-            <div className="absolute z-[2] right-[-34px] top-[34px] bg-nero rounded-2xl shadow-[0px_20px_60px_rgba(0,_0,_0,_0.18)] border border-[rgba(0,0,0,0.08)] px-4 py-3 w-[220px] sm:hidden transform rotate-2 hover:-translate-y-1 hover:shadow-[0px_28px_80px_rgba(0,_0,_0,_0.22)] transition-all duration-300 hero-float-2">
+            <div className="absolute z-[2] right-[-34px] top-[34px] bg-nero rounded-2xl shadow-[0px_14px_40px_rgba(31,_149,_242,_0.25)] px-4 py-3 w-[220px] sm:hidden transform rotate-2 hover:-translate-y-1 hover:shadow-[0px_18px_55px_rgba(31,_149,_242,_0.28)] transition-all duration-300 hero-float-2">
               <div className="text-xs text-black/60">Project built</div>
               <div className="text-lg font-semibold text-black">100+</div>
               <div className="mt-1 text-xs text-black/70">Built across Web, AI, and Automation</div>
@@ -483,7 +483,7 @@ const HomePage: FunctionComponent = () => {
 
           <div
             ref={scrollContainerRef}
-            className="self-stretch overflow-x-auto scrollbar-hide flex flex-row items-center justify-center md:justify-start sm:justify-start py-[25px] px-[5px] gap-[15px] text-left text-2xl text-footer-header cursor-grab active:cursor-grabbing"
+            className="self-stretch overflow-x-auto scrollbar-hide flex flex-row items-center justify-center md:justify-start sm:justify-start py-[25px] px-[5px] gap-[15px] text-left text-2xl text-main-blue cursor-grab active:cursor-grabbing"
             onMouseDown={startDragging}
             onMouseUp={stopDragging}
             onMouseLeave={stopDragging}
@@ -496,7 +496,7 @@ const HomePage: FunctionComponent = () => {
               {cardData.map((card, index) => (
                 <div
                   key={index}
-                  className="flex-none w-[200px] h-[150px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-center justify-center p-[5px] box-border gap-[5px] transition-transform hover:scale-105 lg:w-[200px] md:w-[150px] sm:w-[150px]"
+                  className="flex-none w-[200px] h-[150px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-center justify-center p-[5px] box-border gap-[5px] transition-transform hover:scale-105 lg:w-[200px] md:w-[150px] sm:w-[150px]"
                 >
                   <div className="self-stretch flex flex-row items-end justify-start gap-[14px]">
                     <img
@@ -527,7 +527,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-center gap-[10px] text-xl">
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -546,7 +546,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -565,7 +565,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -583,7 +583,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -600,7 +600,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -619,7 +619,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[81.3px] relative h-[81.3px]"
                 alt=""
@@ -634,7 +634,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`Forgot what was taught in the last  class? No worries. Watch the  recorded class video anytime to  refresh your memory. Get lifetime access to our  exclusive learning content `}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -649,7 +649,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[150%] whitespace-pre-wrap">{`For class management &  progress tracking  For Easy rescheduling of  classes and session notes  For Course and instructor  information`}</div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-start p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -667,7 +667,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -685,7 +685,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -704,7 +704,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px] overflow-hidden shrink-0"
                 alt=""
@@ -721,7 +721,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_8px_22px_rgba(31,_149,_242,_0.18)] rounded bg-nero h-[340px] flex flex-col items-center justify-center p-[15px] box-border gap-[15px]">
               <img
                 className="w-[100px] relative h-[100px]"
                 alt=""
@@ -748,7 +748,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-sm sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -814,7 +814,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -880,7 +880,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/bestsellingpng1@2x.png"
               />
             </div>
-            <div className="w-[350px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded-lg bg-nero flex flex-col items-start justify-start p-2.5 box-border relative gap-[15px]">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover z-[0]"
                 alt=""
@@ -963,21 +963,24 @@ const HomePage: FunctionComponent = () => {
               Flexible pricing with personalized classes
             </div>
           </div>
-          <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-[25px] px-2.5 gap-[15px] text-left text-md md:flex-row md:flex-wrap sm:pt-5 sm:pb-5 sm:box-border">
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
-                <div className="self-stretch flex flex-row items-start justify-center z-[0]">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
+          <div className="self-stretch flex flex-row items-stretch justify-center gap-6 py-[25px] px-2.5 text-left text-md sm:pt-5 sm:pb-5 sm:box-border overflow-x-auto">
+            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow">
+              <div className="self-stretch bg-gradient-to-r from-aqua-deep to-[#0B8BEA] text-nero flex flex-col items-start justify-center pt-7 px-6 pb-4 relative">
+                <div className="self-stretch flex flex-row items-start justify-between gap-4">
+                  <div className="flex-1 relative leading-[120%] font-semibold text-lg">
                     8 classes / month
+                  </div>
+                  <div className="shrink-0 text-sm font-semibold bg-nero/15 rounded-full px-3 py-1">
+                    Most Popular
                   </div>
                 </div>
                 <img
-                  className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover z-[1]"
+                  className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover opacity-90"
                   alt=""
                   src="/homepage/bestsellingpng@2x.png"
                 />
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
+              <div className="self-stretch bg-white flex flex-col items-start justify-start py-5 px-6 gap-3 text-sm">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
@@ -1053,20 +1056,15 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[10px]">
-              <div className="self-stretch rounded-t-md rounded-b-none bg-aqua-deep flex flex-col items-start justify-center pt-[25px] px-[25px] pb-[5px] relative border-[1px] border-solid border-black">
-                <div className="self-stretch flex flex-row items-start justify-center z-[0]">
-                  <div className="flex-1 relative leading-[120%] font-semibold">
+            <div className="w-[300px] min-w-[300px] rounded-2xl bg-white overflow-hidden flex flex-col items-start justify-start shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] transition-shadow">
+              <div className="self-stretch bg-slate-900 text-nero flex flex-col items-start justify-center pt-7 px-6 pb-4 relative">
+                <div className="self-stretch flex flex-row items-start justify-between gap-4">
+                  <div className="flex-1 relative leading-[120%] font-semibold text-lg">
                     4 classes / month
                   </div>
                 </div>
-                <img
-                  className="w-[100px] !m-[0] absolute top-[0px] left-[0px] h-[25px] overflow-hidden shrink-0 object-cover hidden z-[1]"
-                  alt=""
-                  src="/homepage/bestsellingpng2@2x.png"
-                />
               </div>
-              <div className="self-stretch bg-nero flex flex-col items-start justify-start py-2.5 px-5 gap-[5px] text-sm">
+              <div className="self-stretch bg-white flex flex-col items-start justify-start py-5 px-6 gap-3 text-sm">
                 <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                   <img
                     className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
@@ -1175,14 +1173,14 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-col items-center justify-start text-2xl text-aqua-deep">
-            <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px]">
-              <div className="flex-1 flex flex-row items-center justify-between sm:flex-col">
+            <div className="self-stretch bg-nero flex flex-row flex-wrap items-center justify-between p-[15px] max-w-4xl mx-auto rounded-xl shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)]">
+              <div className="flex flex-row items-center justify-between sm:flex-col w-full">
                 <img
                   className="w-[186px] rounded h-[127px] overflow-hidden shrink-0 object-cover sm:w-full sm:h-[100px]"
                   alt=""
                   src="/homepage/iconpng1@2x.png"
                 />
-                <div className="flex-1 flex flex-col items-center justify-center gap-[10px] sm:flex-[unset] sm:self-stretch">
+                <div className="flex-1 flex flex-col items-center justify-center gap-[10px] sm:flex-[unset] sm:self-stretch ml-4 sm:ml-0">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch flex flex-row items-start justify-start">
                       <div className="flex-1 relative leading-[150%] font-semibold sm:text-xl">
@@ -1261,7 +1259,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[20px] text-left text-lg md:flex-row md:flex-wrap sm:flex-row sm:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1290,7 +1288,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1319,7 +1317,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>Build real skills
             </div>
-            <div className="w-[350px] shadow-[0px_1px_3px_rgba(0,_0,_0,_0.1)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
+            <div className="w-[350px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.18)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:pl-[5px] sm:pr-[5px] sm:box-border">
               <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[30px]">
                 <div className="flex flex-row items-start justify-start">
                   <img
@@ -1375,7 +1373,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-md md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold whitespace-pre-wrap">{`"Teaching software engineering is a responsibility we take seriously."`}</div>
               </div>
@@ -1410,7 +1408,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/arrowbendrightdown.svg"
               />
             </div>
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold">
                   "Empowering young minds with coding skills is a profound
@@ -1448,7 +1446,7 @@ const HomePage: FunctionComponent = () => {
                 src="/homepage/arrowbendrightdown.svg"
               />
             </div>
-            <div className="w-[300px] shadow-[0px_25px_50px_-12px_rgba(0,_0,_0,_0.25)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
+            <div className="w-[300px] shadow-[0px_14px_34px_rgba(31,_149,_242,_0.22)] rounded-lg bg-nero overflow-hidden shrink-0 flex flex-col items-center justify-center py-[50px] px-[15px] box-border gap-[15px]">
               <div className="self-stretch flex flex-col items-center justify-start">
                 <div className="self-stretch relative leading-[120%] font-semibold">
                   "Guiding children through the world of coding is a weighty
@@ -1503,7 +1501,7 @@ const HomePage: FunctionComponent = () => {
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg">{`Most loved & trusted platform to learn coding`}</div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-[15px] gap-[15px] text-left text-md md:flex-row md:flex-wrap sm:pl-[5px] sm:pr-[5px] sm:box-border">
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1515,7 +1513,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1527,7 +1525,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1537,7 +1535,7 @@ const HomePage: FunctionComponent = () => {
                 <div className="flex-1 relative leading-[120%] font-semibold">{`All level of Coding courses `}</div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1549,7 +1547,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[200px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
+            <div className="w-[200px] shadow-[0px_6px_18px_rgba(31,_149,_242,_0.22)] rounded bg-nero flex flex-col items-start justify-start p-[15px] box-border gap-[15px] sm:w-[300px]">
               <img
                 className="w-[50px] relative h-[50px] overflow-hidden shrink-0"
                 alt=""
@@ -1591,7 +1589,7 @@ const HomePage: FunctionComponent = () => {
                 return (
                   <div
                     key={idx}
-                    className="group bg-nero border border-gray-200 rounded-lg shadow hover:shadow-md transition-all duration-300 overflow-hidden"
+                    className="group bg-nero rounded-lg shadow-[0px_10px_26px_rgba(31,_149,_242,_0.16)] hover:shadow-[0px_14px_34px_rgba(31,_149,_242,_0.2)] transition-all duration-300 overflow-hidden"
                   >
                     <button
                       type="button"
@@ -1675,7 +1673,7 @@ const HomePage: FunctionComponent = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-center justify-center p-5">
-            <form className="m-0 w-[550px] shadow-[0px_0px_24px_rgba(0,_0,_0,_0.03)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] border-[1px] border-solid border-nero md:w-[350px]">
+            <form className="m-0 w-[550px] shadow-[0px_10px_26px_rgba(31,_149,_242,_0.16)] rounded-xl bg-nero box-border flex flex-col items-start justify-start py-7 px-[30px] gap-[17px] md:w-[350px]">
               <div className="self-stretch flex flex-col items-start justify-start">
                 <div className="self-stretch relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-left">
                   Fill in your details to and reach out to us!
@@ -1988,7 +1986,7 @@ const HomePage: FunctionComponent = () => {
                 </div>
                 <div className="w-[120px] h-[60px] flex items-center justify-center">
                   <img
-                    className="max-w-full max-h-full w-auto h-auto"
+                    className="max-w-full max-h-full w-auto h-auto object-contain"
                     alt="Proma.ai Logo"
                     src="https://proma.ai/_astro/logo-new.CLfn8ACZ_22shiD.svg"
                   />
@@ -2013,7 +2011,7 @@ const HomePage: FunctionComponent = () => {
                   <img
                     className="max-w-full max-h-full w-auto h-auto"
                     alt="Nordcraft Logo"
-                    src="https://media.licdn.com/dms/image/v2/D4D0BAQH3sDGSEiGaGw/company-logo_200_200/B4DZZdco9YHIAM-/0/1745324511478/toddledev_logo?e=1767830400&v=beta&t=O9aEAMn7cT8sC9Qsxk6GmUhlm_I_z3rt_iGJwIxgL_o"
+                    src="https://res.cloudinary.com/jeevankc17/image/upload/v1771917422/nc-logo-wide-black_c0qbvg.png"
                   />
                 </div>
               </div>
@@ -2033,11 +2031,53 @@ const HomePage: FunctionComponent = () => {
                   />
                 </div>
                 <div className="w-[120px] h-[60px] flex items-center justify-center">
-                  <img
+                  <svg
+                    width="109"
+                    height="113"
+                    viewBox="0 0 109 113"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                     className="max-w-full max-h-full w-auto h-auto"
-                    alt="ActivePieces Logo"
-                    src="https://www.activepieces.com/activepieces-logo-hz-og.svg"
-                  />
+                    aria-label="Supabase Logo"
+                  >
+                    <path
+                      d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <path
+                      d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z"
+                      fill="url(#paint1_linear)"
+                      fillOpacity="0.2"
+                    />
+                    <path
+                      d="M45.317 2.07103C48.1765 -1.53037 53.9745 0.442937 54.0434 5.041L54.4849 72.2922H9.83113C1.64038 72.2922 -2.92775 62.8321 2.1655 56.4175L45.317 2.07103Z"
+                      fill="#3ECF8E"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="53.9738"
+                        y1="54.974"
+                        x2="94.1635"
+                        y2="71.8295"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stopColor="#249361" />
+                        <stop offset="1" stopColor="#3ECF8E" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear"
+                        x1="36.1558"
+                        y1="30.578"
+                        x2="54.4844"
+                        y2="65.0806"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop />
+                        <stop offset="1" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
             </div>

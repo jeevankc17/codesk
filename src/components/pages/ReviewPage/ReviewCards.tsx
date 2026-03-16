@@ -99,7 +99,7 @@ const ReviewCards: FunctionComponent<ReviewCardsType> = ({
   ]);
   return (
     <div
-      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-lg text-footer-header font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
+      className={`self-stretch flex flex-row flex-wrap items-center justify-center p-5 text-left text-lg text-main-blue font-body-large-600 sm:pl-[5px] sm:pr-[5px] sm:box-border ${className}`}
     >
       {reviewItems.map((item, index) => (
         <ReviewCard

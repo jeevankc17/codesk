@@ -63,7 +63,7 @@ const CodewarTabs: FunctionComponent<CodewarTabsType> = ({
 
   return (
     <div
-      className={`self-stretch h-[65px] rounded-lg bg-footer-header flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] fixed top-[77px] left-0 right-0 z-[98] text-center text-lg text-aqua-deep font-body-large-600 sm:pl-0 sm:pr-0 sm:box-border sm:h-[45px] ${className}`}
+      className={`self-stretch h-[65px] rounded-lg bg-main-blue flex flex-row flex-wrap items-start justify-center py-2.5 px-0 box-border gap-[5px] fixed top-[77px] left-0 right-0 z-[98] text-center text-lg text-aqua-deep font-body-large-600 sm:pl-0 sm:pr-0 sm:box-border sm:h-[45px] ${className}`}
     >
       <div className="w-full max-w-[1240px] mx-auto flex flex-row flex-wrap items-start justify-center gap-[5px]">
         <button

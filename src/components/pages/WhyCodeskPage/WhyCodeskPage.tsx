@@ -45,7 +45,7 @@ const WhyCodeskPage: FunctionComponent = () => {
         
         <Navbar {...navbarProps} />
         
-        <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
             <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
               <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
@@ -90,7 +90,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                      <div className="flex-1 relative leading-[120%] font-semibold sm:text-2xl">
+                      <div className="flex-1 relative leading-[120%] font-bold text-2xl md:text-xl sm:text-lg">
                         Curriculum
                       </div>
                     </div>
@@ -106,7 +106,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                      <div className="flex-1 relative leading-[120%] font-semibold sm:text-2xl">
+                      <div className="flex-1 relative leading-[120%] font-bold text-2xl md:text-xl sm:text-lg">
                         Teachers
                       </div>
                     </div>
@@ -140,7 +140,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                      <div className="flex-1 relative leading-[120%] font-semibold sm:text-2xl">
+                      <div className="flex-1 relative leading-[120%] font-bold text-2xl md:text-xl sm:text-lg">
                         Personalized Coding Journey
                       </div>
                     </div>
@@ -161,7 +161,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                      <div className="flex-1 relative leading-[120%] font-semibold sm:text-2xl">
+                      <div className="flex-1 relative leading-[120%] font-bold text-2xl md:text-xl sm:text-lg">
                         Our values
                       </div>
                     </div>
@@ -196,7 +196,7 @@ const WhyCodeskPage: FunctionComponent = () => {
                 <div className="self-stretch flex flex-col items-start justify-start w-full">
                   <div className="self-stretch flex flex-col items-start justify-start">
                     <div className="self-stretch bg-nero flex flex-row items-center justify-center p-2.5">
-                      <div className="flex-1 relative leading-[120%] font-semibold sm:text-2xl">
+                      <div className="flex-1 relative leading-[120%] font-bold text-2xl md:text-xl sm:text-lg">
                         Founding Team Experise
                       </div>
                     </div>

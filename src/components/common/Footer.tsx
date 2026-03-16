@@ -16,7 +16,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
         alt=""
         src="/subscribe-section-background1@2x.png"
       />
-      <div className="self-stretch bg-footer-header flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col sm:gap-[5px]">
+      <div className="self-stretch bg-main-blue flex flex-col items-center justify-start py-2.5 px-5 gap-[44px] lg:flex-col sm:gap-[5px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[14px] !mb-[40px]">
           <div className="self-stretch flex flex-row items-start justify-start">
             <div className="h-[38px] flex-1 relative leading-[120%] font-semibold inline-block text-4xl text-center md:text-left sm:text-2xl">
@@ -160,6 +160,61 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
                 target="_blank"
               >
                 Contact Us
+              </a>
+            </div>
+          </div>
+          <div className="flex-1 flex flex-col items-start justify-start gap-[10px] text-left md:flex-[unset] md:self-stretch sm:flex-[unset] sm:self-stretch">
+            <div className="self-stretch flex flex-row items-start justify-start text-xl sm:text-sm">
+              <div className="flex-1 relative leading-[150%] font-semibold">
+                Quick Links
+              </div>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/partnershippage"
+              >
+                School Partnerships
+              </a>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/worksheetpage"
+              >
+                Worksheets
+              </a>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/blogpage"
+              >
+                Blogs
+              </a>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/competetions/projects"
+              >
+                Projects
+              </a>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/whycodeskpage"
+              >
+                Why CoDesk?
+              </a>
+            </div>
+            <div className="self-stretch flex flex-row items-start justify-start sm:text-xs">
+              <a
+                className="[text-decoration:none] flex-1 relative leading-[150%] text-[inherit]"
+                href="/applyteacherpage"
+              >
+                Careers
               </a>
             </div>
           </div>

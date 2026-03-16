@@ -107,7 +107,7 @@ const Builders: FunctionComponent = () => {
         </div>
       </div>
       <div className="h-[120px]"></div>
-      <div className="self-stretch rounded-mini bg-footer-header flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
+      <div className="self-stretch rounded-mini bg-main-blue flex flex-row items-center justify-between py-0 px-[15px] z-[2] lg:flex-col md:flex-col sm:pl-[5px] sm:pr-[5px] sm:box-border">
         <div className="flex-1 flex flex-col items-center justify-center p-[15px] gap-[34px] lg:order-[2] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch">
           <div className="self-stretch flex flex-col items-center justify-start">
             <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg text-center">
@@ -183,7 +183,7 @@ const Builders: FunctionComponent = () => {
                     </div>
                   </div>
                   <div className="w-[200px] rounded-2xl bg-nero flex flex-row items-center justify-start p-2 box-border gap-[5px]">
-                    <div className="rounded-xl bg-footer-header flex flex-row items-start justify-start p-5">
+                    <div className="rounded-xl bg-main-blue flex flex-row items-start justify-start p-5">
                       <img className="w-6 relative h-6" alt="" src="/svg1.svg" />
                     </div>
                     <div className="flex-1 flex flex-col items-start justify-start">

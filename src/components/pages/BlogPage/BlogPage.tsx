@@ -53,7 +53,7 @@ const BlogPage: FunctionComponent = () => {
         
         <Navbar {...navbarProps} />
         
-        <header className="self-stretch rounded-[20px] bg-footer-header h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
+        <header className="self-stretch rounded-[20px] bg-main-blue h-[500px] flex flex-row items-center justify-between py-0 px-[10px] box-border gap-[5px] z-[1] text-left text-4xl text-nero font-inter lg:flex-col lg:h-auto md:flex-col md:gap-[5px] md:p-2.5 md:box-border sm:gap-[5px] sm:p-[5px] sm:h-auto sm:min-h-[550px] sm:box-border">
           <div className="w-[775px] flex flex-col items-start justify-center h-full p-[10px] box-border gap-[10px] lg:order-[2] lg:w-full md:w-full sm:w-full sm:items-center">
             <div className="self-stretch flex flex-col items-start justify-start gap-[15px] sm:items-center">
               <div className="self-stretch relative leading-[120%] font-semibold text-3xl md:text-xl sm:text-lg sm:text-center">
@@ -90,41 +90,86 @@ const BlogPage: FunctionComponent = () => {
           </div>
 
           {/* Blog cards */}
-          <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[20px] p-5 text-left text-2xl sm:p-2">
+          <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[20px] p-5 text-left text-xl sm:p-2">
             <div className="w-[350px] rounded-lg bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] sm:w-full">
               <img
                 className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover rounded-lg sm:h-[180px]"
                 alt=""
                 src="/image81@2x.png"
               />
-              <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] gap-[15px] min-h-[52.5px]">
-                <div className="self-stretch flex flex-col items-start justify-start gap-[2px]">
-                  <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center">
-                    <div className="flex-1 relative leading-[150%] font-semibold sm:text-xl">
-                      How to build a face recognizer with Scratch coding?
-                    </div>
-                  </div>
-                  <div className="self-stretch flex flex-row items-center justify-start gap-[2px] text-base">
-                    <div className="w-[84px] relative leading-[150%] text-black sm:text-sm">{`Written By: `}</div>
-                    <div className="flex-1 relative leading-[150%] text-black sm:text-sm">
-                      CoDesk Innovations
-                    </div>
-                  </div>
+              <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center">
+                <div className="flex-1 relative leading-[150%] font-semibold text-lg sm:text-base">
+                  How to build a face recognizer with Scratch coding?
                 </div>
-                <div className="w-80 relative text-base leading-[150%] text-black [display:-webkit-inline-box] overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] max-w-[320px] sm:text-sm">
+              </div>
+              <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-sm">
+                <div className="w-full relative leading-[150%] text-black inline-block max-w-[320px]">
                   Over the last few years, facial recognition technology has grown
                   in popularity. Face detection in psychology refers to the act of
                   identifying and focusing on faces in a scene.
                 </div>
-                <button
-                  className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
-                  autoFocus={true}
-                >
-                  <div className="relative text-lg tracking-[-0.01em] leading-[20px] capitalize font-semibold font-inter text-nero text-center inline-block max-h-[58px] sm:text-base">
-                    read more
-                  </div>
-                </button>
               </div>
+              <button
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+                autoFocus={true}
+              >
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px] sm:text-base">
+                  read more
+                </div>
+              </button>
+            </div>
+            <div className="w-[350px] rounded-lg bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] sm:w-full">
+              <img
+                className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover rounded-lg sm:h-[180px]"
+                alt=""
+                src="/image51@2x.png"
+              />
+              <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center">
+                <div className="flex-1 relative leading-[150%] font-semibold text-lg sm:text-base">
+                  Introduction to Python for Kids
+                </div>
+              </div>
+              <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-sm">
+                <div className="w-full relative leading-[150%] text-black inline-block max-w-[320px]">
+                  Python is one of the best programming languages for kids to start
+                  with. Its simple syntax and powerful capabilities make it perfect
+                  for beginners.
+                </div>
+              </div>
+              <button
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+                autoFocus={true}
+              >
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px] sm:text-base">
+                  read more
+                </div>
+              </button>
+            </div>
+            <div className="w-[350px] rounded-lg bg-nero flex flex-col items-center justify-start p-2.5 box-border gap-[15px] sm:w-full">
+              <img
+                className="self-stretch relative max-w-full overflow-hidden h-[213px] shrink-0 object-cover rounded-lg sm:h-[180px]"
+                alt=""
+                src="/image31@2x.png"
+              />
+              <div className="self-stretch bg-nero overflow-hidden flex flex-row items-center justify-center">
+                <div className="flex-1 relative leading-[150%] font-semibold text-lg sm:text-base">
+                  Building Your First Game with Scratch
+                </div>
+              </div>
+              <div className="self-stretch bg-nero box-border overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[5px] min-h-[52.5px] text-sm">
+                <div className="w-full relative leading-[150%] text-black inline-block max-w-[320px]">
+                  Scratch is a visual programming language that makes it easy for
+                  kids to create interactive stories, games, and animations.
+                </div>
+              </div>
+              <button
+                className="cursor-pointer py-[9px] px-5 bg-aqua-deep self-stretch rounded flex flex-row items-center justify-center border-[1px] border-solid border-nero sm:h-[35px]"
+                autoFocus={true}
+              >
+                <div className="relative text-lg leading-[150%] font-semibold font-body-large-600 text-nero text-center inline-block max-h-[58px] sm:text-base">
+                  read more
+                </div>
+              </button>
             </div>
           </div>
           <div
